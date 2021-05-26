@@ -1,0 +1,13 @@
+{
+    "name" : "ConfigurateurOakAddin",
+    "main": "OakAddins/OakAddinsConfigurateur.ts",
+    "tsconfig": "tsconfig.json",
+    "assets" : [
+        { "from": "OakAddins/data", "to": "data" },
+        { "from": "OakAddins/configurator.html", "to": "index.html" }
+    ]
+}
+
+/*
+    { "from": "OakAddins/images", "to": "images" },
+*/

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="ConfigurateurOakAddin.js"></script>
+</head>
+<body>
+
+    <noscript>This Page requires Javascript. Enable Javascript and reload this page to continue.</noscript>
+
+    <div id="calculator-container"></div>
+
+    <script>
+
+        const data = {
+            'fr-FR': {
+                choices : 'data/fr-FR/choices-fr-FR.json'
+            },
+            'en-US': {
+                choices : 'data/en-US/choices-en-US.json'
+            }
+        };
+
+        document.Configurator = new ConfigurateurOakAddin.default('#calculator-container', data['fr-FR']);
+    
+    </script>
+</body>
+</html>

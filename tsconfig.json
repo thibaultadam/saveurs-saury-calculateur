@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "Configurator",
+    "target": "ES6",
+    "strict": true,
+    "sourceMap": true
+  },
+  "include": [
+    "./src/**/*.ts"
+  ]
+}
