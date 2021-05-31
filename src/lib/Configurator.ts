@@ -1,19 +1,23 @@
-import ChoicesManager from './Choices/ChoicesManager';
+import ChoicesManager, { ChoicesManagerConstructor } from './Choices/ChoicesManager';
+import DataParser, { DataParserConstructor } from './Data/DataParser';
 import Debug, { DebugLevel } from './Tools/Debug';
 import EventEmitter from './Tools/EventEmitter';
 
-export type ConfiguratorPathes = any;
+export type ConfiguratorPathes = {
+    root?: string,
+    [index: string] : string | undefined
+}
 
-export type Data = any 
-| { 
-    choices?: string[] | string[][]
-};
+export type Data = {
+    [index: string] : any
+}
 
 export default
-abstract class Calculator extends EventEmitter
+abstract class Configurator extends EventEmitter
 {
     container: HTMLElement | null;
     choicesManager!: ChoicesManager;
+    dataParser!: DataParser | undefined;
     
     data : Data = {};
 
@@ -41,12 +45,45 @@ abstract class Calculator extends EventEmitter
     {
         Debug.log('paths', paths, this);
 
-        for(const key of Object.keys(paths))
+        if(!paths.root)
+        {
+            Debug.error('paths.root in not defined, please define it in the paths object');
+        }
+
+        this.data.root = paths.root?.toString();
+        delete paths.root;
+
+        for(const key in paths)
         {
             const path = paths[key];
 
-            const text = await (await fetch(path)).text();
-            this.data[key] = await JSON.parse(text);
+            if(path)
+            {
+                const extention = path.match(/\.[0-9a-z]+$/i);
+
+                if(!extention)
+                {
+                    Debug.error("invalid filename");
+                    break;
+                }
+
+                switch(extention[0])
+                {
+                    case '.json' : 
+                        const jsonFile = await (await fetch(path)).text();
+                        this.data[key] = await JSON.parse(jsonFile);
+                    break;
+                    case '.js' :
+                        const jsFile = await (await fetch(path)).text();
+                        Debug.log(eval(jsFile));
+
+                    break;
+                }
+            }
+            else
+            {
+                Debug.error(`path on key "${key}" is invalid`);
+            }
         }
 
         this.onDataLoaded();
@@ -57,9 +94,14 @@ abstract class Calculator extends EventEmitter
 
     protected abstract onDataLoaded(): void;
 
-    protected registerChoiceManagerClass(ChoiceManagerClass : any) : void
+    protected registerChoiceManagerClass(ChoiceManagerClass : ChoicesManagerConstructor) : void
     {
         this.choicesManager = new ChoiceManagerClass(this);
+    }
+
+    protected registerDataParserClass(DataParserClass : DataParserConstructor) : void
+    {
+        this.dataParser = new DataParserClass(this);
     }
 
 }

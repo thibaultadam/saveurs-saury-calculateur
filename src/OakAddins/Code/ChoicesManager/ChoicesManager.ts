@@ -1,16 +1,16 @@
-import _ChoicesManager from "../../lib/Choices/ChoicesManager";
-import OakAddinsConfigurateur from "../OakAddinsConfigurateur";
+import _ChoicesManager from "../../../lib/Choices/ChoicesManager";
+import Configurator from "../../../lib/Configurator";
 
 export default class ChoicesManager extends _ChoicesManager
 {
-    constructor(public configurator: OakAddinsConfigurateur)
+    constructor(public configurator: Configurator)
     {
         super(configurator);
     }
 
     protected onBuildChoice()
     {
-
+        
     }
 
     protected onBuildProducts()

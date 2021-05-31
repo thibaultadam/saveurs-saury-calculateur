@@ -1,0 +1,52 @@
+{
+    "data": {
+        
+    },
+    "choices": 
+    {
+        "types": {
+            "phase": {
+                "type": "button",
+                "title": "Phase d'utilisation"
+            },
+            "product": {
+                "type": "button",
+                "title": "Produits",
+                "description": "Produits utilisables dans la phase Fermentation",
+                "params":  {
+                    "call": ["showProducts"], 
+                    "params": [
+                        [0]
+                    ]
+                }
+            },
+            "unit": {
+                "type": "radio",
+                "title": "Unité",
+                "params":  {
+                    "calls": ["buildNext"]
+                }
+            },
+            "value": {
+                "type": "input",
+                "title": "Valeur en ${unit}",
+                "titleParse": {
+                    "unit": "${unit}"
+                },
+                "params":  {
+                    "calls": ["buildNext"]
+                }
+            },
+            "gramsPerLiter" : {
+                "type": "input",
+                "title": "Pour la fermentation ou l'élevage court",
+                "description": "Entrez le nombre de grammes par Litres"
+            },
+            "porcentage" : {
+                "type": "input",
+                "title": "Pour l'élevage long",
+                "description": "Entrez % de bois neuf (100% = barrique neuve)"
+            }
+        }
+    }
+}

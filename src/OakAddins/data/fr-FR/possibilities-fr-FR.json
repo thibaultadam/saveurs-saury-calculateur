@@ -1,0 +1,77 @@
+{
+    "type": "phase",
+    "values": {
+        "Fermentation": {
+            "next": {  
+                "type": "product",
+                "values": {
+                    "Poudre": {
+                        "next": "possibilities-calculation-gramsPerLiter-fr-FR.json",
+                        "params": ["gramsPerLiter"]
+                    },
+                    "Fine de Chêne": {
+                        "next": "possibilities-calculation-gramsPerLiter-fr-FR.json",
+                        "params": ["gramsPerLiter"]
+                    },
+                    "Copeaux" : {
+                        "next": "possibilities-calculation-gramsPerLiter-fr-FR.json",
+                        "params": ["gramsPerLiter"]
+                    }
+                }
+            }
+        },
+        "Elevage Court": {
+            "next": {  
+                "type": "product",
+                "values" : {
+                    "Copeaux": {
+                        "next": "possibilities-calculation-gramsPerLiter-fr-FR.json",
+                        "params" : ["gramsPerLiter"]
+                    },
+                    "Cubes / Dominos / Blocks": {
+                        "next": "possibilities-calculation-gramsPerLiter-fr-FR.json",
+                        "params" : ["gramsPerLiter"]
+                    },  
+                    "Mini Thin Tank Staves / Thin Tank Staves" : {
+                        "next": "possibilities-calculation-gramsPerLiter-fr-FR.json",
+                        "params" : ["gramsPerLiter"]
+                    }
+                }
+            }
+        },
+        "Elevage Long": {
+            "next": {
+                "type": "product",
+                "values" : {
+                    "Winewood": {
+                        "next": "possibilities-calculation-porcentage-fr-FR.json",
+                        "params" : ["porcentage"]
+                    },
+                    "Mini Tank Staves / Tank Staves": {
+                        "next": "possibilities-calculation-porcentage-fr-FR.json",
+                        "params" : ["porcentage"]
+                    },
+                    "XL Stave" : {
+                        "next": "possibilities-calculation-porcentage-fr-FR.json",
+                        "params" : ["porcentage"]
+                    }
+                }
+            }
+        },
+        "Kits Barriques": {
+            "next": {  
+                "type": "product",
+                "values" : {
+                    "Barrel Insert": {
+                        "next": "possibilities-calculation-fr-FR.json",
+                        "params" : []
+                    },
+                    "Oak Chain": {
+                        "next": "possibilities-calculation-fr-FR.json",
+                        "params" : []
+                    }
+                }
+            }
+        }
+    }
+}

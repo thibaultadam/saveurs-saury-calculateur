@@ -12,20 +12,26 @@
 
     <noscript>This Page requires Javascript. Enable Javascript and reload this page to continue.</noscript>
 
-    <div id="calculator-container"></div>
+    <div id="configurator-container"></div>
 
     <script>
 
         const data = {
             'fr-FR': {
-                choices : 'data/fr-FR/choices-fr-FR.json'
+                root: "data/fr-FR",
+                config : 'data/fr-FR/config-fr-FR.json',
+                choices : 'data/fr-FR/choices-fr-FR.json',
+                responseTable : 'data/fr-FR/responses-table-fr-FR.js',
             },
             'en-US': {
-                choices : 'data/en-US/choices-en-US.json'
+                root: "data/en-US",
+                config : 'data/en-US/config-en-US.json',
+                choices : 'data/en-US/choices-en-US.json',
+                responseTable : 'data/en-US/responses-table-en-US.js',
             }
         };
 
-        document.Configurator = new ConfigurateurOakAddin.default('#calculator-container', data['fr-FR']);
+        document.Configurator = new ConfigurateurOakAddin.default('#configurator-container', data['fr-FR']);
     
     </script>
 </body>

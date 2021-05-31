@@ -1,7 +1,7 @@
-import ChoiceContainer from "../../../lib/Choices/ChoiceContainer";
-import ChoiceButton from "../../../lib/Choices/ChoiceButton";
+import ChoiceContainer from "../../../../lib/Choices/ChoiceContainer";
+import ChoiceInput from "../../../../lib/Choices/ChoiceInput";
 
-export default class InputButton extends ChoiceButton
+export default class InputChoice extends ChoiceInput
 {
     constructor(type : string, choiceContainer: ChoiceContainer, ...args : any[])
     {
@@ -15,6 +15,11 @@ export default class InputButton extends ChoiceButton
 
     protected onClick(ev : MouseEvent, ...args : any[]) : void
     {
-        
+
+    }
+
+    protected onChange(ev : Event, ...args : any[]) : void
+    {
+
     }
 }

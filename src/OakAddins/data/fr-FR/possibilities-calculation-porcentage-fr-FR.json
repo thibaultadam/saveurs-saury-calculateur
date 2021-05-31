@@ -1,0 +1,24 @@
+{
+    "type": "unit",
+    "values": {
+        "Hectolitres": {
+            "rootNext" : true
+        },
+        "Gallon": {
+            "rootNext" : true
+        },
+        "next" : {
+            "type": "value",
+            "values": {
+                "fermentation-input": {
+                    "nextByCondition": {
+                        "type": "porcentage",
+                        "values": {
+                            "porcentage-input": {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

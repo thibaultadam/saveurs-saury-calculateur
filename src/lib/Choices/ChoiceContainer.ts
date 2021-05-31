@@ -2,12 +2,18 @@ import { Data } from "../Configurator";
 import Debug from "../Tools/Debug";
 import UIElement from "../UIElement";
 import ChoiceButton, { ChoiceButtonConstructor } from "./ChoiceButton";
-import ChoicesManager from "./ChoicesManager";
+import ChoicesManager, { ChoicesManagerConstructor } from "./ChoicesManager";
 
 export type ContainerCreationCallback = (type : string, ...args : any[]) => HTMLElement;
 
+export type ChoiceContainerConstructor = new (type : string, 
+    containersCreation : ContainerCreationCallback[], 
+    choicesManager: ChoicesManager, 
+    ...args : any[]) 
+    => ChoiceContainer
+
 export default
-class ChoiceContainer extends UIElement {
+abstract class ChoiceContainer extends UIElement {
 
     public container!: HTMLElement;
     public containersbundle: HTMLElement[] = [];

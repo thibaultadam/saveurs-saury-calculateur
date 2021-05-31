@@ -1,6 +1,7 @@
-import Configurator, { ConfiguratorPathes } from "../lib/Configurator";
-import { DebugLevel } from "../lib/Tools/Debug";
+import Configurator, { ConfiguratorPathes } from "../../lib/Configurator";
+import { DebugLevel } from "../../lib/Tools/Debug";
 import ChoicesManager from "./ChoicesManager/ChoicesManager";
+import DataParser from "./Data/DataParser";
 
 export default class OakAddinsConfigurateur extends Configurator 
 {
@@ -12,6 +13,9 @@ export default class OakAddinsConfigurateur extends Configurator
     protected onDataLoaded()
     {
         this.registerChoiceManagerClass(ChoicesManager);
+        
+        this.registerDataParserClass(DataParser);
+        
         this.choicesManager.buildChoice();
     }
 }

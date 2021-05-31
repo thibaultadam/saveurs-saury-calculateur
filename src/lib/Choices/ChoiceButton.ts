@@ -3,25 +3,30 @@ import UIElement from "../UIElement";
 import ChoiceContainer from "./ChoiceContainer";
 import ChoicesEnumerator from "./ChoicesEnumerator";
 
-export type ChoiceButtonConstructor = new (type : string, choiceContainer: ChoiceContainer, ...args : any[]) => ChoiceButton
+export type ChoiceButtonConstructor = new (
+    type : string, 
+    choiceContainer: ChoiceContainer, 
+    ...args : any[]) 
+    => ChoiceButton
 
 export default
 abstract class ChoiceButton extends UIElement {
 
     public type : string;
 
-    public choiceContainer: ChoiceContainer;
     public choiceEnumerator: ChoicesEnumerator;
     public container!: HTMLElement;
     
     protected buildArgs : any[];
 
-    constructor(type : string, choiceContainer: ChoiceContainer, ...args : any[])
+    constructor(
+        type : string, 
+        public choiceContainer: ChoiceContainer, 
+        ...args : any[])
     {
         super();
 
         this.type = type;
-        this.choiceContainer = choiceContainer;
         this.choiceEnumerator = this.choiceContainer.choicesManager.choicesEnumerator;
         this.buildArgs = args;
     }
@@ -41,6 +46,11 @@ abstract class ChoiceButton extends UIElement {
         });
 
         return this;
+    }
+
+    protected click() : void
+    {
+        this.container.click();
     }
 
     protected abstract onBuild(...args : any[]) : void;

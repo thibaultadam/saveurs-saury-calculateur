@@ -3,8 +3,13 @@ import ChoicesEnumerator from "./ChoicesEnumerator";
 import EventEmitter from "../Tools/EventEmitter";
 import DataProvider, { DataProviderConstructor } from "../DataProvider";
 
-import ChoiceContainer, { ContainerCreationCallback } from "./ChoiceContainer";
+import ChoiceContainer, { ChoiceContainerConstructor, ContainerCreationCallback } from "./ChoiceContainer";
 import Debug from "../Tools/Debug";
+
+export type ChoicesManagerConstructor = new (
+    configurator : Configurator,
+    data?: Data) 
+    => ChoicesManager;
 
 export default 
 abstract class ChoicesManager extends EventEmitter
@@ -13,9 +18,11 @@ abstract class ChoicesManager extends EventEmitter
     public dataProvider!: DataProvider;
 
     private choiceContainersCreation : ContainerCreationCallback[] = [];
-    private ChoiceContainerClasses = new Map<string, typeof ChoiceContainer>();
+    private ChoiceContainerClasses = new Map<string, ChoiceContainerConstructor>();
 
-    constructor(public configurator : Configurator, public data: Data = configurator.data)
+    constructor(
+        public configurator : Configurator, 
+        public data: Data = configurator.data)
     {
         super();
         this.configurator = configurator;
@@ -90,7 +97,7 @@ abstract class ChoicesManager extends EventEmitter
      * @param {string} index 
      * @param {typeof ChoiceContainer} ChoiceClass 
      */
-    protected registerChoiceClass(index : string, ChoiceClass : typeof ChoiceContainer)
+    protected registerChoiceClass(index : string, ChoiceClass : ChoiceContainerConstructor)
     {
         this.ChoiceContainerClasses.set(index, ChoiceClass);
         Debug.log(`Registering choice class`);

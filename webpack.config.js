@@ -25,6 +25,10 @@ if(config.assets)
             {
                 assets.push({ from: path.join(src, asset.from), to: path.join(out, asset.to) });
             }
+            else
+            {
+                console.error('invalid asset declaration');
+            }
         }
     }
 }

@@ -10,7 +10,10 @@ class Debug
         switch(Debug.debugLevel)
         {
             case "log" :
-                console.log(...args);
+            // for tracing calls before console.log
+            console.groupCollapsed(...args);
+            console.trace();
+            console.groupEnd();
         }
     }
 
