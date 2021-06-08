@@ -15,7 +15,7 @@ export default class OakAddinsConfigurateur extends Configurator
     {
         this.registerChoiceManagerClass(ChoicesManager);
 
-        // lance la construction du 1er element 
+        // lance la construction du 1er element
         this.choicesManager.buildChoice();
     }
 }

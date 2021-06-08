@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> lib/Choices/ChoicesEnumerator.ts</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="ChoiceContainer.html">ChoiceContainer</a></li><li><a href="ChoicesEnumerator.html">ChoicesEnumerator</a></li><li><a href="Configurator.html">Configurator</a></li><li><a href="UIElement.html">UIElement</a></li></ul><h3>Global</h3><ul><li><a href="global.html#treeParser">treeParser</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>lib/Choices/ChoicesEnumerator.ts</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import Debug from '../Tools/Debug';
+import EventEmitter from '../Tools/EventEmitter';
+
+export type Choice = {
+    label: string,
+    index: number,
+    value: string | null,
+    isFirst: () => boolean,
+    data: Map&lt;string, any>
+};
+
+/**
+ * 
+ * @alias ChoicesEnumerator
+ * @extends EventEmitter
+ */
+export default class ChoicesEnumerator extends EventEmitter
+{
+    /**
+     * toute les étapes de la construction du configurateur
+     * @type {Choice[]}
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+    public choices: Choice[];
+
+    /**
+     * l'étape courante de la construction du configurateur
+     * @type {Choice}
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+    public current: Choice;
+
+    /**
+     * 
+     * @param {string[]} choicesLabels liste des labels des différentes étapes du configurateur permet de générer les choix
+     */
+    constructor(choicesLabels: string[])
+    {
+        super();
+
+        if(!choicesLabels)
+        {
+            Debug.error(`data.choices not defined, you need to define choices in "onDataLoaded" the main class or in a dataFile`);
+        }
+
+        this.choices = [];
+
+        Debug.log("choices Labels", choicesLabels);
+
+        // Initialise tout les choix possibles
+        for(let i = 0; i &lt; choicesLabels.length; i++)
+        {
+            this.choices[i] = {
+                label: choicesLabels[i],
+                index: i,
+                value: null,
+                isFirst: () => (i == 0),
+                data: new Map&lt;string, any>()
+            };
+        }
+
+        this.current = this.choices[0];
+    }
+
+    /**
+     * Contien le choix suivant (retourne l'actuel si il n'y a pas de suivant)
+     * @type {Choice}
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+    public get nextChoice() : Choice
+    {
+        if(this.current.index + 1 &lt; this.choices.length)
+        {
+            return this.choices[this.current.index + 1];
+        }
+
+        return this.current;
+    }
+
+    /**
+     * Contien le choix precedant (retourne l'actuel si il n'y a pas de precedant)
+     * @returns {any}
+     * @type {Choice}
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+    public get previousChoice() : Choice
+    {
+        if(this.current.index - 1 >= 0)
+        {
+            return this.choices[this.current.index - 1];
+        }
+
+        return this.current;
+    }
+
+    /**
+     * Fait ce déplacer le choix actuel vers un autre en fonction de sont index, réinitialise au passage les choix supérieurs
+     * @param {number} index 
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+    public goTo(index: number) : void
+    {
+        if(index &lt; 0 || index >= this.choices.length)
+        {
+            Debug.error('Index exceding choices size');
+        }
+
+        this.current = this.choices[index];
+
+        for(let i = this.current.index; i &lt; this.choices.length; i++)
+        {
+            this.choices[i].value = null;
+        }
+        
+        if(!this.isEnd())
+        {
+            this.emit('change');
+        }
+        else
+        {
+            this.emit('end');
+        }
+    }
+
+    /**
+     * Permets de définir la valeur d'un choix en fonction de sont index
+     * @param {number} index
+     * @param {string} value
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+    public set(index : number, value : string) : void
+    {
+        this.choices[index].value = value.toString(); // pour ne pas copier la référance
+    }
+
+    /**
+     * @returns true si le choix actuel est le dernier
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+    public isEnd()
+    {
+        return (this.nextChoice == this.current);
+    }
+
+    /**
+     * Permets de récupérer un choix en fonction de son label (déconseillé)
+     * @param {string} label
+     * @returns Le premier choix trouvé avec le label correspondant
+     * @private
+     * @memberof ChoicesEnumerator
+     * @deprecated
+     */
+    private getByLabel(label : string) : Choice | undefined
+    {
+        return this.choices.find(choice => choice.label === label);
+    }
+
+    /**
+     * Permets de récupérer un choix en fonction de son index
+     * @param {number} index
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+    public get(index : number): Choice
+    {
+        return this.choices[index];
+    }
+
+    /**
+     * Permets de récupérer le nombre de choix qui ont une valeur définie
+     * @returns nombre de choix complété
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+     public get completedCount(): number
+     {
+         let count = 0;
+         for(const choice of this.choices)
+         {
+            if(choice.value) count++;
+         }
+         return count;
+     }
+
+    /**
+     * Permets de récupérer les choix qui ont une valeur définie
+     * @returns tableau choix complété
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+    public completedArray(): Choice[]
+    {
+        const array = [];
+
+        for(const choice of this.choices)
+        {
+            if(choice.value)
+            {
+                array.push(choice);
+            }
+        }
+
+        return array;
+    }
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

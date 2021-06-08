@@ -7,7 +7,7 @@
     "build": "webpack --progress --mode=production",
     "dev-nohost": "webpack --watch --progress --mode=development",
     "dev": "concurrently -k -n \"Webpack,Host\" -p \"[{name}]\" -c \"blue,green\" \"webpack --watch --progress --mode=development\" \"node host.js --path=build --port=6600\"",
-    "doc": "jsdoc -c docs/jsDocConfig.json",
+    "doc": "jsdoc -c docs/jsDocConfig.json -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

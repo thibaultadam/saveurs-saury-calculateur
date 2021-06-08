@@ -15,7 +15,7 @@ abstract class ChoiceInput extends UIElement {
     public type : string;
 
     public choiceEnumerator: ChoicesEnumerator;
-    public container!: HTMLInputElement;
+    public $container!: HTMLInputElement;
 
     protected buildArgs : any[];
     public value: string = "";
@@ -36,19 +36,19 @@ abstract class ChoiceInput extends UIElement {
     {
         Debug.log(`Building button type "${this.type}" with args`, ...this.buildArgs)
 
-        this.container = buildCallback(...this.buildArgs);
+        this.$container = buildCallback(...this.buildArgs);
 
         this.onBuild(...this.buildArgs);
         this.emit('build', ...this.buildArgs);
 
-        this.container.addEventListener('click', (ev: MouseEvent) => {
+        this.$container.addEventListener('click', (ev: MouseEvent) => {
             this.emit('click', ev, ...this.buildArgs);
             this.onClick(ev, ...this.buildArgs);
         });
 
-        this.container.addEventListener('change', (ev: Event) => {
+        this.$container.addEventListener('change', (ev: Event) => {
 
-            this.value = this.container.value;
+            this.value = this.$container.value;
 
             this.emit('change', ev, ...this.buildArgs);
             this.onChange(ev, ...this.buildArgs);
@@ -59,13 +59,13 @@ abstract class ChoiceInput extends UIElement {
 
     protected click() : void
     {
-        this.container.click();
+        this.$container.click();
     }
 
     protected change(value: string = "") : void
     {
-        this.container.value = value;
-        this.container.dispatchEvent(new Event('change'));
+        this.$container.value = value;
+        this.$container.dispatchEvent(new Event('change'));
     }
 
     protected abstract onBuild(...args : any[]) : void;

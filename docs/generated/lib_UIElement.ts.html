@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Home</title>
+  <title> lib/UIElement.ts</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -73,37 +75,60 @@
         <div class="core" id="main-content-wrapper">
             <div class="content">
                 <header class="page-title">
-                    <p></p>
-                    <h1>Home</h1>
+                    <p>Source</p>
+                    <h1>lib/UIElement.ts</h1>
                 </header>
                 
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><h1>Configutateur - OakAddins</h1></article>
+        <article>
+            <pre class="prettyprint source linenums"><code>import Debug from "./Tools/Debug";
+import EventEmitter from "./Tools/EventEmitter";
+
+/**
+ * //TODO : Description
+ * @alias UIElement
+ */
+export default 
+abstract class UIElement extends EventEmitter
+{
+    /**
+     * @memberof UIElement
+     */
+    constructor()
+    {
+        super();
+        window?.addEventListener('resize', () => this.emit('changeDisplaySize'));
+    }
+
+    /**
+     * @type {Map&lt;string, number>}
+     * @public
+     * @static
+     */
+    public static sizes = new Map&lt;string, number>();
+
+    /**
+     * @param  {string} sizeKey
+     * @returns {boolean}
+     * @protected
+     * @memberof UIElement
+     */
+    protected isDisplaySize(sizeKey : string) : boolean
+    {
+        if(!UIElement.sizes.has(sizeKey))
+        {
+            Debug.error('display size key not found');
+        }
+
+        return window.matchMedia(`(min-width: ${UIElement.sizes.get(sizeKey)}px)`).matches;
+    }
+}</code></pre>
+        </article>
     </section>
-
-
 
 
 

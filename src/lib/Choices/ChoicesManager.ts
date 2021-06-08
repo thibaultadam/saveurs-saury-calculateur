@@ -60,7 +60,7 @@ abstract class ChoicesManager extends EventEmitter
      * // BUG : ajouter {} pour générer la doc
      */
     protected abstract onBuildChoice() : void;
-    //{}
+    //#{}
 
     /**
      * Initialize the creation of a new ChoiceContainer according to his type 

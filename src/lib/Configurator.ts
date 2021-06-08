@@ -16,12 +16,12 @@ export type Data = {
  * Class mère de tout le configurateur
  * @alias Configurator
  * @extends EventEmitter
- * @virtual
+ * @abstract
  */
 export default
 abstract class Configurator extends EventEmitter
 {
-    container: HTMLElement | null;
+    $container: HTMLElement | null;
     choicesManager!: ChoicesManager;
     dataParser!: DataParser | undefined;
     
@@ -40,7 +40,7 @@ abstract class Configurator extends EventEmitter
 
         Debug.debugLevel = debugLevel || Debug.debugLevel;
 
-        this.container = document.querySelector(container);
+        this.$container = document.querySelector(container);
 
         this.fetchDataFiles(paths);
     }
