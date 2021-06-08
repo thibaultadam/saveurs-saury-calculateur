@@ -1,20 +1,42 @@
+import Debug from "./Tools/Debug";
 import EventEmitter from "./Tools/EventEmitter";
 
+/**
+ * //TODO : Description
+ * @alias UIElement
+ */
 export default 
 abstract class UIElement extends EventEmitter
 {
+    /**
+     * @memberof UIElement
+     */
     constructor()
     {
         super();
+        window?.addEventListener('resize', () => this.emit('changeDisplaySize'));
     }
 
-    isDisplaySize(size : "s" | "m" | "l") : boolean
+    /**
+     * @type {Map<string, number>}
+     * @public
+     * @static
+     */
+    public static sizes = new Map<string, number>();
+
+    /**
+     * @param  {string} sizeKey
+     * @returns {boolean}
+     * @protected
+     * @memberof UIElement
+     */
+    protected isDisplaySize(sizeKey : string) : boolean
     {
-        switch(size)
+        if(!UIElement.sizes.has(sizeKey))
         {
-            case "s": return window.matchMedia("(min-width: 0px)").matches;
-            case "m": return window.matchMedia("(min-width: 992px)").matches;
-            case "l": return window.matchMedia("(min-width: 1200px)").matches;
+            Debug.error('display size key not found');
         }
+
+        return window.matchMedia(`(min-width: ${UIElement.sizes.get(sizeKey)}px)`).matches;
     }
 }

@@ -8,14 +8,14 @@ export default class OakAddinsConfigurateur extends Configurator
     constructor(container: string, path : ConfiguratorPathes, debugLevel? : DebugLevel)
     {
         super(container, path, debugLevel);
+        this.registerDataParserClass(DataParser);
     }
     
     protected onDataLoaded()
     {
         this.registerChoiceManagerClass(ChoicesManager);
-        
-        this.registerDataParserClass(DataParser);
-        
+
+        // lance la construction du 1er element 
         this.choicesManager.buildChoice();
     }
 }

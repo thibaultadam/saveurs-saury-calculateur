@@ -63,11 +63,11 @@
                 "type": "product",
                 "values" : {
                     "Barrel Insert": {
-                        "next": "possibilities-calculation-fr-FR.json",
+                        "next": "possibilities-calculation-porcentage-fr-FR.json",
                         "params" : []
                     },
                     "Oak Chain": {
-                        "next": "possibilities-calculation-fr-FR.json",
+                        "next": "possibilities-calculation-porcentage-fr-FR.json",
                         "params" : []
                     }
                 }

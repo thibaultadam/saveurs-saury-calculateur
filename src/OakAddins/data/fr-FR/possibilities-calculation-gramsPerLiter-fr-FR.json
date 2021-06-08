@@ -6,16 +6,16 @@
         },
         "Gallon": {
             "rootNext" : true
-        },
-        "next" : {
-            "type": "value",
-            "values": {
-                "fermentation-input": {
-                    "nextByCondition": {
-                        "type": "gramsPerLiter",
-                        "values": {
-                            "gramsPerLiter-input": {}
-                        }
+        }
+    },
+    "next" : {
+        "type": "value",
+        "values": {
+            "fermentation-input": {
+                "next": {
+                    "type": "gramsPerLiter",
+                    "values": {
+                        "gramsPerLiter-input": {}
                     }
                 }
             }

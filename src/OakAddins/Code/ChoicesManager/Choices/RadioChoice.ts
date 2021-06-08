@@ -1,7 +1,7 @@
 import ChoiceContainer from "../../../../lib/Choices/ChoiceContainer";
 import ChoiceButton from "../../../../lib/Choices/ChoiceButton";
 
-export default class InputButton extends ChoiceButton
+export default class RadioChoice extends ChoiceButton
 {
     constructor(type : string, choiceContainer: ChoiceContainer, ...args : any[])
     {

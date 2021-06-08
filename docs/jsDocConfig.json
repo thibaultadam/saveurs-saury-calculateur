@@ -1,0 +1,22 @@
+{
+    "source": {
+        "include": ["./src"],
+        "includePattern": ".ts$",
+        "excludePattern": "(node_modules/|docs/|build)"
+    },
+    "plugins": [
+        "plugins/markdown",
+        "plugins/typescript"
+    ],
+    "typescript": {
+      "moduleRoot": "./src"
+    },
+    "opts": {
+        "template": "node_modules/better-docs",
+        "encoding": "utf8",
+        "readme": "./readme.md",
+        "destination": "docs/generated",
+        "recurse": true,
+        "verbose": true
+    }
+}

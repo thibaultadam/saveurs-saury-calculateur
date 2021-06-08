@@ -32,15 +32,22 @@ if(config.assets)
         }
     }
 }
+else
+{
+    console.log('[lib]', 'no assets defined');
+}
+
+const entry = path.join(src, config.main);
+const name = config.name || 'Configurator';
 
 module.exports = {
     devtool: 'eval-source-map',
-    entry: path.join(src, config.main),
+    entry: entry,
     output: {
-        filename: `${config.name}.js`,
+        filename: `${name}.js`,
         path: path.join(__dirname, 'build'),
         libraryTarget: 'var',
-        library: config.name
+        library: name
     },
     plugins: [
         new CopyPlugin({

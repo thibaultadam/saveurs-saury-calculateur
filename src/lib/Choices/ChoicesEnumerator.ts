@@ -1,24 +1,41 @@
 import Debug from '../Tools/Debug';
-import UIElement from '../UIElement';
+import EventEmitter from '../Tools/EventEmitter';
 
-export
-type ChoiceType = {
+export type Choice = {
     label: string,
     index: number,
     value: string | null,
-    isFirst: Function,
+    isFirst: () => boolean,
     data: Map<string, any>
 };
 
-export default
 /**
- * ChoicesEnumerator
+ * 
+ * @alias ChoicesEnumerator
+ * @extends EventEmitter
  */
-class ChoicesEnumerator extends UIElement
+export default class ChoicesEnumerator extends EventEmitter
 {
-    choices: ChoiceType[];
-    current: ChoiceType;
+    /**
+     * toute les étapes de la construction du configurateur
+     * @type {Choice[]}
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+    public choices: Choice[];
 
+    /**
+     * l'étape courante de la construction du configurateur
+     * @type {Choice}
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+    public current: Choice;
+
+    /**
+     * 
+     * @param {string[]} choicesLabels liste des labels des différentes étapes du configurateur permet de générer les choix
+     */
     constructor(choicesLabels: string[])
     {
         super();
@@ -48,40 +65,57 @@ class ChoicesEnumerator extends UIElement
     }
 
     /**
-     * Permet de recuperer le choix suivant (retourne l'actuel si il n'y a pas de suivant)
-     * @returns {any}
+     * Contien le choix suivant (retourne l'actuel si il n'y a pas de suivant)
+     * @type {Choice}
+     * @public
+     * @memberof ChoicesEnumerator
      */
-    get nextChoice() : ChoiceType
+    public get nextChoice() : Choice
     {
         if(this.current.index + 1 < this.choices.length)
+        {
             return this.choices[this.current.index + 1];
+        }
+
         return this.current;
     }
 
     /**
-     * Permet de recuperer le choix precedant (retourne l'actuel si il n'y a pas de precedant)
+     * Contien le choix precedant (retourne l'actuel si il n'y a pas de precedant)
      * @returns {any}
+     * @type {Choice}
+     * @public
+     * @memberof ChoicesEnumerator
      */
-    get previousChoice() : any
+    public get previousChoice() : Choice
     {
         if(this.current.index - 1 >= 0)
+        {
             return this.choices[this.current.index - 1];
+        }
+
         return this.current;
     }
 
     /**
-     * // TODO : goTo Description
+     * Fait ce déplacer le choix actuel vers un autre en fonction de sont index, réinitialise au passage les choix supérieurs
+     * @param {number} index 
+     * @public
+     * @memberof ChoicesEnumerator
      */
-    goTo(index: number) : void
+    public goTo(index: number) : void
     {
+        if(index < 0 || index >= this.choices.length)
+        {
+            Debug.error('Index exceding choices size');
+        }
+
         this.current = this.choices[index];
 
         for(let i = this.current.index; i < this.choices.length; i++)
         {
             this.choices[i].value = null;
         }
-
-        Debug.log(`ChoiceManager.goTo(${index})`, this);
         
         if(!this.isEnd())
         {
@@ -94,70 +128,84 @@ class ChoicesEnumerator extends UIElement
     }
 
     /**
-     * // TODO : setDOM Description
+     * Permets de définir la valeur d'un choix en fonction de sont index
+     * @param {number} index
+     * @param {string} value
+     * @public
+     * @memberof ChoicesEnumerator
      */
-    setData(index: number, data : any) : void
+    public set(index : number, value : string) : void
     {
-        this.choices[index].data = data;
+        this.choices[index].value = value.toString(); // pour ne pas copier la référance
     }
 
     /**
-     * // TODO : set Description
+     * @returns true si le choix actuel est le dernier
+     * @public
+     * @memberof ChoicesEnumerator
      */
-    set(index : number, choice : string)
-    {
-        // .toString() pour faire une copie de la string (ne pas copier la référence)
-        this.choices[index].value = choice.toString();
-        Debug.log("ChoiceManager.set()", this);
-    }
-
-    /**
-     * @returns true if current is last choice and current.value is defined
-     */
-    isEnd()
+    public isEnd()
     {
         return (this.nextChoice == this.current);
     }
 
     /**
-     * //TODO : getByLabel description
+     * Permets de récupérer un choix en fonction de son label (déconseillé)
+     * @param {string} label
+     * @returns Le premier choix trouvé avec le label correspondant
+     * @private
+     * @memberof ChoicesEnumerator
+     * @deprecated
      */
-    private getByLabel(label : string) : ChoiceType | undefined
+    private getByLabel(label : string) : Choice | undefined
     {
         return this.choices.find(choice => choice.label === label);
     }
 
     /**
-     * // TODO : completedChoicesCount Description
+     * Permets de récupérer un choix en fonction de son index
+     * @param {number} index
+     * @public
+     * @memberof ChoicesEnumerator
      */
-    get completedChoicesCount()
-    {
-        let count = 0;
-        for(const choice of this.choices)
-        {
-            if(choice.value) count++;
-            else break;
-        }
-        return count;
-    }
-
-    /**
-     * // TODO : set Description
-     */
-    get(index : number)
+    public get(index : number): Choice
     {
         return this.choices[index];
     }
 
     /**
-     * //TODO : toArray description
+     * Permets de récupérer le nombre de choix qui ont une valeur définie
+     * @returns nombre de choix complété
+     * @public
+     * @memberof ChoicesEnumerator
      */
-    toArray()
+     public get completedCount(): number
+     {
+         let count = 0;
+         for(const choice of this.choices)
+         {
+            if(choice.value) count++;
+         }
+         return count;
+     }
+
+    /**
+     * Permets de récupérer les choix qui ont une valeur définie
+     * @returns tableau choix complété
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+    public completedArray(): Choice[]
     {
         const array = [];
 
         for(const choice of this.choices)
-            if(choice.value) array.push(choice);
+        {
+            if(choice.value)
+            {
+                array.push(choice);
+            }
+        }
 
         return array;
     }

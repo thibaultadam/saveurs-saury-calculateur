@@ -11,6 +11,11 @@ export type ChoicesManagerConstructor = new (
     data?: Data) 
     => ChoicesManager;
 
+/**
+ * @alias ChoicesManager
+ * @extends EventEmitter
+ * @abstract
+ */
 export default 
 abstract class ChoicesManager extends EventEmitter
 {
@@ -31,33 +36,42 @@ abstract class ChoicesManager extends EventEmitter
 
     /**
      * // TODO : buildChoice description
+     * @public
+     * @returns {void}
+     * @memberof ChoicesManager
      */
     public buildChoice() : void
     {
         this.emit('build');
         this.onBuildChoice();
     }
-    protected abstract onBuildChoice() : void 
-    
+
     /**
-     * // TODO : buildProducts description
+     * Appeler lors ce que la création d'un choix est lancer, cette fonction sert au lancement de la création des containers de choix
+     * @example
+     * onBuildChoice()
+     * {
+     *  this.createChoiceContainer('type', data);
+     * }
+     * @protected
+     * @abstract
+     * @returns {void}
+     * @memberof ChoicesManager
+     * // BUG : ajouter {} pour générer la doc
      */
-    protected buildProducts() : void
-    {
-        this.emit('buildProducts');
-        this.onBuildProducts()
-        // TODO : buildProduct
-    }
-    protected abstract onBuildProducts() : void
+    protected abstract onBuildChoice() : void;
+    //{}
 
     /**
      * Initialize the creation of a new ChoiceContainer according to his type 
-     * @returns {ChoiceContainer} the freshly created container
      * @param {string} type 
      * @param {any[]} data 
      * @param {any[]} args
+     * @protected
+     * @returns {ChoiceContainer | null}
+     * @memberof ChoicesManager
      */
-    protected createChoiceContainer(type : string, ...args : any[]) : ChoiceContainer | null
+    protected createChoiceContainer(type : string, ...args : any[]): ChoiceContainer | null
     {
         if(this.ChoiceContainerClasses.has(type))
         {
@@ -85,8 +99,11 @@ abstract class ChoicesManager extends EventEmitter
     /**
      * //TODO : registerChoiceContainersCreation description
      * @param {ContainerCreationCallback} creationCallback 
+     * @protected
+     * @returns {void}
+     * @memberof ChoicesManager
      */
-    protected registerChoiceContainersCreation(creationCallback : ContainerCreationCallback)
+    protected addChoiceContainersCreation(creationCallback : ContainerCreationCallback): void
     {
         this.choiceContainersCreation.push(creationCallback);
         Debug.log(`Registering GLOBAL choice container callback`);
@@ -95,9 +112,12 @@ abstract class ChoicesManager extends EventEmitter
     /**
      * // TODO : registerDataProviderClass description
      * @param {string} index 
-     * @param {typeof ChoiceContainer} ChoiceClass 
+     * @param {ChoiceContainer} ChoiceClass 
+     * @protected
+     * @returns {void}
+     * @memberof ChoicesManager
      */
-    protected registerChoiceClass(index : string, ChoiceClass : ChoiceContainerConstructor)
+    protected registerChoiceClass(index : string, ChoiceClass : ChoiceContainerConstructor): void
     {
         this.ChoiceContainerClasses.set(index, ChoiceClass);
         Debug.log(`Registering choice class`);
@@ -105,9 +125,12 @@ abstract class ChoicesManager extends EventEmitter
 
     /**
      * // TODO : registerDataProviderClass description
-     * @param {typeof SuperDataProvider} DataProviderClass 
+     * @param {SuperDataProvider} DataProviderClass 
+     * @protected
+     * @returns {void}
+     * @memberof ChoicesManager
      */
-    protected registerDataProviderClass(DataProvider : DataProviderConstructor)
+    protected registerDataProviderClass(DataProvider : DataProviderConstructor): void
     {
         this.dataProvider = new DataProvider(this);
         Debug.log(`Registering DataProvider class`);

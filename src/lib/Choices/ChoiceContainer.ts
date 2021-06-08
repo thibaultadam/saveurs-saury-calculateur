@@ -12,6 +12,12 @@ export type ChoiceContainerConstructor = new (type : string,
     ...args : any[]) 
     => ChoiceContainer
 
+/**
+ * Class abstraite des conteneurs de choix
+ * @alias ChoiceContainer
+ * @extends UIElement
+ * @virtual
+ */
 export default
 abstract class ChoiceContainer extends UIElement {
 
@@ -30,6 +36,7 @@ abstract class ChoiceContainer extends UIElement {
      * @param choicesManager 
      * @param data 
      * @param args...
+     * @memberof ChoiceContainer
      */
     constructor(
         public type : string, 
@@ -52,6 +59,8 @@ abstract class ChoiceContainer extends UIElement {
     /**
      * // TODO creationCallback description
      * @param creationCallback
+     * @public
+     * @memberof ChoiceContainer
      */
     public createNewContainer(creationCallback : ContainerCreationCallback)
     {
@@ -74,6 +83,8 @@ abstract class ChoiceContainer extends UIElement {
     /**
      * //TODO : createButton description
      * @param args 
+     * @protected
+     * @memberof ChoiceContainer
      */
     protected createButton(...args : any[]) : ChoiceButton
     {
@@ -90,6 +101,8 @@ abstract class ChoiceContainer extends UIElement {
     /**
      * //TODO : createButton registerButtonClass
      * @param ButtonClass 
+     * @protected
+     * @memberof ChoiceContainer
      */
     protected registerButtonClass(ButtonClass : ChoiceButtonConstructor)
     {

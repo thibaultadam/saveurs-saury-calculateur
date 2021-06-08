@@ -6,12 +6,17 @@ export type DataParserConstructor = new (
     data? : Data) 
     => DataParser
 
-export type DataParserCallback = (data: any) => any;
+export type DataParserCallback = (sourceData: any) => any;
+
+export type DataParserCallbackData = {
+    callback: DataParserCallback,
+    thisArg: any
+};
 
 export default
 abstract class DataParser {
     
-    protected parsers = new Map<string, DataParserCallback>();
+    protected parsers = new Map<string, DataParserCallbackData>();
 
     constructor(
         public configurator: Configurator,
@@ -21,16 +26,19 @@ abstract class DataParser {
 
     }
 
-    protected addDataParser(dataKey: string, callback: DataParserCallback) : void 
+    protected addDataParser(dataKey: string, callback: DataParserCallback, thisArg?: any): void 
     {
-        this.parsers.set(dataKey, callback);
+        this.parsers.set(dataKey, { 
+            callback,
+            thisArg
+        });
     }
 
-    public parse()
+    public async parse(): Promise<void>
     {
         for(const parser of this.parsers.entries())
         {
-            const data = this.data[parser[0]];
+            let data = this.data[parser[0]];
 
             if(!data)
             {
@@ -38,7 +46,7 @@ abstract class DataParser {
             }
 
             try {
-                parser[1](data);
+                this.data[parser[0]] = await parser[1].callback.call(parser[1].thisArg, data);
             }
             catch(error)
             {

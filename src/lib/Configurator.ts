@@ -12,6 +12,12 @@ export type Data = {
     [index: string] : any
 }
 
+/**
+ * Class mère de tout le configurateur
+ * @alias Configurator
+ * @extends EventEmitter
+ * @virtual
+ */
 export default
 abstract class Configurator extends EventEmitter
 {
@@ -22,9 +28,11 @@ abstract class Configurator extends EventEmitter
     data : Data = {};
 
     /**
-     * //TODO : Configurator constructor description
-     * @param container
-     * @param paths
+     * 
+     * @param  {string} container
+     * @param  {ConfiguratorPathes} paths
+     * @param {DebugLevel} debugLevel?
+     * @memberof Configurator
      */
     constructor(container : string, paths : ConfiguratorPathes, debugLevel? : DebugLevel) 
     {
@@ -40,8 +48,11 @@ abstract class Configurator extends EventEmitter
     /**
      * Récuperation de toutes les données externes avec lesquelles sera contruit le Configurateur
      * @param paths 
+     * @returns {Promise<void>}
+     * @private
+     * @memberof Configurator
      */
-    private async fetchDataFiles(paths : ConfiguratorPathes = {})
+    private async fetchDataFiles(paths : ConfiguratorPathes = {}): Promise<void>
     {
         Debug.log('paths', paths, this);
 
@@ -71,12 +82,11 @@ abstract class Configurator extends EventEmitter
                 {
                     case '.json' : 
                         const jsonFile = await (await fetch(path)).text();
-                        this.data[key] = await JSON.parse(jsonFile);
+                        this.data[key] = JSON.parse(jsonFile);
                     break;
                     case '.js' :
                         const jsFile = await (await fetch(path)).text();
-                        Debug.log(eval(jsFile));
-
+                        this.data[key] = eval(jsFile);
                     break;
                 }
             }
@@ -86,20 +96,48 @@ abstract class Configurator extends EventEmitter
             }
         }
 
+        await this.dataParser?.parse();
         this.onDataLoaded();
 
         this.emit('fetched');
         Debug.log('data Loaded', this.data);
     }
 
+    /**
+     * 
+     * @returns {void}
+     * @protected
+     * @abstract
+     * @example
+     * onDataLoaded()
+     * {
+     *  this.registerChoiceManagerClass(ChoicesManager);
+     *  this.choiceManager.buildChoice();
+     * }
+     * @memberof Configurator
+     */
     protected abstract onDataLoaded(): void;
 
-    protected registerChoiceManagerClass(ChoiceManagerClass : ChoicesManagerConstructor) : void
+    
+    /**
+     * 
+     * @param  {ChoicesManagerConstructor} ChoiceManagerClass
+     * @returns {void}
+     * @protected
+     * @memberof Configurator
+     */
+    protected registerChoiceManagerClass(ChoiceManagerClass : ChoicesManagerConstructor): void
     {
         this.choicesManager = new ChoiceManagerClass(this);
     }
-
-    protected registerDataParserClass(DataParserClass : DataParserConstructor) : void
+    /**
+     * 
+     * @param  {DataParserConstructor} DataParserClass
+     * @returns {void}
+     * @protected
+     * @memberof Configurator
+     */
+    protected registerDataParserClass(DataParserClass : DataParserConstructor): void
     {
         this.dataParser = new DataParserClass(this);
     }
