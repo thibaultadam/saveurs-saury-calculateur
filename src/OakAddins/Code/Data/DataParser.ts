@@ -1,8 +1,8 @@
-import Configurator from "../../../lib/Configurator";
-import SuperDataParser from "../../../lib/Data/DataParser";
-import Debug from "../../../lib/Tools/Debug";
+import {Configurator} from "../../../lib/Configurator";
+import {DataParser as _DataParser} from "../../../lib/Data/DataParser";
+import {Debug} from "../../../lib/Tools/Debug";
 
-type JsonTypes = number | string | boolean | {[index : string] : JsonTypes} | JsonTypes[] | null | undefined;
+export type JsonTypes = number | string | boolean | {[index : string] : JsonTypes} | JsonTypes[] | null | undefined;
 
 export type TreeNode = {
     type: string,
@@ -16,8 +16,8 @@ export type TreeNode = {
     next?: TreeNode | string
 }
 
-export default
-class DataParser extends SuperDataParser {
+export
+class DataParser extends _DataParser {
 
     constructor(configurator: Configurator)
     {

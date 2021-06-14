@@ -1,7 +1,7 @@
 // original code adapted in typescript from https://gist.github.com/mudge/5830382
 
 /* Polyfill EventEmitter. */
-export default
+export 
 abstract class EventEmitter {
     events: any
 

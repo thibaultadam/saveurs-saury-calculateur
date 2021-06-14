@@ -1,10 +1,10 @@
-import Configurator, { Data } from "../Configurator";
-import ChoicesEnumerator from "./ChoicesEnumerator";
-import EventEmitter from "../Tools/EventEmitter";
-import DataProvider, { DataProviderConstructor } from "../DataProvider";
+import {Configurator, Data } from "../Configurator";
+import {ChoicesEnumerator} from "./ChoicesEnumerator";
+import {EventEmitter} from "../Tools/EventEmitter";
+import {DataProvider, DataProviderConstructor } from "../DataProvider";
 
-import ChoiceContainer, { ChoiceContainerConstructor, ContainerCreationCallback } from "./ChoiceContainer";
-import Debug from "../Tools/Debug";
+import {ChoiceContainer, ChoiceContainerConstructor, ContainerCreationCallback } from "./ChoiceContainer";
+import {Debug} from "../Tools/Debug";
 
 export type ChoicesManagerConstructor = new (
     configurator : Configurator,
@@ -16,7 +16,7 @@ export type ChoicesManagerConstructor = new (
  * @extends EventEmitter
  * @abstract
  */
-export default 
+export 
 abstract class ChoicesManager extends EventEmitter
 {
     public choicesEnumerator: ChoicesEnumerator;
@@ -130,7 +130,7 @@ abstract class ChoicesManager extends EventEmitter
      * @returns {void}
      * @memberof ChoicesManager
      */
-    protected registerDataProviderClass(DataProvider : DataProviderConstructor): void
+    protected registerDataProviderClass<TDataProvider>(DataProvider : DataProviderConstructor): void
     {
         this.dataProvider = new DataProvider(this);
         Debug.log(`Registering DataProvider class`);

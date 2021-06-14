@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "Configurator",
+    "outDir": "build",
     "target": "ES6",
     "strict": true,
     "sourceMap": true

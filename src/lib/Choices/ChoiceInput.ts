@@ -1,7 +1,7 @@
-import Debug from "../Tools/Debug";
-import UIElement from "../UIElement";
-import ChoiceContainer from "./ChoiceContainer";
-import ChoicesEnumerator from "./ChoicesEnumerator";
+import {Debug} from "../Tools/Debug";
+import {UIElement} from "../UIElement";
+import {ChoiceContainer} from "./ChoiceContainer";
+import {ChoicesEnumerator} from "./ChoicesEnumerator";
 
 export type ChoiceInputConstructor = new (
     type : string, 
@@ -9,7 +9,7 @@ export type ChoiceInputConstructor = new (
     ...args : any[]) 
     => ChoiceInput
 
-export default
+export
 abstract class ChoiceInput extends UIElement {
 
     public type : string;

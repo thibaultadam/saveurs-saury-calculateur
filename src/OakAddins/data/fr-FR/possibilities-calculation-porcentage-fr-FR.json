@@ -14,9 +14,7 @@
             "fermentation-input": {
                 "next": {
                     "type": "porcentage",
-                    "values": {
-                        "porcentage-input": {}
-                    }
+                    "end": true
                 }
             }
         }

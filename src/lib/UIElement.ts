@@ -1,11 +1,11 @@
-import Debug from "./Tools/Debug";
-import EventEmitter from "./Tools/EventEmitter";
+import {Debug} from "./Tools/Debug";
+import {EventEmitter} from "./Tools/EventEmitter";
 
 /**
  * //TODO : Description
  * @alias UIElement
  */
-export default 
+export  
 abstract class UIElement extends EventEmitter
 {
     /**

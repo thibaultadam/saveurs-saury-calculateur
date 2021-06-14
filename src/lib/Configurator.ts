@@ -1,7 +1,7 @@
-import ChoicesManager, { ChoicesManagerConstructor } from './Choices/ChoicesManager';
-import DataParser, { DataParserConstructor } from './Data/DataParser';
-import Debug, { DebugLevel } from './Tools/Debug';
-import EventEmitter from './Tools/EventEmitter';
+import { ChoicesManager, ChoicesManagerConstructor } from './Choices/ChoicesManager';
+import { DataParser, DataParserConstructor } from './Data/DataParser';
+import { Debug, DebugLevel } from './Tools/Debug';
+import { EventEmitter } from './Tools/EventEmitter';
 
 export type ConfiguratorPathes = {
     root?: string,
@@ -18,7 +18,7 @@ export type Data = {
  * @extends EventEmitter
  * @abstract
  */
-export default
+export
 abstract class Configurator extends EventEmitter
 {
     $container: HTMLElement | null;
@@ -97,10 +97,10 @@ abstract class Configurator extends EventEmitter
         }
 
         await this.dataParser?.parse();
-        this.onDataLoaded();
+        Debug.log('data fully Loaded and parsed', this.data);
 
-        this.emit('fetched');
-        Debug.log('data Loaded', this.data);
+        this.onDataLoaded();
+        this.emit('dataLoaded');
     }
 
     /**

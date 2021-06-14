@@ -4,8 +4,9 @@ const { exec } = require('child_process');
 
 const inDir = path.join(__dirname, '../src');
 const outDir  = path.join(__dirname, './sources');
+const thenCommand = `jsdoc -c docs/jsDocConfig.json -p`;
 
-const parsedFiles = parseRepetory('');
+const parsedFiles = parseRepetory('./');
 
 function parseRepetory(repertoryPath, parsedFiles = [])
 {
@@ -15,8 +16,9 @@ function parseRepetory(repertoryPath, parsedFiles = [])
 
     for(const fileName of files)
     {
-        // si le nom du fichier a une extention
-        if(fileName.match(/\.[0-9a-z]+$/i))
+        const extention = fileName.match(/\.[0-9a-z]+$/i)
+
+        if(extention && extention[0] === '.ts')
         {
             parsedFiles.push({
                 path: `${path.join(outDir, repertoryPath)}/${fileName}`,
@@ -31,6 +33,7 @@ function parseRepetory(repertoryPath, parsedFiles = [])
 
     for(const repertory of repertoriesToParse)
     {
+        // vérification de l'éxitance du dossier
         if(!fs.readdirSync(path.join(outDir, repertory)))
         {
             fs.mkdirSync(path.join(outDir, repertory));
@@ -47,7 +50,7 @@ for(const file of parsedFiles)
     fs.writeFileSync(file.path, file.content);
 }
 
-exec(`jsdoc -c docs/jsDocConfig.json -p`, (error, stdout, stderr) => {
+exec(thenCommand, (error, stdout, stderr) => {
     if (error) {
         console.log(error.message);
         return;
@@ -56,5 +59,5 @@ exec(`jsdoc -c docs/jsDocConfig.json -p`, (error, stdout, stderr) => {
         console.log(`ERROR : ${stderr}`);
         return;
     }
-    console.log(`${stdout}`);
+    console.log(stdout);
 });

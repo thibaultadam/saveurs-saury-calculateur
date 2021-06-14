@@ -16,35 +16,6 @@
 
 (function()
 {
-    // made to handle multiple kind of callback  
-    class FieldCallback 
-    {
-        /**
-         * 
-         * @example
-         * {
-         *  "hectolitres" : (volume, gpl) => volume / gpl,
-         *  "gallons" : (volume, gpl) => volume / gpl * 2,
-         * }
-         */
-        constructor(callbacksObject, ending)
-        {
-            this.callbacks = callbacksObject;
-        }
-
-        call(...args)
-        {
-            if(!this.callbacks[Config.data.volumeType]) throw new Error(`Unable to find "${Config.data.volumeType}" in callback (maybe you type wrong the volume index in callback declaration or in Config)`);
-            return this.callbacks[Config.data.volumeType](...args);
-        }
-
-        get get()
-        {
-            if(!this.callbacks[Config.data.volumeType]) throw new Error(`Unable to find "${Config.data.volumeType}" in callback (maybe you type wrong the volume index in callback declaration or in Config)`);
-            return this.callbacks[Config.data.volumeType];
-        }
-    }
-
     const vulumeTypes = {
 
         dosage : {
@@ -376,7 +347,5 @@
         }
     ]
     
-    console.log(dataset);
-
     return dataset;
 })();

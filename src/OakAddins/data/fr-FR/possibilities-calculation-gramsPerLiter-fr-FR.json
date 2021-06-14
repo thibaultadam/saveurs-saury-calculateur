@@ -14,9 +14,7 @@
             "fermentation-input": {
                 "next": {
                     "type": "gramsPerLiter",
-                    "values": {
-                        "gramsPerLiter-input": {}
-                    }
+                    "end": true
                 }
             }
         }

@@ -1,9 +1,13 @@
-import Configurator, { ConfiguratorPathes } from "../../lib/Configurator";
+import {Configurator, ConfiguratorPathes } from "../../lib/Configurator";
 import { DebugLevel } from "../../lib/Tools/Debug";
-import ChoicesManager from "./ChoicesManager/ChoicesManager";
-import DataParser from "./Data/DataParser";
+import {ChoicesManager} from "./ChoicesManager/ChoicesManager";
+import {DataParser} from "./Data/DataParser";
 
-export default class OakAddinsConfigurateur extends Configurator 
+/**
+ * @alias OakAddinsConfigurateur
+ */
+export 
+class OakAddinsConfigurateur extends Configurator 
 {
     constructor(container: string, path : ConfiguratorPathes, debugLevel? : DebugLevel)
     {

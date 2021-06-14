@@ -1,7 +1,7 @@
-import Debug from "../Tools/Debug";
-import UIElement from "../UIElement";
-import ChoiceContainer from "./ChoiceContainer";
-import ChoicesEnumerator from "./ChoicesEnumerator";
+import {Debug} from "../Tools/Debug";
+import {UIElement} from "../UIElement";
+import {ChoiceContainer} from "./ChoiceContainer";
+import {ChoicesEnumerator} from "./ChoicesEnumerator";
 
 export type ChoiceButtonConstructor = new (
     type : string, 
@@ -15,7 +15,7 @@ export type ChoiceButtonConstructor = new (
  * @extends UIElement
  * @abstract
  */
-export default
+export
 abstract class ChoiceButton extends UIElement {
 
     /**

@@ -1,8 +1,8 @@
 import { Data } from "../Configurator";
-import Debug from "../Tools/Debug";
-import UIElement from "../UIElement";
-import ChoiceButton, { ChoiceButtonConstructor } from "./ChoiceButton";
-import ChoicesManager from "./ChoicesManager";
+import {Debug} from "../Tools/Debug";
+import {UIElement} from "../UIElement";
+import {ChoiceButton, ChoiceButtonConstructor } from "./ChoiceButton";
+import {ChoicesManager} from "./ChoicesManager";
 
 /**
  * @typedef ContainerCreationCallback
@@ -23,7 +23,7 @@ export type ChoiceContainerConstructor = new (type : string,
  * @class
  * @abstract
  */
-export default
+export
 abstract class ChoiceContainer extends UIElement {
 
     /**

@@ -1,5 +1,5 @@
-import Configurator, { Data } from "../Configurator";
-import Debug from "../Tools/Debug";
+import {Configurator, Data } from "../Configurator";
+import {Debug} from "../Tools/Debug";
 
 export type DataParserConstructor = new (
     configurator : Configurator,
@@ -13,7 +13,7 @@ export type DataParserCallbackData = {
     thisArg: any
 };
 
-export default
+export 
 abstract class DataParser {
     
     protected parsers = new Map<string, DataParserCallbackData>();

@@ -1,7 +1,7 @@
-import ChoiceContainer from "../../../../lib/Choices/ChoiceContainer";
-import ChoiceButton from "../../../../lib/Choices/ChoiceButton";
+import {ChoiceContainer} from "../../../../lib/Choices/ChoiceContainer";
+import {ChoiceButton} from "../../../../lib/Choices/ChoiceButton";
 
-export default class ButtonChoice extends ChoiceButton
+export class ButtonChoice extends ChoiceButton
 {
     constructor(type : string, choiceContainer: ChoiceContainer, ...args : any[])
     {

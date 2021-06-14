@@ -6,18 +6,16 @@
                 "type": "product",
                 "values": {
                     "Poudre": {
-                        "next": "possibilities-calculation-gramsPerLiter-fr-FR.json",
-                        "params": ["gramsPerLiter"]
+                        "rootNext" : true
                     },
                     "Fine de Chêne": {
-                        "next": "possibilities-calculation-gramsPerLiter-fr-FR.json",
-                        "params": ["gramsPerLiter"]
+                        "rootNext" : true
                     },
                     "Copeaux" : {
-                        "next": "possibilities-calculation-gramsPerLiter-fr-FR.json",
-                        "params": ["gramsPerLiter"]
+                        "rootNext" : true
                     }
-                }
+                },
+                "next": "possibilities-calculation-gramsPerLiter-fr-FR.json"
             }
         },
         "Elevage Court": {
@@ -25,18 +23,16 @@
                 "type": "product",
                 "values" : {
                     "Copeaux": {
-                        "next": "possibilities-calculation-gramsPerLiter-fr-FR.json",
-                        "params" : ["gramsPerLiter"]
+                        "rootNext" : true
                     },
                     "Cubes / Dominos / Blocks": {
-                        "next": "possibilities-calculation-gramsPerLiter-fr-FR.json",
-                        "params" : ["gramsPerLiter"]
+                        "rootNext" : true
                     },  
                     "Mini Thin Tank Staves / Thin Tank Staves" : {
-                        "next": "possibilities-calculation-gramsPerLiter-fr-FR.json",
-                        "params" : ["gramsPerLiter"]
+                        "rootNext" : true
                     }
-                }
+                },
+                "next": "possibilities-calculation-gramsPerLiter-fr-FR.json"
             }
         },
         "Elevage Long": {
@@ -44,18 +40,16 @@
                 "type": "product",
                 "values" : {
                     "Winewood": {
-                        "next": "possibilities-calculation-porcentage-fr-FR.json",
-                        "params" : ["porcentage"]
+                        "rootNext" : true
                     },
                     "Mini Tank Staves / Tank Staves": {
-                        "next": "possibilities-calculation-porcentage-fr-FR.json",
-                        "params" : ["porcentage"]
+                        "rootNext" : true
                     },
                     "XL Stave" : {
-                        "next": "possibilities-calculation-porcentage-fr-FR.json",
-                        "params" : ["porcentage"]
+                        "rootNext" : true
                     }
-                }
+                },
+                "next": "possibilities-calculation-porcentage-fr-FR.json"
             }
         },
         "Kits Barriques": {
@@ -63,14 +57,13 @@
                 "type": "product",
                 "values" : {
                     "Barrel Insert": {
-                        "next": "possibilities-calculation-porcentage-fr-FR.json",
-                        "params" : []
+                        "rootNext" : true
                     },
                     "Oak Chain": {
-                        "next": "possibilities-calculation-porcentage-fr-FR.json",
-                        "params" : []
+                        "rootNext" : true
                     }
-                }
+                },
+                "next": "possibilities-calculation-porcentage-fr-FR.json"
             }
         }
     }

@@ -1,12 +1,24 @@
-import Debug from '../Tools/Debug';
-import EventEmitter from '../Tools/EventEmitter';
+import {Debug} from '../Tools/Debug';
+import {EventEmitter} from '../Tools/EventEmitter';
 
+export type MultipleLabel = {
+    [index: string]: string
+};
+
+/**
+ * @typedef Choice
+ */
 export type Choice = {
     label: string,
+    labels?: MultipleLabel,
     index: number,
     value: string | null,
     isFirst: () => boolean,
     data: Map<string, any>
+};
+
+ export type CompletedChoice = Choice & {
+    value: string,
 };
 
 /**
@@ -14,7 +26,7 @@ export type Choice = {
  * @alias ChoicesEnumerator
  * @extends EventEmitter
  */
-export default class ChoicesEnumerator extends EventEmitter
+export class ChoicesEnumerator extends EventEmitter
 {
     /**
      * toute les étapes de la construction du configurateur
@@ -36,7 +48,7 @@ export default class ChoicesEnumerator extends EventEmitter
      * 
      * @param {string[]} choicesLabels liste des labels des différentes étapes du configurateur permet de générer les choix
      */
-    constructor(choicesLabels: string[])
+    constructor(choicesLabels: string[] | string[][])
     {
         super();
 
@@ -52,13 +64,35 @@ export default class ChoicesEnumerator extends EventEmitter
         // Initialise tout les choix possibles
         for(let i = 0; i < choicesLabels.length; i++)
         {
-            this.choices[i] = {
-                label: choicesLabels[i],
-                index: i,
-                value: null,
-                isFirst: () => (i == 0),
-                data: new Map<string, any>()
-            };
+            switch(typeof choicesLabels[i])
+            {
+                case 'string': 
+
+                    this.choices[i] = {
+                        label: choicesLabels[i] as string,
+                        index: i,
+                        value: null,
+                        isFirst: () => (i === 0),
+                        data: new Map<string, any>()
+                    };
+
+                break;
+                case 'object': 
+
+                    this.choices[i] = {
+                        label: (choicesLabels[i] as string[]).reduce((prev, curr) => `${prev}-${curr}`, ''),
+                        labels: (choicesLabels[i] as string[]).reduce((prev, next) => {
+                            prev[next] = next;
+                            return prev;
+                        }, {} as MultipleLabel),
+                        index: i,
+                        value: null,
+                        isFirst: () => (i === 0),
+                        data: new Map<string, any>()
+                    };
+
+                break;
+            }
         }
 
         this.current = this.choices[0];
@@ -103,11 +137,33 @@ export default class ChoicesEnumerator extends EventEmitter
      * @public
      * @memberof ChoicesEnumerator
      */
+    public next(value: string) : void
+    {
+        this.current.value = value;
+        this.current = this.nextChoice;
+        
+        if(!this.isEnd())
+        {
+            this.emit('change');
+        }
+        else
+        {
+            this.emit('end');
+        }
+    }
+
+    /**
+     * Fait ce déplacer le choix actuel vers un autre en fonction de sont index, réinitialise au passage les choix supérieurs
+     * @param {number} index 
+     * @public
+     * @memberof ChoicesEnumerator
+     */
     public goTo(index: number) : void
     {
         if(index < 0 || index >= this.choices.length)
         {
             Debug.error('Index exceding choices size');
+            return;
         }
 
         this.current = this.choices[index];
@@ -136,6 +192,12 @@ export default class ChoicesEnumerator extends EventEmitter
      */
     public set(index : number, value : string) : void
     {
+        if(index < 0 || index >= this.choices.length)
+        {
+            Debug.error('Index out choices size');
+            return;
+        }
+
         this.choices[index].value = value.toString(); // pour ne pas copier la référance
     }
 
@@ -195,7 +257,7 @@ export default class ChoicesEnumerator extends EventEmitter
      * @public
      * @memberof ChoicesEnumerator
      */
-    public completedArray(): Choice[]
+    public completedArray(): CompletedChoice[]
     {
         const array = [];
 
@@ -203,7 +265,7 @@ export default class ChoicesEnumerator extends EventEmitter
         {
             if(choice.value)
             {
-                array.push(choice);
+                array.push(choice as CompletedChoice);
             }
         }
 

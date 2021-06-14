@@ -1,6 +1,6 @@
 export type DebugLevel = "none" | "log" | "warn" | "error";
 
-export default 
+export  
 class Debug
 {
     public static debugLevel : DebugLevel = "log";
