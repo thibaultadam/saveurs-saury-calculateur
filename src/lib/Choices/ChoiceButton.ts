@@ -58,13 +58,13 @@ abstract class ChoiceButton extends UIElement {
     constructor(
         type : string, 
         public choiceContainer: ChoiceContainer, 
-        ...args : any[])
+        ...buildArgs : any[])
     {
         super();
 
         this.type = type;
         this.choiceEnumerator = this.choiceContainer.choicesManager.choicesEnumerator;
-        this.buildArgs = args;
+        this.buildArgs = buildArgs;
     }
 
     /**
@@ -73,7 +73,7 @@ abstract class ChoiceButton extends UIElement {
      * @returns {ChoiceButton}
      * @memberof ChoiceButton
      */
-    protected buildButton(buildCallback : (...args : any[]) => HTMLElement): ChoiceButton
+    protected build(buildCallback : (...args : any[]) => HTMLElement): ChoiceButton
     {
         Debug.log(`Building button type "${this.type}" with args`, ...this.buildArgs)
 

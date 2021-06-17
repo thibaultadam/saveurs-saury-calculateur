@@ -12,9 +12,15 @@ export type ContainerCreationCallback = (type: string, ...args: any[]) => HTMLEl
 
 export type ChoiceContainerConstructor = new (type : string, 
     containersCreation : ContainerCreationCallback[], 
-    choicesManager: ChoicesManager, 
+    choicesManager: ChoicesManager,
     ...args : any[]) 
     => ChoiceContainer
+
+export type ClassBuildData = {
+    type : string,
+    containersCreation : ContainerCreationCallback[],
+    choicesManager: ChoicesManager
+}   
 
 /**
  * Class abstraite des conteneurs de choix
@@ -75,6 +81,22 @@ abstract class ChoiceContainer extends UIElement {
     public data : Data;
 
     /**
+     * Contiens la string du type de container
+     * @type {string}
+     * @public
+     * @memberof ChoiceContainer
+     */
+    public type : string;
+
+    /**
+     * Référance au ChoiceManager
+     * @type {string}
+     * @public
+     * @memberof ChoiceContainer
+     */
+    public choicesManager: ChoicesManager;
+
+    /**
      * // TODO ChoiceContainer constructor description
      * @param  {string} type
      * @param  {ContainerCreationCallback[]} containersCreation
@@ -83,24 +105,18 @@ abstract class ChoiceContainer extends UIElement {
      * @memberof ChoiceContainer
      */
     constructor(
-        /**
-         * Contiens la string du type de container
-         * @type {string}
-         * @public
-         * @memberof ChoiceContainer
-         */
-        public type : string, 
-        containersCreation : ContainerCreationCallback[], 
-        public choicesManager: ChoicesManager, 
-        ...args : any[])
+        classBuild: ClassBuildData, 
+        ...buildArgs : any[])
     {
-        super();
+        super();     
+        
+        this.type = classBuild.type;
+        this.choicesManager = classBuild.choicesManager;
 
         this.data = this.choicesManager.data;
+        this.buildArgs = buildArgs;
 
-        this.buildArgs = args;
-
-        for(const containerCreation of containersCreation)
+        for(const containerCreation of classBuild.containersCreation)
         {
             this.createNewContainer(containerCreation);
         }
@@ -138,7 +154,7 @@ abstract class ChoiceContainer extends UIElement {
      * @protected
      * @memberof ChoiceContainer
      */
-    protected createButton(...args : any[]) : ChoiceButton
+    protected createChoice(...args : any[]) : ChoiceButton
     {
         const button : ChoiceButton = new this.ButtonClass(this.type, this, ...args);
         this.$container.appendChild(button.$container);
@@ -157,7 +173,7 @@ abstract class ChoiceContainer extends UIElement {
      * @protected
      * @memberof ChoiceContainer
      */
-    protected registerButtonClass(ButtonClass : ChoiceButtonConstructor): void
+    protected registerChoiceClass(ButtonClass : ChoiceButtonConstructor): void
     {
         this.ButtonClass = ButtonClass;
         Debug.log(`Registering Button Class for "${this.type}"`);

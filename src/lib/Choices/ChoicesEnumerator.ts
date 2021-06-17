@@ -136,6 +136,7 @@ export class ChoicesEnumerator extends EventEmitter
      * @param {number} index 
      * @public
      * @memberof ChoicesEnumerator
+     * @deprecated
      */
     public next(value: string) : void
     {
