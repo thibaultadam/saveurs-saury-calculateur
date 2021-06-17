@@ -25,6 +25,8 @@ abstract class ChoicesManager extends EventEmitter
     private choiceContainersCreation : ContainerCreationCallback[] = [];
     private ChoiceContainerClasses = new Map<string, ChoiceContainerConstructor>();
 
+    protected choicesContainers = new Map<string, ChoiceContainer[]>();
+
     constructor(
         public configurator : Configurator, 
         public data: Data = configurator.data)
@@ -57,16 +59,15 @@ abstract class ChoicesManager extends EventEmitter
      * @abstract
      * @returns {void}
      * @memberof ChoicesManager
-     * // BUG : ajouter {} pour générer la doc
      */
     protected abstract onBuildChoice() : void;
     //#{}
 
     /**
-     * Initialize the creation of a new ChoiceContainer according to his type 
+     * Initialize creation of a new ChoiceContainer according to his type 
      * @param {string} type 
      * @param {any[]} data 
-     * @param {any[]} args
+     * @param {any[]} ...args
      * @protected
      * @returns {ChoiceContainer | null}
      * @memberof ChoicesManager
@@ -86,7 +87,7 @@ abstract class ChoicesManager extends EventEmitter
             const choice = new ChoiceContainerClass(type, this.choiceContainersCreation, this, ...args);
             
             Debug.log(`Successfully created new choice`, choice);
-
+            this.choicesContainers.get(type)?.push(choice);
             return choice;
         }
         else
@@ -97,7 +98,7 @@ abstract class ChoicesManager extends EventEmitter
     }
 
     /**
-     * //TODO : registerChoiceContainersCreation description
+     * //TODO : registerChoiceContainersCreation description Registering GLOBAL choice container callback
      * @param {ContainerCreationCallback} creationCallback 
      * @protected
      * @returns {void}
@@ -117,20 +118,21 @@ abstract class ChoicesManager extends EventEmitter
      * @returns {void}
      * @memberof ChoicesManager
      */
-    protected registerChoiceClass(index : string, ChoiceClass : ChoiceContainerConstructor): void
+    protected registerChoiceClass(type : string, ChoiceClass : ChoiceContainerConstructor): void
     {
-        this.ChoiceContainerClasses.set(index, ChoiceClass);
-        Debug.log(`Registering choice class`);
+        this.ChoiceContainerClasses.set(type, ChoiceClass);
+        this.choicesContainers.set(type, []);
+        Debug.log(`Registering a choice class`, ChoiceClass);
     }
 
     /**
      * // TODO : registerDataProviderClass description
-     * @param {SuperDataProvider} DataProviderClass 
+     * @param {DataProviderConstructor} DataProvider 
      * @protected
      * @returns {void}
      * @memberof ChoicesManager
      */
-    protected registerDataProviderClass<TDataProvider>(DataProvider : DataProviderConstructor): void
+    protected registerDataProviderClass(DataProvider : DataProviderConstructor): void
     {
         this.dataProvider = new DataProvider(this);
         Debug.log(`Registering DataProvider class`);

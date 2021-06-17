@@ -14,7 +14,7 @@
                 "title": "Produits",
                 "description": "Produits utilisables dans la phase Fermentation",
                 "params":  {
-                    "call": ["showProducts"], 
+                    "call": ["showProducts"],
                     "params": [
                         [0]
                     ]

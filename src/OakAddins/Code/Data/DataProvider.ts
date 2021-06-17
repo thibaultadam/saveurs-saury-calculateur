@@ -1,9 +1,12 @@
 import { ChoicesManager } from '../../../lib/Choices/ChoicesManager';
 import {DataProvider as _DataProvider} from '../../../lib/DataProvider';
 import { Debug } from '../../../lib/Tools/Debug';
+import { ChoiceType } from '../ChoicesManager/ChoicesManager';
 import { JsonTypes, TreeNode } from './DataParser';
 
 export type ChoiceData = {
+    type: ChoiceType,
+    title?: string,
     [index: string]: JsonTypes
 }
 
@@ -21,7 +24,7 @@ export class DataProvider extends _DataProvider{
             Debug.error(`no choiceData defined for "${choiceName}"`);
         }
 
-        return this.data.config.choices.types[choiceName] as ChoiceData;
+        return this.data?.config?.choices?.types[choiceName] as ChoiceData;
     }
 
     public getCurrentNode(): TreeNode

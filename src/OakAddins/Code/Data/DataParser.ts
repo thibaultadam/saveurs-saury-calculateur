@@ -9,6 +9,7 @@ export type TreeNode = {
     values: {
         [index : string] : {
             [index : string] : JsonTypes,
+            label: string,
             next?: TreeNode | string,
             rootNext?: boolean
         }
@@ -45,11 +46,17 @@ class DataParser extends _DataParser {
 
         const nexts = new Map<string, TreeNode>();
 
+        if(!current.values)
+        {
+            return;
+        }
+        
         for(const choiceKey of Object.keys(current.values))
         {
             const choice = current.values[choiceKey];
-            formated.values[choiceKey] = {};
-            formated.values[choiceKey].label = choiceKey;
+            formated.values[choiceKey] = {
+                label: choiceKey
+            };
 
             for(const valueKey of Object.keys(choice))
             {
@@ -60,6 +67,8 @@ class DataParser extends _DataParser {
                     default:
                         formated.values[choiceKey][valueKey] = value;
                     break;
+                    case "end":
+                        return;
                     case "next":
 
                         if(typeof value === "object")
