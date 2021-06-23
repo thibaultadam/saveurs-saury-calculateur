@@ -8,7 +8,8 @@
     "dev-nohost": "webpack --watch --progress --mode=development",
     "dev": "concurrently -k -n \"Webpack,Host\" -p \"[{name}]\" -c \"blue,green\" \"webpack --watch --progress --mode=development\" \"node host.js --path=build --port=6600\"",
     "doc": "typedoc src --out ./docs/typeDoc",
-    "docUnsatable" : "jsdoc -c docs/jsDocConfig.json -p",
+    "doc-github": "typedoc src --out ./docs/typeDoc-github --theme ./node_modules/typedoc-github-wiki-theme/dist",
+    "docUnsatable": "jsdoc -c docs/jsDocConfig.json -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -33,12 +34,11 @@
     "webpack-cli": "^4.2.0"
   },
   "devDependencies": {
-    "better-docs": "^2.3.2",
     "concurrently": "^6.1.0",
     "express": "^4.17.1",
-    "jsdoc": "^3.6.7",
-    "jsdoc-plugin-typescript": "^2.0.6",
     "minimist": "^1.2.5",
-    "typedoc": "^0.20.36"
+    "typedoc": "^0.21.0",
+    "typedoc-github-wiki-theme": "^0.4.2",
+    "typedoc-plugin-markdown": "^3.10.0"
   }
 }
