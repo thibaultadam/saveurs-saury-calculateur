@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:9](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/ChoicesManager.ts#L9)
+[lib/ChoicesManagement/ChoicesManager.ts:9](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/ChoicesManager.ts#L9)

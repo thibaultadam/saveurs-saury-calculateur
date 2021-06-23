@@ -26,4 +26,4 @@
 
 #### Defined in
 
-[lib/DataProvider.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/DataProvider.ts#L6)
+[lib/DataProvider.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/DataProvider.ts#L6)

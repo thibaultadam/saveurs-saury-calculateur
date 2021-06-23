@@ -1,3 +1,3 @@
-# Configutateur - OakAddins
+# Configutateur - OakAddins.com
 
-Application
+Future configurateur du site OakAddins

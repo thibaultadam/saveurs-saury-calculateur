@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[OakAddins/Code/Tools/ParseTools.ts:1](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/OakAddins/Code/Tools/ParseTools.ts#L1)
+[OakAddins/Code/Tools/ParseTools.ts:1](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/OakAddins/Code/Tools/ParseTools.ts#L1)

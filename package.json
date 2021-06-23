@@ -8,7 +8,7 @@
     "dev-nohost": "webpack --watch --progress --mode=development",
     "dev": "concurrently -k -n \"Webpack,Host\" -p \"[{name}]\" -c \"blue,green\" \"webpack --watch --progress --mode=development\" \"node host.js --path=build --port=6600\"",
     "doc": "typedoc src --out ./docs/typeDoc",
-    "doc-github": "typedoc src --out ./docs/typeDoc-github --theme ./node_modules/typedoc-github-wiki-theme/dist",
+    "doc-github": "typedoc src --out ./docs/wiki --theme ./node_modules/typedoc-github-wiki-theme/dist",
     "docUnsatable": "jsdoc -c docs/jsDocConfig.json -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

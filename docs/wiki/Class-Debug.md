@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[lib/Tools/Debug.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Tools/Debug.ts#L6)
+[lib/Tools/Debug.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Tools/Debug.ts#L6)
 
 ## Methods
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[lib/Tools/Debug.ts:30](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Tools/Debug.ts#L30)
+[lib/Tools/Debug.ts:30](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Tools/Debug.ts#L30)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/Debug.ts:8](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Tools/Debug.ts#L8)
+[lib/Tools/Debug.ts:8](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Tools/Debug.ts#L8)
 
 ___
 
@@ -90,4 +90,4 @@ ___
 
 #### Defined in
 
-[lib/Tools/Debug.ts:20](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Tools/Debug.ts#L20)
+[lib/Tools/Debug.ts:20](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Tools/Debug.ts#L20)

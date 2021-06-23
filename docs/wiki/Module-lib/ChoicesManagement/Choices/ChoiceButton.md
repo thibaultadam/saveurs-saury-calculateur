@@ -28,4 +28,4 @@
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceButton.ts:4](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/Choices/ChoiceButton.ts#L4)
+[lib/ChoicesManagement/Choices/ChoiceButton.ts:4](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/Choices/ChoiceButton.ts#L4)

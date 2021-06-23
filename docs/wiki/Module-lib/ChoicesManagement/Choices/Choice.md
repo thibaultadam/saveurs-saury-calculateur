@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:11](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/Choices/Choice.ts#L11)
+[lib/ChoicesManagement/Choices/Choice.ts:11](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/Choices/Choice.ts#L11)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/Choices/Choice.ts#L6)
+[lib/ChoicesManagement/Choices/Choice.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/Choices/Choice.ts#L6)

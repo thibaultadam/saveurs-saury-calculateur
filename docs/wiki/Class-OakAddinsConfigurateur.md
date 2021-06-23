@@ -52,7 +52,7 @@
 
 #### Defined in
 
-[OakAddins/Code/OakAddinsConfigurateur.ts:15](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/OakAddins/Code/OakAddinsConfigurateur.ts#L15)
+[OakAddins/Code/OakAddinsConfigurateur.ts:15](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/OakAddins/Code/OakAddinsConfigurateur.ts#L15)
 
 ## Properties
 
@@ -66,7 +66,7 @@
 
 #### Defined in
 
-[lib/Configurator.ts:24](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Configurator.ts#L24)
+[lib/Configurator.ts:24](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Configurator.ts#L24)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[lib/Configurator.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Configurator.ts#L25)
+[lib/Configurator.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Configurator.ts#L25)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[lib/Configurator.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Configurator.ts#L28)
+[lib/Configurator.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Configurator.ts#L28)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[lib/Configurator.ts:26](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Configurator.ts#L26)
+[lib/Configurator.ts:26](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Configurator.ts#L26)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Tools/EventEmitter.ts#L6)
+[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Tools/EventEmitter.ts#L6)
 
 ## Methods
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Tools/EventEmitter.ts#L33)
+[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Tools/EventEmitter.ts#L33)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Tools/EventEmitter.ts#L13)
+[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Tools/EventEmitter.ts#L13)
 
 ___
 
@@ -190,7 +190,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/OakAddinsConfigurateur.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/OakAddins/Code/OakAddinsConfigurateur.ts#L25)
+[OakAddins/Code/OakAddinsConfigurateur.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/OakAddins/Code/OakAddinsConfigurateur.ts#L25)
 
 ___
 
@@ -215,7 +215,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Tools/EventEmitter.ts#L46)
+[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Tools/EventEmitter.ts#L46)
 
 ___
 
@@ -241,7 +241,7 @@ ___
 
 #### Defined in
 
-[lib/Configurator.ts:136](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Configurator.ts#L136)
+[lib/Configurator.ts:136](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Configurator.ts#L136)
 
 ___
 
@@ -267,7 +267,7 @@ ___
 
 #### Defined in
 
-[lib/Configurator.ts:147](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Configurator.ts#L147)
+[lib/Configurator.ts:147](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Configurator.ts#L147)
 
 ___
 
@@ -292,4 +292,4 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Tools/EventEmitter.ts#L21)
+[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Tools/EventEmitter.ts#L21)

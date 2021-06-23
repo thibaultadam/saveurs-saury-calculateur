@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[OakAddins/Code/Data/DataProvider.ts:7](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/OakAddins/Code/Data/DataProvider.ts#L7)
+[OakAddins/Code/Data/DataProvider.ts:7](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/OakAddins/Code/Data/DataProvider.ts#L7)

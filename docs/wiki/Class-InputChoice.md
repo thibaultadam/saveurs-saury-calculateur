@@ -58,7 +58,7 @@
 
 #### Defined in
 
-[OakAddins/Code/ChoicesManager/Choices/InputChoice.ts:8](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/OakAddins/Code/ChoicesManager/Choices/InputChoice.ts#L8)
+[OakAddins/Code/ChoicesManager/Choices/InputChoice.ts:8](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/OakAddins/Code/ChoicesManager/Choices/InputChoice.ts#L8)
 
 ## Properties
 
@@ -76,7 +76,7 @@ Le container DOM du choix
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:56](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/Choices/Choice.ts#L56)
+[lib/ChoicesManagement/Choices/Choice.ts:56](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/Choices/Choice.ts#L56)
 
 ___
 
@@ -92,7 +92,7 @@ Le container DOM qui est la source des événements
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceInput.ts:16](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L16)
+[lib/ChoicesManagement/Choices/ChoiceInput.ts:16](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L16)
 
 ___
 
@@ -110,7 +110,7 @@ Les arguments de construction du button
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:72](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/Choices/Choice.ts#L72)
+[lib/ChoicesManagement/Choices/Choice.ts:72](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/Choices/Choice.ts#L72)
 
 ___
 
@@ -128,7 +128,7 @@ Référance a l'instance du container de ce choix
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:80](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/Choices/Choice.ts#L80)
+[lib/ChoicesManagement/Choices/Choice.ts:80](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/Choices/Choice.ts#L80)
 
 ___
 
@@ -146,7 +146,7 @@ référance a l'énumérateur de choix car souvent les choix sont énuméré a p
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:48](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/Choices/Choice.ts#L48)
+[lib/ChoicesManagement/Choices/Choice.ts:48](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/Choices/Choice.ts#L48)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Tools/EventEmitter.ts#L6)
+[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Tools/EventEmitter.ts#L6)
 
 ___
 
@@ -178,7 +178,7 @@ Identifieur de position dans la liste des choix
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:32](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/Choices/Choice.ts#L32)
+[lib/ChoicesManagement/Choices/Choice.ts:32](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/Choices/Choice.ts#L32)
 
 ___
 
@@ -196,7 +196,7 @@ La string du type de button
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:40](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/Choices/Choice.ts#L40)
+[lib/ChoicesManagement/Choices/Choice.ts:40](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/Choices/Choice.ts#L40)
 
 ___
 
@@ -210,7 +210,7 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceInput.ts:15](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L15)
+[lib/ChoicesManagement/Choices/ChoiceInput.ts:15](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L15)
 
 ___
 
@@ -226,7 +226,7 @@ ___
 
 #### Defined in
 
-[lib/UIElement.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/UIElement.ts#L25)
+[lib/UIElement.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/UIElement.ts#L25)
 
 ## Methods
 
@@ -252,7 +252,7 @@ Permet de crée le/les élément(s) DOM qui constitue le boutton
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceInput.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L25)
+[lib/ChoicesManagement/Choices/ChoiceInput.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L25)
 
 ___
 
@@ -276,7 +276,7 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceInput.ts:40](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L40)
+[lib/ChoicesManagement/Choices/ChoiceInput.ts:40](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L40)
 
 ___
 
@@ -298,7 +298,7 @@ Permet de déclancher l'évenement 'click' sur le bouton
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceButton.ts:55](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/Choices/ChoiceButton.ts#L55)
+[lib/ChoicesManagement/Choices/ChoiceButton.ts:55](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/Choices/ChoiceButton.ts#L55)
 
 ___
 
@@ -323,7 +323,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Tools/EventEmitter.ts#L33)
+[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Tools/EventEmitter.ts#L33)
 
 ___
 
@@ -349,7 +349,7 @@ ___
 
 #### Defined in
 
-[lib/UIElement.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/UIElement.ts#L33)
+[lib/UIElement.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/UIElement.ts#L33)
 
 ___
 
@@ -374,7 +374,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Tools/EventEmitter.ts#L13)
+[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Tools/EventEmitter.ts#L13)
 
 ___
 
@@ -404,7 +404,7 @@ Est appeler lorsque la construction du boutton est déclanché
 
 #### Defined in
 
-[OakAddins/Code/ChoicesManager/Choices/InputChoice.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/OakAddins/Code/ChoicesManager/Choices/InputChoice.ts#L21)
+[OakAddins/Code/ChoicesManager/Choices/InputChoice.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/OakAddins/Code/ChoicesManager/Choices/InputChoice.ts#L21)
 
 ___
 
@@ -433,7 +433,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/ChoicesManager/Choices/InputChoice.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/OakAddins/Code/ChoicesManager/Choices/InputChoice.ts#L28)
+[OakAddins/Code/ChoicesManager/Choices/InputChoice.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/OakAddins/Code/ChoicesManager/Choices/InputChoice.ts#L28)
 
 ___
 
@@ -464,7 +464,7 @@ Est appeler lorsque l'evenement click est déclanché
 
 #### Defined in
 
-[OakAddins/Code/ChoicesManager/Choices/InputChoice.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/OakAddins/Code/ChoicesManager/Choices/InputChoice.ts#L33)
+[OakAddins/Code/ChoicesManager/Choices/InputChoice.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/OakAddins/Code/ChoicesManager/Choices/InputChoice.ts#L33)
 
 ___
 
@@ -489,7 +489,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Tools/EventEmitter.ts#L46)
+[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Tools/EventEmitter.ts#L46)
 
 ___
 
@@ -514,4 +514,4 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Tools/EventEmitter.ts#L21)
+[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Tools/EventEmitter.ts#L21)

@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[lib/Data/DataParser.ts:19](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Data/DataParser.ts#L19)
+[lib/Data/DataParser.ts:19](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Data/DataParser.ts#L19)
 
 ## Properties
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[lib/Data/DataParser.ts:19](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Data/DataParser.ts#L19)
+[lib/Data/DataParser.ts:19](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Data/DataParser.ts#L19)
 
 ## Methods
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[lib/Data/DataParser.ts:29](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Data/DataParser.ts#L29)
+[lib/Data/DataParser.ts:29](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Data/DataParser.ts#L29)
 
 ___
 
@@ -96,4 +96,4 @@ ___
 
 #### Defined in
 
-[lib/Data/DataParser.ts:37](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/Data/DataParser.ts#L37)
+[lib/Data/DataParser.ts:37](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/Data/DataParser.ts#L37)

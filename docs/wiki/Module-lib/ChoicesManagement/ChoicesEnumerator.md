@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:11](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L11)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:11](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L11)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:20](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L20)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:20](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L20)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:24](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L24)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:24](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L24)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:4](https://github.com/P0ulpy/Configurateur-OakAddins/blob/af13efb/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L4)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:4](https://github.com/P0ulpy/Configurateur-OakAddins/blob/74cfff5/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L4)
