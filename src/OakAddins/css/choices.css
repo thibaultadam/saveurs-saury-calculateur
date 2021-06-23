@@ -1,0 +1,96 @@
+h1 {
+    color: rgb(102, 57, 183);
+}
+
+p {
+    color: rgb(102, 57, 183);
+    font-weight: bold;
+}
+
+label {
+    color: rgb(102, 57, 183);
+}
+
+input {
+    color: rgb(102, 57, 183);
+}
+
+span {
+    color: rgb(102, 57, 183);
+}
+
+tr {
+    color: rgb(102, 57, 183);
+}
+
+td {
+    color: rgb(102, 57, 183);
+}
+
+.value {
+    border: 0.5px solid rgb(102, 57, 183);
+    border-radius: 4px;
+
+    background: white;
+
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    padding-right: 0.3rem;
+    padding-left: 0.3rem;
+}
+
+.btn-indigo {
+    color: rgb(102, 57, 183);
+    border-color: rgb(102, 57, 183);
+}
+
+.btn-outline-indigo {
+    color: rgb(255, 255, 255);
+    background-color: rgb(102, 57, 183);
+    border-color: rgb(102, 57, 183);
+}
+
+.btn-indigo[type="radio"] {
+    color: rgb(108, 117, 125);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgb(108, 117, 125);
+}
+
+.btn-indigo:hover {
+    color: #fff;
+    background-color: rgb(137, 78, 248);
+    border-color: rgb(96, 48, 185)
+}
+
+.btn-check:focus+.btn-indigo,
+.btn-indigo:focus {
+    color: #fff;
+    background-color: rgb(137, 78, 248);
+    border-color: rgb(96, 48, 185);
+    box-shadow: 0 0 0 .25rem rgba(138, 78, 248, 0.486)
+}
+
+.btn-check:active+.btn-indigo,
+.btn-check:checked+.btn-indigo,
+.btn-indigo.active,
+.btn-indigo:active,
+.show>.btn-indigo.dropdown-toggle {
+    color: #fff;
+    background-color: rgb(96, 48, 185);
+    border-color: rgb(103, 57, 189)
+}
+
+.btn-check:active+.btn-indigo:focus,
+.btn-check:checked+.btn-indigo:focus,
+.btn-indigo.active:focus,
+.btn-indigo:active:focus,
+.show>.btn-indigo.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .25rem rgba(138, 78, 248, 0.486);
+}
+
+.btn-indigo.disabled,
+.btn-indigo:disabled {
+    color: #fff;
+    background-color: rgb(102, 57, 183);
+    border-color: rgb(102, 57, 183)
+}

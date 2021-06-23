@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>lib/Choices/ChoicesManager | calculateur-oakaddins</title>
+	<title>lib/ChoicesManagement/Choices/Choice | calculateur-oakaddins</title>
 	<meta name="description" content="Documentation for calculateur-oakaddins">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">calculateur-oakaddins</a>
 				</li>
 				<li>
-					<a href="lib_choices_choicesmanager.html">lib/Choices/ChoicesManager</a>
+					<a href="lib_choicesmanagement_choices_choice.html">lib/ChoicesManagement/Choices/Choice</a>
 				</li>
 			</ul>
-			<h1>Module lib/Choices/ChoicesManager</h1>
+			<h1>Module lib/ChoicesManagement/Choices/Choice</h1>
 		</div>
 	</div>
 </header>
@@ -72,13 +72,14 @@
 						<section class="tsd-index-section ">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/lib_choices_choicesmanager.choicesmanager.html" class="tsd-kind-icon">Choices<wbr>Manager</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/lib_choicesmanagement_choices_choice.choice.html" class="tsd-kind-icon">Choice</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="lib_choices_choicesmanager.html#choicesmanagerconstructor" class="tsd-kind-icon">Choices<wbr>Manager<wbr>Constructor</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="lib_choicesmanagement_choices_choice.html#choiceconstructionoptions" class="tsd-kind-icon">Choice<wbr>Construction<wbr>Options</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="lib_choicesmanagement_choices_choice.html#choiceconstructor" class="tsd-kind-icon">Choice<wbr>Constructor</a></li>
 							</ul>
 						</section>
 					</div>
@@ -87,12 +88,36 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
-					<a name="choicesmanagerconstructor" class="tsd-anchor"></a>
-					<h3>Choices<wbr>Manager<wbr>Constructor</h3>
-					<div class="tsd-signature tsd-kind-icon">Choices<wbr>Manager<wbr>Constructor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">new </span><span class="tsd-signature-symbol">(</span>configurator<span class="tsd-signature-symbol">: </span><a href="../classes/lib_configurator.configurator.html" class="tsd-signature-type" data-tsd-kind="Class">Configurator</a>, data<span class="tsd-signature-symbol">?: </span><a href="lib_configurator.html#data" class="tsd-signature-type" data-tsd-kind="Type alias">Data</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../classes/lib_choices_choicesmanager.choicesmanager.html" class="tsd-signature-type" data-tsd-kind="Class">ChoicesManager</a></div>
+					<a name="choiceconstructionoptions" class="tsd-anchor"></a>
+					<h3>Choice<wbr>Construction<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">Choice<wbr>Construction<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>choiceContainer<span class="tsd-signature-symbol">: </span><a href="../classes/lib_choicesmanagement_choices_choicecontainer.choicecontainer.html" class="tsd-signature-type" data-tsd-kind="Class">ChoiceContainer</a><span class="tsd-signature-symbol">; </span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/P0ulpy/Configurateur-OakAddins/blob/0d8ff74/src/lib/Choices/ChoicesManager.ts#L9">lib/Choices/ChoicesManager.ts:9</a></li>
+							<li>Defined in lib/ChoicesManagement/Choices/Choice.ts:11</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>choice<wbr>Container<span class="tsd-signature-symbol">: </span><a href="../classes/lib_choicesmanagement_choices_choicecontainer.choicecontainer.html" class="tsd-signature-type" data-tsd-kind="Class">ChoiceContainer</a></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="choiceconstructor" class="tsd-anchor"></a>
+					<h3>Choice<wbr>Constructor</h3>
+					<div class="tsd-signature tsd-kind-icon">Choice<wbr>Constructor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">new </span><span class="tsd-signature-symbol">(</span>constructionOptions<span class="tsd-signature-symbol">: </span><a href="lib_choicesmanagement_choices_choice.html#choiceconstructionoptions" class="tsd-signature-type" data-tsd-kind="Type alias">ChoiceConstructionOptions</a>, <span class="tsd-signature-symbol">...</span>buildArgs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../classes/lib_choicesmanagement_choices_choice.choice.html" class="tsd-signature-type" data-tsd-kind="Class">Choice</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/ChoicesManagement/Choices/Choice.ts:6</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -100,20 +125,20 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-type-alias">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">new </span><span class="tsd-signature-symbol">(</span>configurator<span class="tsd-signature-symbol">: </span><a href="../classes/lib_configurator.configurator.html" class="tsd-signature-type" data-tsd-kind="Class">Configurator</a>, data<span class="tsd-signature-symbol">?: </span><a href="lib_configurator.html#data" class="tsd-signature-type" data-tsd-kind="Type alias">Data</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/lib_choices_choicesmanager.choicesmanager.html" class="tsd-signature-type" data-tsd-kind="Class">ChoicesManager</a></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">new </span><span class="tsd-signature-symbol">(</span>constructionOptions<span class="tsd-signature-symbol">: </span><a href="lib_choicesmanagement_choices_choice.html#choiceconstructionoptions" class="tsd-signature-type" data-tsd-kind="Type alias">ChoiceConstructionOptions</a>, <span class="tsd-signature-symbol">...</span>buildArgs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/lib_choicesmanagement_choices_choice.choice.html" class="tsd-signature-type" data-tsd-kind="Class">Choice</a></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5>configurator: <a href="../classes/lib_configurator.configurator.html" class="tsd-signature-type" data-tsd-kind="Class">Configurator</a></h5>
+												<h5>constructionOptions: <a href="lib_choicesmanagement_choices_choice.html#choiceconstructionoptions" class="tsd-signature-type" data-tsd-kind="Type alias">ChoiceConstructionOptions</a></h5>
 											</li>
 											<li>
-												<h5><span class="tsd-flag ts-flagOptional">Optional</span> data: <a href="lib_configurator.html#data" class="tsd-signature-type" data-tsd-kind="Type alias">Data</a></h5>
+												<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>buildArgs: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <a href="../classes/lib_choices_choicesmanager.choicesmanager.html" class="tsd-signature-type" data-tsd-kind="Class">ChoicesManager</a></h4>
+										<h4 class="tsd-returns-title">Returns <a href="../classes/lib_choicesmanagement_choices_choice.choice.html" class="tsd-signature-type" data-tsd-kind="Class">Choice</a></h4>
 									</li>
 								</ul>
 							</li>
@@ -159,19 +184,25 @@
 						<a href="oakaddins_code_oakaddinsconfigurateur.html">Oak<wbr>Addins/<wbr>Code/<wbr>Oak<wbr>Addins<wbr>Configurateur</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="lib_choices_choicebutton.html">lib/<wbr>Choices/<wbr>Choice<wbr>Button</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_choices_choicecontainer.html">lib/<wbr>Choices/<wbr>Choice<wbr>Container</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_choices_choiceinput.html">lib/<wbr>Choices/<wbr>Choice<wbr>Input</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_choices_choicesenumerator.html">lib/<wbr>Choices/<wbr>Choices<wbr>Enumerator</a>
+						<a href="oakaddins_code_tools_parsetools.html">Oak<wbr>Addins/<wbr>Code/<wbr>Tools/<wbr>Parse<wbr>Tools</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="lib_choices_choicesmanager.html">lib/<wbr>Choices/<wbr>Choices<wbr>Manager</a>
+						<a href="lib_choicesmanagement_choices_choice.html">lib/<wbr>Choices<wbr>Management/<wbr>Choices/<wbr>Choice</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="lib_choicesmanagement_choices_choicebutton.html">lib/<wbr>Choices<wbr>Management/<wbr>Choices/<wbr>Choice<wbr>Button</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="lib_choicesmanagement_choices_choicecontainer.html">lib/<wbr>Choices<wbr>Management/<wbr>Choices/<wbr>Choice<wbr>Container</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="lib_choicesmanagement_choices_choiceinput.html">lib/<wbr>Choices<wbr>Management/<wbr>Choices/<wbr>Choice<wbr>Input</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="lib_choicesmanagement_choicesenumerator.html">lib/<wbr>Choices<wbr>Management/<wbr>Choices<wbr>Enumerator</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="lib_choicesmanagement_choicesmanager.html">lib/<wbr>Choices<wbr>Management/<wbr>Choices<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="lib_configurator.html">lib/<wbr>Configurator</a>
@@ -181,6 +212,9 @@
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="lib_dataprovider.html">lib/<wbr>Data<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="lib_tools_domelementcreator.html">lib/<wbr>Tools/DOMElement<wbr>Creator</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="lib_tools_debug.html">lib/<wbr>Tools/<wbr>Debug</a>
@@ -196,10 +230,13 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/lib_choices_choicesmanager.choicesmanager.html" class="tsd-kind-icon">Choices<wbr>Manager</a>
+						<a href="../classes/lib_choicesmanagement_choices_choice.choice.html" class="tsd-kind-icon">Choice</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="lib_choices_choicesmanager.html#choicesmanagerconstructor" class="tsd-kind-icon">Choices<wbr>Manager<wbr>Constructor</a>
+						<a href="lib_choicesmanagement_choices_choice.html#choiceconstructionoptions" class="tsd-kind-icon">Choice<wbr>Construction<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="lib_choicesmanagement_choices_choice.html#choiceconstructor" class="tsd-kind-icon">Choice<wbr>Constructor</a>
 					</li>
 				</ul>
 			</nav>
@@ -211,6 +248,7 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
 			</ul>
 			<ul class="tsd-legend">

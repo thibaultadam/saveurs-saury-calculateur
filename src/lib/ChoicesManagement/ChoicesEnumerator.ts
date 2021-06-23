@@ -17,8 +17,12 @@ export type Choice = {
     data: Map<string, any>
 };
 
- export type CompletedChoice = Choice & {
+export type CompletedChoice = Choice & {
     value: string,
+};
+
+export type EmptyChoice = Choice & {
+    value: null,
 };
 
 /**
@@ -199,7 +203,7 @@ export class ChoicesEnumerator extends EventEmitter
             return;
         }
 
-        this.choices[index].value = value.toString(); // pour ne pas copier la référance
+        this.choices[index].value = value.toString();
     }
 
     /**
@@ -213,16 +217,15 @@ export class ChoicesEnumerator extends EventEmitter
     }
 
     /**
-     * Permets de récupérer un choix en fonction de son label (déconseillé)
+     * Permets de récupérer un choix en fonction de son label 
      * @param {string} label
      * @returns Le premier choix trouvé avec le label correspondant
      * @private
      * @memberof ChoicesEnumerator
-     * @deprecated
      */
-    private getByLabel(label : string) : Choice | undefined
+    public getByLabel(label : string) : Choice | undefined
     {
-        return this.choices.find(choice => choice.label === label);
+        return this.choices.find(choice => (choice.label === label || (choice.labels && choice.labels[label])));
     }
 
     /**
@@ -242,15 +245,33 @@ export class ChoicesEnumerator extends EventEmitter
      * @public
      * @memberof ChoicesEnumerator
      */
-     public get completedCount(): number
-     {
-         let count = 0;
-         for(const choice of this.choices)
-         {
-            if(choice.value) count++;
-         }
-         return count;
-     }
+    public get completedCount(): number
+    {
+        let count = 0;
+        for(const choice of this.choices)
+        {
+        if(choice.value) count++;
+        }
+        return count;
+    }
+
+    /**
+     * Permets de récupérer tout les choix qui suivent le courant 
+     * @returns tableau choix qui suivent le courant
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+    public get nexts(): Choice[]
+    {
+        const choices: Choice[] = [];
+
+        for(let i = this.current.index; i < this.choices.length; i++)
+        {
+            choices.push(this.choices[i]);
+        }
+
+        return choices;
+    }
 
     /**
      * Permets de récupérer les choix qui ont une valeur définie
@@ -258,7 +279,7 @@ export class ChoicesEnumerator extends EventEmitter
      * @public
      * @memberof ChoicesEnumerator
      */
-    public completedArray(): CompletedChoice[]
+    public get completed(): CompletedChoice[]
     {
         const array = [];
 
@@ -267,6 +288,27 @@ export class ChoicesEnumerator extends EventEmitter
             if(choice.value)
             {
                 array.push(choice as CompletedChoice);
+            }
+        }
+
+        return array;
+    }
+
+    /**
+     * Permets de récupérer les choix qui n'ont pas de valeur définie
+     * @returns tableau choix qui n'ont pas de valeur définie
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+    public get notCompleted(): EmptyChoice[]
+    {
+        const array = [];
+
+        for(const choice of this.choices)
+        {
+            if(!choice.value)
+            {
+                array.push(choice as EmptyChoice);
             }
         }
 

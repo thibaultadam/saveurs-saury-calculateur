@@ -1,4 +1,5 @@
-import {ChoicesManager as _ChoicesManager} from "../../../lib/Choices/ChoicesManager";
+import { ChoiceContainer } from "../../../lib/ChoicesManagement/Choices/ChoiceContainer";
+import {ChoicesManager as _ChoicesManager} from "../../../lib/ChoicesManagement/ChoicesManager";
 import {Configurator} from "../../../lib/Configurator";
 import { Debug } from "../../../lib/Tools/Debug";
 import { TreeNode } from "../Data/DataParser";
@@ -34,7 +35,28 @@ export  class ChoicesManager extends _ChoicesManager
             return;
         }
 
-        this.createChoiceContainer(choiceData.type, node, choiceData);
+        // lorsque l'on change un choix plus haut que le courant on supprime tout les containers suivants qui on été crée précedement
+        if(this.choicesEnumerator.current.data.has("DOM"))
+        {
+            Debug.log("current have DOM");
+
+            for(let i = this.choicesEnumerator.current.index; i < this.choicesEnumerator.choices.length; i++)
+            {
+                this.choicesEnumerator.get(i)?.data.get('DOM')?.forEach((container: HTMLElement) => container.remove());
+            }
+        }
+
+        const choiceContainer = this.createChoiceContainer(choiceData.type, node, choiceData) as ChoiceContainer;
+        this.choicesEnumerator.current.data.set("DOM", choiceContainer?.containersBundle);
+
+        if(choiceData?.params)
+        {
+            /*if(choiceData.params?.buildNext)
+            {
+                this.choicesEnumerator.set(choiceContainer.id, );
+                this.choicesEnumerator.goTo(choiceContainer.id + 1);
+            }*/
+        }
     }
 
         // Testing

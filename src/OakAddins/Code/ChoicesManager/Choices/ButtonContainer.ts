@@ -1,6 +1,5 @@
-import { ChoiceContainer, ContainerCreationCallback } from "../../../../lib/Choices/ChoiceContainer";
-import { ChoicesManager } from "../../../../lib/Choices/ChoicesManager";
-import { Debug } from "../../../../lib/Tools/Debug";
+import { ChoiceContainer, ChoiceContainerConstructionOptions, ContainerCreationCallback } from "../../../../lib/ChoicesManagement/Choices/ChoiceContainer";
+import { ChoicesManager } from "../../../../lib/ChoicesManagement/ChoicesManager";
 import { createElement } from "../../../../lib/Tools/DOMElementCreator";
 import { TreeNode } from "../../Data/DataParser";
 import { ChoiceData } from "../../Data/DataProvider";
@@ -9,26 +8,23 @@ import { ButtonChoice } from "./ButtonChoice";
 export class ButtonContainer extends ChoiceContainer
 {
     constructor (
-        type: string, 
-        containersCreation : ContainerCreationCallback[],
-        choicesManager: ChoicesManager, 
-        data : TreeNode,
-        choiceData: ChoiceData,
-        ...buildArgs : any[])
+        constructionOptions: ChoiceContainerConstructionOptions, 
+        node : TreeNode,
+        choiceData: ChoiceData)
     {
-        super({type, containersCreation, choicesManager}, ...buildArgs);
+        super(constructionOptions, node, choiceData);
         this.registerChoiceClass(ButtonChoice);
 
-        // si le container existe déja c'est que le choix est en train de ce recrée, donc on le détruit
-        this.$container?.remove()
+        this.createNewContainer(() => createElement(`
+        <div class="row">
+            <p class="my-2 fs-6">${choiceData.title}</p>
+        </div>`) as HTMLElement);
 
-        this.createNewContainer(() => createElement(`<div><div>${choiceData.title}</div></div>`) as HTMLElement);
+        this.createNewContainer(() => createElement(`<div class="col" role="group" aria-label="${this.type}-${this.id}">`) as HTMLElement);
 
-        for(const buttonData of Object.values(data.values))
+        for(const buttonData of Object.values(node.values))
         {
-            console.log(buttonData);
-
-            this.createChoice(buttonData, this.choicesManager.choicesEnumerator.current.index);
+            this.createChoice(buttonData, choiceData);
         }
     }
 }

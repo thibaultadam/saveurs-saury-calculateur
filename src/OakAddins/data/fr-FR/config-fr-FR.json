@@ -24,17 +24,21 @@
                 "type": "radio",
                 "title": "Unité",
                 "params":  {
-                    "calls": ["buildNext"]
+                    "buildProducts": true
                 }
             },
             "value": {
                 "type": "input",
                 "title": "Valeur en ${unit}",
+                "placeholder": "0",
+                "inputType": "number",
+                "defaultValue": "0",
+                
                 "titleParse": {
                     "unit": "${unit}"
                 },
                 "params":  {
-                    "calls": ["buildNext"]
+                    "buildNext": true
                 }
             },
             "gramsPerLiter" : {

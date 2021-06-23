@@ -1,8 +1,10 @@
-import { Data } from "../Configurator";
-import {Debug} from "../Tools/Debug";
-import {UIElement} from "../UIElement";
+import { Data } from "../../Configurator";
+import {Debug} from "../../Tools/Debug";
+import {UIElement} from "../../UIElement";
 import {ChoiceButton, ChoiceButtonConstructor } from "./ChoiceButton";
-import {ChoicesManager} from "./ChoicesManager";
+import {ChoicesManager} from "../ChoicesManager";
+import { Choice, ChoiceConstructor } from "./Choice";
+import { ChoicesEnumerator } from "../ChoicesEnumerator";
 
 /**
  * @typedef ContainerCreationCallback
@@ -10,13 +12,13 @@ import {ChoicesManager} from "./ChoicesManager";
  */
 export type ContainerCreationCallback = (type: string, ...args: any[]) => HTMLElement;
 
-export type ChoiceContainerConstructor = new (type : string, 
-    containersCreation : ContainerCreationCallback[], 
-    choicesManager: ChoicesManager,
-    ...args : any[]) 
+export type ChoiceContainerConstructor = new (
+    constructionOptions: ChoiceContainerConstructionOptions, 
+    ...buildArgs : any[]) 
     => ChoiceContainer
 
-export type ClassBuildData = {
+export type ChoiceContainerConstructionOptions = {
+    id: number,
     type : string,
     containersCreation : ContainerCreationCallback[],
     choicesManager: ChoicesManager
@@ -46,7 +48,7 @@ abstract class ChoiceContainer extends UIElement {
      * @private
      * @memberof ChoiceContainer
      */
-    public containersbundle: HTMLElement[] = [];
+    public containersBundle: HTMLElement[] = [];
 
     /**
      * Contiens les arguments de construction des boutons
@@ -62,7 +64,7 @@ abstract class ChoiceContainer extends UIElement {
      * @private
      * @memberof ChoiceContainer
      */
-    private buttons: ChoiceButton[] = [];
+    private buttons: Choice[] = [];
 
     /**
      * Contiens la class constructrice des boutons de ce container
@@ -70,7 +72,7 @@ abstract class ChoiceContainer extends UIElement {
      * @private
      * @memberof ChoiceContainer
      */
-    private ButtonClass!: ChoiceButtonConstructor;
+    private ChoiceClass!: ChoiceConstructor;
     
     /**
      * Contien la référance vers les données du configurateur
@@ -89,12 +91,28 @@ abstract class ChoiceContainer extends UIElement {
     public type : string;
 
     /**
+     * Identifiant unique corespondant a la position du choix dans le ChoiceEnumerator
+     * @type {string}
+     * @public
+     * @memberof ChoiceContainer
+     */
+    public id : number;
+
+    /**
      * Référance au ChoiceManager
      * @type {string}
      * @public
      * @memberof ChoiceContainer
      */
     public choicesManager: ChoicesManager;
+
+    /**
+     * Référance au ChoiceEnumerator
+     * @type {string}
+     * @public
+     * @memberof ChoiceContainer
+     */
+    public choicesEnumerator: ChoicesEnumerator;
 
     /**
      * // TODO ChoiceContainer constructor description
@@ -105,18 +123,20 @@ abstract class ChoiceContainer extends UIElement {
      * @memberof ChoiceContainer
      */
     constructor(
-        classBuild: ClassBuildData, 
+        constructionOptions: ChoiceContainerConstructionOptions, 
         ...buildArgs : any[])
     {
         super();     
         
-        this.type = classBuild.type;
-        this.choicesManager = classBuild.choicesManager;
+        this.id = constructionOptions.id;
+        this.type = constructionOptions.type;
+        this.choicesManager = constructionOptions.choicesManager;
+        this.choicesEnumerator = constructionOptions.choicesManager.choicesEnumerator;
 
         this.data = this.choicesManager.data;
         this.buildArgs = buildArgs;
 
-        for(const containerCreation of classBuild.containersCreation)
+        for(const containerCreation of constructionOptions.containersCreation)
         {
             this.createNewContainer(containerCreation);
         }
@@ -144,7 +164,7 @@ abstract class ChoiceContainer extends UIElement {
             this.$container = this.$container.appendChild(newContainer);
         }
 
-        this.containersbundle.push(this.$container);
+        this.containersBundle.push(this.$container);
     }
 
     /**
@@ -154,10 +174,13 @@ abstract class ChoiceContainer extends UIElement {
      * @protected
      * @memberof ChoiceContainer
      */
-    protected createChoice(...args : any[]) : ChoiceButton
+    protected createChoice(...args : any[]) : Choice
     {
-        const button : ChoiceButton = new this.ButtonClass(this.type, this, ...args);
-        this.$container.appendChild(button.$container);
+        const button = new this.ChoiceClass({
+            id: this.buttons.length,
+            type: this.type, 
+            choiceContainer: this
+        }, ...args);
         
         this.buttons.push(button);
         button.on('click', (ev: MouseEvent, ...args: any) => this.emit('click', button, ev, ...args));
@@ -173,9 +196,9 @@ abstract class ChoiceContainer extends UIElement {
      * @protected
      * @memberof ChoiceContainer
      */
-    protected registerChoiceClass(ButtonClass : ChoiceButtonConstructor): void
+    protected registerChoiceClass(ChoiceClass : ChoiceConstructor): void
     {
-        this.ButtonClass = ButtonClass;
+        this.ChoiceClass = ChoiceClass;
         Debug.log(`Registering Button Class for "${this.type}"`);
     }
 }

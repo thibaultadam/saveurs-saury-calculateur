@@ -1,4 +1,4 @@
-import { ChoicesManager, ChoicesManagerConstructor } from './Choices/ChoicesManager';
+import { ChoicesManager, ChoicesManagerConstructor } from './ChoicesManagement/ChoicesManager';
 import { DataParser, DataParserConstructor } from './Data/DataParser';
 import { Debug, DebugLevel } from './Tools/Debug';
 import { EventEmitter } from './Tools/EventEmitter';
@@ -21,7 +21,7 @@ export type Data = {
 export
 abstract class Configurator extends EventEmitter
 {
-    $container: HTMLElement | null;
+    $container: HTMLElement;
     choicesManager!: ChoicesManager;
     dataParser!: DataParser | undefined;
     
@@ -40,7 +40,14 @@ abstract class Configurator extends EventEmitter
 
         Debug.debugLevel = debugLevel || Debug.debugLevel;
 
-        this.$container = document.querySelector(container);
+        const containerElement = document.querySelector<HTMLElement>(container);
+
+        if(!containerElement)
+        {
+            throw Error(`can't build Configurator whitout a valid container`);
+        }
+
+        this.$container = containerElement;
 
         this.fetchDataFiles(paths);
     }

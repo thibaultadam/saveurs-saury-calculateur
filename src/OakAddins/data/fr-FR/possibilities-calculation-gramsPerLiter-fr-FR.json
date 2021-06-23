@@ -12,8 +12,10 @@
         "type": "value",
         "values": {
             "fermentation-input": {
+                "text": "ENTREZ VALEUR EN HECTOLITRES",
                 "next": {
                     "type": "gramsPerLiter",
+                    "text": "Entrez % de bois neuf (100% = barrique neuve) :",
                     "end": true
                 }
             }

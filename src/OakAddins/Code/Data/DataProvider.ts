@@ -1,4 +1,4 @@
-import { ChoicesManager } from '../../../lib/Choices/ChoicesManager';
+import { ChoicesManager } from '../../../lib/ChoicesManagement/ChoicesManager';
 import {DataProvider as _DataProvider} from '../../../lib/DataProvider';
 import { Debug } from '../../../lib/Tools/Debug';
 import { ChoiceType } from '../ChoicesManager/ChoicesManager';
@@ -29,7 +29,7 @@ export class DataProvider extends _DataProvider{
 
     public getCurrentNode(): TreeNode
     {
-        const completedChoices = this.choicesEnumerator.completedArray();
+        const completedChoices = this.choicesEnumerator.completed;
         
         let node = this.data.tree;
 

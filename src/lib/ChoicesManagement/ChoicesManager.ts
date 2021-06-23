@@ -3,7 +3,7 @@ import {ChoicesEnumerator} from "./ChoicesEnumerator";
 import {EventEmitter} from "../Tools/EventEmitter";
 import {DataProvider, DataProviderConstructor } from "../DataProvider";
 
-import {ChoiceContainer, ChoiceContainerConstructor, ContainerCreationCallback } from "./ChoiceContainer";
+import {ChoiceContainer, ChoiceContainerConstructor, ContainerCreationCallback } from "./Choices/ChoiceContainer";
 import {Debug} from "../Tools/Debug";
 
 export type ChoicesManagerConstructor = new (
@@ -25,7 +25,7 @@ abstract class ChoicesManager extends EventEmitter
     private choiceContainersCreation : ContainerCreationCallback[] = [];
     private ChoiceContainerClasses = new Map<string, ChoiceContainerConstructor>();
 
-    protected choicesContainers = new Map<string, ChoiceContainer[]>();
+    protected choicesContainersInstances = new Map<string, ChoiceContainer[]>();
 
     constructor(
         public configurator : Configurator, 
@@ -84,10 +84,15 @@ abstract class ChoicesManager extends EventEmitter
                 return null;
             }
 
-            const choice = new ChoiceContainerClass(type, this.choiceContainersCreation, this, ...args);
+            const choice = new ChoiceContainerClass({
+                id: this.choicesEnumerator.current.index,
+                type: type, 
+                containersCreation: this.choiceContainersCreation, 
+                choicesManager: this
+            }, ...args);
             
             Debug.log(`Successfully created new choice`, choice);
-            this.choicesContainers.get(type)?.push(choice);
+            this.choicesContainersInstances.get(type)?.push(choice);
             return choice;
         }
         else
@@ -121,7 +126,7 @@ abstract class ChoicesManager extends EventEmitter
     protected registerChoiceClass(type : string, ChoiceClass : ChoiceContainerConstructor): void
     {
         this.ChoiceContainerClasses.set(type, ChoiceClass);
-        this.choicesContainers.set(type, []);
+        this.choicesContainersInstances.set(type, []);
         Debug.log(`Registering a choice class`, ChoiceClass);
     }
 

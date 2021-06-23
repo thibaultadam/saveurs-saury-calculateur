@@ -1,14 +1,31 @@
-import { ChoiceContainer, ContainerCreationCallback } from "../../../../lib/Choices/ChoiceContainer";
-import { ChoicesManager } from "../../../../lib/Choices/ChoicesManager";
+import { ChoiceContainer, ChoiceContainerConstructionOptions } from "../../../../lib/ChoicesManagement/Choices/ChoiceContainer";
+import { createElement } from "../../../../lib/Tools/DOMElementCreator";
+import { TreeNode } from "../../Data/DataParser";
+import { ChoiceData } from "../../Data/DataProvider";
+import { RadioChoice } from "./RadioChoice";
 
 export class RadioContainer extends ChoiceContainer
 {
-    constructor(
-        type: string, 
-        containersCreation : ContainerCreationCallback[],
-        choicesManager: ChoicesManager, 
-        ...buildArgs : any[])
+    constructor (
+        constructionOptions: ChoiceContainerConstructionOptions, 
+        node : TreeNode,
+        choiceData: ChoiceData)
     {
-        super({type, containersCreation, choicesManager}, buildArgs);
+        super(constructionOptions, node, choiceData);
+        this.registerChoiceClass(RadioChoice);
+
+        this.createNewContainer(() => createElement(`
+        <div class="my-2">
+            <p class="my-2 fs-6">${choiceData.title}</p>
+        </div>`) as HTMLElement);
+
+        this.createNewContainer(() => createElement(`
+        <div class="btn-group" role="group" aria-label="${this.type}-${this.id}"></div>
+        `) as HTMLElement);
+
+        for(const buttonData of Object.values(node.values))
+        {
+            this.createChoice(buttonData, choiceData);
+        }
     }
 }

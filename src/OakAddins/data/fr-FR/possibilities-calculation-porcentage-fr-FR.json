@@ -11,9 +11,11 @@
     "next" : {
         "type": "value",
         "values": {
-            "fermentation-input": {
+            "porcentage-input": {
+                "text": "ENTREZ VALEUR EN HECTOLITRES",
                 "next": {
                     "type": "porcentage",
+                    "text": "Entrez % de bois neuf (100% = barrique neuve) :",
                     "end": true
                 }
             }

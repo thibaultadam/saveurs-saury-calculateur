@@ -71,9 +71,22 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Permet la déclaration et la centralisation des méthodes de récupération de données</p>
+						<p>Permet la déclaration et la centralisation des méthodes de récupération de données
+							la décalaration des Handlers se fait directement dans la class et sont accès ce fait soit directement
+							soit via la méthode &quot;get&quot;.
+						/!\ un Handler doit forcement avoir un nom qui commance par &#39;get&#39; afin de le différencier des autre methodes</p>
 					</div>
 					<dl class="tsd-comment-tags">
+						<dt>example</dt>
+						<dd><p>public getUserData(userID: number)
+								{
+								return this.data.users[userID];
+							}</p>
+							<p>// on peut l&#39;appeler directement
+							dataProvider.getUserData(0);</p>
+							<p>// ou via la methode get sans avoir besoin de mettre le get au debut du nom de la méthode
+							dataProvider.get(&#39;UserData&#39;, 0)</p>
+						</dd>
 						<dt>alias</dt>
 						<dd><p>DataProvider</p>
 						</dd>
@@ -93,6 +106,18 @@
 					</li>
 				</ul>
 			</section>
+			<section class="tsd-panel tsd-kind-class tsd-parent-kind-module">
+				<h3 class="tsd-before-signature">Indexable</h3>
+				<div class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">[</span>index: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">ProviderHandler</span><span class="tsd-signature-symbol"> | </span><a href="lib_choicesmanagement_choicesmanager.choicesmanager.html" class="tsd-signature-type" data-tsd-kind="Class">ChoicesManager</a><span class="tsd-signature-symbol"> | </span><a href="lib_choicesmanagement_choicesenumerator.choicesenumerator.html" class="tsd-signature-type" data-tsd-kind="Class">ChoicesEnumerator</a><span class="tsd-signature-symbol"> | </span><a href="../modules/lib_configurator.html#data" class="tsd-signature-type" data-tsd-kind="Type alias">Data</a></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Permet la déclaration et la centralisation des méthodes de récupération de données
+							la décalaration des Handlers se fait directement dans la class et sont accès ce fait soit directement
+							soit via la méthode &quot;get&quot;.
+						/!\ un Handler doit forcement avoir un nom qui commance par &#39;get&#39; afin de le différencier des autre methodes</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -109,7 +134,6 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="lib_dataprovider.dataprovider.html#choicesenumerator" class="tsd-kind-icon">choices<wbr>Enumerator</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lib_dataprovider.dataprovider.html#choicesmanager" class="tsd-kind-icon">choices<wbr>Manager</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="lib_dataprovider.dataprovider.html#data" class="tsd-kind-icon">data</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="lib_dataprovider.dataprovider.html#providers" class="tsd-kind-icon">providers</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -127,29 +151,35 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Data<wbr>Provider<span class="tsd-signature-symbol">(</span>choicesManager<span class="tsd-signature-symbol">: </span><a href="lib_choices_choicesmanager.choicesmanager.html" class="tsd-signature-type" data-tsd-kind="Class">ChoicesManager</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_dataprovider.dataprovider.html" class="tsd-signature-type" data-tsd-kind="Class">DataProvider</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Data<wbr>Provider<span class="tsd-signature-symbol">(</span>choicesManager<span class="tsd-signature-symbol">: </span><a href="lib_choicesmanagement_choicesmanager.choicesmanager.html" class="tsd-signature-type" data-tsd-kind="Class">ChoicesManager</a>, choicesEnumerator<span class="tsd-signature-symbol">?: </span><a href="lib_choicesmanagement_choicesenumerator.choicesenumerator.html" class="tsd-signature-type" data-tsd-kind="Class">ChoicesEnumerator</a>, data<span class="tsd-signature-symbol">?: </span><a href="../modules/lib_configurator.html#data" class="tsd-signature-type" data-tsd-kind="Type alias">Data</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_dataprovider.dataprovider.html" class="tsd-signature-type" data-tsd-kind="Class">DataProvider</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/P0ulpy/Configurateur-OakAddins/blob/0d8ff74/src/lib/DataProvider.ts#L29">lib/DataProvider.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/P0ulpy/Configurateur-OakAddins/blob/d5c74ec/src/lib/DataProvider.ts#L32">lib/DataProvider.ts:32</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Le DataProvider est instancier lors de sont ajout dans le ChoiceManager</p>
+									<p>Le DataProvider est instancier au moment de sont ajout ajout dans le ChoiceManager</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>memberof</dt>
-									<dd><p>OadAddinsDataProvider</p>
+									<dd><p>DataProvider</p>
 									</dd>
 								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>choicesManager: <a href="lib_choices_choicesmanager.choicesmanager.html" class="tsd-signature-type" data-tsd-kind="Class">ChoicesManager</a></h5>
+									<h5>choicesManager: <a href="lib_choicesmanagement_choicesmanager.choicesmanager.html" class="tsd-signature-type" data-tsd-kind="Class">ChoicesManager</a></h5>
+								</li>
+								<li>
+									<h5>choicesEnumerator: <a href="lib_choicesmanagement_choicesenumerator.choicesenumerator.html" class="tsd-signature-type" data-tsd-kind="Class">ChoicesEnumerator</a><span class="tsd-signature-symbol"> = ...</span></h5>
+								</li>
+								<li>
+									<h5>data: <a href="../modules/lib_configurator.html#data" class="tsd-signature-type" data-tsd-kind="Type alias">Data</a><span class="tsd-signature-symbol"> = ...</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="lib_dataprovider.dataprovider.html" class="tsd-signature-type" data-tsd-kind="Class">DataProvider</a></h4>
@@ -162,81 +192,23 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="choicesenumerator" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> choices<wbr>Enumerator</h3>
-					<div class="tsd-signature tsd-kind-icon">choices<wbr>Enumerator<span class="tsd-signature-symbol">:</span> <a href="lib_choices_choicesenumerator.choicesenumerator.html" class="tsd-signature-type" data-tsd-kind="Class">ChoicesEnumerator</a></div>
+					<div class="tsd-signature tsd-kind-icon">choices<wbr>Enumerator<span class="tsd-signature-symbol">:</span> <a href="lib_choicesmanagement_choicesenumerator.choicesenumerator.html" class="tsd-signature-type" data-tsd-kind="Class">ChoicesEnumerator</a><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/P0ulpy/Configurateur-OakAddins/blob/0d8ff74/src/lib/DataProvider.ts#L16">lib/DataProvider.ts:16</a></li>
-						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="choicesmanager" class="tsd-anchor"></a>
 					<h3>choices<wbr>Manager</h3>
-					<div class="tsd-signature tsd-kind-icon">choices<wbr>Manager<span class="tsd-signature-symbol">:</span> <a href="lib_choices_choicesmanager.choicesmanager.html" class="tsd-signature-type" data-tsd-kind="Class">ChoicesManager</a></div>
+					<div class="tsd-signature tsd-kind-icon">choices<wbr>Manager<span class="tsd-signature-symbol">:</span> <a href="lib_choicesmanagement_choicesmanager.choicesmanager.html" class="tsd-signature-type" data-tsd-kind="Class">ChoicesManager</a></div>
 					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/P0ulpy/Configurateur-OakAddins/blob/0d8ff74/src/lib/DataProvider.ts#L15">lib/DataProvider.ts:15</a></li>
-						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="data" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> data</h3>
-					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <a href="../modules/lib_configurator.html#data" class="tsd-signature-type" data-tsd-kind="Type alias">Data</a></div>
+					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <a href="../modules/lib_configurator.html#data" class="tsd-signature-type" data-tsd-kind="Type alias">Data</a><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/P0ulpy/Configurateur-OakAddins/blob/0d8ff74/src/lib/DataProvider.ts#L17">lib/DataProvider.ts:17</a></li>
-						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
-					<a name="providers" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> providers</h3>
-					<div class="tsd-signature tsd-kind-icon">providers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> = {}</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/P0ulpy/Configurateur-OakAddins/blob/0d8ff74/src/lib/DataProvider.ts#L27">lib/DataProvider.ts:27</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Permet la définition des différents providers</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>example</dt>
-							<dd><p>this.providers.users = (userName: string) =&gt; this.data.users[userName];</p>
-							</dd>
-							<dt>memberof</dt>
-							<dd><p>OadAddinsDataProvider</p>
-							</dd>
-						</dl>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-index-signature">
-								<h5><span class="tsd-signature-symbol">[</span>index: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
-								<ul class="tsd-parameters">
-									<li class="tsd-parameter-signature">
-										<ul class="tsd-signatures tsd-kind-type-literal">
-											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-										</ul>
-										<ul class="tsd-descriptions">
-											<li class="tsd-description">
-												<h4 class="tsd-parameters-title">Parameters</h4>
-												<ul class="tsd-parameters">
-													<li>
-														<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>params: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
-													</li>
-												</ul>
-												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -251,7 +223,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/P0ulpy/Configurateur-OakAddins/blob/0d8ff74/src/lib/DataProvider.ts#L49">lib/DataProvider.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/P0ulpy/Configurateur-OakAddins/blob/d5c74ec/src/lib/DataProvider.ts#L55">lib/DataProvider.ts:55</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -316,19 +288,25 @@
 						<a href="../modules/oakaddins_code_oakaddinsconfigurateur.html">Oak<wbr>Addins/<wbr>Code/<wbr>Oak<wbr>Addins<wbr>Configurateur</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/lib_choices_choicebutton.html">lib/<wbr>Choices/<wbr>Choice<wbr>Button</a>
+						<a href="../modules/oakaddins_code_tools_parsetools.html">Oak<wbr>Addins/<wbr>Code/<wbr>Tools/<wbr>Parse<wbr>Tools</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/lib_choices_choicecontainer.html">lib/<wbr>Choices/<wbr>Choice<wbr>Container</a>
+						<a href="../modules/lib_choicesmanagement_choices_choice.html">lib/<wbr>Choices<wbr>Management/<wbr>Choices/<wbr>Choice</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/lib_choices_choiceinput.html">lib/<wbr>Choices/<wbr>Choice<wbr>Input</a>
+						<a href="../modules/lib_choicesmanagement_choices_choicebutton.html">lib/<wbr>Choices<wbr>Management/<wbr>Choices/<wbr>Choice<wbr>Button</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/lib_choices_choicesenumerator.html">lib/<wbr>Choices/<wbr>Choices<wbr>Enumerator</a>
+						<a href="../modules/lib_choicesmanagement_choices_choicecontainer.html">lib/<wbr>Choices<wbr>Management/<wbr>Choices/<wbr>Choice<wbr>Container</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/lib_choices_choicesmanager.html">lib/<wbr>Choices/<wbr>Choices<wbr>Manager</a>
+						<a href="../modules/lib_choicesmanagement_choices_choiceinput.html">lib/<wbr>Choices<wbr>Management/<wbr>Choices/<wbr>Choice<wbr>Input</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/lib_choicesmanagement_choicesenumerator.html">lib/<wbr>Choices<wbr>Management/<wbr>Choices<wbr>Enumerator</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/lib_choicesmanagement_choicesmanager.html">lib/<wbr>Choices<wbr>Management/<wbr>Choices<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/lib_configurator.html">lib/<wbr>Configurator</a>
@@ -338,6 +316,9 @@
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="../modules/lib_dataprovider.html">lib/<wbr>Data<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/lib_tools_domelementcreator.html">lib/<wbr>Tools/DOMElement<wbr>Creator</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/lib_tools_debug.html">lib/<wbr>Tools/<wbr>Debug</a>
@@ -369,9 +350,6 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 								<a href="lib_dataprovider.dataprovider.html#data" class="tsd-kind-icon">data</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
-								<a href="lib_dataprovider.dataprovider.html#providers" class="tsd-kind-icon">providers</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="lib_dataprovider.dataprovider.html#get" class="tsd-kind-icon">get</a>
 							</li>
@@ -398,6 +376,7 @@
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
 			</ul>
 			<ul class="tsd-legend">

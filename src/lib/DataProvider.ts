@@ -1,5 +1,5 @@
-import { ChoicesEnumerator } from "./Choices/ChoicesEnumerator";
-import { ChoicesManager } from "./Choices/ChoicesManager";
+import { ChoicesEnumerator } from "./ChoicesManagement/ChoicesEnumerator";
+import { ChoicesManager } from "./ChoicesManagement/ChoicesManager";
 import { Data } from "./Configurator";
 import { Debug } from "./Tools/Debug";
 
@@ -32,16 +32,16 @@ abstract class DataProvider
     [index: string]: ProviderHandler | ChoicesManager | ChoicesEnumerator | Data;
 
     /**
-     * Le DataProvider est instancier lors de sont ajout dans le ChoiceManag
+     * Le DataProvider est instancier au moment de sont ajout ajout dans le ChoiceManager
      * @param  {ChoicesManager} choicesManager
-     * @param  {ChoicesEnumerato} choicesEnumerator
-     * @param  {Data} data
+     * @param  {ChoicesEnumerato} choicesEnumerator?
+     * @param  {Data} data?
      * @memberof DataProvider
      */
     constructor(
         public choicesManager : ChoicesManager, 
         protected choicesEnumerator : ChoicesEnumerator = choicesManager.choicesEnumerator,
-        protected data : Data = choicesManager.configurator.data,)
+        protected data : Data = choicesManager.configurator.data)
     {
 
     }
@@ -52,7 +52,7 @@ abstract class DataProvider
      * @returns {any}
      * @memberof DataProvider
      */
-    public get(index : string, ...args: any[]): any
+    public get(index: string, ...args: any[]): any
     {
         const providerName = `get${index}`;
 

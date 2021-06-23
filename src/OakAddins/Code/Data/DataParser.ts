@@ -2,7 +2,8 @@ import {Configurator} from "../../../lib/Configurator";
 import {DataParser as _DataParser} from "../../../lib/Data/DataParser";
 import {Debug} from "../../../lib/Tools/Debug";
 
-export type JsonTypes = number | string | boolean | {[index : string] : JsonTypes} | JsonTypes[] | null | undefined;
+// BUG: JSON types pour les objet ne fonctionne pas
+export type JsonTypes = any; //number | string | boolean | {[index : string] : JsonTypes} | JsonTypes[] | null | undefined;
 
 export type TreeNode = {
     type: string,
@@ -62,6 +63,29 @@ class DataParser extends _DataParser {
             {
                 const value = choice[valueKey];
 
+                // pour charger un choix suivant externe
+                const loadRemote = async(path: string) =>
+                {
+                    let remoteValue: TreeNode | null = null;
+
+                    try {
+                        remoteValue = await (await fetch(`${this.data.root}/${path}`)).json();
+                    }
+                    catch(error)
+                    {
+                        Debug.error(`can't fetch next remote dependancie`);
+                    }
+                    finally
+                    {
+                        if(remoteValue)
+                        {
+                            // the remote value become the value
+                            choice.next = remoteValue;
+                            nexts.set(choiceKey, remoteValue);
+                        }
+                    }
+                }
+
                 switch(valueKey)
                 {
                     default:
@@ -77,24 +101,7 @@ class DataParser extends _DataParser {
                         }
                         if(typeof value === "string")
                         {
-                            let remoteValue: TreeNode | null = null;
-
-                            try {
-                                remoteValue = await (await fetch(`${this.data.root}/${value}`)).json();
-                            }
-                            catch(error)
-                            {
-                                Debug.error(`can't fetch next remote dependancie`);
-                            }
-                            finally
-                            {
-                                if(remoteValue)
-                                {
-                                    // the remote value become the value
-                                    choice.next = remoteValue;
-                                    nexts.set(choiceKey, remoteValue as TreeNode);
-                                }
-                            }
+                            await loadRemote(value);
                         }
 
                     break;
@@ -109,24 +116,7 @@ class DataParser extends _DataParser {
                         }
                         if(typeof current.next === "string")
                         {
-                            let remoteValue: TreeNode | null = null;
-
-                            try {
-                                remoteValue = await (await fetch(`${this.data.root}/${current.next}`)).json();
-                            }
-                            catch(error)
-                            {
-                                Debug.error(`can't fetch next remote dependancie`);
-                            }
-                            finally
-                            {
-                                if(remoteValue)
-                                {
-                                    // the remote value become the value
-                                    choice.next = remoteValue;
-                                    nexts.set(choiceKey, remoteValue as TreeNode);
-                                }
-                            }
+                            await loadRemote(current.next);
                         }
                         
                     break;

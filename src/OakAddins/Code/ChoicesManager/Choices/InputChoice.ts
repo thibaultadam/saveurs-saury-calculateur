@@ -1,25 +1,35 @@
-import {ChoiceContainer} from "../../../../lib/Choices/ChoiceContainer";
-import {ChoiceInput} from "../../../../lib/Choices/ChoiceInput";
+import { ChoiceConstructionOptions } from "../../../../lib/ChoicesManagement/Choices/Choice";
+import { ChoiceInput } from "../../../../lib/ChoicesManagement/Choices/ChoiceInput";
+import { createElement } from "../../../../lib/Tools/DOMElementCreator";
+import { TreeNode } from "../../Data/DataParser";
+import { ChoiceData } from "../../Data/DataProvider";
 
-export  class InputChoice extends ChoiceInput
+export class InputChoice extends ChoiceInput
 {
-    constructor(type : string, choiceContainer: ChoiceContainer, ...args : any[])
+    constructor(constructionOptions: ChoiceConstructionOptions, ...buildArgs : any[])
     {
-        super(type, choiceContainer, args);
+        super(constructionOptions, ...buildArgs);
+
+        this.build((data: TreeNode["values"]["index"], choiceData: ChoiceData) => 
+        {
+            return createElement(`
+            <input class="form-control" type="${choiceData.inputType || "text"}" id="${data.label}-${this.choiceContainer.id}" placeholder="${choiceData.placeholder || ""}" value="${choiceData.defaultValue || ""}">
+            `) as HTMLInputElement;
+        });
     }
 
-    protected onBuild(...args : any[]) : void
+    protected onBuild(data: TreeNode["values"]["index"], choiceData: ChoiceData): void
     {
-        
+        this.$container.appendChild(createElement(`
+        <label for="${data.label}-${this.choiceContainer.id}">${data.text}</label>
+        `) as HTMLElement);
     }
 
-    protected onClick(ev : MouseEvent, ...args : any[]) : void
+    protected onChange(ev : Event, data: TreeNode["values"]["index"], choiceData: ChoiceData): void
     {
-
+        this.choicesEnumerator.set(this.choiceContainer.id, this.value);
     }
 
-    protected onChange(ev : Event, ...args : any[]) : void
-    {
-
-    }
+    protected onClick(ev : MouseEvent, data: TreeNode["values"]["index"], choiceData: ChoiceData): void
+    {}
 }
