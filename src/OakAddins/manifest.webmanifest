@@ -1,0 +1,21 @@
+{
+    "name": "Configurateur OakAddins",
+    "short_name": "Configurateur OakAddins",
+    "description": "Configurateur du site web OakAddins.com",
+    "lang": "fr",
+    "start_url": "./home.html",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#ffff",
+    "theme_color": "#ffff",
+    "icons": [{
+      "src": "app-ressources/logo.png",
+      "sizes": "181x181",
+      "type": "image/png"
+    }],
+    "related_applications": [{
+      "platform": "web",
+      "url": "./"
+    }]
+  }
