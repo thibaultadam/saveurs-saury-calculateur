@@ -4,7 +4,12 @@
     "tsconfig": "tsconfig.json",
     "assets" : [
         { "from": "OakAddins/data", "to": "data" },
-        { "from": "OakAddins/configurator.html", "to": "index.html" }
+        { "from": "OakAddins/configurator.html", "to": "index.html" },
+        { "from": "OakAddins/home.html", "to": "home.html" },
+        { "from": "OakAddins/manifest.webmanifest", "to": "manifest.webmanifest" },
+        { "from": "OakAddins/sw-init.js", "to": "sw-init.js" },
+        { "from": "OakAddins/sw.js", "to": "sw.js"},
+        { "from": "OakAddins/app-ressources", "to": "app-ressources"}
     ]
 }
 

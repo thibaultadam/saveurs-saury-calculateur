@@ -5,7 +5,6 @@ import {DataParser} from "./Data/DataParser";
 
 // CSS
 import '../css/choices.css';
-import { createElement } from "../../lib/Tools/DOMElementCreator";
 
 /**
  * @alias OakAddinsConfigurateur
