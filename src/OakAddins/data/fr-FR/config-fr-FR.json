@@ -14,42 +14,54 @@
                 "title": "Produits",
                 "description": "Produits utilisables dans la phase Fermentation",
                 "params":  {
-                    "call": ["showProducts"],
-                    "params": [
-                        [0]
-                    ]
+                    "buildProducts" : [0]
                 }
             },
             "unit": {
                 "type": "radio",
-                "title": "Unité",
-                "params":  {
-                    "buildProducts": true
-                }
+                "title": "Unité"
             },
             "value": {
                 "type": "input",
-                "title": "Valeur en ${unit}",
-                "placeholder": "0",
                 "inputType": "number",
+                "title": "Valeur en ${unit}",
+                "description": "Entrez une valeur en ${unit}",
+                
+                "placeholder": "0",
                 "defaultValue": "0",
                 
                 "titleParse": {
                     "unit": "${unit}"
                 },
                 "params":  {
-                    "buildNext": true
+                    "buildNext": [true]
                 }
             },
             "gramsPerLiter" : {
                 "type": "input",
+                "inputType": "number",
                 "title": "Pour la fermentation ou l'élevage court",
-                "description": "Entrez le nombre de grammes par Litres"
+                "description": "Entrez le nombre de grammes par Litres",
+                
+                "placeholder": "0",
+                "defaultValue": "0",
+
+                "params":  {
+                    "buildTab": [true]
+                }
             },
             "porcentage" : {
                 "type": "input",
+                "inputType": "number",
                 "title": "Pour l'élevage long",
-                "description": "Entrez % de bois neuf (100% = barrique neuve)"
+                "description": "Entrez % de bois neuf (100% = barrique neuve)",
+
+                "placeholder": "0",
+                "defaultValue": "0",
+                
+                "params":  {
+                    "buildTab": [true]
+                }
             }
         }
     }

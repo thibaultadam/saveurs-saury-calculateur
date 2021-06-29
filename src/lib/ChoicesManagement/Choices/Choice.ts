@@ -115,6 +115,8 @@ abstract class Choice extends UIElement {
 
         this.onBuild(...this.buildArgs);
         this.emit('build', ...this.buildArgs);
+        
+        this.once('choiceBuilt', () => this.onBuilt(...this.buildArgs));
 
         return this;
     }
@@ -132,5 +134,20 @@ abstract class Choice extends UIElement {
      * @memberof ChoiceButton
      */
     protected abstract onBuild(...args : any[]) : void;
+    //#{}
+
+    /**
+     * Est appelé lorsque la construction du boutton et de son container est completement fini dans les couches plus haute des appels (choiceManager)
+     * @abstract
+     * @param  {any[]} ...args
+     * @returns {void}
+     * @example
+     * onBuilt()
+     * {
+     *  this.choiceEnumerator.next('value');
+     * }
+     * @memberof ChoiceButton
+     */
+    protected abstract onBuilt(...args : any[]) : void;
     //#{}
 }

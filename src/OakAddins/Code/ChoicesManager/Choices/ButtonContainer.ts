@@ -1,5 +1,4 @@
 import { ChoiceContainer, ChoiceContainerConstructionOptions, ContainerCreationCallback } from "../../../../lib/ChoicesManagement/Choices/ChoiceContainer";
-import { ChoicesManager } from "../../../../lib/ChoicesManagement/ChoicesManager";
 import { createElement } from "../../../../lib/Tools/DOMElementCreator";
 import { TreeNode } from "../../Data/DataParser";
 import { ChoiceData } from "../../Data/DataProvider";
@@ -27,4 +26,7 @@ export class ButtonContainer extends ChoiceContainer
             this.createChoice(buttonData, choiceData);
         }
     }
+
+    protected onBuilt(): void
+    {}
 }

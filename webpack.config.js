@@ -27,7 +27,7 @@ if(config.assets)
             }
             else
             {
-                console.error('invalid asset declaration');
+                console.error('[lib]', 'invalid asset declaration');
             }
         }
     }

@@ -37,7 +37,8 @@ abstract class ChoicesManager extends EventEmitter
     }
 
     /**
-     * // TODO : buildChoice description
+     * buildChoice appel onBuildChoice et déclanche les evenements `build` avant l'appel de `onBuild`
+     * et `choiceBuilt` (avec comme valeur d'émition l'index du choix courant) lorsque l'appel de `onBuildChoice` est terminer et que donc le choix est complement appelé
      * @public
      * @returns {void}
      * @memberof ChoicesManager
@@ -46,6 +47,7 @@ abstract class ChoicesManager extends EventEmitter
     {
         this.emit('build');
         this.onBuildChoice();
+        this.emit('choiceBuilt', this.choicesEnumerator.current.index);
     }
 
     /**
@@ -84,12 +86,23 @@ abstract class ChoicesManager extends EventEmitter
                 return null;
             }
 
+            const choiceID = this.choicesEnumerator.current.index;
+
             const choice = new ChoiceContainerClass({
-                id: this.choicesEnumerator.current.index,
+                id: choiceID,
                 type: type, 
                 containersCreation: this.choiceContainersCreation, 
                 choicesManager: this
             }, ...args);
+
+            // lorsque un choix est fini de construire on propage l'évenement dans les couches inférieurs
+            this.on('choiceBuilt', (builtChoiceID: number) => 
+            {
+                if(choiceID === builtChoiceID)
+                {
+                    choice.emit('choiceBuilt');
+                }
+            });
             
             Debug.log(`Successfully created new choice`, choice);
             this.choicesContainersInstances.get(type)?.push(choice);

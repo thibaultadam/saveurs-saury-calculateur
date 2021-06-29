@@ -34,11 +34,13 @@ export  class ChoicesManager extends _ChoicesManager
             this.emit('error', `can't build : no node value defined`);
             return;
         }
+ 
+        Debug.log('--------------------------- onBuildChoice', node, choiceData);
 
         // lorsque l'on change un choix plus haut que le courant on supprime tout les containers suivants qui on été crée précedement
         if(this.choicesEnumerator.current.data.has("DOM"))
         {
-            Debug.log("current have DOM");
+            Debug.log("current have DOM destroying it and nexts");
 
             for(let i = this.choicesEnumerator.current.index; i < this.choicesEnumerator.choices.length; i++)
             {
@@ -48,15 +50,6 @@ export  class ChoicesManager extends _ChoicesManager
 
         const choiceContainer = this.createChoiceContainer(choiceData.type, node, choiceData) as ChoiceContainer;
         this.choicesEnumerator.current.data.set("DOM", choiceContainer?.containersBundle);
-
-        if(choiceData?.params)
-        {
-            /*if(choiceData.params?.buildNext)
-            {
-                this.choicesEnumerator.set(choiceContainer.id, );
-                this.choicesEnumerator.goTo(choiceContainer.id + 1);
-            }*/
-        }
     }
 
         // Testing

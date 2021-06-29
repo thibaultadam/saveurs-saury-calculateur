@@ -11,12 +11,14 @@
     "next" : {
         "type": "value",
         "values": {
-            "porcentage-input": {
-                "text": "ENTREZ VALEUR EN HECTOLITRES",
+            "value": {
                 "next": {
                     "type": "porcentage",
-                    "text": "Entrez % de bois neuf (100% = barrique neuve) :",
-                    "end": true
+                    "values": {
+                        "porcentage-input" : {
+                            "end": true
+                        }
+                    }
                 }
             }
         }

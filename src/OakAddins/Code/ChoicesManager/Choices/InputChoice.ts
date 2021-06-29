@@ -21,13 +21,34 @@ export class InputChoice extends ChoiceInput
     protected onBuild(data: TreeNode["values"]["index"], choiceData: ChoiceData): void
     {
         this.$container.appendChild(createElement(`
-        <label for="${data.label}-${this.choiceContainer.id}">${data.text}</label>
+        <label for="${data.label}-${this.choiceContainer.id}">${choiceData.description}</label>
         `) as HTMLElement);
+
+        // en cas de reconstruction on remet la valeur qui a précedement été entré
+        if(this.choicesEnumerator.get(this.choiceContainer.id).data.has('value'))
+        {
+            this.input(this.choicesEnumerator.get(this.choiceContainer.id).data.get('value'));
+        }
     }
 
-    protected onChange(ev : Event, data: TreeNode["values"]["index"], choiceData: ChoiceData): void
+    protected onBuilt(data: TreeNode["values"]["index"], choiceData: ChoiceData): void
+    {}
+
+    protected onInput(ev : Event, data: TreeNode["values"]["index"], choiceData: ChoiceData): void
     {
-        this.choicesEnumerator.set(this.choiceContainer.id, this.value);
+        this.choicesEnumerator.get(this.choiceContainer.id).data.set('value', this.value);
+        
+        // lorsque le choix est completement construit on vérifit si le parametre buildNext n'est pas définit dans les données 
+        // et dans ce cas on construit le choix suivant
+        // TODO : Enhancement, gerer le parsing des evenements et des parametes d'app dans ChoiceParamParser 
+        if(choiceData?.params)
+        {
+            if(choiceData.params?.buildNext)
+            {
+                this.choicesEnumerator.set(this.choiceContainer.id, 'value');
+                this.choicesEnumerator.goTo(this.choiceContainer.id + 1);
+            }
+        }
     }
 
     protected onClick(ev : MouseEvent, data: TreeNode["values"]["index"], choiceData: ChoiceData): void

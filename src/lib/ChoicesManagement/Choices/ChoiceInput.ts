@@ -26,23 +26,23 @@ abstract class ChoiceInput extends ChoiceButton {
     {
         super.build(buildCallback);
 
-        this.$eventProvider.addEventListener('change', (ev: Event) => {
+        this.$eventProvider.addEventListener('input', (ev: Event) => {
 
             this.value = this.$eventProvider.value;
 
-            this.emit('change', ev, ...this.buildArgs);
-            this.onChange(ev, ...this.buildArgs);
+            this.emit('input', ev, ...this.buildArgs);
+            this.onInput(ev, ...this.buildArgs);
         });
 
         return this;
     }
 
-    protected change(value: string = "") : void
+    protected input(value: string = "") : void
     {
         this.$eventProvider.value = value;
-        this.$eventProvider.dispatchEvent(new Event('change'));
+        this.$eventProvider.dispatchEvent(new Event('input'));
     }
 
-    protected abstract onChange(ev : Event, ...args : any[]) : void;
+    protected abstract onInput(ev : Event, ...args : any[]) : void;
     //#{}
 }

@@ -28,4 +28,7 @@ export class RadioContainer extends ChoiceContainer
             this.createChoice(buttonData, choiceData);
         }
     }
+
+    protected onBuilt(): void
+    {}
 }

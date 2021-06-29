@@ -185,12 +185,18 @@ abstract class ChoiceContainer extends UIElement {
         this.buttons.push(button);
         button.on('click', (ev: MouseEvent, ...args: any) => this.emit('click', button, ev, ...args));
 
+        // déclanche l'evenement `choiceBuilt` dans le bouton quand le choix est completement construit
+        this.once('choiceBuilt', () => {
+            this.onBuilt();
+            button.emit('choiceBuilt');
+        });
+
         this.emit('createButton', button);
         return button;
     }
 
     /**
-     * //TODO : createButton registerButtonClass
+     * Définit la class qui sera construite lors de la création de chaqu'un des element du choi, les déférentes instances de cette class servent comme émeteur d'evenement pour paser d'un choix a un autre
      * @param ButtonClass 
      * @returns {void}
      * @protected
@@ -201,4 +207,13 @@ abstract class ChoiceContainer extends UIElement {
         this.ChoiceClass = ChoiceClass;
         Debug.log(`Registering Button Class for "${this.type}"`);
     }
+
+    /**
+     * Applé lorsque le choix est completement crée dans les couches les plus hautes
+     * @returns {void}
+     * @protected
+     * @memberof ChoiceContainer
+     */
+    protected abstract onBuilt(): void
+    //#{}
 }

@@ -140,18 +140,15 @@ export class ChoicesEnumerator extends EventEmitter
      * @param {number} index 
      * @public
      * @memberof ChoicesEnumerator
-     * @deprecated
      */
     public next(value: string) : void
     {
         this.current.value = value;
         this.current = this.nextChoice;
         
-        if(!this.isEnd())
-        {
-            this.emit('change');
-        }
-        else
+        this.emit('change');
+        
+        if(this.isEnd())
         {
             this.emit('end');
         }
@@ -178,11 +175,9 @@ export class ChoicesEnumerator extends EventEmitter
             this.choices[i].value = null;
         }
         
-        if(!this.isEnd())
-        {
-            this.emit('change');
-        }
-        else
+        this.emit('change');
+        
+        if(this.isEnd())
         {
             this.emit('end');
         }

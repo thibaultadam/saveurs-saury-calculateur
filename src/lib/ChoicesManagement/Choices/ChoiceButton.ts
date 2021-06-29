@@ -23,7 +23,7 @@ abstract class ChoiceButton extends Choice {
      */
     constructor(
         constructionOptions: ChoiceConstructionOptions,
-        ...buildArgs : any[])
+        ...buildArgs: any[])
     {
         super(constructionOptions, ...buildArgs);
     }
@@ -34,7 +34,7 @@ abstract class ChoiceButton extends Choice {
      * @returns {ChoiceButton}
      * @memberof ChoiceButton
      */
-    protected build(buildCallback : (...args : any[]) => HTMLElement): ChoiceButton
+    protected build(buildCallback: (...args : any[]) => HTMLElement): ChoiceButton
     {
         super.build(buildCallback);
 

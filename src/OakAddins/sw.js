@@ -2,8 +2,6 @@
 
 self.addEventListener('fetch', (event) => 
 {
-    console.log('fetching', event?.request?.url);
-
     event.respondWith(
         caches.match(event.request)
         .then((response) => response || fetch(event.request))
@@ -12,7 +10,7 @@ self.addEventListener('fetch', (event) =>
 
 self.addEventListener('install', event => 
 {
-    console.log('installing app');
+    console.log('[SW]','installing app');
 
     event.waitUntil(
         caches.open('configurator')

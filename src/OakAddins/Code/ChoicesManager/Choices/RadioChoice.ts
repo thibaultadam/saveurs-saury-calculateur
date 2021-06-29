@@ -29,6 +29,9 @@ export class RadioChoice extends ChoiceButton
         this.$container.appendChild(label);
     }
 
+    protected onBuilt(data: TreeNode["values"]["index"], choiceData: ChoiceData) : void
+    {}
+
     protected onClick(ev : MouseEvent, data: TreeNode["values"]["index"], choiceData: ChoiceData) : void
     {
         Debug.log('click', 'data', data, 'choiceIndex', this.choiceContainer.id);
