@@ -150,4 +150,9 @@ abstract class Choice extends UIElement {
      */
     protected abstract onBuilt(...args : any[]) : void;
     //#{}
+
+    public delete(): void
+    {
+        this.$eventProvider.remove();
+    }
 }

@@ -1,9 +1,9 @@
 import { ChoiceContainer } from "../../../lib/ChoicesManagement/Choices/ChoiceContainer";
-import {ChoicesManager as _ChoicesManager} from "../../../lib/ChoicesManagement/ChoicesManager";
-import {Configurator} from "../../../lib/Configurator";
+import { ChoicesManager as _ChoicesManager } from "../../../lib/ChoicesManagement/ChoicesManager";
+import { Configurator } from "../../../lib/Configurator";
 import { Debug } from "../../../lib/Tools/Debug";
 import { TreeNode } from "../Data/DataParser";
-import {ChoiceData, DataProvider} from "../Data/DataProvider";
+import { ChoiceData, DataProvider } from "../Data/DataProvider";
 import { ButtonContainer } from "./Choices/ButtonContainer";
 import { InputContainer } from "./Choices/InputContainer";
 import { RadioContainer } from "./Choices/RadioContainer";
@@ -38,18 +38,22 @@ export  class ChoicesManager extends _ChoicesManager
         Debug.log('--------------------------- onBuildChoice', node, choiceData);
 
         // lorsque l'on change un choix plus haut que le courant on supprime tout les containers suivants qui on été crée précedement
-        if(this.choicesEnumerator.current.data.has("DOM"))
+        if(this.choicesContainersInstances[this.choicesEnumerator.current.index])
         {
             Debug.log("current have DOM destroying it and nexts");
 
             for(let i = this.choicesEnumerator.current.index; i < this.choicesEnumerator.choices.length; i++)
             {
-                this.choicesEnumerator.get(i)?.data.get('DOM')?.forEach((container: HTMLElement) => container.remove());
+                // lorsque
+                if(this.choicesContainersInstances[i])
+                {
+                    this.choicesContainersInstances[i].delete();
+                    delete this.choicesContainersInstances[i];
+                }
             }
         }
 
         const choiceContainer = this.createChoiceContainer(choiceData.type, node, choiceData) as ChoiceContainer;
-        this.choicesEnumerator.current.data.set("DOM", choiceContainer?.containersBundle);
     }
 
         // Testing

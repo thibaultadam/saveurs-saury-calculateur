@@ -2,11 +2,11 @@
   "name": "calculateur-oakaddins",
   "version": "1.0.0",
   "description": "dev",
-  "main": "host.js",
+  "main": "",
   "scripts": {
     "build": "webpack --progress --mode=production",
     "dev-nohost": "webpack --watch --progress --mode=development",
-    "dev": "concurrently -k -n \"Webpack,Host\" -p \"[{name}]\" -c \"blue,green\" \"webpack --watch --progress --mode=development\" \"node host.js --path=build --port=6600\"",
+    "dev": "concurrently -k -n \"Webpack,Host\" -p \"[{name}]\" -c \"blue,green\" \"webpack --watch --progress --mode=development\" \"http-server ./build -p 6600 -o -s\"",
     "doc": "typedoc src --out ./docs/typeDoc",
     "doc-github": "typedoc src --out ./docs/wiki",
     "docUnsatable": "jsdoc -c docs/jsDocConfig.json -p",
@@ -36,8 +36,7 @@
   },
   "devDependencies": {
     "concurrently": "^6.1.0",
-    "express": "^4.17.1",
-    "minimist": "^1.2.5",
+    "http-server": "^0.12.3",
     "typedoc": "^0.21.0"
   }
 }

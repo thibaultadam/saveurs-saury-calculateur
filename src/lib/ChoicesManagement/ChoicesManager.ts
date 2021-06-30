@@ -25,7 +25,7 @@ abstract class ChoicesManager extends EventEmitter
     private choiceContainersCreation : ContainerCreationCallback[] = [];
     private ChoiceContainerClasses = new Map<string, ChoiceContainerConstructor>();
 
-    protected choicesContainersInstances = new Map<string, ChoiceContainer[]>();
+    protected choicesContainersInstances: ChoiceContainer[] = [];
 
     constructor(
         public configurator : Configurator, 
@@ -105,7 +105,7 @@ abstract class ChoicesManager extends EventEmitter
             });
             
             Debug.log(`Successfully created new choice`, choice);
-            this.choicesContainersInstances.get(type)?.push(choice);
+            this.choicesContainersInstances[choiceID] = choice;
             return choice;
         }
         else
@@ -139,7 +139,6 @@ abstract class ChoicesManager extends EventEmitter
     protected registerChoiceClass(type : string, ChoiceClass : ChoiceContainerConstructor): void
     {
         this.ChoiceContainerClasses.set(type, ChoiceClass);
-        this.choicesContainersInstances.set(type, []);
         Debug.log(`Registering a choice class`, ChoiceClass);
     }
 

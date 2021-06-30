@@ -48,7 +48,7 @@ abstract class ChoiceContainer extends UIElement {
      * @private
      * @memberof ChoiceContainer
      */
-    public containersBundle: HTMLElement[] = [];
+    public $containersBundle: HTMLElement[] = [];
 
     /**
      * Contiens les arguments de construction des boutons
@@ -64,7 +64,7 @@ abstract class ChoiceContainer extends UIElement {
      * @private
      * @memberof ChoiceContainer
      */
-    private buttons: Choice[] = [];
+    private choices: Choice[] = [];
 
     /**
      * Contiens la class constructrice des boutons de ce container
@@ -164,7 +164,7 @@ abstract class ChoiceContainer extends UIElement {
             this.$container = this.$container.appendChild(newContainer);
         }
 
-        this.containersBundle.push(this.$container);
+        this.$containersBundle.push(this.$container);
     }
 
     /**
@@ -177,12 +177,12 @@ abstract class ChoiceContainer extends UIElement {
     protected createChoice(...args : any[]) : Choice
     {
         const button = new this.ChoiceClass({
-            id: this.buttons.length,
+            id: this.choices.length,
             type: this.type, 
             choiceContainer: this
         }, ...args);
         
-        this.buttons.push(button);
+        this.choices.push(button);
         button.on('click', (ev: MouseEvent, ...args: any) => this.emit('click', button, ev, ...args));
 
         // déclanche l'evenement `choiceBuilt` dans le bouton quand le choix est completement construit
@@ -209,11 +209,26 @@ abstract class ChoiceContainer extends UIElement {
     }
 
     /**
-     * Applé lorsque le choix est completement crée dans les couches les plus hautes
+     * Appelé lorsque le choix est completement crée dans les couches les plus hautes
      * @returns {void}
      * @protected
      * @memberof ChoiceContainer
      */
     protected abstract onBuilt(): void
     //#{}
+
+    public delete(): void
+    {
+        for(let i = 0; i < this.choices.length; i++)
+        {
+            this.choices[i].delete();
+            delete this.choices[i];
+        }
+
+        for(let i = 0; i < this.$containersBundle.length; i++)
+        {
+            this.$containersBundle[i].remove();
+            delete this.$containersBundle[i];
+        }
+    }
 }
