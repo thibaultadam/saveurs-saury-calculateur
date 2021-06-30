@@ -2,7 +2,7 @@ import { ChoiceContainer, ChoiceContainerConstructionOptions, ContainerCreationC
 import { createElement } from "../../../../lib/Tools/DOMElementCreator";
 import { TreeNode } from "../../Data/DataParser";
 import { ChoiceData } from "../../Data/DataProvider";
-import { stringReplace } from "../../Tools/ParseTools";
+import { parseChoiceData } from "../../Tools/ParseTools";
 import { InputChoice } from "./InputChoice";
 
 export class InputContainer extends ChoiceContainer
@@ -19,27 +19,18 @@ export class InputContainer extends ChoiceContainer
         this.registerChoiceClass(InputChoice);
 
         this.node = node;
-        this.choiceData = choiceData;
-
-        let title = choiceData.title as string;
-
-        if(choiceData.titleParse)
-        {
-            title = stringReplace(title, choiceData.titleParse as {[index: string]: string}, {
-                unit: this.choicesManager.choicesEnumerator.getByLabel('unit')?.value as string
-            });
-        }
+        this.choiceData = parseChoiceData(choiceData, this.choicesEnumerator);
         
         this.createNewContainer(() => createElement(`
         <div>
-            <p class="my-2 fs-6">${title}</p>
+            <p class="my-2 fs-6">${this.choiceData.title}</p>
         </div>`) as HTMLElement);
 
         this.createNewContainer(() => createElement(`<div class="form-floating my-2">`) as HTMLElement);
 
         for(const buttonData of Object.values(node.values))
         {
-            this.createChoice(buttonData, choiceData);
+            this.createChoice(buttonData, this.choiceData);
         }
     }
 

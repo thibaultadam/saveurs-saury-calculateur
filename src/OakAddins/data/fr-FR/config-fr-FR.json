@@ -30,11 +30,16 @@
                 "placeholder": "0",
                 "defaultValue": "0",
                 
-                "titleParse": {
-                    "unit": "${unit}"
+                "parse": {
+                    "title" : {
+                        "unit": "${unit}"
+                    },
+                    "description" : {
+                        "unit": "${unit}"
+                    }
                 },
                 "params":  {
-                    "buildNext": [true]
+                    "buildNext": true
                 }
             },
             "gramsPerLiter" : {
@@ -44,11 +49,7 @@
                 "description": "Entrez le nombre de grammes par Litres",
                 
                 "placeholder": "0",
-                "defaultValue": "0",
-
-                "params":  {
-                    "buildTab": [true]
-                }
+                "defaultValue": "0"
             },
             "porcentage" : {
                 "type": "input",
@@ -57,11 +58,7 @@
                 "description": "Entrez % de bois neuf (100% = barrique neuve)",
 
                 "placeholder": "0",
-                "defaultValue": "0",
-                
-                "params":  {
-                    "buildTab": [true]
-                }
+                "defaultValue": "0"
             }
         }
     }

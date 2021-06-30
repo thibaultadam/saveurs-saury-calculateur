@@ -1,10 +1,11 @@
 import {Configurator, ConfiguratorPathes } from "../../lib/Configurator";
-import { DebugLevel } from "../../lib/Tools/Debug";
+import { Debug, DebugLevel } from "../../lib/Tools/Debug";
 import {ChoicesManager} from "./ChoicesManager/ChoicesManager";
 import {DataParser} from "./Data/DataParser";
 
 // CSS
 import '../css/choices.css';
+import { createElement } from "../../lib/Tools/DOMElementCreator";
 
 /**
  * @alias OakAddinsConfigurateur
@@ -27,13 +28,27 @@ class OakAddinsConfigurateur extends Configurator
         this.$container.innerHTML += `
         <h1 class="my-5 text-center">CALCULATEUR</h1>
 
-        <img class="my-5 mx-auto d-block" src="http://www.oakaddins.com/wp-content/uploads/2013/09/logo-calculateur.png"
+        <img class="my-5 mx-auto d-block" src="images/logo.png"
             alt="Calculateur" width="182" height="181">
         `;
 
         this.registerChoiceManagerClass(ChoicesManager);
+        this.choicesManager.choicesEnumerator.on('end', () => this.buildTab());
 
         // lance la construction du 1er element
         this.choicesManager.buildChoice();
+    }
+    
+    private buildTab(): void
+    {
+        Debug.log('--------------------------- buildTab');
+
+        const calculateButton = createElement(
+        `<div class="d-grid gap-2 col-6 mx-auto my-5">
+            <button id="build" class="btn btn-indigo" type="button">CALCULER</button>
+        </div>`
+        ) as HTMLElement;
+
+        this.$container.appendChild(calculateButton);
     }
 }

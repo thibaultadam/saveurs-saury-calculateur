@@ -12,6 +12,8 @@ export type ChoiceType = 'button' | 'radio' | 'input';
 
 export  class ChoicesManager extends _ChoicesManager
 {
+
+
     constructor(public configurator: Configurator)
     {
         super(configurator);
@@ -24,7 +26,7 @@ export  class ChoicesManager extends _ChoicesManager
         this.choicesEnumerator.on('change', () => this.buildChoice());
     }
 
-    protected onBuildChoice()
+    protected onBuildChoice(): void
     {
         const node = this.dataProvider.get('CurrentNode') as TreeNode;
         const choiceData = this.dataProvider.get('ChoiceData', node.type) as ChoiceData;
@@ -55,38 +57,4 @@ export  class ChoicesManager extends _ChoicesManager
 
         const choiceContainer = this.createChoiceContainer(choiceData.type, node, choiceData) as ChoiceContainer;
     }
-
-        // Testing
-
-        // this.choicesEnumerator.next('Elevage Court');
-        // console.log('CurrentNode', this.dataProvider.get('CurrentNode'));
-        // console.log(this.choicesEnumerator.isEnd());
-        // console.log(this.choicesEnumerator.choices);
-        // console.log(this.choicesEnumerator.current.index);
-
-        // this.choicesEnumerator.next('Copeaux');
-        // console.log('CurrentNode', this.dataProvider.get('CurrentNode'));
-        // console.log(this.choicesEnumerator.isEnd());
-        // console.log(this.choicesEnumerator.choices);
-        // console.log(this.choicesEnumerator.current.index);
-
-        // this.choicesEnumerator.next('Gallon');
-        // console.log('CurrentNode', this.dataProvider.get('CurrentNode'));
-        // console.log(this.choicesEnumerator.isEnd());
-        // console.log(this.choicesEnumerator.choices);
-        // console.log(this.choicesEnumerator.current.index);
-
-        // this.choicesEnumerator.next('fermentation-input');
-        // console.log('CurrentNode', this.dataProvider.get('CurrentNode'));
-        // console.log(this.choicesEnumerator.isEnd());
-        // console.log(this.choicesEnumerator.choices);
-        // console.log(this.choicesEnumerator.current.index);
-
-        // this.choicesEnumerator.next('gramsPerLiter-input');
-        // console.log('CurrentNode', this.dataProvider.get('CurrentNode'));
-        // console.log(this.choicesEnumerator.isEnd());
-        // console.log(this.choicesEnumerator.choices);
-        // console.log(this.choicesEnumerator.current.index);
-
-        // Testing
 } 
