@@ -22,8 +22,9 @@ class OakAddinsConfigurateur extends Configurator
     {
         super(container, path, debugLevel);
 
-        this.registerDataParserClass(DataParser);
+        this.showPWAinstallMessage();
 
+        this.registerDataParserClass(DataParser);
         this.$container?.classList.add('container');
     }
     
@@ -54,5 +55,10 @@ class OakAddinsConfigurateur extends Configurator
         Debug.log('--------------------------- buildTab');
 
         this.tableBuilder.build();
+    }
+
+    private showPWAinstallMessage(): void
+    {
+        
     }
 }
