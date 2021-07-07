@@ -1,6 +1,7 @@
 {
-    "data": {
-        
+    "titles": {
+        "text": "",
+        "img": ""
     },
     "choices": 
     {
@@ -28,7 +29,7 @@
                 "description": "Entrez une valeur en ${unit}",
                 
                 "placeholder": "0",
-                "defaultValue": "0",
+                "defaultValue": "10",
                 
                 "parse": {
                     "title" : {
@@ -49,7 +50,7 @@
                 "description": "Entrez le nombre de grammes par Litres",
                 
                 "placeholder": "0",
-                "defaultValue": "0"
+                "defaultValue": "5"
             },
             "porcentage" : {
                 "type": "input",
@@ -58,7 +59,7 @@
                 "description": "Entrez % de bois neuf (100% = barrique neuve)",
 
                 "placeholder": "0",
-                "defaultValue": "0"
+                "defaultValue": "100"
             }
         }
     }

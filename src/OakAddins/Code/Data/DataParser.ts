@@ -1,6 +1,7 @@
-import {Configurator} from "../../../lib/Configurator";
-import {DataParser as _DataParser} from "../../../lib/Data/DataParser";
-import {Debug} from "../../../lib/Tools/Debug";
+import { Configurator } from "../../../lib/Configurator";
+import { DataParser as _DataParser } from "../../../lib/Data/DataParser";
+import { Debug } from "../../../lib/Tools/Debug";
+import { ChoiceType } from "../ChoicesManager/ChoicesManager";
 
 // BUG: JSON types pour les objet ne fonctionne pas
 export type JsonTypes = any; //number | string | boolean | {[index : string] : JsonTypes} | JsonTypes[] | null | undefined;
@@ -18,6 +19,37 @@ export type TreeNode = {
     next?: TreeNode | string
 }
 
+export type ChoiceData = {
+    [index : string] : JsonTypes,
+    type: ChoiceType,
+
+    title?: string,
+    description?: string,
+    
+    params?: {
+        [index : string] : JsonTypes[],
+    }
+
+    inputType?: string,
+
+    placeholder?: string,
+    defaultValue?: string,
+    
+    parse?: {
+        [index : string]: {
+            [index : string] : string
+        }
+    },
+};
+
+export type ConfiguratorConfig = {
+    choices: {
+        types : {
+            [index : string] : ChoiceData
+        }
+    }    
+};
+
 export
 class DataParser extends _DataParser {
 
@@ -26,15 +58,34 @@ class DataParser extends _DataParser {
         super(configurator);
         
         this.addDataParser('tree', this.treeParser, this);
+        this.addDataParser('config', this.configParser, this);
     }
 
     /**
+     * Parse the config adding typeName fields
+     * @param {ConfiguratorConfig} config 
+     * @returns {ConfiguratorConfig} parsedData 
+     */
+    private configParser(config: ConfiguratorConfig): ConfiguratorConfig
+    {
+        const parsedConfig = Object.assign({}, config); // cpy
+
+        for(const choiceTypeName of Object.keys(parsedConfig.choices.types))
+        {
+            parsedConfig.choices.types[choiceTypeName].typeName = choiceTypeName;
+        }
+
+        return parsedConfig;
+    }
+    
+    /**
      * Parse the tree adding label fields and choices dependancies
-     * @param data 
+     * @param {TreeNode} data 
+     * @returns {TreeNode} parsedData
      */
     private async treeParser(tree: TreeNode) : Promise<TreeNode>
     {
-        const parsedTree : TreeNode | any = {};
+        const parsedTree = {} as TreeNode;
 
         await this.treeParserLoop(tree, parsedTree);
         return parsedTree;

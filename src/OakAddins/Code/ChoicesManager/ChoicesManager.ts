@@ -2,8 +2,9 @@ import { ChoiceContainer } from "../../../lib/ChoicesManagement/Choices/ChoiceCo
 import { ChoicesManager as _ChoicesManager } from "../../../lib/ChoicesManagement/ChoicesManager";
 import { Configurator } from "../../../lib/Configurator";
 import { Debug } from "../../../lib/Tools/Debug";
-import { TreeNode } from "../Data/DataParser";
-import { ChoiceData, DataProvider } from "../Data/DataProvider";
+import { ChoiceData, TreeNode } from "../Data/DataParser";
+import { DataProvider } from "../Data/DataProvider";
+import { OakAddinsConfigurateur } from "../OakAddinsConfigurateur";
 import { ButtonContainer } from "./Choices/ButtonContainer";
 import { InputContainer } from "./Choices/InputContainer";
 import { RadioContainer } from "./Choices/RadioContainer";
@@ -12,8 +13,6 @@ export type ChoiceType = 'button' | 'radio' | 'input';
 
 export  class ChoicesManager extends _ChoicesManager
 {
-
-
     constructor(public configurator: Configurator)
     {
         super(configurator);
@@ -39,6 +38,9 @@ export  class ChoicesManager extends _ChoicesManager
  
         Debug.log('--------------------------- onBuildChoice', node, choiceData);
 
+        // dans le cas ou on reconstruit un choix précedant a l'affache du resultat on supprimer le résultat
+        (this.configurator as OakAddinsConfigurateur).tableBuilder.delete();
+
         // lorsque l'on change un choix plus haut que le courant on supprime tout les containers suivants qui on été crée précedement
         if(this.choicesContainersInstances[this.choicesEnumerator.current.index])
         {
@@ -55,6 +57,6 @@ export  class ChoicesManager extends _ChoicesManager
             }
         }
 
-        const choiceContainer = this.createChoiceContainer(choiceData.type, node, choiceData) as ChoiceContainer;
+        this.createChoiceContainer(choiceData.type, node, choiceData) as ChoiceContainer;
     }
 } 

@@ -1,14 +1,7 @@
 import { ChoicesManager } from '../../../lib/ChoicesManagement/ChoicesManager';
 import {DataProvider as _DataProvider} from '../../../lib/DataProvider';
 import { Debug } from '../../../lib/Tools/Debug';
-import { ChoiceType } from '../ChoicesManager/ChoicesManager';
-import { JsonTypes, TreeNode } from './DataParser';
-
-export type ChoiceData = {
-    type: ChoiceType,
-    title?: string,
-    [index: string]: JsonTypes
-}
+import { ChoiceData, TreeNode } from './DataParser';
 
 export class DataProvider extends _DataProvider{
 

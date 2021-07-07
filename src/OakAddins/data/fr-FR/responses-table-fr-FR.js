@@ -11,71 +11,71 @@
  * ------- structure a respecter
  * - Le fichier ne doit pas etre un module
  * - Le fichier doit retourner la/les donnée(s) 
- * - l'utilisation d'une fonction IIFE est recomander pour éviter tout comflit de nomage entre le systèmes et le fichier de données
+ * - l'utilisation d'une fonction IIFE est recomander pour éviter tout comflit de nomage entre le système et le fichier de données
  */
 
 (function()
 {
-    const vulumeTypes = {
+    const volumeTypes = {
 
         dosage : {
-            hectolitres : "Kg",
-            gallons : "Lb",
+            Hectolitres : "Kg",
+            Gallons : "Lb",
         },
 
         sac18: {
-            hectolitres: "Sacs (18kg)",
-            gallons: "Sacs (40 Lbs)",
+            Hectolitres: "Sacs (18kg)",
+            Gallons: "Sacs (40 Lbs)",
         },
         
         sac9: {
-            hectolitres: "Sacs (9kg)",
-            gallons: "Sacs (20 Lbs)",
+            Hectolitres: "Sacs (9kg)",
+            Gallons: "Sacs (20 Lbs)",
         },
 
         sacI40u : {
-            hectolitres : "Sacs infusion de 40 unités",
-            gallons : "Sacs infusion de 40 unités",
+            Hectolitres : "Sacs infusion de 40 unités",
+            Gallons : "Sacs infusion de 40 unités",
         },
         
         paq20u: {
-            hectolitres : "Paquets de 20 unités",
-            gallons : "Paquets de 20 unités",
+            Hectolitres : "Paquets de 20 unités",
+            Gallons : "Paquets de 20 unités",
         },
           
         paq10u: {
-            hectolitres : "Paquets de 10 unités",
-            gallons : "Paquets de 10 unités",
+            Hectolitres : "Paquets de 10 unités",
+            Gallons : "Paquets de 10 unités",
         },
           
         paq14u: {
-            hectolitres : "Paquets de 14 unités",
-            gallons : "Paquets de 14 unités",
+            Hectolitres : "Paquets de 14 unités",
+            Gallons : "Paquets de 14 unités",
         },
 
         paq5u: {
-            hectolitres : "Paquets de 5 unités",
-            gallons : "Paquets de 5 unités",
+            Hectolitres : "Paquets de 5 unités",
+            Gallons : "Paquets de 5 unités",
         },
 
         set18p : {
-            hectolitres: "Set de 18 pièces",
-            gallons: "Set de 18 pièces"
+            Hectolitres: "Set de 18 pièces",
+            Gallons: "Set de 18 pièces"
         },
 
         set34p: {
-            hectolitres : "Set de 34 pièces",
-            gallons : "Set de 34 pièces",
+            Hectolitres : "Set de 34 pièces",
+            Gallons : "Set de 34 pièces",
         },
 
         staves: {
-            hectolitres: "Staves",
-            gallons: "Staves",
+            Hectolitres: "Staves",
+            Gallons: "Staves",
         },
 
         pieces: {
-            hectolitres: "Pièces",
-            gallons: "Pièces",
+            Hectolitres: "Pièces",
+            Gallons: "Pièces",
         }
     }
 
@@ -92,216 +92,229 @@
                 "Produits",
                 "Quantité",
                 "Quantité conditionnée"
-            ],
-            dosage : vulumeTypes.dosage,
-            quantity : vulumeTypes.sac18
+            ]
         },
         {
             "type" : "tbody",
             "values" : [
-                "Durée de la fermentation",
-                "Poudre *",
+                "Durée de la fermentation", // "Fermentation time"
+                "Poudre <b>*</b>", // "Powder <b>*</b>"
                 {
-                    "hectolitres": (volume, gpl) => (volume * 100) * gpl / 1000,
-                    "gallons": (volume, gpl) => (volume * 100) * gpl / 1000,
+                    "Hectolitres": (volume, gpl) => (volume * 100) * gpl / 1000,
+                    "Gallons": (volume, gpl) => volume * gpl / 1000,
                 },
-                (quantity) => quantity / 18
+                {
+                    "Hectolitres" : (quantity) => quantity / 18,
+                    "Gallons" : (quantity) => quantity / 40,
+                }
             ],
-            dosage : vulumeTypes.dosage,
-            quantity : vulumeTypes.sac18
+            dosage : volumeTypes.dosage,
+            quantity : volumeTypes.sac18
         },
         {
             "type" : "tbody",
             "values" : [
-                "Durée de la fermentation",
-                "Mixture *",
+                "Durée de la fermentation", // "Fermentation time"
+                "Mixture <b>*</b>", // "Mixture <b>*</b>"
                 {
-                    "hectolitres": (volume, gpl) => (volume * 100) * gpl / 1000,
-                    "gallons": (volume, gpl) => (volume * 100) * gpl / 1000,
+                    "Hectolitres": (volume, gpl) => (volume * 100) * gpl / 1000,
+                    "Gallons": (volume, gpl) => volume * gpl / 1000,
                 },
-                (quantity) => quantity / 18
+                {
+                    "Hectolitres": (quantity) => quantity / 18,
+                    "Gallons": (quantity) => quantity / 40,
+                }
             ],
-            dosage : vulumeTypes.dosage,
-            quantity : vulumeTypes.sac18
+            dosage : volumeTypes.dosage,
+            quantity : volumeTypes.sac18
         },
         {
             "type" : "tbody",
             "values" : [
-                "Durée de la fermentation",
-                "Fine de chêne",
+                "Durée de la fermentation", // "Fermentation time"
+                "Fine de chêne", // "Oak Fine"
                 {
-                    "hectolitres": (volume, gpl) => (volume * 100) * gpl / 1000,
-                    "gallons": (volume, gpl) => (volume * 100) * gpl / 1000,
+                    "Hectolitres": (volume, gpl) => (volume * 100) * gpl / 1000,
+                    "Gallons": (volume, gpl) => volume * gpl / 1000,
                 },
-                (quantity) => quantity / 18
+                {
+                    "Hectolitres": (quantity) => quantity / 18,
+                    "Gallons": (quantity) => quantity / 40,
+                },
             ],
-            dosage : vulumeTypes.dosage,
-            quantity : vulumeTypes.sac18
+            dosage : volumeTypes.dosage,
+            quantity : volumeTypes.sac18
         },
         {
             "type" : "tbody",
             "values" : [
-                "Fermentation ou élevage court",
-                "Copeaux",
+                "Fermentation ou élevage court", // "Fermentation or short aging"
+                "Copeaux", // "Oak Chips"
                 {
-                    "hectolitres": (volume, gpl) => (volume * 100) * gpl / 1000,
-                    "gallons": (volume, gpl) => (volume * 100) * gpl / 1000,
+                    "Hectolitres": (volume, gpl) => (volume * 100) * gpl / 1000,
+                    "Gallons": (volume, gpl) => volume * gpl / 1000,
                 },
-                (quantity) => quantity / 18
+                {
+                    "Hectolitres": (quantity) => quantity / 18,
+                    "Gallons": (quantity) => quantity / 40,
+                },
             ],
-            dosage : vulumeTypes.dosage,
-            quantity : vulumeTypes.sac9
+            dosage : volumeTypes.dosage,
+            quantity : volumeTypes.sac18
         },
         {
             "type" : "tbody",
             "values" : [
-                "3-4 mois",
-                "Cubes",
+                "3-4 mois", // "3-4 month"
+                "Cubes", // "Cubes"
                 {
-                    "hectolitres": (volume, gpl) => null,
-                    "gallons": (volume, gpl) => null,
+                    "Hectolitres": (volume, gpl) => (volume * 100) * gpl / 1000,
+                    "Gallons": (volume, gpl) => volume * gpl / 1000,
                 },
-                (quantity) => quantity / 9
+                {
+                    "Hectolitres": (quantity) => quantity / 9,
+                    "Gallons": (quantity) => quantity / 20,
+                }
             ],
-            dosage : vulumeTypes.dosage,
-            quantity : vulumeTypes.sac9
+            dosage : volumeTypes.dosage,
+            quantity : volumeTypes.sac9
         },
         {
             "type" : "tbody",
             "values" : [
-                "4-5 mois",
-                "Dominos",
+                "4-5 mois", // "4-5 month"
+                "Dominos", // "Dominoes"
                 {
-                    "hectolitres": (volume, gpl, porcentage) => (typeof gpl === 'number') ? gpl * (volume*100) / 1000 : (2 / 100) * porcentage * volume,
-                    "gallons": (volume, gpl, porcentage) => (typeof gpl === 'number') ? gpl * (volume*100) / 1000 : (2 / 100) * porcentage * volume,
+                    "Hectolitres": (volume, gpl, percentage) => (gpl) ? gpl * (volume*100)/1000 : (2 / 100) * percentage * volume,
+                    "Gallons": (volume, gpl, percentage) => (gpl) ? gpl * volume / 1000 : ((4.4062452 / 100) * percentage * (volume / 26.4)),
                 },
-                (quantity) => quantity / 9
+                {
+                    "Hectolitres": (quantity) => quantity / 9,
+                    "Gallons": (quantity) => quantity / 20,
+                },
+                
             ],
-            dosage : vulumeTypes.dosage,
-            quantity : vulumeTypes.sac9
+            dosage : volumeTypes.dosage,
+            quantity : volumeTypes.sac9
         },
         {
             "type" : "tbody",
             "values" : [
-                "5-6 mois",
-                "Blocks",
+                "5 mois", // "5 month"
+                "Blocks", // "Blocks"
                 {
-                    "hectolitres": (volume, gpl, porcentage) => null,
-                    "gallons": (volume, gpl, porcentage) => null,
+                    "Hectolitres": (volume, gpl, percentage) => (gpl) ? gpl * (volume * 100) / 1000 : (2.5 / 100) * percentage * volume,
+                    "Gallons": (volume, gpl, percentage) => (gpl) ? gpl * volume / 1000 : ((5.5115566 / 100) * percentage * (volume / 26.4)),
                 },
-                /*
-                    // A verifier
+                {
+                    "Hectolitres": (quantity) => quantity / 9,
+                    "Gallons": (quantity) => quantity / 20,
+                },
+            ],
+            dosage : volumeTypes.dosage,
+            quantity : volumeTypes.sac9
+        },
 
-                new FieldCallback({
-                    "hectolitres": (volume, gpl, porcentage) => (typeof gpl === 'number') ? gpl * (volume*100) / 1000 : (2.5 / 100) * porcentage * volume,
-                    "gallons": (volume, gpl, porcentage) => (typeof gpl === 'number') ? gpl * (volume*100) / 1000 : (2.5 / 100) * porcentage * volume,
-                }),
-                */
-                (quantity) => quantity / 9
-            ],
-            dosage : vulumeTypes.dosage,
-            quantity : vulumeTypes.sac9
-        },
-
-        ////////// Porcentage ///////////
+        ////////// Percentage ///////////
 
         {
             "type" : "tbody",
             "values" : [
-                "6-8 mois",
-                "Blocks",
+                "6-8 mois", // "6-8 month"
+                "Mini Thin Tank Stave", // "Mini Thin Tank Stave"
                 {
-                    "hectolitres": (volume, gpl, porcentage) => null,
-                    "gallons": (volume, gpl, porcentage) => null,
+                    "Hectolitres": (volume, gpl, percentage) => (6/33) * percentage * volume,
+                    "Gallons": (volume, gpl, percentage) => (6/33) * percentage * (volume / 26.4),
                 },
-                (quantity) => quantity / 9
+                {
+                    "Hectolitres": (quantity) => quantity / 40,
+                    "Gallons": (quantity) => quantity / 40,
+                }
             ],
-            dosage : vulumeTypes.staves,
-            quantity : vulumeTypes.sacI40u 
+            dosage : volumeTypes.staves,
+            quantity : volumeTypes.sacI40u 
         },
         {
             "type" : "tbody",
             "values" : [
-                "6-8 mois",
-                "Mini Thin Tank Stave ",
+                "6-8 mois", // "6-8 month"
+                "Thin Tank Stave ", // "Thin Tank Stave"
                 {
-                    "hectolitres": (volume, gpl, porcentage) => (6/33) * porcentage * volume,
-                    "gallons": (volume, gpl, porcentage) => (6/33) * porcentage * volume,
+                    "Hectolitres": (volume, gpl, percentage) => (3/33) * percentage * volume,
+                    "Gallons": (volume, gpl, percentage) => (3/33) * percentage * (volume / 26.4),
                 },
-                (quantity) => quantity / 40
+                {
+                    "Hectolitres": (quantity) => quantity / 20,
+                    "Gallons": (quantity) => quantity / 20
+                }
             ],
-            dosage : vulumeTypes.staves,
-            quantity : vulumeTypes.paq20u 
+            dosage : volumeTypes.staves,
+            quantity : volumeTypes.paq20u 
         },
         {
             "type" : "tbody",
             "values" : [
-                "6-8 mois",
-                "Thin Tank Stave",
+                "8-10 mois", // "8-10 month"
+                "Mini Tank Stave", // "Mini Tank Stave"
                 {
-                    "hectolitres": (volume, gpl, porcentage) => (3/33) * porcentage * volume,
-                    "gallons": (volume, gpl, porcentage) => (3/33) * porcentage * volume,
+                    "Hectolitres": (volume, gpl, percentage) => (4/33) * percentage * volume,
+                    "Gallons": (volume, gpl, percentage) => (4/33) * percentage * (volume * 26.4),
                 },
-                (quantity) => quantity / 20
+                {
+                    "Hectolitres": (quantity) => quantity / 40,
+                    "Gallons": (quantity) => quantity / 40,
+                }
             ],
-            dosage : vulumeTypes.staves,
-            quantity : vulumeTypes.sacI40u 
+            dosage : volumeTypes.staves,
+            quantity : volumeTypes.sacI40u 
         },
         {
             "type" : "tbody",
             "values" : [
-                "8-10 mois",
-                "Mini Tank Stave",
+                "8-10 mois", // "8-10 month"
+                "Tank Stave", // "Tank Stave"
                 {
-                    "hectolitres": (volume, gpl, porcentage) => (4/33) * porcentage * volume,
-                    "gallons": (volume, gpl, porcentage) => (4/33) * porcentage * volume,
+                    "Hectolitres": (volume, gpl, percentage) => (2/33) * percentage * volume,
+                    "Gallons": (volume, gpl, percentage) => (2/33) * percentage * (volume * 26.4),
                 },
-                (quantity) => quantity / 40
+                {
+                    "Hectolitres": (quantity) => quantity / 20,
+                    "Gallons": (quantity) => quantity / 20,
+                }
             ],
-            dosage : vulumeTypes.staves,
-            quantity : vulumeTypes.paq20u
+            dosage : volumeTypes.staves,
+            quantity : volumeTypes.paq20u
         },
         {
             "type" : "tbody",
             "values" : [
-                "8-10 mois",
-                "Tank Stave",
+                "10-12 mois", // "10-12 month"
+                "Winewood", // "Winewood"
                 {
-                    "hectolitres": (volume, gpl, porcentage) => (2/33) * porcentage * volume,
-                    "gallons": (volume, gpl, porcentage) => (2/33) * porcentage * volume,
+                    "Hectolitres": (volume, gpl, percentage) => (1.5/33) * percentage * volume,
+                    "Gallons": (volume, gpl, percentage) => (1.5/33) * percentage * (volume * 26.4),
                 },
-                (quantity) => quantity / 20
+                {
+                    "Hectolitres": (quantity) => quantity / 10,
+                    "Gallons": (quantity) => quantity / 10,
+                }
             ],
-            dosage : vulumeTypes.staves,
-            quantity : vulumeTypes.paq10u 
+            dosage : volumeTypes.staves,
+            quantity : volumeTypes.paq10u 
         },
         {
             "type" : "tbody",
             "values" : [
-                "10-12 mois",
-                "Winewood",
+                "10-12 mois", // "10-12 month"
+                "Barrel Insert", // "Barrel Insert"
                 {
-                    "hectolitres": (volume, gpl, porcentage) => (1.5/33) * porcentage * volume,
-                    "gallons": (volume, gpl, porcentage) => (1.5/33) * porcentage * volume,
-                },
-                (quantity) => quantity / 10
-            ],
-            dosage : vulumeTypes.staves,
-            quantity : vulumeTypes.paq14u 
-        },
-        {
-            "type" : "tbody",
-            "values" : [
-                "10-12 mois",
-                "Barrel Insert",
-                {
-                    "hectolitres": (volume, gpl, porcentage) => ((14/2.25) / 70) * porcentage * volume,
-                    "gallons": (volume, gpl, porcentage) => ((14/2.25) / 70) * porcentage * volume,
+                    "Hectolitres": (volume, gpl, percentage) => ((14/2.25) / 70) * percentage * volume,
+                    "Gallons": (volume, gpl, percentage) => null,
                 },
                 (quantity) => quantity / 14
             ],
-            dosage : vulumeTypes.pieces,
-            quantity : vulumeTypes.set18p 
+            dosage : volumeTypes.pieces,
+            quantity : volumeTypes.paq14u 
         },
         {
             "type" : "tbody",
@@ -309,13 +322,13 @@
                 "6-12 mois",
                 "Oak Chain 18 pièces",
                 {
-                    "hectolitres": (volume, gpl, porcentage) => ((18/2.25) / 18) * porcentage * volume,
-                    "gallons": (volume, gpl, porcentage) => ((18/2.25) / 18) * porcentage * volume,
+                    "Hectolitres": (volume, gpl, percentage) => ((18/2.25) / 18) * percentage * volume,
+                    "Gallons": (volume, gpl, percentage) => null,
                 },
                 (quantity) => quantity / 18
             ],
-            dosage : vulumeTypes.pieces,
-            quantity : vulumeTypes.set34p 
+            dosage : volumeTypes.pieces,
+            quantity : volumeTypes.set34p 
         },
         {
             "type" : "tbody",
@@ -323,13 +336,13 @@
                 "6-12 mois",
                 "Oak Chain 34 pièces",
                 {
-                    "hectolitres": (volume, gpl, porcentage) => ((34/2.25) / 33) * porcentage * volume,
-                    "gallons": (volume, gpl, porcentage) => ((34/2.25) / 33) * porcentage * volume,
+                    "Hectolitres": (volume, gpl, percentage) => ((34/2.25) / 33) * percentage * volume,
+                    "Gallons": (volume, gpl, percentage) => null,
                 },
                 (quantity) => quantity / 34
             ],
-            dosage : vulumeTypes.staves,
-            quantity : vulumeTypes.paq5u
+            dosage : volumeTypes.staves,
+            quantity : volumeTypes.paq5u
         },
         {
             "type" : "tbody",
@@ -337,13 +350,13 @@
                 "14-16 mois",
                 "Wineplank",
                 {
-                    "hectolitres": (volume, gpl, porcentage) => (1/33) * porcentage * volume,
-                    "gallons": (volume, gpl, porcentage) => (1/33) * porcentage * volume,
+                    "Hectolitres": (volume, gpl, percentage) => (1 / 33) * percentage * volume,
+                    "Gallons": (volume, gpl, percentage) => null,
                 },
                 (quantity) => quantity / 5
             ],
-            dosage : vulumeTypes.staves,
-            quantity : vulumeTypes.paq10u
+            dosage : volumeTypes.staves,
+            quantity : volumeTypes.paq10u
         }
     ]
     

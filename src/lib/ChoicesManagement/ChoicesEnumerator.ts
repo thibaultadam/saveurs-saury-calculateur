@@ -14,6 +14,7 @@ export type Choice = {
     index: number,
     value: string | null,
     isFirst: () => boolean,
+    isLast: () => boolean,
     data: Map<string, any>
 };
 
@@ -77,6 +78,7 @@ export class ChoicesEnumerator extends EventEmitter
                         index: i,
                         value: null,
                         isFirst: () => (i === 0),
+                        isLast: () => (i === this.choices.length -1),
                         data: new Map<string, any>()
                     };
 
@@ -92,6 +94,7 @@ export class ChoicesEnumerator extends EventEmitter
                         index: i,
                         value: null,
                         isFirst: () => (i === 0),
+                        isLast: () => (i === this.choices.length -1),
                         data: new Map<string, any>()
                     };
 
@@ -147,7 +150,7 @@ export class ChoicesEnumerator extends EventEmitter
         this.current = this.nextChoice;
         
         this.emit('change');
-        
+
         if(this.isEnd())
         {
             this.emit('end');
@@ -176,7 +179,7 @@ export class ChoicesEnumerator extends EventEmitter
         }
         
         this.emit('change');
-        
+
         if(this.isEnd())
         {
             this.emit('end');

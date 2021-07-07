@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --progress --mode=production",
     "dev-nohost": "webpack --watch --progress --mode=development",
-    "dev": "concurrently -k -n \"Webpack,Host\" -p \"[{name}]\" -c \"blue,green\" \"webpack --watch --progress --mode=development\" \"http-server ./build -p 6600 -o -s\"",
+    "dev": "concurrently -k -n \"Webpack,Host\" -p \"[{name}]\" -c \"blue,green\" \"webpack --watch --progress --mode=development\" \"http-server ./build -p 6600 -o\"",
     "doc": "typedoc src --out ./docs/typeDoc",
     "doc-github": "typedoc src --out ./docs/wiki",
     "docUnsatable": "jsdoc -c docs/jsDocConfig.json -p",

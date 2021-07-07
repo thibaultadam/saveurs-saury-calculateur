@@ -12,7 +12,6 @@ export type ChoiceInputConstructor = new (
 export
 abstract class ChoiceInput extends ChoiceButton {
 
-    public value: string = "";
     public $eventProvider!: HTMLInputElement;
 
     constructor(
@@ -26,15 +25,18 @@ abstract class ChoiceInput extends ChoiceButton {
     {
         super.build(buildCallback);
 
-        this.$eventProvider.addEventListener('input', (ev: Event) => {
-
-            this.value = this.$eventProvider.value;
-
+        this.$eventProvider.addEventListener('input', (ev: Event) => 
+        {
             this.emit('input', ev, ...this.buildArgs);
             this.onInput(ev, ...this.buildArgs);
         });
 
         return this;
+    }
+
+    public get value(): string
+    {
+        return this.$eventProvider.value;
     }
 
     protected input(value: string = "") : void

@@ -2,10 +2,13 @@ import {Configurator, ConfiguratorPathes } from "../../lib/Configurator";
 import { Debug, DebugLevel } from "../../lib/Tools/Debug";
 import {ChoicesManager} from "./ChoicesManager/ChoicesManager";
 import {DataParser} from "./Data/DataParser";
+import { TableBuilder } from "./TableBuilder/TableBuilder";
+
 
 // CSS
 import '../css/choices.css';
-import { createElement } from "../../lib/Tools/DOMElementCreator";
+import '../css/docs.css';
+//import '../css/screen.css';
 
 /**
  * @alias OakAddinsConfigurateur
@@ -13,6 +16,8 @@ import { createElement } from "../../lib/Tools/DOMElementCreator";
 export 
 class OakAddinsConfigurateur extends Configurator 
 {
+    public tableBuilder!: TableBuilder;        
+
     constructor(container: string, path : ConfiguratorPathes, debugLevel? : DebugLevel)
     {
         super(container, path, debugLevel);
@@ -33,6 +38,11 @@ class OakAddinsConfigurateur extends Configurator
         `;
 
         this.registerChoiceManagerClass(ChoicesManager);
+
+        this.tableBuilder = new TableBuilder({
+            configurator: this
+        });
+
         this.choicesManager.choicesEnumerator.on('end', () => this.buildTab());
 
         // lance la construction du 1er element
@@ -43,12 +53,6 @@ class OakAddinsConfigurateur extends Configurator
     {
         Debug.log('--------------------------- buildTab');
 
-        const calculateButton = createElement(
-        `<div class="d-grid gap-2 col-6 mx-auto my-5">
-            <button id="build" class="btn btn-indigo" type="button">CALCULER</button>
-        </div>`
-        ) as HTMLElement;
-
-        this.$container.appendChild(calculateButton);
+        this.tableBuilder.build();
     }
 }

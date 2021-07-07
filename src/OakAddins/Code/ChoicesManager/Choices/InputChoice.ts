@@ -1,8 +1,8 @@
 import { ChoiceConstructionOptions } from "../../../../lib/ChoicesManagement/Choices/Choice";
 import { ChoiceInput } from "../../../../lib/ChoicesManagement/Choices/ChoiceInput";
+import { Debug } from "../../../../lib/Tools/Debug";
 import { createElement } from "../../../../lib/Tools/DOMElementCreator";
-import { TreeNode } from "../../Data/DataParser";
-import { ChoiceData } from "../../Data/DataProvider";
+import { ChoiceData, TreeNode } from "../../Data/DataParser";
 
 export class InputChoice extends ChoiceInput
 {
@@ -13,7 +13,7 @@ export class InputChoice extends ChoiceInput
         this.build((data: TreeNode["values"]["index"], choiceData: ChoiceData) => 
         {
             return createElement(`
-            <input class="form-control" type="${choiceData.inputType || "text"}" id="${data.label}-${this.choiceContainer.id}" placeholder="${choiceData.placeholder || ""}" value="${choiceData.defaultValue || ""}">
+            <input class="form-control" type="${choiceData.inputType || "text"}" id="${data.label}-${this.choiceContainer.id}" placeholder="${choiceData.placeholder || ""}" value="${choiceData.defaultValue || "0"}">
             `) as HTMLInputElement;
         });
     }
@@ -29,6 +29,12 @@ export class InputChoice extends ChoiceInput
         {
             this.input(this.choicesEnumerator.get(this.choiceContainer.id).data.get('value'));
         }
+        // appliquer dans tout les systèmes la valeur par défaut du choix
+        else if(choiceData.defaultValue)
+        {
+            Debug.log(`Set default choice value "${choiceData.defaultValue}"`);
+            this.choicesEnumerator.get(this.choiceContainer.id).data.set('value', choiceData.defaultValue);
+        }
     }
 
     protected onBuilt(data: TreeNode["values"]["index"], choiceData: ChoiceData): void
@@ -38,6 +44,12 @@ export class InputChoice extends ChoiceInput
     {
         this.choicesEnumerator.get(this.choiceContainer.id).data.set('value', this.value);
         
+        // si tout est déja construit et on change le dernier choix en réaffiche le résultat
+        if(this.choicesEnumerator.isEnd())
+        {
+            this.choicesEnumerator.emit('end');
+        }
+
         // lorsque le choix est completement construit on vérifit si le parametre buildNext n'est pas définit dans les données 
         // et dans ce cas on construit le choix suivant
         // TODO : Enhancement, gerer le parsing des evenements et des parametes d'app dans ChoiceParamParser 
@@ -45,6 +57,8 @@ export class InputChoice extends ChoiceInput
         {
             if(choiceData.params?.buildNext)
             {
+                choiceData.typeName
+
                 this.choicesEnumerator.set(this.choiceContainer.id, 'value');
                 this.choicesEnumerator.goTo(this.choiceContainer.id + 1);
             }
