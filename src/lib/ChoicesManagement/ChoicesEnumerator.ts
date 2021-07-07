@@ -64,7 +64,7 @@ export class ChoicesEnumerator extends EventEmitter
 
         this.choices = [];
 
-        Debug.log("choices Labels", choicesLabels);
+        Debug.info("choices Labels", choicesLabels);
 
         // Initialise tout les choix possibles
         for(let i = 0; i < choicesLabels.length; i++)
@@ -95,8 +95,13 @@ export class ChoicesEnumerator extends EventEmitter
                         value: null,
                         isFirst: () => (i === 0),
                         isLast: () => (i === this.choices.length -1),
-                        data: new Map<string, any>()
+                        data: new Map<string, Map<string, any>>()
                     };
+
+                    for(const choiceLabel of choicesLabels[i] as string[])
+                    {
+                        this.choices[i].data.set(choiceLabel, new Map<string, any>());
+                    }
 
                 break;
             }
@@ -186,6 +191,74 @@ export class ChoicesEnumerator extends EventEmitter
         }
     }
 
+    /**
+     * Permet de définir une donnée relié a un choix
+     * @param {number} index 
+     * @param {string} valueLabel 
+     * @param {any} value 
+     * @param {string} choiceLabel? pour ajouté une donnée a un label spécifique
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+    public setData(index: number, valueLabel: string, value: any, choiceLabel?: string): void
+    {
+        if(index < 0 || index >= this.choices.length)
+        {
+            Debug.error('Index out choices size');
+            return;
+        }
+
+        if(choiceLabel === undefined || !this.get(index).data.get(choiceLabel)?.set)
+        {
+            this.get(index).data.set(valueLabel, value);
+        }
+        else
+        {
+            for(const choiceDataByChoiceLabel of this.get(index).data.entries())
+            {
+                if(choiceDataByChoiceLabel[0] === choiceLabel) continue;
+
+                Debug.info(choiceDataByChoiceLabel, choiceLabel, valueLabel)
+
+                choiceDataByChoiceLabel[1]?.delete(valueLabel);
+            }
+
+            this.get(index).data.get(choiceLabel).set(valueLabel, value);
+        }
+    }
+
+    /**
+     * Permet de récupérer une donnée relié a un choix
+     * @param {number|string} index 
+     * @param {any} value 
+     * @param {string} choiceLabel? pour récupérer une donnée a un label spécifique
+     * @public
+     * @memberof ChoicesEnumerator
+     */
+    public getData(index: number | string, valueLabel: string, choiceLabel?: string): any
+    {
+        let choice: Choice;        
+
+        switch(typeof index)
+        {
+            case 'number': 
+                choice = this.get(index);
+            break;
+            case 'string': 
+                choice = this.getByLabel(index) as Choice;
+            break;
+        }
+
+        if(choiceLabel === undefined || !choice.data.get(choiceLabel)?.get)
+        {
+            return choice.data.get(valueLabel);
+        }
+        else
+        {
+            return choice.data.get(choiceLabel)?.get(valueLabel);
+        }
+    }
+        
     /**
      * Permets de définir la valeur d'un choix en fonction de sont index
      * @param {number} index

@@ -104,7 +104,7 @@ abstract class ChoicesManager extends EventEmitter
                 }
             });
             
-            Debug.log(`Successfully created new choice`, choice);
+            Debug.info(`Successfully created new choice`, choice);
             this.choicesContainersInstances[choiceID] = choice;
             return choice;
         }
@@ -125,7 +125,7 @@ abstract class ChoicesManager extends EventEmitter
     protected addChoiceContainersCreation(creationCallback : ContainerCreationCallback): void
     {
         this.choiceContainersCreation.push(creationCallback);
-        Debug.log(`Registering GLOBAL choice container callback`);
+        Debug.info(`Registering GLOBAL choice container callback`);
     }
 
     /**
@@ -139,7 +139,7 @@ abstract class ChoicesManager extends EventEmitter
     protected registerChoiceClass(type : string, ChoiceClass : ChoiceContainerConstructor): void
     {
         this.ChoiceContainerClasses.set(type, ChoiceClass);
-        Debug.log(`Registering a choice class`, ChoiceClass);
+        Debug.info(`Registering a choice class`, ChoiceClass);
     }
 
     /**
@@ -152,6 +152,6 @@ abstract class ChoicesManager extends EventEmitter
     protected registerDataProviderClass(DataProvider : DataProviderConstructor): void
     {
         this.dataProvider = new DataProvider(this);
-        Debug.log(`Registering DataProvider class`);
+        Debug.info(`Registering DataProvider class`);
     }
 }

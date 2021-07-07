@@ -24,7 +24,7 @@ self.addEventListener('install', event =>
             '/data/fr-FR/choices-fr-FR.json',
             '/data/fr-FR/config-fr-FR.json',
             '/data/fr-FR/possibilities-calculation-gramsPerLiter-fr-FR.json',
-            '/data/fr-FR/possibilities-calculation-porcentage-fr-FR.json',
+            '/data/fr-FR/possibilities-calculation-percentage-fr-FR.json',
             '/data/fr-FR/possibilities-fr-FR.json',
             '/data/fr-FR/responses-table-fr-FR.js',
             '/app-ressources/logo.png',

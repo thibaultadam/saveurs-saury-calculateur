@@ -52,7 +52,7 @@
                 "placeholder": "0",
                 "defaultValue": "5"
             },
-            "porcentage" : {
+            "percentage" : {
                 "type": "input",
                 "inputType": "number",
                 "title": "Pour l'élevage long",

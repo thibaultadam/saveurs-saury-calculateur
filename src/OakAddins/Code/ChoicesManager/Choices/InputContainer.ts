@@ -1,7 +1,6 @@
 import { ChoiceContainer, ChoiceContainerConstructionOptions, ContainerCreationCallback } from "../../../../lib/ChoicesManagement/Choices/ChoiceContainer";
 import { createElement } from "../../../../lib/Tools/DOMElementCreator";
-import { TreeNode } from "../../Data/DataParser";
-import { ChoiceData } from "../../Data/DataProvider";
+import { ChoiceData, TreeNode } from "../../Data/DataParser";
 import { parseChoiceData } from "../../Tools/ParseTools";
 import { InputChoice } from "./InputChoice";
 
@@ -22,8 +21,8 @@ export class InputContainer extends ChoiceContainer
         this.choiceData = parseChoiceData(choiceData, this.choicesEnumerator);
         
         this.createNewContainer(() => createElement(`
-        <div>
-            <p class="my-2 fs-6">${this.choiceData.title}</p>
+        <div class="my-2">
+            <p class="my-2 fs-6 text-uppercase">${this.choiceData.title}</p>
         </div>`) as HTMLElement);
 
         this.createNewContainer(() => createElement(`<div class="form-floating my-2">`) as HTMLElement);

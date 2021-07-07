@@ -1,7 +1,6 @@
 import { ChoiceContainer, ChoiceContainerConstructionOptions, ContainerCreationCallback } from "../../../../lib/ChoicesManagement/Choices/ChoiceContainer";
 import { createElement } from "../../../../lib/Tools/DOMElementCreator";
-import { TreeNode } from "../../Data/DataParser";
-import { ChoiceData } from "../../Data/DataProvider";
+import { ChoiceData, TreeNode } from "../../Data/DataParser";
 import { ButtonChoice } from "./ButtonChoice";
 
 export class ButtonContainer extends ChoiceContainer

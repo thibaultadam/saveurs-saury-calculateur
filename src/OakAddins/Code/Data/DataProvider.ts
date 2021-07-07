@@ -1,5 +1,5 @@
 import { ChoicesManager } from '../../../lib/ChoicesManagement/ChoicesManager';
-import {DataProvider as _DataProvider} from '../../../lib/DataProvider';
+import { DataProvider as _DataProvider } from '../../../lib/DataProvider';
 import { Debug } from '../../../lib/Tools/Debug';
 import { ChoiceData, TreeNode } from './DataParser';
 

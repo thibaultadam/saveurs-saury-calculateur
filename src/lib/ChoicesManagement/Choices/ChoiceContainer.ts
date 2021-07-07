@@ -205,7 +205,7 @@ abstract class ChoiceContainer extends UIElement {
     protected registerChoiceClass(ChoiceClass : ChoiceConstructor): void
     {
         this.ChoiceClass = ChoiceClass;
-        Debug.log(`Registering Button Class for "${this.type}"`);
+        Debug.info(`Registering Button Class for "${this.type}"`);
     }
 
     /**

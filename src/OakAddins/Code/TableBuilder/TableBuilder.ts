@@ -5,15 +5,15 @@ import { Debug } from "../../../lib/Tools/Debug";
 import { createElement } from "../../../lib/Tools/DOMElementCreator";
 import { EventEmitter } from "../../../lib/Tools/EventEmitter";
 
-export type TableBuilderConstrcutorOptions = {
+export type TableBuilderConstructorOptions = {
     configurator: Configurator,
 }
 
 export type TableBuilderInput = {
     volumeType : string,
     volume : number,
-    gpl : number,
-    porcentage : number
+    gpl : number | null,
+    percentage : number | null
 }
 
 export class TableBuilder extends EventEmitter
@@ -28,7 +28,7 @@ export class TableBuilder extends EventEmitter
     $calculateButton!: HTMLElement;
     $calculateButtonContainer!: HTMLElement;
 
-    constructor(options: TableBuilderConstrcutorOptions)
+    constructor(options: TableBuilderConstructorOptions)
     {
         super();
 
@@ -83,9 +83,9 @@ export class TableBuilder extends EventEmitter
 
         const inputs = {
             volumeType : this.choiceEnumerator.getByLabel('unit')?.value || "Hectolitres",
-            volume : Number(this.choiceEnumerator.getByLabel('value')?.data.get('value')),
-            gpl : Number(this.choiceEnumerator.getByLabel('gramsPerLiter')?.data.get('value')),
-            porcentage : Number(this.choiceEnumerator.getByLabel('porcentage')?.data.get('value')),
+            volume : Number(this.choiceEnumerator.getData('value', 'value')),
+            gpl : Number(this.choiceEnumerator.getData('gramsPerLiter', 'value', 'gramsPerLiter')) || null,
+            percentage : Number(this.choiceEnumerator.getData('percentage', 'value', 'percentage')) || null,
         }
         
         Debug.log('Building table with inputs :', inputs);
@@ -122,8 +122,10 @@ export class TableBuilder extends EventEmitter
         return line + "</tr>";
     }
 
-    protected buildBodyLine(lineData: any, inputs: TableBuilderInput)
+    protected buildBodyLine(lineData: any, inputs: TableBuilderInput): string
     {
+        Debug.info('build line', lineData)
+
         let line = "<tr>";
 
         let quantity = null;
@@ -139,23 +141,27 @@ export class TableBuilder extends EventEmitter
                 break;
                 case "object" : 
 
-                    if(!quantity)
+                    if(quantity === null)
                     {
-                        quantity = value[inputs.volumeType](inputs.volume, inputs.gpl, inputs.porcentage);
+                        quantity = value[inputs.volumeType](inputs.volume, inputs.gpl, inputs.percentage);
 
                         line += 
                         `<td>
                             <span class="value">${quantity?.toFixed(1) || 'null'}</span>
                             <span>${lineData.dosage[inputs.volumeType]}</span>
-                        </td>`;                        
+                        </td>`;
+                        
+                        if(quantity === 0) return "";
                     }
                     else
                     {
                         line += 
                         `<td>
-                            <span class="value">${value(quantity)?.toFixed(1) || 'null'}</span>
+                            <span class="value">${value[inputs.volumeType](quantity)?.toFixed(1) || 'null'}</span>
                             <span>${lineData.quantity[inputs.volumeType]}</span>
                         </td>`;
+
+                        quantity;
                     }
 
                 break;
