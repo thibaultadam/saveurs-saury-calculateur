@@ -1,4 +1,3 @@
-import {Debug} from "../../Tools/Debug";
 import {ChoiceContainer} from "./ChoiceContainer";
 import { ChoiceButton } from "./ChoiceButton";
 import { ChoiceConstructionOptions } from "./Choice";

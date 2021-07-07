@@ -4,7 +4,7 @@
         "Hectolitres": {
             "rootNext" : true
         },
-        "Gallon": {
+        "Gallons": {
             "rootNext" : true
         }
     },
@@ -13,9 +13,9 @@
         "values": {
             "value": {
                 "next": {
-                    "type": "porcentage",
+                    "type": "percentage",
                     "values": {
-                        "porcentage-input" : {
+                        "percentage-input" : {
                             "end": true
                         }
                     }

@@ -25,15 +25,15 @@ export class InputChoice extends ChoiceInput
         `) as HTMLElement);
 
         // en cas de reconstruction on remet la valeur qui a précedement été entré
-        if(this.choicesEnumerator.get(this.choiceContainer.id).data.has('value'))
+        if(this.choicesEnumerator.getData(this.choiceContainer.id, 'value', choiceData.typeName))
         {
-            this.input(this.choicesEnumerator.get(this.choiceContainer.id).data.get('value'));
+            this.input(this.choicesEnumerator.getData(this.choiceContainer.id, 'value', choiceData.typeName));
         }
         // appliquer dans tout les systèmes la valeur par défaut du choix
         else if(choiceData.defaultValue)
         {
             Debug.log(`Set default choice value "${choiceData.defaultValue}"`);
-            this.choicesEnumerator.get(this.choiceContainer.id).data.set('value', choiceData.defaultValue);
+            this.choicesEnumerator.setData(this.choiceContainer.id, 'value', this.value, choiceData.typeName);
         }
     }
 
@@ -42,7 +42,7 @@ export class InputChoice extends ChoiceInput
 
     protected onInput(ev : Event, data: TreeNode["values"]["index"], choiceData: ChoiceData): void
     {
-        this.choicesEnumerator.get(this.choiceContainer.id).data.set('value', this.value);
+        this.choicesEnumerator.setData(this.choiceContainer.id, 'value', this.value, choiceData.typeName);
         
         // si tout est déja construit et on change le dernier choix en réaffiche le résultat
         if(this.choicesEnumerator.isEnd())
@@ -57,8 +57,6 @@ export class InputChoice extends ChoiceInput
         {
             if(choiceData.params?.buildNext)
             {
-                choiceData.typeName
-
                 this.choicesEnumerator.set(this.choiceContainer.id, 'value');
                 this.choicesEnumerator.goTo(this.choiceContainer.id + 1);
             }

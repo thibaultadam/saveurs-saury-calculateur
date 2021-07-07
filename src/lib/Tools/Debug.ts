@@ -1,14 +1,24 @@
-export type DebugLevel = "none" | "log" | "warn" | "error";
+export type DebugLevel = "none" | "info" | "log" | "warn" | "error";
 
 export  
 class Debug
 {
     public static debugLevel : DebugLevel = "log";
 
+    public static info(...args : any) : void
+    {
+        switch(Debug.debugLevel)
+        {
+            case "info" :
+            console.info(...args);
+        }
+    }
+
     public static log(...args : any) : void
     {
         switch(Debug.debugLevel)
         {
+            case "info" :
             case "log" :
             // for tracing calls before console.log
             console.groupCollapsed(...args);
@@ -21,6 +31,7 @@ class Debug
     {
         switch(Debug.debugLevel)
         {
+            case "info" :
             case "log" :
             case "warn" :
                 console.warn(...args);
@@ -31,6 +42,7 @@ class Debug
     {
         switch(Debug.debugLevel)
         {
+            case "info" :
             case "log" :
             case "warn" :
             case "error" :

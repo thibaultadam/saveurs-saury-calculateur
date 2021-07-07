@@ -1,7 +1,6 @@
 import { ChoiceContainer, ChoiceContainerConstructionOptions } from "../../../../lib/ChoicesManagement/Choices/ChoiceContainer";
 import { createElement } from "../../../../lib/Tools/DOMElementCreator";
-import { TreeNode } from "../../Data/DataParser";
-import { ChoiceData } from "../../Data/DataProvider";
+import { ChoiceData, TreeNode } from "../../Data/DataParser";
 import { RadioChoice } from "./RadioChoice";
 
 export class RadioContainer extends ChoiceContainer

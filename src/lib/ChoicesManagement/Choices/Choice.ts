@@ -108,7 +108,7 @@ abstract class Choice extends UIElement {
      */
     protected build(buildCallback : (...args : any[]) => HTMLElement): Choice
     {
-        Debug.log(`Building button type "${this.type}" with args`, ...this.buildArgs)
+        Debug.info(`Building button type "${this.type}" with args`, ...this.buildArgs)
 
         this.$eventProvider = buildCallback(...this.buildArgs);
         this.$container.appendChild(this.$eventProvider);

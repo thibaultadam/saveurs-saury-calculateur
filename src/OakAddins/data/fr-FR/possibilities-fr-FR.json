@@ -49,7 +49,7 @@
                         "rootNext" : true
                     }
                 },
-                "next": "possibilities-calculation-porcentage-fr-FR.json"
+                "next": "possibilities-calculation-percentage-fr-FR.json"
             }
         },
         "Kits Barriques": {
@@ -63,7 +63,7 @@
                         "rootNext" : true
                     }
                 },
-                "next": "possibilities-calculation-porcentage-fr-FR.json"
+                "next": "possibilities-calculation-percentage-fr-FR.json"
             }
         }
     }

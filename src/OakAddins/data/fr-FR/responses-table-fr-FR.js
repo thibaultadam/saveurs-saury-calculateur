@@ -179,6 +179,9 @@
             dosage : volumeTypes.dosage,
             quantity : volumeTypes.sac9
         },
+
+        ////////// Hybrid ///////////
+
         {
             "type" : "tbody",
             "values" : [
@@ -309,56 +312,68 @@
                 "Barrel Insert", // "Barrel Insert"
                 {
                     "Hectolitres": (volume, gpl, percentage) => ((14/2.25) / 70) * percentage * volume,
-                    "Gallons": (volume, gpl, percentage) => null,
+                    "Gallons": (volume, gpl, percentage) => ((14/2.25) / 70) * percentage * (volume / 26.4),
                 },
-                (quantity) => quantity / 14
+                {
+                    "Hectolitres": (quantity) => quantity / 14,
+                    "Gallons": (quantity) => quantity / 14
+                }
             ],
-            dosage : volumeTypes.pieces,
+            dosage : volumeTypes.staves,
             quantity : volumeTypes.paq14u 
         },
         {
             "type" : "tbody",
             "values" : [
-                "6-12 mois",
-                "Oak Chain 18 pièces",
+                "6-12 mois", // "6-12 month"
+                "Oak Chain 18 pièces", // "Oak Chain 18 pieces"
                 {
                     "Hectolitres": (volume, gpl, percentage) => ((18/2.25) / 18) * percentage * volume,
-                    "Gallons": (volume, gpl, percentage) => null,
+                    "Gallons": (volume, gpl, percentage) => ((18/2.25) / 18) * percentage * (volume / 26.4),
                 },
-                (quantity) => quantity / 18
+                {
+                    "Hectolitres": (quantity) => quantity / 18,
+                    "Gallons": (quantity) => quantity / 18
+                }
             ],
             dosage : volumeTypes.pieces,
-            quantity : volumeTypes.set34p 
+            quantity : volumeTypes.set18p 
         },
         {
             "type" : "tbody",
             "values" : [
-                "6-12 mois",
-                "Oak Chain 34 pièces",
+                "6-12 mois", // "6-12 month"
+                "Oak Chain 34 pièces", // "Oak Chain 34 pièces"
                 {
                     "Hectolitres": (volume, gpl, percentage) => ((34/2.25) / 33) * percentage * volume,
-                    "Gallons": (volume, gpl, percentage) => null,
+                    "Gallons": (volume, gpl, percentage) => ((34/2.25) / 33) * percentage * (volume / 26.4),
                 },
-                (quantity) => quantity / 34
+                {
+                    "Hectolitres": (quantity) => quantity / 34,
+                    "Gallons": (quantity) => quantity / 34
+                }
+            ],
+            dosage : volumeTypes.pieces,
+            quantity : volumeTypes.set34p
+        },
+        {
+            "type" : "tbody",
+            "values" : [
+                "14-16 mois", // "14-16 month"
+                "Wineplank", // "Wineplank"
+                {
+                    "Hectolitres": (volume, gpl, percentage) => (1 / 33) * percentage * volume,
+                    "Gallons": (volume, gpl, percentage) => (1 / 33) * percentage * (volume / 26.4),
+                },
+                {
+                    "Hectolitres": (quantity) => quantity / 5,
+                    "Gallons": (quantity) => quantity / 5
+                }
             ],
             dosage : volumeTypes.staves,
             quantity : volumeTypes.paq5u
-        },
-        {
-            "type" : "tbody",
-            "values" : [
-                "14-16 mois",
-                "Wineplank",
-                {
-                    "Hectolitres": (volume, gpl, percentage) => (1 / 33) * percentage * volume,
-                    "Gallons": (volume, gpl, percentage) => null,
-                },
-                (quantity) => quantity / 5
-            ],
-            dosage : volumeTypes.staves,
-            quantity : volumeTypes.paq10u
         }
-    ]
+    ];
     
     return dataset;
 })();

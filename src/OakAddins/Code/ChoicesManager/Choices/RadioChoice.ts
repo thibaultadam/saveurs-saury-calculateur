@@ -1,9 +1,8 @@
-import { TreeNode } from "../../Data/DataParser";
+import { ChoiceData, TreeNode } from "../../Data/DataParser";
 import { createElement } from "../../../../lib/Tools/DOMElementCreator";
 import { ChoiceButton } from "../../../../lib/ChoicesManagement/Choices/ChoiceButton";
 import { Debug } from "../../../../lib/Tools/Debug";
 import { ChoiceConstructionOptions } from "../../../../lib/ChoicesManagement/Choices/Choice";
-import { ChoiceData } from "../../Data/DataProvider";
 
 export class RadioChoice extends ChoiceButton
 {

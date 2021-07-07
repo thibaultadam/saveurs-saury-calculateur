@@ -1,5 +1,5 @@
 import { ChoicesEnumerator } from "../../../lib/ChoicesManagement/ChoicesEnumerator";
-import { ChoiceData } from "../Data/DataProvider";
+import { ChoiceData } from "../Data/DataParser";
 
 export function parseChoiceData(_choiceData: ChoiceData, choicesEnumerator: ChoicesEnumerator): ChoiceData
 {
@@ -7,9 +7,9 @@ export function parseChoiceData(_choiceData: ChoiceData, choicesEnumerator: Choi
 
     if(choiceData.parse)
     {
-        for(const key of Object.keys(choiceData.parse as {[index: string]: string}))
+        for(const key of Object.keys(choiceData.parse))
         {
-            const parser = choiceData.parse[key] as {[index: string]: string};
+            const parser = choiceData.parse[key];
 
             choiceData[key] = stringReplace(choiceData[key], parser, choicesEnumerator);
         }
