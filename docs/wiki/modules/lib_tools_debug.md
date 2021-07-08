@@ -16,8 +16,8 @@
 
 ### DebugLevel
 
-Ƭ **DebugLevel**: ``"none"`` \| ``"log"`` \| ``"warn"`` \| ``"error"``
+Ƭ **DebugLevel**: ``"none"`` \| ``"info"`` \| ``"log"`` \| ``"warn"`` \| ``"error"``
 
 #### Defined in
 
-[lib/Tools/Debug.ts:1](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/Debug.ts#L1)
+[lib/Tools/Debug.ts:1](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/Debug.ts#L1)

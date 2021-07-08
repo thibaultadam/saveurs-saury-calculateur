@@ -6,6 +6,7 @@
 
 ### Modules
 
+- [OakAddins/Code/ChoicesManager/ChoiceParamParser](modules/oakaddins_code_choicesmanager_choiceparamparser.md)
 - [OakAddins/Code/ChoicesManager/Choices/ButtonChoice](modules/oakaddins_code_choicesmanager_choices_buttonchoice.md)
 - [OakAddins/Code/ChoicesManager/Choices/ButtonContainer](modules/oakaddins_code_choicesmanager_choices_buttoncontainer.md)
 - [OakAddins/Code/ChoicesManager/Choices/InputChoice](modules/oakaddins_code_choicesmanager_choices_inputchoice.md)
@@ -16,6 +17,7 @@
 - [OakAddins/Code/Data/DataParser](modules/oakaddins_code_data_dataparser.md)
 - [OakAddins/Code/Data/DataProvider](modules/oakaddins_code_data_dataprovider.md)
 - [OakAddins/Code/OakAddinsConfigurateur](modules/oakaddins_code_oakaddinsconfigurateur.md)
+- [OakAddins/Code/TableBuilder/TableBuilder](modules/oakaddins_code_tablebuilder_tablebuilder.md)
 - [OakAddins/Code/Tools/ParseTools](modules/oakaddins_code_tools_parsetools.md)
 - [lib/ChoicesManagement/Choices/Choice](modules/lib_choicesmanagement_choices_choice.md)
 - [lib/ChoicesManagement/Choices/ChoiceButton](modules/lib_choicesmanagement_choices_choicebutton.md)

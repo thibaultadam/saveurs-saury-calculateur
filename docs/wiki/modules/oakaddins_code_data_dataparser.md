@@ -10,10 +10,56 @@
 
 ### Type aliases
 
+- [ChoiceData](oakaddins_code_data_dataparser.md#choicedata)
+- [ConfiguratorConfig](oakaddins_code_data_dataparser.md#configuratorconfig)
 - [JsonTypes](oakaddins_code_data_dataparser.md#jsontypes)
 - [TreeNode](oakaddins_code_data_dataparser.md#treenode)
 
 ## Type aliases
+
+### ChoiceData
+
+Ƭ **ChoiceData**: `Object`
+
+#### Index signature
+
+▪ [index: `string`]: [`JsonTypes`](oakaddins_code_data_dataparser.md#jsontypes)
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `defaultValue?` | `string` |
+| `description?` | `string` |
+| `inputType?` | `string` |
+| `params?` | `Object` |
+| `parse?` | `Object` |
+| `placeholder?` | `string` |
+| `title?` | `string` |
+| `type` | [`ChoiceType`](oakaddins_code_choicesmanager_choicesmanager.md#choicetype) |
+
+#### Defined in
+
+[OakAddins/Code/Data/DataParser.ts:22](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/Data/DataParser.ts#L22)
+
+___
+
+### ConfiguratorConfig
+
+Ƭ **ConfiguratorConfig**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `choices` | `Object` |
+| `choices.types` | `Object` |
+
+#### Defined in
+
+[OakAddins/Code/Data/DataParser.ts:45](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/Data/DataParser.ts#L45)
+
+___
 
 ### JsonTypes
 
@@ -21,7 +67,7 @@
 
 #### Defined in
 
-[OakAddins/Code/Data/DataParser.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/OakAddins/Code/Data/DataParser.ts#L6)
+[OakAddins/Code/Data/DataParser.ts:7](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/Data/DataParser.ts#L7)
 
 ___
 
@@ -33,10 +79,10 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `next?` | [TreeNode](oakaddins_code_data_dataparser.md#treenode) \| `string` |
+| `next?` | [`TreeNode`](oakaddins_code_data_dataparser.md#treenode) \| `string` |
 | `type` | `string` |
 | `values` | `Object` |
 
 #### Defined in
 
-[OakAddins/Code/Data/DataParser.ts:8](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/OakAddins/Code/Data/DataParser.ts#L8)
+[OakAddins/Code/Data/DataParser.ts:9](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/Data/DataParser.ts#L9)

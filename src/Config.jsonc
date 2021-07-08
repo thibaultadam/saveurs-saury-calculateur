@@ -5,7 +5,7 @@
     "assets" : [
         { "from": "OakAddins/data", "to": "data" },
         { "from": "OakAddins/images", "to": "images" },
-        { "from": "OakAddins/configurator.html", "to": "index.html" },
+        { "from": "OakAddins/configurator.html", "to": "configurator.html" },
         { "from": "OakAddins/home.html", "to": "home.html" },
         { "from": "OakAddins/manifest.webmanifest", "to": "manifest.webmanifest" },
         { "from": "OakAddins/sw-init.js", "to": "sw-init.js" },

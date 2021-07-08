@@ -24,20 +24,20 @@
 
 | Name | Type |
 | :------ | :------ |
-| `choicesManager` | [ChoicesManager](../classes/lib_choicesmanagement_choicesmanager.choicesmanager.md) |
-| `containersCreation` | [ContainerCreationCallback](lib_choicesmanagement_choices_choicecontainer.md#containercreationcallback)[] |
+| `choicesManager` | [`ChoicesManager`](../classes/lib_choicesmanagement_choicesmanager.choicesmanager.md) |
+| `containersCreation` | [`ContainerCreationCallback`](lib_choicesmanagement_choices_choicecontainer.md#containercreationcallback)[] |
 | `id` | `number` |
 | `type` | `string` |
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceContainer.ts:20](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/ChoiceContainer.ts#L20)
+[lib/ChoicesManagement/Choices/ChoiceContainer.ts:20](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/ChoiceContainer.ts#L20)
 
 ___
 
 ### ChoiceContainerConstructor
 
-Ƭ **ChoiceContainerConstructor**: (`constructionOptions`: [ChoiceContainerConstructionOptions](lib_choicesmanagement_choices_choicecontainer.md#choicecontainerconstructionoptions), ...`buildArgs`: `any`[]) => [ChoiceContainer](../classes/lib_choicesmanagement_choices_choicecontainer.choicecontainer.md)
+Ƭ **ChoiceContainerConstructor**: (`constructionOptions`: [`ChoiceContainerConstructionOptions`](lib_choicesmanagement_choices_choicecontainer.md#choicecontainerconstructionoptions), ...`buildArgs`: `any`[]) => [`ChoiceContainer`](../classes/lib_choicesmanagement_choices_choicecontainer.choicecontainer.md)
 
 #### Type declaration
 
@@ -47,12 +47,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `constructionOptions` | [ChoiceContainerConstructionOptions](lib_choicesmanagement_choices_choicecontainer.md#choicecontainerconstructionoptions) |
+| `constructionOptions` | [`ChoiceContainerConstructionOptions`](lib_choicesmanagement_choices_choicecontainer.md#choicecontainerconstructionoptions) |
 | `...buildArgs` | `any`[] |
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceContainer.ts:15](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/ChoiceContainer.ts#L15)
+[lib/ChoicesManagement/Choices/ChoiceContainer.ts:15](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/ChoiceContainer.ts#L15)
 
 ___
 
@@ -79,4 +79,4 @@ HTMLElement
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceContainer.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/ChoiceContainer.ts#L13)
+[lib/ChoicesManagement/Choices/ChoiceContainer.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/ChoiceContainer.ts#L13)

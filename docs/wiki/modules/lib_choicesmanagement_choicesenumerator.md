@@ -25,36 +25,37 @@
 
 | Name | Type |
 | :------ | :------ |
-| `data` | `Map`<string, any\> |
+| `data` | `Map`<`string`, `any`\> |
 | `index` | `number` |
 | `isFirst` | () => `boolean` |
+| `isLast` | () => `boolean` |
 | `label` | `string` |
-| `labels?` | [MultipleLabel](lib_choicesmanagement_choicesenumerator.md#multiplelabel) |
+| `labels?` | [`MultipleLabel`](lib_choicesmanagement_choicesenumerator.md#multiplelabel) |
 | `value` | `string` \| ``null`` |
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:11](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L11)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:11](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L11)
 
 ___
 
 ### CompletedChoice
 
-Ƭ **CompletedChoice**: [Choice](lib_choicesmanagement_choicesenumerator.md#choice) & { `value`: `string`  }
+Ƭ **CompletedChoice**: [`Choice`](lib_choicesmanagement_choicesenumerator.md#choice) & { `value`: `string`  }
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:20](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L20)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L21)
 
 ___
 
 ### EmptyChoice
 
-Ƭ **EmptyChoice**: [Choice](lib_choicesmanagement_choicesenumerator.md#choice) & { `value`: ``null``  }
+Ƭ **EmptyChoice**: [`Choice`](lib_choicesmanagement_choicesenumerator.md#choice) & { `value`: ``null``  }
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:24](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L24)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L25)
 
 ___
 
@@ -68,4 +69,4 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:4](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L4)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:4](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L4)

@@ -20,4 +20,4 @@
 
 #### Defined in
 
-[OakAddins/Code/ChoicesManager/ChoicesManager.ts:11](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/OakAddins/Code/ChoicesManager/ChoicesManager.ts#L11)
+[OakAddins/Code/ChoicesManager/ChoicesManager.ts:12](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/ChoicesManager/ChoicesManager.ts#L12)

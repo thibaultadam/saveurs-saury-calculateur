@@ -29,7 +29,7 @@
                         "rootNext" : true
                     },  
                     "Mini Thin Tank Staves / Thin Tank Staves" : {
-                        "rootNext" : true
+                        "next": "possibilities-calculation-percentage-fr-FR.json"
                     }
                 },
                 "next": "possibilities-calculation-gramsPerLiter-fr-FR.json"

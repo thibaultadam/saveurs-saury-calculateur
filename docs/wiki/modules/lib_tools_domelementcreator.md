@@ -26,4 +26,4 @@
 
 #### Defined in
 
-[lib/Tools/DOMElementCreator.ts:2](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/DOMElementCreator.ts#L2)
+[lib/Tools/DOMElementCreator.ts:2](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/DOMElementCreator.ts#L2)

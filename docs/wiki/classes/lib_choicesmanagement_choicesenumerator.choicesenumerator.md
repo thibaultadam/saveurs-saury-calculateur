@@ -8,9 +8,9 @@
 
 ## Hierarchy
 
-- [EventEmitter](lib_tools_eventemitter.eventemitter.md)
+- [`EventEmitter`](lib_tools_eventemitter.eventemitter.md)
 
-  ↳ **ChoicesEnumerator**
+  ↳ **`ChoicesEnumerator`**
 
 ## Table of contents
 
@@ -38,6 +38,7 @@
 - [emit](lib_choicesmanagement_choicesenumerator.choicesenumerator.md#emit)
 - [get](lib_choicesmanagement_choicesenumerator.choicesenumerator.md#get)
 - [getByLabel](lib_choicesmanagement_choicesenumerator.choicesenumerator.md#getbylabel)
+- [getData](lib_choicesmanagement_choicesenumerator.choicesenumerator.md#getdata)
 - [goTo](lib_choicesmanagement_choicesenumerator.choicesenumerator.md#goto)
 - [isEnd](lib_choicesmanagement_choicesenumerator.choicesenumerator.md#isend)
 - [next](lib_choicesmanagement_choicesenumerator.choicesenumerator.md#next)
@@ -45,6 +46,7 @@
 - [once](lib_choicesmanagement_choicesenumerator.choicesenumerator.md#once)
 - [removeListener](lib_choicesmanagement_choicesenumerator.choicesenumerator.md#removelistener)
 - [set](lib_choicesmanagement_choicesenumerator.choicesenumerator.md#set)
+- [setData](lib_choicesmanagement_choicesenumerator.choicesenumerator.md#setdata)
 
 ## Constructors
 
@@ -64,13 +66,13 @@
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:49](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L49)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:50](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L50)
 
 ## Properties
 
 ### choices
 
-• **choices**: [Choice](../modules/lib_choicesmanagement_choicesenumerator.md#choice)[]
+• **choices**: [`Choice`](../modules/lib_choicesmanagement_choicesenumerator.md#choice)[]
 
 toute les étapes de la construction du configurateur
 
@@ -78,13 +80,13 @@ toute les étapes de la construction du configurateur
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:41](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L41)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:42](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L42)
 
 ___
 
 ### current
 
-• **current**: [Choice](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
+• **current**: [`Choice`](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
 
 l'étape courante de la construction du configurateur
 
@@ -92,7 +94,7 @@ l'étape courante de la construction du configurateur
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:49](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L49)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:50](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L50)
 
 ___
 
@@ -106,13 +108,13 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L6)
+[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L6)
 
 ## Accessors
 
 ### completed
 
-• `get` **completed**(): [CompletedChoice](../modules/lib_choicesmanagement_choicesenumerator.md#completedchoice)[]
+• `get` **completed**(): [`CompletedChoice`](../modules/lib_choicesmanagement_choicesenumerator.md#completedchoice)[]
 
 Permets de récupérer les choix qui ont une valeur définie
 
@@ -120,13 +122,13 @@ Permets de récupérer les choix qui ont une valeur définie
 
 #### Returns
 
-[CompletedChoice](../modules/lib_choicesmanagement_choicesenumerator.md#completedchoice)[]
+[`CompletedChoice`](../modules/lib_choicesmanagement_choicesenumerator.md#completedchoice)[]
 
 tableau choix complété
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:282](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L282)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:353](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L353)
 
 ___
 
@@ -146,13 +148,13 @@ nombre de choix complété
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:248](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L248)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:319](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L319)
 
 ___
 
 ### nextChoice
 
-• `get` **nextChoice**(): [Choice](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
+• `get` **nextChoice**(): [`Choice`](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
 
 Contien le choix suivant (retourne l'actuel si il n'y a pas de suivant)
 
@@ -160,17 +162,17 @@ Contien le choix suivant (retourne l'actuel si il n'y a pas de suivant)
 
 #### Returns
 
-[Choice](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
+[`Choice`](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:111](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L111)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:119](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L119)
 
 ___
 
 ### nexts
 
-• `get` **nexts**(): [Choice](../modules/lib_choicesmanagement_choicesenumerator.md#choice)[]
+• `get` **nexts**(): [`Choice`](../modules/lib_choicesmanagement_choicesenumerator.md#choice)[]
 
 Permets de récupérer tout les choix qui suivent le courant
 
@@ -178,19 +180,19 @@ Permets de récupérer tout les choix qui suivent le courant
 
 #### Returns
 
-[Choice](../modules/lib_choicesmanagement_choicesenumerator.md#choice)[]
+[`Choice`](../modules/lib_choicesmanagement_choicesenumerator.md#choice)[]
 
 tableau choix qui suivent le courant
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:264](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L264)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:335](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L335)
 
 ___
 
 ### notCompleted
 
-• `get` **notCompleted**(): [EmptyChoice](../modules/lib_choicesmanagement_choicesenumerator.md#emptychoice)[]
+• `get` **notCompleted**(): [`EmptyChoice`](../modules/lib_choicesmanagement_choicesenumerator.md#emptychoice)[]
 
 Permets de récupérer les choix qui n'ont pas de valeur définie
 
@@ -198,19 +200,19 @@ Permets de récupérer les choix qui n'ont pas de valeur définie
 
 #### Returns
 
-[EmptyChoice](../modules/lib_choicesmanagement_choicesenumerator.md#emptychoice)[]
+[`EmptyChoice`](../modules/lib_choicesmanagement_choicesenumerator.md#emptychoice)[]
 
 tableau choix qui n'ont pas de valeur définie
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:303](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L303)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:374](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L374)
 
 ___
 
 ### previousChoice
 
-• `get` **previousChoice**(): [Choice](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
+• `get` **previousChoice**(): [`Choice`](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
 
 Contien le choix precedant (retourne l'actuel si il n'y a pas de precedant)
 
@@ -218,11 +220,11 @@ Contien le choix precedant (retourne l'actuel si il n'y a pas de precedant)
 
 #### Returns
 
-[Choice](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
+[`Choice`](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:128](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L128)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:136](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L136)
 
 ## Methods
 
@@ -247,13 +249,13 @@ Contien le choix precedant (retourne l'actuel si il n'y a pas de precedant)
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L33)
+[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L33)
 
 ___
 
 ### get
 
-▸ **get**(`index`): [Choice](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
+▸ **get**(`index`): [`Choice`](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
 
 Permets de récupérer un choix en fonction de son index
 
@@ -267,17 +269,17 @@ Permets de récupérer un choix en fonction de son index
 
 #### Returns
 
-[Choice](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
+[`Choice`](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:237](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L237)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:308](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L308)
 
 ___
 
 ### getByLabel
 
-▸ `Private` **getByLabel**(`label`): `undefined` \| [Choice](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
+▸ `Private` **getByLabel**(`label`): `undefined` \| [`Choice`](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
 
 Permets de récupérer un choix en fonction de son label
 
@@ -291,13 +293,39 @@ Permets de récupérer un choix en fonction de son label
 
 #### Returns
 
-`undefined` \| [Choice](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
+`undefined` \| [`Choice`](../modules/lib_choicesmanagement_choicesenumerator.md#choice)
 
 Le premier choix trouvé avec le label correspondant
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:226](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L226)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:297](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L297)
+
+___
+
+### getData
+
+▸ **getData**(`index`, `valueLabel`, `choiceLabel?`): `any`
+
+Permet de récupérer une donnée relié a un choix
+
+**`memberof`** ChoicesEnumerator
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `index` | `string` \| `number` |
+| `valueLabel` | `string` |
+| `choiceLabel?` | `string` |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[lib/ChoicesManagement/ChoicesEnumerator.ts:238](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L238)
 
 ___
 
@@ -321,7 +349,7 @@ Fait ce déplacer le choix actuel vers un autre en fonction de sont index, réin
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:166](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L166)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:171](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L171)
 
 ___
 
@@ -339,7 +367,7 @@ true si le choix actuel est le dernier
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:214](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L214)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:285](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L285)
 
 ___
 
@@ -350,8 +378,6 @@ ___
 Fait ce déplacer le choix actuel vers un autre en fonction de sont index, réinitialise au passage les choix supérieurs
 
 **`memberof`** ChoicesEnumerator
-
-**`deprecated`**
 
 #### Parameters
 
@@ -365,7 +391,7 @@ Fait ce déplacer le choix actuel vers un autre en fonction de sont index, réin
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:145](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L145)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:152](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L152)
 
 ___
 
@@ -390,7 +416,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L13)
+[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L13)
 
 ___
 
@@ -415,7 +441,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L46)
+[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L46)
 
 ___
 
@@ -440,7 +466,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L21)
+[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L21)
 
 ___
 
@@ -465,4 +491,31 @@ Permets de définir la valeur d'un choix en fonction de sont index
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesEnumerator.ts:198](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L198)
+[lib/ChoicesManagement/ChoicesEnumerator.ts:269](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L269)
+
+___
+
+### setData
+
+▸ **setData**(`index`, `valueLabel`, `value`, `choiceLabel?`): `void`
+
+Permet de définir une donnée relié a un choix
+
+**`memberof`** ChoicesEnumerator
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `index` | `number` |
+| `valueLabel` | `string` |
+| `value` | `any` |
+| `choiceLabel?` | `string` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[lib/ChoicesManagement/ChoicesEnumerator.ts:203](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesEnumerator.ts#L203)

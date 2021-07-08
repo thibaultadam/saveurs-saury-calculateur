@@ -1,4 +1,3 @@
-//importScripts('/cache-polyfill.js');
 
 self.addEventListener('fetch', (event) => 
 {
@@ -19,7 +18,7 @@ self.addEventListener('install', event =>
             '/sw-init.js',
             '/sw.js',
             '/ConfigurateurOakAddin.js',
-            '/index.html',
+            '/configurator.html',
             '/home.html',
             '/data/fr-FR/choices-fr-FR.json',
             '/data/fr-FR/config-fr-FR.json',
@@ -29,6 +28,35 @@ self.addEventListener('install', event =>
             '/data/fr-FR/possibilities-fr-FR.json',
             '/data/fr-FR/responses-table-fr-FR.js',
             '/app-ressources/logo.png',
+            '/app-ressources/apple-icon-180.png',
+            '/app-ressources/apple-splash-1125-2436.jpg',
+            '/app-ressources/apple-splash-1136-640.jpg', 
+            '/app-ressources/apple-splash-1170-2532.jpg',
+            '/app-ressources/apple-splash-1242-2208.jpg',
+            '/app-ressources/apple-splash-1242-2688.jpg',
+            '/app-ressources/apple-splash-1284-2778.jpg',
+            '/app-ressources/apple-splash-1334-750.jpg',
+            '/app-ressources/apple-splash-1536-2048.jpg',
+            '/app-ressources/apple-splash-1620-2160.jpg',
+            '/app-ressources/apple-splash-1668-2224.jpg',
+            '/app-ressources/apple-splash-1668-2388.jpg',
+            '/app-ressources/apple-splash-1792-828.jpg',
+            '/app-ressources/apple-splash-2048-1536.jpg',
+            '/app-ressources/apple-splash-2048-2732.jpg',
+            '/app-ressources/apple-splash-2160-1620.jpg',
+            '/app-ressources/apple-splash-2208-1242.jpg',
+            '/app-ressources/apple-splash-2224-1668.jpg',
+            '/app-ressources/apple-splash-2388-1668.jpg',
+            '/app-ressources/apple-splash-2436-1125.jpg',
+            '/app-ressources/apple-splash-2532-1170.jpg',
+            '/app-ressources/apple-splash-2688-1242.jpg',
+            '/app-ressources/apple-splash-2732-2048.jpg',
+            '/app-ressources/apple-splash-2778-1284.jpg',
+            '/app-ressources/apple-splash-640-1136.jpg',
+            '/app-ressources/apple-splash-750-1334.jpg',
+            '/app-ressources/apple-splash-828-1792.jpg',
+            '/app-ressources/manifest-icon-192.png',
+            '/app-ressources/manifest-icon-512.png'
         ])
     ));
 });

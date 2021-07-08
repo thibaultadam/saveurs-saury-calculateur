@@ -6,9 +6,9 @@
 
 ## Hierarchy
 
-- [DataProvider](lib_dataprovider.dataprovider.md)
+- [`DataProvider`](lib_dataprovider.dataprovider.md)
 
-  ↳ **DataProvider**
+  ↳ **`DataProvider`**
 
 ## Table of contents
 
@@ -40,7 +40,7 @@ Le DataProvider est instancier au moment de sont ajout ajout dans le ChoiceManag
 
 | Name | Type |
 | :------ | :------ |
-| `choicesManager` | [ChoicesManager](lib_choicesmanagement_choicesmanager.choicesmanager.md) |
+| `choicesManager` | [`ChoicesManager`](lib_choicesmanagement_choicesmanager.choicesmanager.md) |
 
 #### Overrides
 
@@ -48,13 +48,13 @@ Le DataProvider est instancier au moment de sont ajout ajout dans le ChoiceManag
 
 #### Defined in
 
-[OakAddins/Code/Data/DataProvider.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/OakAddins/Code/Data/DataProvider.ts#L13)
+[OakAddins/Code/Data/DataProvider.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/Data/DataProvider.ts#L6)
 
 ## Properties
 
 ### choicesEnumerator
 
-• `Protected` **choicesEnumerator**: [ChoicesEnumerator](lib_choicesmanagement_choicesenumerator.choicesenumerator.md)
+• `Protected` **choicesEnumerator**: [`ChoicesEnumerator`](lib_choicesmanagement_choicesenumerator.choicesenumerator.md)
 
 #### Inherited from
 
@@ -64,7 +64,7 @@ ___
 
 ### choicesManager
 
-• **choicesManager**: [ChoicesManager](lib_choicesmanagement_choicesmanager.choicesmanager.md)
+• **choicesManager**: [`ChoicesManager`](lib_choicesmanagement_choicesmanager.choicesmanager.md)
 
 #### Inherited from
 
@@ -74,7 +74,7 @@ ___
 
 ### data
 
-• `Protected` **data**: [Data](../modules/lib_configurator.md#data)
+• `Protected` **data**: [`Data`](../modules/lib_configurator.md#data)
 
 #### Inherited from
 
@@ -105,13 +105,13 @@ ___
 
 #### Defined in
 
-[lib/DataProvider.ts:55](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/DataProvider.ts#L55)
+[lib/DataProvider.ts:55](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/DataProvider.ts#L55)
 
 ___
 
 ### getChoiceData
 
-▸ **getChoiceData**(`choiceName`): [ChoiceData](../modules/oakaddins_code_data_dataprovider.md#choicedata)
+▸ **getChoiceData**(`choiceName`): [`ChoiceData`](../modules/oakaddins_code_data_dataparser.md#choicedata)
 
 #### Parameters
 
@@ -121,22 +121,22 @@ ___
 
 #### Returns
 
-[ChoiceData](../modules/oakaddins_code_data_dataprovider.md#choicedata)
+[`ChoiceData`](../modules/oakaddins_code_data_dataparser.md#choicedata)
 
 #### Defined in
 
-[OakAddins/Code/Data/DataProvider.ts:20](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/OakAddins/Code/Data/DataProvider.ts#L20)
+[OakAddins/Code/Data/DataProvider.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/Data/DataProvider.ts#L13)
 
 ___
 
 ### getCurrentNode
 
-▸ **getCurrentNode**(): [TreeNode](../modules/oakaddins_code_data_dataparser.md#treenode)
+▸ **getCurrentNode**(): [`TreeNode`](../modules/oakaddins_code_data_dataparser.md#treenode)
 
 #### Returns
 
-[TreeNode](../modules/oakaddins_code_data_dataparser.md#treenode)
+[`TreeNode`](../modules/oakaddins_code_data_dataparser.md#treenode)
 
 #### Defined in
 
-[OakAddins/Code/Data/DataProvider.ts:30](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/OakAddins/Code/Data/DataProvider.ts#L30)
+[OakAddins/Code/Data/DataProvider.ts:23](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/Data/DataProvider.ts#L23)

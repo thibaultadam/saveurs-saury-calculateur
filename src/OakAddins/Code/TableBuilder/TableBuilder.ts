@@ -116,7 +116,7 @@ export class TableBuilder extends EventEmitter
 
         for(let i = 0; i < lineData.values.length; i++)
         {
-            line += `<td class="text-center fw-bold">${lineData.values[i]}</td>`;
+            line += `<td class="text-center fw-bold fs-6" style="font-size: .85rem !important;">${lineData.values[i]}</td>`;
         }
 
         return line + "</tr>";
@@ -127,19 +127,18 @@ export class TableBuilder extends EventEmitter
         Debug.info('build line', lineData);
 
         const selectedProduct = this.choiceEnumerator.getByLabel('product')?.value?.toLowerCase() as string;
-        const lineProduct = lineData.values[1].toLowerCase() as string;
+        const lineProduct = lineData.product.toLowerCase() as string;
 
-        console.log(selectedProduct, lineProduct);
-        console.log(lineProduct);
-        console.log(selectedProduct.search(lineProduct));
+        console.log(selectedProduct, lineProduct, selectedProduct.search(lineProduct));
 
         if(selectedProduct.search(lineProduct) === -1)
         {
-            //return "";
+            Debug.info('skiping by product');
+            return "";
         }
 
 
-        let line = "<tr>";
+        let line = `<tr style="font-size: .85rem !important;">`;
 
         let quantity = null;
 
@@ -164,7 +163,11 @@ export class TableBuilder extends EventEmitter
                             <span>${lineData.dosage[inputs.volumeType]}</span>
                         </td>`;
                         
-                        if(quantity === 0) return "";
+                        if(quantity === 0)
+                        {
+                            Debug.info('skiping by quantity');
+                            return "";
+                        } 
                     }
                     else
                     {

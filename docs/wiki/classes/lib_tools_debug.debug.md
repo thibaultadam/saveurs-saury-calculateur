@@ -17,6 +17,7 @@
 ### Methods
 
 - [error](lib_tools_debug.debug.md#error)
+- [info](lib_tools_debug.debug.md#info)
 - [log](lib_tools_debug.debug.md#log)
 - [warn](lib_tools_debug.debug.md#warn)
 
@@ -30,11 +31,11 @@
 
 ### debugLevel
 
-▪ `Static` **debugLevel**: [DebugLevel](../modules/lib_tools_debug.md#debuglevel) = "log"
+▪ `Static` **debugLevel**: [`DebugLevel`](../modules/lib_tools_debug.md#debuglevel) = `"log"`
 
 #### Defined in
 
-[lib/Tools/Debug.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/Debug.ts#L6)
+[lib/Tools/Debug.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/Debug.ts#L6)
 
 ## Methods
 
@@ -54,7 +55,27 @@
 
 #### Defined in
 
-[lib/Tools/Debug.ts:30](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/Debug.ts#L30)
+[lib/Tools/Debug.ts:41](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/Debug.ts#L41)
+
+___
+
+### info
+
+▸ `Static` **info**(...`args`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...args` | `any` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[lib/Tools/Debug.ts:8](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/Debug.ts#L8)
 
 ___
 
@@ -74,7 +95,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/Debug.ts:8](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/Debug.ts#L8)
+[lib/Tools/Debug.ts:17](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/Debug.ts#L17)
 
 ___
 
@@ -94,4 +115,4 @@ ___
 
 #### Defined in
 
-[lib/Tools/Debug.ts:20](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/Debug.ts#L20)
+[lib/Tools/Debug.ts:30](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/Debug.ts#L30)

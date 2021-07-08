@@ -10,11 +10,11 @@
 
 ## Hierarchy
 
-- [EventEmitter](lib_tools_eventemitter.eventemitter.md)
+- [`EventEmitter`](lib_tools_eventemitter.eventemitter.md)
 
-  ↳ **ChoicesManager**
+  ↳ **`ChoicesManager`**
 
-  ↳↳ [ChoicesManager](oakaddins_code_choicesmanager_choicesmanager.choicesmanager.md)
+  ↳↳ [`ChoicesManager`](oakaddins_code_choicesmanager_choicesmanager.choicesmanager.md)
 
 ## Table of contents
 
@@ -56,8 +56,8 @@
 
 | Name | Type |
 | :------ | :------ |
-| `configurator` | [Configurator](lib_configurator.configurator.md) |
-| `data` | [Data](../modules/lib_configurator.md#data) |
+| `configurator` | [`Configurator`](lib_configurator.configurator.md) |
+| `data` | [`Data`](../modules/lib_configurator.md#data) |
 
 #### Overrides
 
@@ -65,69 +65,69 @@
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesManager.ts#L28)
+[lib/ChoicesManagement/ChoicesManager.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesManager.ts#L28)
 
 ## Properties
 
 ### ChoiceContainerClasses
 
-• `Private` **ChoiceContainerClasses**: `Map`<string, [ChoiceContainerConstructor](../modules/lib_choicesmanagement_choices_choicecontainer.md#choicecontainerconstructor)\>
+• `Private` **ChoiceContainerClasses**: `Map`<`string`, [`ChoiceContainerConstructor`](../modules/lib_choicesmanagement_choices_choicecontainer.md#choicecontainerconstructor)\>
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:26](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesManager.ts#L26)
+[lib/ChoicesManagement/ChoicesManager.ts:26](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesManager.ts#L26)
 
 ___
 
 ### choiceContainersCreation
 
-• `Private` **choiceContainersCreation**: [ContainerCreationCallback](../modules/lib_choicesmanagement_choices_choicecontainer.md#containercreationcallback)[] = []
+• `Private` **choiceContainersCreation**: [`ContainerCreationCallback`](../modules/lib_choicesmanagement_choices_choicecontainer.md#containercreationcallback)[] = `[]`
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesManager.ts#L25)
+[lib/ChoicesManagement/ChoicesManager.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesManager.ts#L25)
 
 ___
 
 ### choicesContainersInstances
 
-• `Protected` **choicesContainersInstances**: `Map`<string, [ChoiceContainer](lib_choicesmanagement_choices_choicecontainer.choicecontainer.md)[]\>
+• `Protected` **choicesContainersInstances**: [`ChoiceContainer`](lib_choicesmanagement_choices_choicecontainer.choicecontainer.md)[] = `[]`
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesManager.ts#L28)
+[lib/ChoicesManagement/ChoicesManager.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesManager.ts#L28)
 
 ___
 
 ### choicesEnumerator
 
-• **choicesEnumerator**: [ChoicesEnumerator](lib_choicesmanagement_choicesenumerator.choicesenumerator.md)
+• **choicesEnumerator**: [`ChoicesEnumerator`](lib_choicesmanagement_choicesenumerator.choicesenumerator.md)
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:22](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesManager.ts#L22)
+[lib/ChoicesManagement/ChoicesManager.ts:22](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesManager.ts#L22)
 
 ___
 
 ### configurator
 
-• **configurator**: [Configurator](lib_configurator.configurator.md)
+• **configurator**: [`Configurator`](lib_configurator.configurator.md)
 
 ___
 
 ### data
 
-• **data**: [Data](../modules/lib_configurator.md#data)
+• **data**: [`Data`](../modules/lib_configurator.md#data)
 
 ___
 
 ### dataProvider
 
-• **dataProvider**: [DataProvider](lib_dataprovider.dataprovider.md)
+• **dataProvider**: [`DataProvider`](lib_dataprovider.dataprovider.md)
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:23](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesManager.ts#L23)
+[lib/ChoicesManagement/ChoicesManager.ts:23](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesManager.ts#L23)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L6)
+[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L6)
 
 ## Methods
 
@@ -157,7 +157,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `creationCallback` | [ContainerCreationCallback](../modules/lib_choicesmanagement_choices_choicecontainer.md#containercreationcallback) |
+| `creationCallback` | [`ContainerCreationCallback`](../modules/lib_choicesmanagement_choices_choicecontainer.md#containercreationcallback) |
 
 #### Returns
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:112](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesManager.ts#L112)
+[lib/ChoicesManagement/ChoicesManager.ts:125](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesManager.ts#L125)
 
 ___
 
@@ -173,7 +173,8 @@ ___
 
 ▸ **buildChoice**(): `void`
 
-// TODO : buildChoice description
+buildChoice appel onBuildChoice et déclanche les evenements `build` avant l'appel de `onBuild`
+et `choiceBuilt` (avec comme valeur d'émition l'index du choix courant) lorsque l'appel de `onBuildChoice` est terminer et que donc le choix est complement appelé
 
 **`memberof`** ChoicesManager
 
@@ -183,13 +184,13 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:45](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesManager.ts#L45)
+[lib/ChoicesManagement/ChoicesManager.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesManager.ts#L46)
 
 ___
 
 ### createChoiceContainer
 
-▸ `Protected` **createChoiceContainer**(`type`, ...`args`): ``null`` \| [ChoiceContainer](lib_choicesmanagement_choices_choicecontainer.choicecontainer.md)
+▸ `Protected` **createChoiceContainer**(`type`, ...`args`): ``null`` \| [`ChoiceContainer`](lib_choicesmanagement_choices_choicecontainer.choicecontainer.md)
 
 Initialize creation of a new ChoiceContainer according to his type
 
@@ -204,11 +205,11 @@ Initialize creation of a new ChoiceContainer according to his type
 
 #### Returns
 
-``null`` \| [ChoiceContainer](lib_choicesmanagement_choices_choicecontainer.choicecontainer.md)
+``null`` \| [`ChoiceContainer`](lib_choicesmanagement_choices_choicecontainer.choicecontainer.md)
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:75](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesManager.ts#L75)
+[lib/ChoicesManagement/ChoicesManager.ts:77](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesManager.ts#L77)
 
 ___
 
@@ -233,7 +234,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L33)
+[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L33)
 
 ___
 
@@ -258,7 +259,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L13)
+[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L13)
 
 ___
 
@@ -284,7 +285,7 @@ onBuildChoice()
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:63](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesManager.ts#L63)
+[lib/ChoicesManagement/ChoicesManager.ts:65](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesManager.ts#L65)
 
 ___
 
@@ -309,7 +310,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L46)
+[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L46)
 
 ___
 
@@ -326,7 +327,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `type` | `string` |
-| `ChoiceClass` | [ChoiceContainerConstructor](../modules/lib_choicesmanagement_choices_choicecontainer.md#choicecontainerconstructor) |
+| `ChoiceClass` | [`ChoiceContainerConstructor`](../modules/lib_choicesmanagement_choices_choicecontainer.md#choicecontainerconstructor) |
 
 #### Returns
 
@@ -334,7 +335,7 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:126](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesManager.ts#L126)
+[lib/ChoicesManagement/ChoicesManager.ts:139](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesManager.ts#L139)
 
 ___
 
@@ -350,7 +351,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `DataProvider` | [DataProviderConstructor](../modules/lib_dataprovider.md#dataproviderconstructor) |
+| `DataProvider` | [`DataProviderConstructor`](../modules/lib_dataprovider.md#dataproviderconstructor) |
 
 #### Returns
 
@@ -358,7 +359,7 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:140](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesManager.ts#L140)
+[lib/ChoicesManagement/ChoicesManager.ts:152](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesManager.ts#L152)
 
 ___
 
@@ -383,4 +384,4 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L21)
+[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L21)

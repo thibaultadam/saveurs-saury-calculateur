@@ -6,26 +6,25 @@
 
 ### Functions
 
-- [stringReplace](oakaddins_code_tools_parsetools.md#stringreplace)
+- [parseChoiceData](oakaddins_code_tools_parsetools.md#parsechoicedata)
 
 ## Functions
 
-### stringReplace
+### parseChoiceData
 
-▸ **stringReplace**(`value`, `parser`, `context`): `string`
+▸ **parseChoiceData**(`_choiceData`, `choicesEnumerator`): [`ChoiceData`](oakaddins_code_data_dataparser.md#choicedata)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `value` | `string` |
-| `parser` | `Object` |
-| `context` | `Object` |
+| `_choiceData` | [`ChoiceData`](oakaddins_code_data_dataparser.md#choicedata) |
+| `choicesEnumerator` | [`ChoicesEnumerator`](../classes/lib_choicesmanagement_choicesenumerator.choicesenumerator.md) |
 
 #### Returns
 
-`string`
+[`ChoiceData`](oakaddins_code_data_dataparser.md#choicedata)
 
 #### Defined in
 
-[OakAddins/Code/Tools/ParseTools.ts:1](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/OakAddins/Code/Tools/ParseTools.ts#L1)
+[OakAddins/Code/Tools/ParseTools.ts:4](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/Tools/ParseTools.ts#L4)

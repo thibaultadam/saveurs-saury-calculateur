@@ -16,7 +16,7 @@
 
 ### ChoicesManagerConstructor
 
-Ƭ **ChoicesManagerConstructor**: (`configurator`: [Configurator](../classes/lib_configurator.configurator.md), `data?`: [Data](lib_configurator.md#data)) => [ChoicesManager](../classes/lib_choicesmanagement_choicesmanager.choicesmanager.md)
+Ƭ **ChoicesManagerConstructor**: (`configurator`: [`Configurator`](../classes/lib_configurator.configurator.md), `data?`: [`Data`](lib_configurator.md#data)) => [`ChoicesManager`](../classes/lib_choicesmanagement_choicesmanager.choicesmanager.md)
 
 #### Type declaration
 
@@ -26,9 +26,9 @@
 
 | Name | Type |
 | :------ | :------ |
-| `configurator` | [Configurator](../classes/lib_configurator.configurator.md) |
-| `data?` | [Data](lib_configurator.md#data) |
+| `configurator` | [`Configurator`](../classes/lib_configurator.configurator.md) |
+| `data?` | [`Data`](lib_configurator.md#data) |
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:9](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/ChoicesManager.ts#L9)
+[lib/ChoicesManagement/ChoicesManager.ts:9](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/ChoicesManager.ts#L9)

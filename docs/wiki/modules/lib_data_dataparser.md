@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[lib/Data/DataParser.ts:9](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Data/DataParser.ts#L9)
+[lib/Data/DataParser.ts:9](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Data/DataParser.ts#L9)
 
 ___
 
@@ -48,18 +48,18 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `callback` | [DataParserCallback](lib_data_dataparser.md#dataparsercallback) |
+| `callback` | [`DataParserCallback`](lib_data_dataparser.md#dataparsercallback) |
 | `thisArg` | `any` |
 
 #### Defined in
 
-[lib/Data/DataParser.ts:11](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Data/DataParser.ts#L11)
+[lib/Data/DataParser.ts:11](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Data/DataParser.ts#L11)
 
 ___
 
 ### DataParserConstructor
 
-Ƭ **DataParserConstructor**: (`configurator`: [Configurator](../classes/lib_configurator.configurator.md), `data?`: [Data](lib_configurator.md#data)) => [DataParser](../classes/lib_data_dataparser.dataparser.md)
+Ƭ **DataParserConstructor**: (`configurator`: [`Configurator`](../classes/lib_configurator.configurator.md), `data?`: [`Data`](lib_configurator.md#data)) => [`DataParser`](../classes/lib_data_dataparser.dataparser.md)
 
 #### Type declaration
 
@@ -69,9 +69,9 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `configurator` | [Configurator](../classes/lib_configurator.configurator.md) |
-| `data?` | [Data](lib_configurator.md#data) |
+| `configurator` | [`Configurator`](../classes/lib_configurator.configurator.md) |
+| `data?` | [`Data`](lib_configurator.md#data) |
 
 #### Defined in
 
-[lib/Data/DataParser.ts:4](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Data/DataParser.ts#L4)
+[lib/Data/DataParser.ts:4](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Data/DataParser.ts#L4)
