@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[lib/Configurator.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L6)
+[lib/Configurator.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Configurator.ts#L6)
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 #### Defined in
 
-[lib/Configurator.ts:11](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L11)
+[lib/Configurator.ts:11](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Configurator.ts#L11)

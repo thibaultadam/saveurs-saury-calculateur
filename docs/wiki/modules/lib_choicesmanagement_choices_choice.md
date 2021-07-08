@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:11](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/Choice.ts#L11)
+[lib/ChoicesManagement/Choices/Choice.ts:11](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/ChoicesManagement/Choices/Choice.ts#L11)
 
 ___
 
@@ -50,4 +50,4 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/Choice.ts#L6)
+[lib/ChoicesManagement/Choices/Choice.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/ChoicesManagement/Choices/Choice.ts#L6)

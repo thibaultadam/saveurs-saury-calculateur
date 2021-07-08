@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[lib/UIElement.ts:10](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/UIElement.ts#L10)
+[lib/UIElement.ts:10](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/UIElement.ts#L10)
 
 ## Properties
 
@@ -65,7 +65,7 @@
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L6)
+[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Tools/EventEmitter.ts#L6)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[lib/UIElement.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/UIElement.ts#L25)
+[lib/UIElement.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/UIElement.ts#L25)
 
 ## Methods
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L33)
+[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Tools/EventEmitter.ts#L33)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[lib/UIElement.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/UIElement.ts#L33)
+[lib/UIElement.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/UIElement.ts#L33)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L13)
+[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Tools/EventEmitter.ts#L13)
 
 ___
 
@@ -174,7 +174,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L46)
+[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Tools/EventEmitter.ts#L46)
 
 ___
 
@@ -199,4 +199,4 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L21)
+[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Tools/EventEmitter.ts#L21)

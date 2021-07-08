@@ -32,4 +32,4 @@
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceButton.ts:4](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/ChoiceButton.ts#L4)
+[lib/ChoicesManagement/Choices/ChoiceButton.ts:4](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/ChoicesManagement/Choices/ChoiceButton.ts#L4)
