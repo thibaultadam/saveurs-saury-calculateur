@@ -16,7 +16,7 @@
 
 ### ChoiceButtonConstructor
 
-Ƭ **ChoiceButtonConstructor**: (`type`: `string`, `choiceContainer`: [ChoiceContainer](../classes/lib_choicesmanagement_choices_choicecontainer.choicecontainer.md), ...`args`: `any`[]) => [ChoiceButton](../classes/lib_choicesmanagement_choices_choicebutton.choicebutton.md)
+Ƭ **ChoiceButtonConstructor**: (`type`: `string`, `choiceContainer`: [`ChoiceContainer`](../classes/lib_choicesmanagement_choices_choicecontainer.choicecontainer.md), ...`args`: `any`[]) => [`ChoiceButton`](../classes/lib_choicesmanagement_choices_choicebutton.choicebutton.md)
 
 #### Type declaration
 
@@ -27,9 +27,9 @@
 | Name | Type |
 | :------ | :------ |
 | `type` | `string` |
-| `choiceContainer` | [ChoiceContainer](../classes/lib_choicesmanagement_choices_choicecontainer.choicecontainer.md) |
+| `choiceContainer` | [`ChoiceContainer`](../classes/lib_choicesmanagement_choices_choicecontainer.choicecontainer.md) |
 | `...args` | `any`[] |
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceButton.ts:4](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/ChoiceButton.ts#L4)
+[lib/ChoicesManagement/Choices/ChoiceButton.ts:4](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/ChoiceButton.ts#L4)

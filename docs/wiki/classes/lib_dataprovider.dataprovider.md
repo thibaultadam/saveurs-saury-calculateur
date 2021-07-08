@@ -25,13 +25,13 @@ dataProvider.get('UserData', 0)
 
 ## Hierarchy
 
-- **DataProvider**
+- **`DataProvider`**
 
-  ↳ [DataProvider](oakaddins_code_data_dataprovider.dataprovider.md)
+  ↳ [`DataProvider`](oakaddins_code_data_dataprovider.dataprovider.md)
 
 ## Indexable
 
-▪ [index: `string`]: `ProviderHandler` \| [ChoicesManager](lib_choicesmanagement_choicesmanager.choicesmanager.md) \| [ChoicesEnumerator](lib_choicesmanagement_choicesenumerator.choicesenumerator.md) \| [Data](../modules/lib_configurator.md#data)
+▪ [index: `string`]: `ProviderHandler` \| [`ChoicesManager`](lib_choicesmanagement_choicesmanager.choicesmanager.md) \| [`ChoicesEnumerator`](lib_choicesmanagement_choicesenumerator.choicesenumerator.md) \| [`Data`](../modules/lib_configurator.md#data)
 
 ## Table of contents
 
@@ -63,31 +63,31 @@ Le DataProvider est instancier au moment de sont ajout ajout dans le ChoiceManag
 
 | Name | Type |
 | :------ | :------ |
-| `choicesManager` | [ChoicesManager](lib_choicesmanagement_choicesmanager.choicesmanager.md) |
-| `choicesEnumerator` | [ChoicesEnumerator](lib_choicesmanagement_choicesenumerator.choicesenumerator.md) |
-| `data` | [Data](../modules/lib_configurator.md#data) |
+| `choicesManager` | [`ChoicesManager`](lib_choicesmanagement_choicesmanager.choicesmanager.md) |
+| `choicesEnumerator` | [`ChoicesEnumerator`](lib_choicesmanagement_choicesenumerator.choicesenumerator.md) |
+| `data` | [`Data`](../modules/lib_configurator.md#data) |
 
 #### Defined in
 
-[lib/DataProvider.ts:32](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/DataProvider.ts#L32)
+[lib/DataProvider.ts:32](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/DataProvider.ts#L32)
 
 ## Properties
 
 ### choicesEnumerator
 
-• `Protected` **choicesEnumerator**: [ChoicesEnumerator](lib_choicesmanagement_choicesenumerator.choicesenumerator.md)
+• `Protected` **choicesEnumerator**: [`ChoicesEnumerator`](lib_choicesmanagement_choicesenumerator.choicesenumerator.md)
 
 ___
 
 ### choicesManager
 
-• **choicesManager**: [ChoicesManager](lib_choicesmanagement_choicesmanager.choicesmanager.md)
+• **choicesManager**: [`ChoicesManager`](lib_choicesmanagement_choicesmanager.choicesmanager.md)
 
 ___
 
 ### data
 
-• `Protected` **data**: [Data](../modules/lib_configurator.md#data)
+• `Protected` **data**: [`Data`](../modules/lib_configurator.md#data)
 
 ## Methods
 
@@ -110,4 +110,4 @@ ___
 
 #### Defined in
 
-[lib/DataProvider.ts:55](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/DataProvider.ts#L55)
+[lib/DataProvider.ts:55](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/DataProvider.ts#L55)

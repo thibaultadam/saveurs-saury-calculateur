@@ -6,9 +6,9 @@
 
 ## Hierarchy
 
-- [DataParser](lib_data_dataparser.dataparser.md)
+- [`DataParser`](lib_data_dataparser.dataparser.md)
 
-  ↳ **DataParser**
+  ↳ **`DataParser`**
 
 ## Table of contents
 
@@ -25,6 +25,7 @@
 ### Methods
 
 - [addDataParser](oakaddins_code_data_dataparser.dataparser.md#adddataparser)
+- [configParser](oakaddins_code_data_dataparser.dataparser.md#configparser)
 - [parse](oakaddins_code_data_dataparser.dataparser.md#parse)
 - [treeParser](oakaddins_code_data_dataparser.dataparser.md#treeparser)
 - [treeParserLoop](oakaddins_code_data_dataparser.dataparser.md#treeparserloop)
@@ -39,7 +40,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `configurator` | [Configurator](lib_configurator.configurator.md) |
+| `configurator` | [`Configurator`](lib_configurator.configurator.md) |
 
 #### Overrides
 
@@ -47,13 +48,13 @@
 
 #### Defined in
 
-[OakAddins/Code/Data/DataParser.ts:22](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/OakAddins/Code/Data/DataParser.ts#L22)
+[OakAddins/Code/Data/DataParser.ts:54](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/Data/DataParser.ts#L54)
 
 ## Properties
 
 ### configurator
 
-• **configurator**: [Configurator](lib_configurator.configurator.md)
+• **configurator**: [`Configurator`](lib_configurator.configurator.md)
 
 #### Inherited from
 
@@ -63,7 +64,7 @@ ___
 
 ### data
 
-• **data**: [Data](../modules/lib_configurator.md#data)
+• **data**: [`Data`](../modules/lib_configurator.md#data)
 
 #### Inherited from
 
@@ -73,7 +74,7 @@ ___
 
 ### parsers
 
-• `Protected` **parsers**: `Map`<string, [DataParserCallbackData](../modules/lib_data_dataparser.md#dataparsercallbackdata)\>
+• `Protected` **parsers**: `Map`<`string`, [`DataParserCallbackData`](../modules/lib_data_dataparser.md#dataparsercallbackdata)\>
 
 #### Inherited from
 
@@ -81,7 +82,7 @@ ___
 
 #### Defined in
 
-[lib/Data/DataParser.ts:19](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Data/DataParser.ts#L19)
+[lib/Data/DataParser.ts:19](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Data/DataParser.ts#L19)
 
 ## Methods
 
@@ -94,7 +95,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `dataKey` | `string` |
-| `callback` | [DataParserCallback](../modules/lib_data_dataparser.md#dataparsercallback) |
+| `callback` | [`DataParserCallback`](../modules/lib_data_dataparser.md#dataparsercallback) |
 | `thisArg?` | `any` |
 
 #### Returns
@@ -107,17 +108,41 @@ ___
 
 #### Defined in
 
-[lib/Data/DataParser.ts:29](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Data/DataParser.ts#L29)
+[lib/Data/DataParser.ts:29](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Data/DataParser.ts#L29)
+
+___
+
+### configParser
+
+▸ `Private` **configParser**(`config`): [`ConfiguratorConfig`](../modules/oakaddins_code_data_dataparser.md#configuratorconfig)
+
+Parse the config adding typeName fields
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `config` | [`ConfiguratorConfig`](../modules/oakaddins_code_data_dataparser.md#configuratorconfig) |
+
+#### Returns
+
+[`ConfiguratorConfig`](../modules/oakaddins_code_data_dataparser.md#configuratorconfig)
+
+parsedData
+
+#### Defined in
+
+[OakAddins/Code/Data/DataParser.ts:69](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/Data/DataParser.ts#L69)
 
 ___
 
 ### parse
 
-▸ **parse**(): `Promise`<void\>
+▸ **parse**(): `Promise`<`void`\>
 
 #### Returns
 
-`Promise`<void\>
+`Promise`<`void`\>
 
 #### Inherited from
 
@@ -125,13 +150,13 @@ ___
 
 #### Defined in
 
-[lib/Data/DataParser.ts:37](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Data/DataParser.ts#L37)
+[lib/Data/DataParser.ts:37](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Data/DataParser.ts#L37)
 
 ___
 
 ### treeParser
 
-▸ `Private` **treeParser**(`tree`): `Promise`<[TreeNode](../modules/oakaddins_code_data_dataparser.md#treenode)\>
+▸ `Private` **treeParser**(`tree`): `Promise`<[`TreeNode`](../modules/oakaddins_code_data_dataparser.md#treenode)\>
 
 Parse the tree adding label fields and choices dependancies
 
@@ -139,33 +164,35 @@ Parse the tree adding label fields and choices dependancies
 
 | Name | Type |
 | :------ | :------ |
-| `tree` | [TreeNode](../modules/oakaddins_code_data_dataparser.md#treenode) |
+| `tree` | [`TreeNode`](../modules/oakaddins_code_data_dataparser.md#treenode) |
 
 #### Returns
 
-`Promise`<[TreeNode](../modules/oakaddins_code_data_dataparser.md#treenode)\>
+`Promise`<[`TreeNode`](../modules/oakaddins_code_data_dataparser.md#treenode)\>
+
+parsedData
 
 #### Defined in
 
-[OakAddins/Code/Data/DataParser.ts:35](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/OakAddins/Code/Data/DataParser.ts#L35)
+[OakAddins/Code/Data/DataParser.ts:86](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/Data/DataParser.ts#L86)
 
 ___
 
 ### treeParserLoop
 
-▸ `Private` **treeParserLoop**(`current`, `formated`): `Promise`<void\>
+▸ `Private` **treeParserLoop**(`current`, `formated`): `Promise`<`void`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `current` | [TreeNode](../modules/oakaddins_code_data_dataparser.md#treenode) |
-| `formated` | [TreeNode](../modules/oakaddins_code_data_dataparser.md#treenode) |
+| `current` | [`TreeNode`](../modules/oakaddins_code_data_dataparser.md#treenode) |
+| `formated` | [`TreeNode`](../modules/oakaddins_code_data_dataparser.md#treenode) |
 
 #### Returns
 
-`Promise`<void\>
+`Promise`<`void`\>
 
 #### Defined in
 
-[OakAddins/Code/Data/DataParser.ts:43](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/OakAddins/Code/Data/DataParser.ts#L43)
+[OakAddins/Code/Data/DataParser.ts:94](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/Data/DataParser.ts#L94)

@@ -12,11 +12,11 @@ Class mère de tout le configurateur
 
 ## Hierarchy
 
-- [EventEmitter](lib_tools_eventemitter.eventemitter.md)
+- [`EventEmitter`](lib_tools_eventemitter.eventemitter.md)
 
-  ↳ **Configurator**
+  ↳ **`Configurator`**
 
-  ↳↳ [OakAddinsConfigurateur](oakaddins_code_oakaddinsconfigurateur.oakaddinsconfigurateur.md)
+  ↳↳ [`OakAddinsConfigurateur`](oakaddins_code_oakaddinsconfigurateur.oakaddinsconfigurateur.md)
 
 ## Table of contents
 
@@ -56,8 +56,8 @@ Class mère de tout le configurateur
 | Name | Type |
 | :------ | :------ |
 | `container` | `string` |
-| `paths` | [ConfiguratorPathes](../modules/lib_configurator.md#configuratorpathes) |
-| `debugLevel?` | [DebugLevel](../modules/lib_tools_debug.md#debuglevel) |
+| `paths` | [`ConfiguratorPathes`](../modules/lib_configurator.md#configuratorpathes) |
+| `debugLevel?` | [`DebugLevel`](../modules/lib_tools_debug.md#debuglevel) |
 
 #### Overrides
 
@@ -65,7 +65,7 @@ Class mère de tout le configurateur
 
 #### Defined in
 
-[lib/Configurator.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Configurator.ts#L28)
+[lib/Configurator.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L28)
 
 ## Properties
 
@@ -75,37 +75,37 @@ Class mère de tout le configurateur
 
 #### Defined in
 
-[lib/Configurator.ts:24](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Configurator.ts#L24)
+[lib/Configurator.ts:24](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L24)
 
 ___
 
 ### choicesManager
 
-• **choicesManager**: [ChoicesManager](lib_choicesmanagement_choicesmanager.choicesmanager.md)
+• **choicesManager**: [`ChoicesManager`](lib_choicesmanagement_choicesmanager.choicesmanager.md)
 
 #### Defined in
 
-[lib/Configurator.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Configurator.ts#L25)
+[lib/Configurator.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L25)
 
 ___
 
 ### data
 
-• **data**: [Data](../modules/lib_configurator.md#data) = {}
+• **data**: [`Data`](../modules/lib_configurator.md#data) = `{}`
 
 #### Defined in
 
-[lib/Configurator.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Configurator.ts#L28)
+[lib/Configurator.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L28)
 
 ___
 
 ### dataParser
 
-• **dataParser**: `undefined` \| [DataParser](lib_data_dataparser.dataparser.md)
+• **dataParser**: `undefined` \| [`DataParser`](lib_data_dataparser.dataparser.md)
 
 #### Defined in
 
-[lib/Configurator.ts:26](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Configurator.ts#L26)
+[lib/Configurator.ts:26](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L26)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L6)
+[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L6)
 
 ## Methods
 
@@ -144,13 +144,13 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L33)
+[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L33)
 
 ___
 
 ### fetchDataFiles
 
-▸ `Private` **fetchDataFiles**(`paths?`): `Promise`<void\>
+▸ `Private` **fetchDataFiles**(`paths?`): `Promise`<`void`\>
 
 Récuperation de toutes les données externes avec lesquelles sera contruit le Configurateur
 
@@ -160,15 +160,15 @@ Récuperation de toutes les données externes avec lesquelles sera contruit le C
 
 | Name | Type |
 | :------ | :------ |
-| `paths` | [ConfiguratorPathes](../modules/lib_configurator.md#configuratorpathes) |
+| `paths` | [`ConfiguratorPathes`](../modules/lib_configurator.md#configuratorpathes) |
 
 #### Returns
 
-`Promise`<void\>
+`Promise`<`void`\>
 
 #### Defined in
 
-[lib/Configurator.ts:62](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Configurator.ts#L62)
+[lib/Configurator.ts:62](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L62)
 
 ___
 
@@ -193,7 +193,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L13)
+[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L13)
 
 ___
 
@@ -218,7 +218,7 @@ onDataLoaded()
 
 #### Defined in
 
-[lib/Configurator.ts:126](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Configurator.ts#L126)
+[lib/Configurator.ts:126](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L126)
 
 ___
 
@@ -243,7 +243,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L46)
+[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L46)
 
 ___
 
@@ -257,7 +257,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `ChoiceManagerClass` | [ChoicesManagerConstructor](../modules/lib_choicesmanagement_choicesmanager.md#choicesmanagerconstructor) |
+| `ChoiceManagerClass` | [`ChoicesManagerConstructor`](../modules/lib_choicesmanagement_choicesmanager.md#choicesmanagerconstructor) |
 
 #### Returns
 
@@ -265,7 +265,7 @@ ___
 
 #### Defined in
 
-[lib/Configurator.ts:136](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Configurator.ts#L136)
+[lib/Configurator.ts:136](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L136)
 
 ___
 
@@ -279,7 +279,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `DataParserClass` | [DataParserConstructor](../modules/lib_data_dataparser.md#dataparserconstructor) |
+| `DataParserClass` | [`DataParserConstructor`](../modules/lib_data_dataparser.md#dataparserconstructor) |
 
 #### Returns
 
@@ -287,7 +287,7 @@ ___
 
 #### Defined in
 
-[lib/Configurator.ts:147](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Configurator.ts#L147)
+[lib/Configurator.ts:147](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L147)
 
 ___
 
@@ -312,4 +312,4 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L21)
+[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L21)

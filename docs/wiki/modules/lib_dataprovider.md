@@ -16,7 +16,7 @@
 
 ### DataProviderConstructor
 
-Ƭ **DataProviderConstructor**: (`choicesManager`: [ChoicesManager](../classes/lib_choicesmanagement_choicesmanager.choicesmanager.md)) => [DataProvider](../classes/lib_dataprovider.dataprovider.md)
+Ƭ **DataProviderConstructor**: (`choicesManager`: [`ChoicesManager`](../classes/lib_choicesmanagement_choicesmanager.choicesmanager.md)) => [`DataProvider`](../classes/lib_dataprovider.dataprovider.md)
 
 #### Type declaration
 
@@ -26,8 +26,8 @@
 
 | Name | Type |
 | :------ | :------ |
-| `choicesManager` | [ChoicesManager](../classes/lib_choicesmanagement_choicesmanager.choicesmanager.md) |
+| `choicesManager` | [`ChoicesManager`](../classes/lib_choicesmanagement_choicesmanager.choicesmanager.md) |
 
 #### Defined in
 
-[lib/DataProvider.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/DataProvider.ts#L6)
+[lib/DataProvider.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/DataProvider.ts#L6)

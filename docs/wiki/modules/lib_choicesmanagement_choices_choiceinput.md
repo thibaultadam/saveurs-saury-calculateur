@@ -16,7 +16,7 @@
 
 ### ChoiceInputConstructor
 
-Ƭ **ChoiceInputConstructor**: (`type`: `string`, `choiceContainer`: [ChoiceContainer](../classes/lib_choicesmanagement_choices_choicecontainer.choicecontainer.md), ...`args`: `any`[]) => [ChoiceInput](../classes/lib_choicesmanagement_choices_choiceinput.choiceinput.md)
+Ƭ **ChoiceInputConstructor**: (`type`: `string`, `choiceContainer`: [`ChoiceContainer`](../classes/lib_choicesmanagement_choices_choicecontainer.choicecontainer.md), ...`args`: `any`[]) => [`ChoiceInput`](../classes/lib_choicesmanagement_choices_choiceinput.choiceinput.md)
 
 #### Type declaration
 
@@ -27,9 +27,9 @@
 | Name | Type |
 | :------ | :------ |
 | `type` | `string` |
-| `choiceContainer` | [ChoiceContainer](../classes/lib_choicesmanagement_choices_choicecontainer.choicecontainer.md) |
+| `choiceContainer` | [`ChoiceContainer`](../classes/lib_choicesmanagement_choices_choicecontainer.choicecontainer.md) |
 | `...args` | `any`[] |
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceInput.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L6)
+[lib/ChoicesManagement/Choices/ChoiceInput.ts:5](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L5)

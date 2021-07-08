@@ -108,6 +108,7 @@
                     "Gallons" : (quantity) => quantity / 40,
                 }
             ],
+            product: "Poudre",
             dosage : volumeTypes.dosage,
             quantity : volumeTypes.sac18
         },
@@ -125,6 +126,7 @@
                     "Gallons": (quantity) => quantity / 40,
                 }
             ],
+            product: "Mixture",
             dosage : volumeTypes.dosage,
             quantity : volumeTypes.sac18
         },
@@ -142,6 +144,7 @@
                     "Gallons": (quantity) => quantity / 40,
                 },
             ],
+            product: "Fine de chêne",
             dosage : volumeTypes.dosage,
             quantity : volumeTypes.sac18
         },
@@ -159,6 +162,7 @@
                     "Gallons": (quantity) => quantity / 40,
                 },
             ],
+            product: "Copeaux",
             dosage : volumeTypes.dosage,
             quantity : volumeTypes.sac18
         },
@@ -176,6 +180,7 @@
                     "Gallons": (quantity) => quantity / 20,
                 }
             ],
+            product: "Cubes",
             dosage : volumeTypes.dosage,
             quantity : volumeTypes.sac9
         },
@@ -197,6 +202,7 @@
                 },
                 
             ],
+            product: "Dominos",
             dosage : volumeTypes.dosage,
             quantity : volumeTypes.sac9
         },
@@ -214,6 +220,7 @@
                     "Gallons": (quantity) => quantity / 20,
                 },
             ],
+            product: "Blocks",
             dosage : volumeTypes.dosage,
             quantity : volumeTypes.sac9
         },
@@ -234,6 +241,7 @@
                     "Gallons": (quantity) => quantity / 40,
                 }
             ],
+            product: "Mini Thin Tank Stave",
             dosage : volumeTypes.staves,
             quantity : volumeTypes.sacI40u 
         },
@@ -241,7 +249,7 @@
             "type" : "tbody",
             "values" : [
                 "6-8 mois", // "6-8 month"
-                "Thin Tank Stave ", // "Thin Tank Stave"
+                "Thin Tank Stave", // "Thin Tank Stave"
                 {
                     "Hectolitres": (volume, gpl, percentage) => (3/33) * percentage * volume,
                     "Gallons": (volume, gpl, percentage) => (3/33) * percentage * (volume / 26.4),
@@ -251,6 +259,7 @@
                     "Gallons": (quantity) => quantity / 20
                 }
             ],
+            product: "Thin Tank Stave",
             dosage : volumeTypes.staves,
             quantity : volumeTypes.paq20u 
         },
@@ -268,6 +277,7 @@
                     "Gallons": (quantity) => quantity / 40,
                 }
             ],
+            product: "Mini Tank Stave",
             dosage : volumeTypes.staves,
             quantity : volumeTypes.sacI40u 
         },
@@ -285,6 +295,7 @@
                     "Gallons": (quantity) => quantity / 20,
                 }
             ],
+            product: "Tank Stave",
             dosage : volumeTypes.staves,
             quantity : volumeTypes.paq20u
         },
@@ -302,6 +313,7 @@
                     "Gallons": (quantity) => quantity / 10,
                 }
             ],
+            product: "Winewood",
             dosage : volumeTypes.staves,
             quantity : volumeTypes.paq10u 
         },
@@ -319,6 +331,7 @@
                     "Gallons": (quantity) => quantity / 14
                 }
             ],
+            product: "Barrel Insert",
             dosage : volumeTypes.staves,
             quantity : volumeTypes.paq14u 
         },
@@ -336,6 +349,7 @@
                     "Gallons": (quantity) => quantity / 18
                 }
             ],
+            product: "Oak Chain",
             dosage : volumeTypes.pieces,
             quantity : volumeTypes.set18p 
         },
@@ -353,6 +367,7 @@
                     "Gallons": (quantity) => quantity / 34
                 }
             ],
+            product: "Oak Chain",
             dosage : volumeTypes.pieces,
             quantity : volumeTypes.set34p
         },
@@ -370,6 +385,7 @@
                     "Gallons": (quantity) => quantity / 5
                 }
             ],
+            product: "Wineplank",
             dosage : volumeTypes.staves,
             quantity : volumeTypes.paq5u
         }

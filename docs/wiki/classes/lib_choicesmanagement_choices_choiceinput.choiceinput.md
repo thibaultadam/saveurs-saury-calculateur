@@ -6,11 +6,11 @@
 
 ## Hierarchy
 
-- [ChoiceButton](lib_choicesmanagement_choices_choicebutton.choicebutton.md)
+- [`ChoiceButton`](lib_choicesmanagement_choices_choicebutton.choicebutton.md)
 
-  ↳ **ChoiceInput**
+  ↳ **`ChoiceInput`**
 
-  ↳↳ [InputChoice](oakaddins_code_choicesmanager_choices_inputchoice.inputchoice.md)
+  ↳↳ [`InputChoice`](oakaddins_code_choicesmanager_choices_inputchoice.inputchoice.md)
 
 ## Table of contents
 
@@ -28,20 +28,25 @@
 - [events](lib_choicesmanagement_choices_choiceinput.choiceinput.md#events)
 - [id](lib_choicesmanagement_choices_choiceinput.choiceinput.md#id)
 - [type](lib_choicesmanagement_choices_choiceinput.choiceinput.md#type)
-- [value](lib_choicesmanagement_choices_choiceinput.choiceinput.md#value)
 - [sizes](lib_choicesmanagement_choices_choiceinput.choiceinput.md#sizes)
+
+### Accessors
+
+- [value](lib_choicesmanagement_choices_choiceinput.choiceinput.md#value)
 
 ### Methods
 
 - [build](lib_choicesmanagement_choices_choiceinput.choiceinput.md#build)
-- [change](lib_choicesmanagement_choices_choiceinput.choiceinput.md#change)
 - [click](lib_choicesmanagement_choices_choiceinput.choiceinput.md#click)
+- [delete](lib_choicesmanagement_choices_choiceinput.choiceinput.md#delete)
 - [emit](lib_choicesmanagement_choices_choiceinput.choiceinput.md#emit)
+- [input](lib_choicesmanagement_choices_choiceinput.choiceinput.md#input)
 - [isDisplaySize](lib_choicesmanagement_choices_choiceinput.choiceinput.md#isdisplaysize)
 - [on](lib_choicesmanagement_choices_choiceinput.choiceinput.md#on)
 - [onBuild](lib_choicesmanagement_choices_choiceinput.choiceinput.md#onbuild)
-- [onChange](lib_choicesmanagement_choices_choiceinput.choiceinput.md#onchange)
+- [onBuilt](lib_choicesmanagement_choices_choiceinput.choiceinput.md#onbuilt)
 - [onClick](lib_choicesmanagement_choices_choiceinput.choiceinput.md#onclick)
+- [onInput](lib_choicesmanagement_choices_choiceinput.choiceinput.md#oninput)
 - [once](lib_choicesmanagement_choices_choiceinput.choiceinput.md#once)
 - [removeListener](lib_choicesmanagement_choices_choiceinput.choiceinput.md#removelistener)
 
@@ -55,7 +60,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `constructionOptions` | [ChoiceConstructionOptions](../modules/lib_choicesmanagement_choices_choice.md#choiceconstructionoptions) |
+| `constructionOptions` | [`ChoiceConstructionOptions`](../modules/lib_choicesmanagement_choices_choice.md#choiceconstructionoptions) |
 | `...buildArgs` | `any`[] |
 
 #### Overrides
@@ -64,7 +69,7 @@
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceInput.ts:16](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L16)
+[lib/ChoicesManagement/Choices/ChoiceInput.ts:14](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L14)
 
 ## Properties
 
@@ -82,7 +87,7 @@ Le container DOM du choix
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:56](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/Choice.ts#L56)
+[lib/ChoicesManagement/Choices/Choice.ts:56](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/Choice.ts#L56)
 
 ___
 
@@ -98,7 +103,7 @@ Le container DOM qui est la source des événements
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceInput.ts:16](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L16)
+[lib/ChoicesManagement/Choices/ChoiceInput.ts:14](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L14)
 
 ___
 
@@ -116,13 +121,13 @@ Les arguments de construction du button
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:72](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/Choice.ts#L72)
+[lib/ChoicesManagement/Choices/Choice.ts:72](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/Choice.ts#L72)
 
 ___
 
 ### choiceContainer
 
-• **choiceContainer**: [ChoiceContainer](lib_choicesmanagement_choices_choicecontainer.choicecontainer.md)
+• **choiceContainer**: [`ChoiceContainer`](lib_choicesmanagement_choices_choicecontainer.choicecontainer.md)
 
 Référance a l'instance du container de ce choix
 
@@ -134,13 +139,13 @@ Référance a l'instance du container de ce choix
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:80](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/Choice.ts#L80)
+[lib/ChoicesManagement/Choices/Choice.ts:80](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/Choice.ts#L80)
 
 ___
 
 ### choicesEnumerator
 
-• **choicesEnumerator**: [ChoicesEnumerator](lib_choicesmanagement_choicesenumerator.choicesenumerator.md)
+• **choicesEnumerator**: [`ChoicesEnumerator`](lib_choicesmanagement_choicesenumerator.choicesenumerator.md)
 
 référance a l'énumérateur de choix car souvent les choix sont énuméré a partir d'une action d'un choiceButton
 
@@ -152,7 +157,7 @@ référance a l'énumérateur de choix car souvent les choix sont énuméré a p
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:48](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/Choice.ts#L48)
+[lib/ChoicesManagement/Choices/Choice.ts:48](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/Choice.ts#L48)
 
 ___
 
@@ -166,7 +171,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L6)
+[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L6)
 
 ___
 
@@ -184,7 +189,7 @@ Identifieur de position dans la liste des choix
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:32](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/Choice.ts#L32)
+[lib/ChoicesManagement/Choices/Choice.ts:32](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/Choice.ts#L32)
 
 ___
 
@@ -202,23 +207,13 @@ La string du type de button
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:40](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/Choice.ts#L40)
-
-___
-
-### value
-
-• **value**: `string` = ""
-
-#### Defined in
-
-[lib/ChoicesManagement/Choices/ChoiceInput.ts:15](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L15)
+[lib/ChoicesManagement/Choices/Choice.ts:40](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/Choice.ts#L40)
 
 ___
 
 ### sizes
 
-▪ `Static` **sizes**: `Map`<string, number\>
+▪ `Static` **sizes**: `Map`<`string`, `number`\>
 
 **`static`**
 
@@ -228,13 +223,27 @@ ___
 
 #### Defined in
 
-[lib/UIElement.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/UIElement.ts#L25)
+[lib/UIElement.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/UIElement.ts#L25)
+
+## Accessors
+
+### value
+
+• `get` **value**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[lib/ChoicesManagement/Choices/ChoiceInput.ts:36](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L36)
 
 ## Methods
 
 ### build
 
-▸ `Protected` **build**(`buildCallback`): [ChoiceInput](lib_choicesmanagement_choices_choiceinput.choiceinput.md)
+▸ `Protected` **build**(`buildCallback`): [`ChoiceInput`](lib_choicesmanagement_choices_choiceinput.choiceinput.md)
 
 Permet de crée le/les élément(s) DOM qui constitue le boutton
 
@@ -246,7 +255,7 @@ Permet de crée le/les élément(s) DOM qui constitue le boutton
 
 #### Returns
 
-[ChoiceInput](lib_choicesmanagement_choices_choiceinput.choiceinput.md)
+[`ChoiceInput`](lib_choicesmanagement_choices_choiceinput.choiceinput.md)
 
 #### Overrides
 
@@ -254,27 +263,7 @@ Permet de crée le/les élément(s) DOM qui constitue le boutton
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceInput.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L25)
-
-___
-
-### change
-
-▸ `Protected` **change**(`value?`): `void`
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `value` | `string` | "" |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[lib/ChoicesManagement/Choices/ChoiceInput.ts:40](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L40)
+[lib/ChoicesManagement/Choices/ChoiceInput.ts:23](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L23)
 
 ___
 
@@ -296,7 +285,25 @@ Permet de déclancher l'évenement 'click' sur le bouton
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceButton.ts:55](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/ChoiceButton.ts#L55)
+[lib/ChoicesManagement/Choices/ChoiceButton.ts:55](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/ChoiceButton.ts#L55)
+
+___
+
+### delete
+
+▸ **delete**(): `void`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[ChoiceButton](lib_choicesmanagement_choices_choicebutton.choicebutton.md).[delete](lib_choicesmanagement_choices_choicebutton.choicebutton.md#delete)
+
+#### Defined in
+
+[lib/ChoicesManagement/Choices/Choice.ts:154](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/Choice.ts#L154)
 
 ___
 
@@ -321,7 +328,27 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L33)
+[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L33)
+
+___
+
+### input
+
+▸ `Protected` **input**(`value?`): `void`
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `value` | `string` | `""` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[lib/ChoicesManagement/Choices/ChoiceInput.ts:41](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L41)
 
 ___
 
@@ -347,7 +374,7 @@ ___
 
 #### Defined in
 
-[lib/UIElement.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/UIElement.ts#L33)
+[lib/UIElement.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/UIElement.ts#L33)
 
 ___
 
@@ -372,7 +399,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L13)
+[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L13)
 
 ___
 
@@ -408,28 +435,43 @@ onBuild()
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:134](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/Choice.ts#L134)
+[lib/ChoicesManagement/Choices/Choice.ts:136](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/Choice.ts#L136)
 
 ___
 
-### onChange
+### onBuilt
 
-▸ `Protected` `Abstract` **onChange**(`ev`, ...`args`): `void`
+▸ `Protected` `Abstract` **onBuilt**(...`args`): `void`
+
+Est appelé lorsque la construction du boutton et de son container est completement fini dans les couches plus haute des appels (choiceManager)
+
+**`abstract`**
+
+**`example`**
+onBuilt()
+{
+ this.choiceEnumerator.next('value');
+}
+
+**`memberof`** ChoiceButton
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `ev` | `Event` |
 | `...args` | `any`[] |
 
 #### Returns
 
 `void`
 
+#### Inherited from
+
+[ChoiceButton](lib_choicesmanagement_choices_choicebutton.choicebutton.md).[onBuilt](lib_choicesmanagement_choices_choicebutton.choicebutton.md#onbuilt)
+
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceInput.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L46)
+[lib/ChoicesManagement/Choices/Choice.ts:151](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/Choice.ts#L151)
 
 ___
 
@@ -460,7 +502,28 @@ Est appeler lorsque l'evenement click est déclanché
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceButton.ts:68](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/ChoiceButton.ts#L68)
+[lib/ChoicesManagement/Choices/ChoiceButton.ts:68](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/ChoiceButton.ts#L68)
+
+___
+
+### onInput
+
+▸ `Protected` `Abstract` **onInput**(`ev`, ...`args`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `ev` | `Event` |
+| `...args` | `any`[] |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[lib/ChoicesManagement/Choices/ChoiceInput.ts:47](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L47)
 
 ___
 
@@ -485,7 +548,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L46)
+[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L46)
 
 ___
 
@@ -510,4 +573,4 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L21)
+[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L21)

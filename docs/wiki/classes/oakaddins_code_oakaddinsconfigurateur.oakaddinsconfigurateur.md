@@ -8,9 +8,9 @@
 
 ## Hierarchy
 
-- [Configurator](lib_configurator.configurator.md)
+- [`Configurator`](lib_configurator.configurator.md)
 
-  ↳ **OakAddinsConfigurateur**
+  ↳ **`OakAddinsConfigurateur`**
 
 ## Table of contents
 
@@ -25,9 +25,11 @@
 - [data](oakaddins_code_oakaddinsconfigurateur.oakaddinsconfigurateur.md#data)
 - [dataParser](oakaddins_code_oakaddinsconfigurateur.oakaddinsconfigurateur.md#dataparser)
 - [events](oakaddins_code_oakaddinsconfigurateur.oakaddinsconfigurateur.md#events)
+- [tableBuilder](oakaddins_code_oakaddinsconfigurateur.oakaddinsconfigurateur.md#tablebuilder)
 
 ### Methods
 
+- [buildTab](oakaddins_code_oakaddinsconfigurateur.oakaddinsconfigurateur.md#buildtab)
 - [emit](oakaddins_code_oakaddinsconfigurateur.oakaddinsconfigurateur.md#emit)
 - [on](oakaddins_code_oakaddinsconfigurateur.oakaddinsconfigurateur.md#on)
 - [onDataLoaded](oakaddins_code_oakaddinsconfigurateur.oakaddinsconfigurateur.md#ondataloaded)
@@ -35,6 +37,7 @@
 - [registerChoiceManagerClass](oakaddins_code_oakaddinsconfigurateur.oakaddinsconfigurateur.md#registerchoicemanagerclass)
 - [registerDataParserClass](oakaddins_code_oakaddinsconfigurateur.oakaddinsconfigurateur.md#registerdataparserclass)
 - [removeListener](oakaddins_code_oakaddinsconfigurateur.oakaddinsconfigurateur.md#removelistener)
+- [showPWAinstallMessage](oakaddins_code_oakaddinsconfigurateur.oakaddinsconfigurateur.md#showpwainstallmessage)
 
 ## Constructors
 
@@ -47,8 +50,8 @@
 | Name | Type |
 | :------ | :------ |
 | `container` | `string` |
-| `path` | [ConfiguratorPathes](../modules/lib_configurator.md#configuratorpathes) |
-| `debugLevel?` | [DebugLevel](../modules/lib_tools_debug.md#debuglevel) |
+| `path` | [`ConfiguratorPathes`](../modules/lib_configurator.md#configuratorpathes) |
+| `debugLevel?` | [`DebugLevel`](../modules/lib_tools_debug.md#debuglevel) |
 
 #### Overrides
 
@@ -56,7 +59,7 @@
 
 #### Defined in
 
-[OakAddins/Code/OakAddinsConfigurateur.ts:15](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/OakAddins/Code/OakAddinsConfigurateur.ts#L15)
+[OakAddins/Code/OakAddinsConfigurateur.ts:19](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/OakAddinsConfigurateur.ts#L19)
 
 ## Properties
 
@@ -70,13 +73,13 @@
 
 #### Defined in
 
-[lib/Configurator.ts:24](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Configurator.ts#L24)
+[lib/Configurator.ts:24](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L24)
 
 ___
 
 ### choicesManager
 
-• **choicesManager**: [ChoicesManager](lib_choicesmanagement_choicesmanager.choicesmanager.md)
+• **choicesManager**: [`ChoicesManager`](lib_choicesmanagement_choicesmanager.choicesmanager.md)
 
 #### Inherited from
 
@@ -84,13 +87,13 @@ ___
 
 #### Defined in
 
-[lib/Configurator.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Configurator.ts#L25)
+[lib/Configurator.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L25)
 
 ___
 
 ### data
 
-• **data**: [Data](../modules/lib_configurator.md#data) = {}
+• **data**: [`Data`](../modules/lib_configurator.md#data) = `{}`
 
 #### Inherited from
 
@@ -98,13 +101,13 @@ ___
 
 #### Defined in
 
-[lib/Configurator.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Configurator.ts#L28)
+[lib/Configurator.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L28)
 
 ___
 
 ### dataParser
 
-• **dataParser**: `undefined` \| [DataParser](lib_data_dataparser.dataparser.md)
+• **dataParser**: `undefined` \| [`DataParser`](lib_data_dataparser.dataparser.md)
 
 #### Inherited from
 
@@ -112,7 +115,7 @@ ___
 
 #### Defined in
 
-[lib/Configurator.ts:26](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Configurator.ts#L26)
+[lib/Configurator.ts:26](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L26)
 
 ___
 
@@ -126,9 +129,33 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L6)
+[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L6)
+
+___
+
+### tableBuilder
+
+• **tableBuilder**: [`TableBuilder`](oakaddins_code_tablebuilder_tablebuilder.tablebuilder.md)
+
+#### Defined in
+
+[OakAddins/Code/OakAddinsConfigurateur.ts:19](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/OakAddinsConfigurateur.ts#L19)
 
 ## Methods
+
+### buildTab
+
+▸ `Private` **buildTab**(): `void`
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[OakAddins/Code/OakAddinsConfigurateur.ts:53](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/OakAddinsConfigurateur.ts#L53)
+
+___
 
 ### emit
 
@@ -151,7 +178,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L33)
+[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L33)
 
 ___
 
@@ -176,7 +203,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L13)
+[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L13)
 
 ___
 
@@ -194,7 +221,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/OakAddinsConfigurateur.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/OakAddins/Code/OakAddinsConfigurateur.ts#L25)
+[OakAddins/Code/OakAddinsConfigurateur.ts:31](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/OakAddinsConfigurateur.ts#L31)
 
 ___
 
@@ -219,7 +246,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L46)
+[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L46)
 
 ___
 
@@ -233,7 +260,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `ChoiceManagerClass` | [ChoicesManagerConstructor](../modules/lib_choicesmanagement_choicesmanager.md#choicesmanagerconstructor) |
+| `ChoiceManagerClass` | [`ChoicesManagerConstructor`](../modules/lib_choicesmanagement_choicesmanager.md#choicesmanagerconstructor) |
 
 #### Returns
 
@@ -245,7 +272,7 @@ ___
 
 #### Defined in
 
-[lib/Configurator.ts:136](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Configurator.ts#L136)
+[lib/Configurator.ts:136](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L136)
 
 ___
 
@@ -259,7 +286,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `DataParserClass` | [DataParserConstructor](../modules/lib_data_dataparser.md#dataparserconstructor) |
+| `DataParserClass` | [`DataParserConstructor`](../modules/lib_data_dataparser.md#dataparserconstructor) |
 
 #### Returns
 
@@ -271,7 +298,7 @@ ___
 
 #### Defined in
 
-[lib/Configurator.ts:147](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Configurator.ts#L147)
+[lib/Configurator.ts:147](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Configurator.ts#L147)
 
 ___
 
@@ -296,4 +323,18 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Tools/EventEmitter.ts#L21)
+[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/EventEmitter.ts#L21)
+
+___
+
+### showPWAinstallMessage
+
+▸ `Private` **showPWAinstallMessage**(): `void`
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[OakAddins/Code/OakAddinsConfigurateur.ts:60](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/OakAddinsConfigurateur.ts#L60)

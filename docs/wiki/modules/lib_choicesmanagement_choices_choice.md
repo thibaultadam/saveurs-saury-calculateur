@@ -23,19 +23,19 @@
 
 | Name | Type |
 | :------ | :------ |
-| `choiceContainer` | [ChoiceContainer](../classes/lib_choicesmanagement_choices_choicecontainer.choicecontainer.md) |
+| `choiceContainer` | [`ChoiceContainer`](../classes/lib_choicesmanagement_choices_choicecontainer.choicecontainer.md) |
 | `id` | `number` |
 | `type` | `string` |
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:11](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/Choice.ts#L11)
+[lib/ChoicesManagement/Choices/Choice.ts:11](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/Choice.ts#L11)
 
 ___
 
 ### ChoiceConstructor
 
-Ƭ **ChoiceConstructor**: (`constructionOptions`: [ChoiceConstructionOptions](lib_choicesmanagement_choices_choice.md#choiceconstructionoptions), ...`buildArgs`: `any`[]) => [Choice](../classes/lib_choicesmanagement_choices_choice.choice.md)
+Ƭ **ChoiceConstructor**: (`constructionOptions`: [`ChoiceConstructionOptions`](lib_choicesmanagement_choices_choice.md#choiceconstructionoptions), ...`buildArgs`: `any`[]) => [`Choice`](../classes/lib_choicesmanagement_choices_choice.choice.md)
 
 #### Type declaration
 
@@ -45,9 +45,9 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `constructionOptions` | [ChoiceConstructionOptions](lib_choicesmanagement_choices_choice.md#choiceconstructionoptions) |
+| `constructionOptions` | [`ChoiceConstructionOptions`](lib_choicesmanagement_choices_choice.md#choiceconstructionoptions) |
 | `...buildArgs` | `any`[] |
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/Choice.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/ChoicesManagement/Choices/Choice.ts#L6)
+[lib/ChoicesManagement/Choices/Choice.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/ChoicesManagement/Choices/Choice.ts#L6)

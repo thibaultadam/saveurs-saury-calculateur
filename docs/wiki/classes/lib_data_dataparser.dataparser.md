@@ -6,9 +6,9 @@
 
 ## Hierarchy
 
-- **DataParser**
+- **`DataParser`**
 
-  ↳ [DataParser](oakaddins_code_data_dataparser.dataparser.md)
+  ↳ [`DataParser`](oakaddins_code_data_dataparser.dataparser.md)
 
 ## Table of contents
 
@@ -37,34 +37,34 @@
 
 | Name | Type |
 | :------ | :------ |
-| `configurator` | [Configurator](lib_configurator.configurator.md) |
-| `data` | [Data](../modules/lib_configurator.md#data) |
+| `configurator` | [`Configurator`](lib_configurator.configurator.md) |
+| `data` | [`Data`](../modules/lib_configurator.md#data) |
 
 #### Defined in
 
-[lib/Data/DataParser.ts:19](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Data/DataParser.ts#L19)
+[lib/Data/DataParser.ts:19](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Data/DataParser.ts#L19)
 
 ## Properties
 
 ### configurator
 
-• **configurator**: [Configurator](lib_configurator.configurator.md)
+• **configurator**: [`Configurator`](lib_configurator.configurator.md)
 
 ___
 
 ### data
 
-• **data**: [Data](../modules/lib_configurator.md#data)
+• **data**: [`Data`](../modules/lib_configurator.md#data)
 
 ___
 
 ### parsers
 
-• `Protected` **parsers**: `Map`<string, [DataParserCallbackData](../modules/lib_data_dataparser.md#dataparsercallbackdata)\>
+• `Protected` **parsers**: `Map`<`string`, [`DataParserCallbackData`](../modules/lib_data_dataparser.md#dataparsercallbackdata)\>
 
 #### Defined in
 
-[lib/Data/DataParser.ts:19](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Data/DataParser.ts#L19)
+[lib/Data/DataParser.ts:19](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Data/DataParser.ts#L19)
 
 ## Methods
 
@@ -77,7 +77,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `dataKey` | `string` |
-| `callback` | [DataParserCallback](../modules/lib_data_dataparser.md#dataparsercallback) |
+| `callback` | [`DataParserCallback`](../modules/lib_data_dataparser.md#dataparsercallback) |
 | `thisArg?` | `any` |
 
 #### Returns
@@ -86,18 +86,18 @@ ___
 
 #### Defined in
 
-[lib/Data/DataParser.ts:29](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Data/DataParser.ts#L29)
+[lib/Data/DataParser.ts:29](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Data/DataParser.ts#L29)
 
 ___
 
 ### parse
 
-▸ **parse**(): `Promise`<void\>
+▸ **parse**(): `Promise`<`void`\>
 
 #### Returns
 
-`Promise`<void\>
+`Promise`<`void`\>
 
 #### Defined in
 
-[lib/Data/DataParser.ts:37](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cc0811b/src/lib/Data/DataParser.ts#L37)
+[lib/Data/DataParser.ts:37](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Data/DataParser.ts#L37)
