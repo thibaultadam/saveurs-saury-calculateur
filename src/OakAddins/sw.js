@@ -23,6 +23,7 @@ self.addEventListener('install', event =>
             '/home.html',
             '/data/fr-FR/choices-fr-FR.json',
             '/data/fr-FR/config-fr-FR.json',
+            '/data/fr-FR/products-fr-FR.json',
             '/data/fr-FR/possibilities-calculation-gramsPerLiter-fr-FR.json',
             '/data/fr-FR/possibilities-calculation-percentage-fr-FR.json',
             '/data/fr-FR/possibilities-fr-FR.json',

@@ -124,7 +124,20 @@ export class TableBuilder extends EventEmitter
 
     protected buildBodyLine(lineData: any, inputs: TableBuilderInput): string
     {
-        Debug.info('build line', lineData)
+        Debug.info('build line', lineData);
+
+        const selectedProduct = this.choiceEnumerator.getByLabel('product')?.value?.toLowerCase() as string;
+        const lineProduct = lineData.values[1].toLowerCase() as string;
+
+        console.log(selectedProduct, lineProduct);
+        console.log(lineProduct);
+        console.log(selectedProduct.search(lineProduct));
+
+        if(selectedProduct.search(lineProduct) === -1)
+        {
+            //return "";
+        }
+
 
         let line = "<tr>";
 
