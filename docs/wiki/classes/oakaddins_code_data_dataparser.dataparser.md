@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[OakAddins/Code/Data/DataParser.ts:54](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/Data/DataParser.ts#L54)
+[OakAddins/Code/Data/DataParser.ts:54](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/OakAddins/Code/Data/DataParser.ts#L54)
 
 ## Properties
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[lib/Data/DataParser.ts:19](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Data/DataParser.ts#L19)
+[lib/Data/DataParser.ts:19](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Data/DataParser.ts#L19)
 
 ## Methods
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[lib/Data/DataParser.ts:29](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Data/DataParser.ts#L29)
+[lib/Data/DataParser.ts:29](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Data/DataParser.ts#L29)
 
 ___
 
@@ -132,7 +132,7 @@ parsedData
 
 #### Defined in
 
-[OakAddins/Code/Data/DataParser.ts:69](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/Data/DataParser.ts#L69)
+[OakAddins/Code/Data/DataParser.ts:69](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/OakAddins/Code/Data/DataParser.ts#L69)
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 #### Defined in
 
-[lib/Data/DataParser.ts:37](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Data/DataParser.ts#L37)
+[lib/Data/DataParser.ts:37](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Data/DataParser.ts#L37)
 
 ___
 
@@ -174,7 +174,7 @@ parsedData
 
 #### Defined in
 
-[OakAddins/Code/Data/DataParser.ts:86](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/Data/DataParser.ts#L86)
+[OakAddins/Code/Data/DataParser.ts:86](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/OakAddins/Code/Data/DataParser.ts#L86)
 
 ___
 
@@ -195,4 +195,4 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/Data/DataParser.ts:94](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/Data/DataParser.ts#L94)
+[OakAddins/Code/Data/DataParser.ts:94](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/OakAddins/Code/Data/DataParser.ts#L94)

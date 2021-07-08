@@ -30,4 +30,4 @@
 
 #### Defined in
 
-[lib/DataProvider.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/DataProvider.ts#L6)
+[lib/DataProvider.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/DataProvider.ts#L6)

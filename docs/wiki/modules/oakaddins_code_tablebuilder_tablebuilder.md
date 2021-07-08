@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:8](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L8)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:8](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L8)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:12](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L12)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:12](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L12)

@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[lib/Tools/Debug.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/Debug.ts#L6)
+[lib/Tools/Debug.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Tools/Debug.ts#L6)
 
 ## Methods
 
@@ -55,7 +55,7 @@
 
 #### Defined in
 
-[lib/Tools/Debug.ts:41](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/Debug.ts#L41)
+[lib/Tools/Debug.ts:41](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Tools/Debug.ts#L41)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/Debug.ts:8](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/Debug.ts#L8)
+[lib/Tools/Debug.ts:8](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Tools/Debug.ts#L8)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/Debug.ts:17](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/Debug.ts#L17)
+[lib/Tools/Debug.ts:17](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Tools/Debug.ts#L17)
 
 ___
 
@@ -115,4 +115,4 @@ ___
 
 #### Defined in
 
-[lib/Tools/Debug.ts:30](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/Tools/Debug.ts#L30)
+[lib/Tools/Debug.ts:30](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Tools/Debug.ts#L30)

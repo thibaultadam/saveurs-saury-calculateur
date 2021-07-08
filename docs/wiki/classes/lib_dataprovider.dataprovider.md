@@ -69,7 +69,7 @@ Le DataProvider est instancier au moment de sont ajout ajout dans le ChoiceManag
 
 #### Defined in
 
-[lib/DataProvider.ts:32](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/DataProvider.ts#L32)
+[lib/DataProvider.ts:32](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/DataProvider.ts#L32)
 
 ## Properties
 
@@ -110,4 +110,4 @@ ___
 
 #### Defined in
 
-[lib/DataProvider.ts:55](https://github.com/P0ulpy/Configurateur-OakAddins/blob/cf4ecab/src/lib/DataProvider.ts#L55)
+[lib/DataProvider.ts:55](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/DataProvider.ts#L55)
