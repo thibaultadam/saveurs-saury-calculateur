@@ -1,84 +1,145 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
-<head>
+    <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configurator - OakAddins</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Configurator - OakAddins</title>
 
-    <script src="sw-init.js"></script>
-    <link rel="manifest" href="manifest.webmanifest">
+        <!--<script src="sw-init.js"></script>-->
+        <link rel="manifest" href="manifest.webmanifest">
 
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="apple-touch-icon" href="app-ressources/apple-icon-180.png">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="apple-touch-icon" href="app-ressources/apple-icon-180.png">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+        <link rel="apple-touch-startup-image" href="app-ressources/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-    </script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
-    <script src="ConfigurateurOakAddin.js"></script>
-</head>
-<body>
+        <script src="ConfigurateurOakAddin.js"></script>
+    </head>
+    <body>
 
-    <div id="configurator-container"></div>
+        <div class="container">
 
-    <script>
+            <div id="carouselExampleInterval" class="carousel slide rounded my-5" data-bs-touch="false" data-bs-interval="false">
 
-        let test;
+                <div class="carousel-inner">
 
-        const data = {
-            'fr-FR': {
-                root: "data/fr-FR",
-                config : 'data/fr-FR/config-fr-FR.json',
-                choices : 'data/fr-FR/choices-fr-FR.json',
-                product : 'data/fr-FR/products-fr-FR.json',
-                tree: 'data/fr-FR/possibilities-fr-FR.json',
-                responseTable : 'data/fr-FR/responses-table-fr-FR.js',
-            },
-            'en-US': {
-                root: "data/en-US",
-                config : 'data/en-US/config-en-US.json',
-                choices : 'data/en-US/choices-en-US.json',
-                product : 'data/en-US/products-en-US.json',
-                tree: 'data/en-US/possibilities-en-US.json',
-                responseTable : 'data/en-US/responses-table-en-US.js',
-            }
-        };
+                    <div class="carousel-item active" style="background-color: #6639b7; color: white; border-radius: 5px;">
 
-        document.Configurator = new ConfigurateurOakAddin.OakAddinsConfigurateur('#configurator-container', data['fr-FR'], 'info');
-    
-    </script>
+                        <div class="row mx-5 my-5">
 
-    <noscript>This Page requires Javascript. Enable Javascript and reload this page to continue.</noscript>
+                            <div class="col" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </div>
 
-</body>
+                            <h2 class="col fs-1 text-center">Poudre</h2>
+
+                            <div class="col" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col mx-5 my-5">
+
+                            <div class="">
+                                <div class="row">
+                                    <div class="col-3">
+                                        Objectifs :
+                                    </div>
+                                    <div class="col-9">
+                                        <p>Gagner en fruit, en volume</p>
+                                        <p>Résultats rapides</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        Utilisation :
+                                    </div>
+                                    <div class="col-9">
+                                        <p>Vin rouge :</p>
+                                        <p>A l’encuvage sur la vendange ou en phase liquide, compatible avec la thermovinification.</p>
+                                        <p>Vin blanc :</p>
+                                        <p>Sur phase liquide en fermentation.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <img class=" img-thumbnail" style="border-radius: 100px !important; border-color: #ffffff4f !important; background-color: #ffffff4f;" src="http://www.oakaddins.com/wp-content/uploads/2013/10/p_poudre_mixture-280x280.jpg" width="200" height="200" alt="">
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row"></div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div id="configurator-container"></div>
+
+        <script>
+
+            const data = {
+                'fr-FR': {
+                    root: "data/fr-FR",
+                    config: 'data/fr-FR/config-fr-FR.json',
+                    choices: 'data/fr-FR/choices-fr-FR.json',
+                    product: 'data/fr-FR/products-fr-FR.json',
+                    tree: 'data/fr-FR/possibilities-fr-FR.json',
+                    responseTable: 'data/fr-FR/responses-table-fr-FR.js'
+                },
+                'en-US': {
+                    root: "data/en-US",
+                    config: 'data/en-US/config-en-US.json',
+                    choices: 'data/en-US/choices-en-US.json',
+                    product: 'data/en-US/products-en-US.json',
+                    tree: 'data/en-US/possibilities-en-US.json',
+                    responseTable: 'data/en-US/responses-table-en-US.js'
+                }
+            };
+
+            document.Configurator = new ConfigurateurOakAddin.OakAddinsConfigurateur('#configurator-container', data['fr-FR'], 'info');
+        </script>
+
+        <noscript>This Page requires Javascript. Enable Javascript and reload this page to continue.</noscript>
+
+    </body>
 </html>

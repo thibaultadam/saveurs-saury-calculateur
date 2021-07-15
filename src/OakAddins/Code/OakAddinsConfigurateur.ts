@@ -7,7 +7,7 @@ import { TableBuilder } from "./TableBuilder/TableBuilder";
 
 // CSS
 import '../css/choices.css';
-import '../css/docs.css';
+//import '../css/docs.css';
 //import '../css/screen.css';
 
 /**
