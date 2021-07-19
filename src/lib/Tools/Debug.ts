@@ -3,7 +3,7 @@ export type DebugLevel = "none" | "info" | "log" | "warn" | "error";
 export  
 class Debug
 {
-    public static debugLevel : DebugLevel = "log";
+    public static debugLevel : DebugLevel = "info";
 
     public static info(...args : any) : void
     {
