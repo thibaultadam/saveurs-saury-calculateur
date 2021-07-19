@@ -1,9 +1,8 @@
-import {Configurator, ConfiguratorPathes } from "../../lib/Configurator";
+import { Configurator, ConfiguratorPathes } from "../../lib/Configurator";
 import { Debug, DebugLevel } from "../../lib/Tools/Debug";
-import {ChoicesManager} from "./ChoicesManager/ChoicesManager";
-import {DataParser} from "./Data/DataParser";
+import { ChoicesManager } from "./ChoicesManager/ChoicesManager";
+import { DataParser } from "./Data/DataParser";
 import { TableBuilder } from "./TableBuilder/TableBuilder";
-
 
 // CSS
 import '../css/choices.css';
