@@ -56,7 +56,7 @@ abstract class ChoiceContainer extends UIElement {
      * @private
      * @memberof ChoiceContainer
      */
-    private buildArgs : any[];
+    protected buildArgs : any[];
 
     /**
      * Contiens les instances de boutons de ce container
@@ -64,7 +64,7 @@ abstract class ChoiceContainer extends UIElement {
      * @private
      * @memberof ChoiceContainer
      */
-    private choices: Choice[] = [];
+    public choices: Choice[] = [];
 
     /**
      * Contiens la class constructrice des boutons de ce container
@@ -72,7 +72,7 @@ abstract class ChoiceContainer extends UIElement {
      * @private
      * @memberof ChoiceContainer
      */
-    private ChoiceClass!: ChoiceConstructor;
+    protected ChoiceClass!: ChoiceConstructor;
     
     /**
      * Contien la référance vers les données du configurateur

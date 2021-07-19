@@ -48,7 +48,7 @@ Le DataProvider est instancier au moment de sont ajout ajout dans le ChoiceManag
 
 #### Defined in
 
-[OakAddins/Code/Data/DataProvider.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/OakAddins/Code/Data/DataProvider.ts#L6)
+[OakAddins/Code/Data/DataProvider.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/Data/DataProvider.ts#L6)
 
 ## Properties
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[lib/DataProvider.ts:55](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/DataProvider.ts#L55)
+[lib/DataProvider.ts:55](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/DataProvider.ts#L55)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/Data/DataProvider.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/OakAddins/Code/Data/DataProvider.ts#L13)
+[OakAddins/Code/Data/DataProvider.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/Data/DataProvider.ts#L13)
 
 ___
 
@@ -139,4 +139,4 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/Data/DataProvider.ts:23](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/OakAddins/Code/Data/DataProvider.ts#L23)
+[OakAddins/Code/Data/DataProvider.ts:23](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/Data/DataProvider.ts#L23)
