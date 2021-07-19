@@ -129,14 +129,11 @@ export class TableBuilder extends EventEmitter
         const selectedProduct = this.choiceEnumerator.getByLabel('product')?.value?.toLowerCase() as string;
         const lineProduct = lineData.product.toLowerCase() as string;
 
-        console.log(selectedProduct, lineProduct, selectedProduct.search(lineProduct));
-
         if(selectedProduct.search(lineProduct) === -1)
         {
             Debug.info('skiping by product');
             return "";
         }
-
 
         let line = `<tr style="font-size: .85rem !important;">`;
 
