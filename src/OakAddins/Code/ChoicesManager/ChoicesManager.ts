@@ -10,7 +10,6 @@ import { InputContainer } from "./Choices/InputContainer";
 import { RadioContainer } from "./Choices/RadioContainer";
 
 export type ChoiceType = 'button' | 'radio' | 'input';
-
 export  class ChoicesManager extends _ChoicesManager
 {
     constructor(public configurator: Configurator)

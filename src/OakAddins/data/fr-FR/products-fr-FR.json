@@ -14,11 +14,15 @@
                 "title" : "Utilisation",
                 "values" : [    
                     "<b>Vin rouge :</b>",
-                    "A l’encuvage sur la vendange ou en phase liquide, compatible avec la thermovinification.",
+                    [ 
+                        "A l’encuvage sur la vendange ou en phase liquide, compatible avec la thermovinification."
+                    ],
                     "<b>Vin blanc :</b>",
-                    "Sur phase liquide en fermentation.",
+                    [
+                        "Sur phase liquide en fermentation."
+                    ],
                     "<a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Poudre.pdf\" target=\"_blank\">Télécharger la fiche produit</a>",
-                    "*Uniquement autorisés hors Union Européenne"   
+                    "*Uniquement autorisés hors Union Européenne"
                 ] 
             }
         ]
@@ -39,10 +43,13 @@
                 "title" : "Utilisation",
                 "values" : [    
                     "<b>Vin rouge</b>",
-                    "A l’encuvage sur la vendange ou en phase liquide, compatible avec la thermovinification",
+                    [ 
+                        "A l’encuvage sur la vendange ou en phase liquide, compatible avec la thermovinification"
+                    ],
                     "<b>Vin blanc</b>",
-                    "Sur phase liquide en fermentation",
-                    "",
+                    [
+                        "Sur phase liquide en fermentation"
+                    ],
                     "<strong><a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Fine-de-Chene.pdf\">Télécharger la fiche produit</a></strong>",
                     "<img src=\"http://www.oakaddins.com/wp-content/uploads/2014/02/macaron_non_chauffes_FR.png\" alt=\"disponible aussi non chauffé\">"
                 ] 
@@ -65,13 +72,15 @@
                 "title" : "Utilisation",
                 "values" : [    
                     "<b>Vin rouge</b>",
-                    "En fermentation",
-                    "Après soutirage : Sur phase liquide pendant la fermentation alcoolique et/ou malolactique, compatible avec la thermovinification",
-                    "En élevage et touche finale",
-                    "<b></b>",
+                    [
+                        "En fermentation",
+                        "Après soutirage : Sur phase liquide pendant la fermentation alcoolique et/ou malolactique, compatible avec la thermovinification",
+                        "En élevage et touche finale"
+                    ],
                     "En fermentation : après débourbage",
-                    "En élevage et touche finale",
-                    "",
+                    [
+                        "En élevage et touche finale"
+                    ],
                     "<b><a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Oak-Chips.pdf\" target=\"_blank\">Télécharger la fiche produit</a></b>",
                     "<img src=\"http://www.oakaddins.com/wp-content/uploads/2014/02/macaron_non_chauffes_FR.png\" alt=\"disponible aussi non chauffé\">"
                 ] 
@@ -94,13 +103,17 @@
                 "title" : "Utilisation",
                 "values" : [    
                     "<b>Vin rouge</b>",
-                    "Pendant la fermentation malolactique",
-                    "Aprés soutirage",
+                    [
+                        "Pendant la fermentation malolactique",
+                        "Aprés soutirage"    
+                    ],
                     "<b>Vin blanc</b>",
-                    "Pendant la fermentation",
-                    "Après débourbage",
-                    "Sur vins finis",
-                    "",
+                    [
+                        
+                        "Pendant la fermentation",
+                        "Après débourbage",
+                        "Sur vins finis"
+                    ],
                     "<b><a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Cubes-Dominos-Blocks.pdf\" target=\"_blank\">Télécharger la fiche produit</a></b>"
                 ] 
             }
@@ -122,10 +135,13 @@
                 "title" : "Utilisation",
                 "values" : [    
                     "<b>Vin rouge</b>",
-                    "A l’encuvage sur la vendange ou en phase liquide, compatible avec la thermovinification",
+                    [ 
+                        "A l’encuvage sur la vendange ou en phase liquide, compatible avec la thermovinification" 
+                    ],
                     "<b>Vin blanc</b>",
-                    "Sur phase liquide en fermentation",
-                    "",
+                    [ 
+                        "Sur phase liquide en fermentation" 
+                    ],
                     "<b><a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Thin-Tank-Staves.pdf\" target=\"_blank\">Télécharger la fiche produit</a></b>"
                 ] 
             }
@@ -146,9 +162,10 @@
                 "title" : "Utilisation",
                 "values" : [
                     "<b>Vin rouge et vin blanc</b>",
-                    "Après soutirage",
-                    "Sur vins finis",
-                    "",
+                    [
+                        "Après soutirage",
+                        "Sur vins finis"
+                    ],
                     "<b><a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Winewood.pdf\" target=\"_blank\">Télécharger la fiche produit</a></b>"
                 ] 
             }
@@ -170,10 +187,11 @@
                 "title" : "Utilisation",
                 "values" : [    
                     "<b>Vin rouge et vin blanc</b>",
-                    "Pendant la fermentation malolactique",
-                    "Après soutirage",
-                    "Sur vins finis",
-                    "",
+                    [
+                        "Pendant la fermentation malolactique",
+                        "Après soutirage",
+                        "Sur vins finis"
+                    ],
                     "<b><a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Tank-Staves.pdf\" target=\"_blank\">Télécharger la fiche produit</a></b>"
                 ] 
             }
@@ -195,8 +213,9 @@
                 "title" : "Utilisation",
                 "values" : [    
                     "<b>Vin rouge :</b>",
-                    "Mise en place dès la réception vendange.",
-                    "",
+                    [
+                        "Mise en place dès la réception vendange."
+                    ],
                     "<b><a href=\"http://www.oakaddins.com/wp-content/uploads/2016/11/XL-Stave.pdf\" target=\"_blank\">Télécharger la fiche produit</a></b>"
                 ] 
             }
@@ -217,9 +236,10 @@
                 "title" : "Utilisation",
                 "values" : [    
                     "<b>Vin rouge et vin blanc</b>",
-                    "En vinification intégrale",
-                    "En élevage",
-                    "",
+                    [
+                        "En vinification intégrale",
+                        "En élevage"    
+                    ],
                     "<b><a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Barrel-Insert.pdf\" target=\"_blank\">Télécharger la fiche produit</a></b>"
                 ] 
             }
@@ -241,9 +261,11 @@
                 "title" : "Utilisation",
                 "values" : [    
                     "<b>Vin rouge et vin blanc</b>",
-                    "En vinification intégrale",
-                    "En élevage",
-                    "<b><a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Oak-Chain.pdf\" target=\"_blank\">Télécharger la fiche produit</a></b>"
+                    [
+                        "En vinification intégrale",
+                        "En élevage"
+                    ],
+                    "<b> <a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Oak-Chain.pdf\" target=\"_blank\">Télécharger la fiche produit</a> </b>"
                 ] 
             }
         ]
