@@ -52,7 +52,7 @@ abstract class ChoiceButton extends Choice {
      * @protected
      * @memberof ChoiceButton
      */
-    protected click() : void
+    public click() : void
     {
         this.$eventProvider.click();
     }

@@ -65,7 +65,7 @@
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/ChoicesManagement/ChoicesManager.ts#L28)
+[lib/ChoicesManagement/ChoicesManager.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/ChoicesManagement/ChoicesManager.ts#L28)
 
 ## Properties
 
@@ -75,7 +75,7 @@
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:26](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/ChoicesManagement/ChoicesManager.ts#L26)
+[lib/ChoicesManagement/ChoicesManager.ts:26](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/ChoicesManagement/ChoicesManager.ts#L26)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/ChoicesManagement/ChoicesManager.ts#L25)
+[lib/ChoicesManagement/ChoicesManager.ts:25](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/ChoicesManagement/ChoicesManager.ts#L25)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/ChoicesManagement/ChoicesManager.ts#L28)
+[lib/ChoicesManagement/ChoicesManager.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/ChoicesManagement/ChoicesManager.ts#L28)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:22](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/ChoicesManagement/ChoicesManager.ts#L22)
+[lib/ChoicesManagement/ChoicesManager.ts:22](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/ChoicesManagement/ChoicesManager.ts#L22)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:23](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/ChoicesManagement/ChoicesManager.ts#L23)
+[lib/ChoicesManagement/ChoicesManager.ts:23](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/ChoicesManagement/ChoicesManager.ts#L23)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Tools/EventEmitter.ts#L6)
+[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/EventEmitter.ts#L6)
 
 ## Methods
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:125](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/ChoicesManagement/ChoicesManager.ts#L125)
+[lib/ChoicesManagement/ChoicesManager.ts:125](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/ChoicesManagement/ChoicesManager.ts#L125)
 
 ___
 
@@ -184,7 +184,7 @@ et `choiceBuilt` (avec comme valeur d'émition l'index du choix courant) lorsque
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/ChoicesManagement/ChoicesManager.ts#L46)
+[lib/ChoicesManagement/ChoicesManager.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/ChoicesManagement/ChoicesManager.ts#L46)
 
 ___
 
@@ -209,7 +209,7 @@ Initialize creation of a new ChoiceContainer according to his type
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:77](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/ChoicesManagement/ChoicesManager.ts#L77)
+[lib/ChoicesManagement/ChoicesManager.ts:77](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/ChoicesManagement/ChoicesManager.ts#L77)
 
 ___
 
@@ -234,7 +234,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Tools/EventEmitter.ts#L33)
+[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/EventEmitter.ts#L33)
 
 ___
 
@@ -259,7 +259,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Tools/EventEmitter.ts#L13)
+[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/EventEmitter.ts#L13)
 
 ___
 
@@ -285,7 +285,7 @@ onBuildChoice()
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:65](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/ChoicesManagement/ChoicesManager.ts#L65)
+[lib/ChoicesManagement/ChoicesManager.ts:65](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/ChoicesManagement/ChoicesManager.ts#L65)
 
 ___
 
@@ -310,7 +310,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Tools/EventEmitter.ts#L46)
+[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/EventEmitter.ts#L46)
 
 ___
 
@@ -335,7 +335,7 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:139](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/ChoicesManagement/ChoicesManager.ts#L139)
+[lib/ChoicesManagement/ChoicesManager.ts:139](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/ChoicesManagement/ChoicesManager.ts#L139)
 
 ___
 
@@ -359,7 +359,7 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/ChoicesManager.ts:152](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/ChoicesManagement/ChoicesManager.ts#L152)
+[lib/ChoicesManagement/ChoicesManager.ts:152](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/ChoicesManagement/ChoicesManager.ts#L152)
 
 ___
 
@@ -384,4 +384,4 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/48879bc/src/lib/Tools/EventEmitter.ts#L21)
+[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/EventEmitter.ts#L21)

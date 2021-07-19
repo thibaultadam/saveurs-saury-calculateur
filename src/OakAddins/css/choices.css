@@ -1,16 +1,29 @@
+html {
+    scroll-behavior: smooth;
+}
+
 h1 {
     color: rgb(102, 57, 183);
 }
 
-#configurator-container p {
+#configurator-container h6 {
     color: rgb(102, 57, 183);
     font-weight: bold;
 }
 
-#product-design-contrainer p {
+.product-design-contrainer p {
     margin-bottom: .5rem;
+    color: white !important;
 }
 
+.product-design-contrainer a:not(.btn) {
+    margin-bottom: .5rem;
+    color: white;
+}
+
+.product-design-contrainer a:hover:not(.btn) {
+    color: bisque;
+}
 
 #response-container label {
     color: rgb(102, 57, 183);

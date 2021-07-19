@@ -25,8 +25,7 @@ export class TableBuilder extends EventEmitter
 
     protected containerCreator!: () => HTMLElement;
     protected $container!: HTMLElement;
-    $calculateButton!: HTMLElement;
-    $calculateButtonContainer!: HTMLElement;
+    $catchUpLine!: HTMLElement;
 
     constructor(options: TableBuilderConstructorOptions)
     {
@@ -73,13 +72,11 @@ export class TableBuilder extends EventEmitter
     {   
         this.reset();
 
-        this.$calculateButtonContainer = createElement(`<div class="d-grid gap-2 col-6 mx-auto my-5">`) as HTMLElement;
-        this.$calculateButton = createElement(`<button id="build" class="btn btn-indigo" type="button">CALCULER</button>`) as HTMLElement;
-        
-        this.$calculateButton.addEventListener('click', () => this.build());
-        this.$calculateButtonContainer.appendChild(this.$calculateButton);
+        this.$catchUpLine = createElement(`
+        <div class="text-center my-5"><i>"phrase d’accroche pour annoncer les recommandations"</i></div>
+        `) as HTMLElement;
 
-        this.$container.appendChild(this.$calculateButtonContainer);
+        this.$container.appendChild(this.$catchUpLine);
 
         const inputs = {
             volumeType : this.choiceEnumerator.getByLabel('unit')?.value || "Hectolitres",
@@ -90,7 +87,7 @@ export class TableBuilder extends EventEmitter
         
         Debug.log('Building table with inputs :', inputs);
     
-        let tableContent = '<table class="table table-striped" id="response-container">';
+        let tableContent = '<table class="table table-striped" id="response-container" style="margin-bottom: 10rem">';
     
         let thead = "<thead>";
         let tbody = "<tbody>";

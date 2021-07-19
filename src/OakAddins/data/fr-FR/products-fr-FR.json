@@ -2,6 +2,7 @@
     "Poudre": {
         "title": "Poudre",
         "image" : "http://www.oakaddins.com/wp-content/uploads/2013/10/p_poudre_mixture-280x280.jpg",
+        "infos": "http://www.oakaddins.com/wp-content/uploads/2013/10/Poudre.pdf",
         "cat" : [
             {
                 "title" : "Objectif",
@@ -21,14 +22,13 @@
                     [
                         "Sur phase liquide en fermentation."
                     ],
-                    "<a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Poudre.pdf\" target=\"_blank\">Télécharger la fiche produit</a>",
                     "*Uniquement autorisés hors Union Européenne"
                 ] 
             }
         ]
     },
-    "Fine de chêne": {
-        "title": "Fine de chêne",
+    "Fine de Chêne": {
+        "title": "Fine de Chêne",
         "image" : "http://www.oakaddins.com/wp-content/uploads/2013/10/p_fine_de_chene-280x280.jpg",
         "infos" : "http://www.oakaddins.com/wp-content/uploads/2013/10/Fine-de-Chene.pdf",
         "cat" : [
@@ -50,7 +50,6 @@
                     [
                         "Sur phase liquide en fermentation"
                     ],
-                    "<strong><a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Fine-de-Chene.pdf\">Télécharger la fiche produit</a></strong>",
                     "<img src=\"http://www.oakaddins.com/wp-content/uploads/2014/02/macaron_non_chauffes_FR.png\" alt=\"disponible aussi non chauffé\">"
                 ] 
             }
@@ -81,7 +80,6 @@
                     [
                         "En élevage et touche finale"
                     ],
-                    "<b><a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Oak-Chips.pdf\" target=\"_blank\">Télécharger la fiche produit</a></b>",
                     "<img src=\"http://www.oakaddins.com/wp-content/uploads/2014/02/macaron_non_chauffes_FR.png\" alt=\"disponible aussi non chauffé\">"
                 ] 
             }
@@ -113,14 +111,13 @@
                         "Pendant la fermentation",
                         "Après débourbage",
                         "Sur vins finis"
-                    ],
-                    "<b><a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Cubes-Dominos-Blocks.pdf\" target=\"_blank\">Télécharger la fiche produit</a></b>"
+                    ]
                 ] 
             }
         ]
     },
-    "Mini Thin Tank Staves/Thin tank staves": {
-        "title": "Mini Thin Tank Staves/Thin tank staves",
+    "Mini Thin Tank Staves / Thin Tank Staves": {
+        "title": "Mini Thin Tank Staves / Thin Tank Staves",
         "image" : null,
         "infos": "http://www.oakaddins.com/wp-content/uploads/2013/10/Thin-Tank-Staves.pdf",
         "techsheet": "http://www.oakaddins.com/wp-content/uploads/2019/11/Thin-Tank-Staves1.pdf",
@@ -141,8 +138,7 @@
                     "<b>Vin blanc</b>",
                     [ 
                         "Sur phase liquide en fermentation" 
-                    ],
-                    "<b><a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Thin-Tank-Staves.pdf\" target=\"_blank\">Télécharger la fiche produit</a></b>"
+                    ]
                 ] 
             }
         ]
@@ -165,8 +161,7 @@
                     [
                         "Après soutirage",
                         "Sur vins finis"
-                    ],
-                    "<b><a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Winewood.pdf\" target=\"_blank\">Télécharger la fiche produit</a></b>"
+                    ]
                 ] 
             }
         ]
@@ -191,8 +186,7 @@
                         "Pendant la fermentation malolactique",
                         "Après soutirage",
                         "Sur vins finis"
-                    ],
-                    "<b><a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Tank-Staves.pdf\" target=\"_blank\">Télécharger la fiche produit</a></b>"
+                    ]
                 ] 
             }
         ]
@@ -215,8 +209,7 @@
                     "<b>Vin rouge :</b>",
                     [
                         "Mise en place dès la réception vendange."
-                    ],
-                    "<b><a href=\"http://www.oakaddins.com/wp-content/uploads/2016/11/XL-Stave.pdf\" target=\"_blank\">Télécharger la fiche produit</a></b>"
+                    ]
                 ] 
             }
         ]
@@ -239,8 +232,7 @@
                     [
                         "En vinification intégrale",
                         "En élevage"    
-                    ],
-                    "<b><a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Barrel-Insert.pdf\" target=\"_blank\">Télécharger la fiche produit</a></b>"
+                    ]
                 ] 
             }
         ]
@@ -264,8 +256,7 @@
                     [
                         "En vinification intégrale",
                         "En élevage"
-                    ],
-                    "<b> <a href=\"http://www.oakaddins.com/wp-content/uploads/2013/10/Oak-Chain.pdf\" target=\"_blank\">Télécharger la fiche produit</a> </b>"
+                    ]
                 ] 
             }
         ]

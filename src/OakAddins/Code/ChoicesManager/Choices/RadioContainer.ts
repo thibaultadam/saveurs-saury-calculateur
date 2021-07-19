@@ -14,8 +14,8 @@ export class RadioContainer extends ChoiceContainer
         this.registerChoiceClass(RadioChoice);
 
         this.createNewContainer(() => createElement(`
-        <div class="my-2">
-            <p class="my-2 fs-6">${choiceData.title}</p>
+        <div class="my-4">
+            <h6 class="my-2 fs-6">${choiceData.title}</h6>
         </div>`) as HTMLElement);
 
         this.createNewContainer(() => createElement(`
@@ -26,8 +26,18 @@ export class RadioContainer extends ChoiceContainer
         {
             this.createChoice(buttonData, choiceData);
         }
+
+        if(this.choices[0])
+        {
+            (this.choices[0] as RadioChoice).click();
+        }
     }
 
     protected onBuilt(): void
-    {}
+    {
+        this.$container.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }
 }

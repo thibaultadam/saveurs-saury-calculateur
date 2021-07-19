@@ -351,7 +351,7 @@
             ],
             product: "Oak Chain",
             dosage : volumeTypes.pieces,
-            quantity : volumeTypes.set18p 
+            quantity : volumeTypes.set18p
         },
         {
             "type" : "tbody",
@@ -388,6 +388,24 @@
             product: "Wineplank",
             dosage : volumeTypes.staves,
             quantity : volumeTypes.paq5u
+        },
+        {
+            "type" : "tbody",
+            "values" : [
+                "18 mois",
+                "XL Stave",
+                {
+                    "Hectolitres": (volume, gpl, percentage) => (2/33) * percentage * (volume/26.4),
+                    "Gallons": (volume, gpl, percentage) => (2/33) * percentage * volume,
+                },
+                {
+                    "Hectolitres": (quantity) => quantity / 10,
+                    "Gallons": (quantity) => quantity / 10,
+                }
+            ],
+            product: "XL Stave",
+            dosage : volumeTypes.staves,
+            quantity : volumeTypes.paq10u
         }
     ];
     

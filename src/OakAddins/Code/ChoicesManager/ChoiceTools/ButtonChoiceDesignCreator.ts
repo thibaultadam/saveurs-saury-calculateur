@@ -1,3 +1,4 @@
+import { Debug } from "../../../../lib/Tools/Debug";
 import { createElement } from "../../../../lib/Tools/DOMElementCreator";
 import { EventEmitter } from "../../../../lib/Tools/EventEmitter";
 import { OakAddinsConfigurateur } from "../../OakAddinsConfigurateur";
@@ -12,7 +13,7 @@ export type ProductLine = {
 
 export type Product = {
     title: string,
-    image: string,
+    image?: string,
     techsheet?: string,
     infos?: string,
     cat: ProductLine[]
@@ -30,32 +31,36 @@ export type ButtonChoiceDesignCreatorOptions = {
 
 export class ButtonChoiceDesignCreator extends EventEmitter 
 {
-    public static createContainer(buttonContainer: ButtonContainer): HTMLElement
+    public static createContainer(buttonContainer: ButtonContainer): { globalContainer: HTMLElement, container: HTMLElement }
     {
-        const productContainer = createElement(`<div id="${buttonContainer.type}-${buttonContainer.id}" class="carousel slide rounded my-5" data-bs-touch="false" data-bs-interval="false">`) as HTMLElement;
-        buttonContainer.$container.appendChild(productContainer);
-
-        buttonContainer.$designContainer = createElement(`<div class="carousel-inner">`) as HTMLElement;
-        productContainer.appendChild(buttonContainer.$designContainer);
-
-        return buttonContainer.$designContainer;
+        const globalProductsContainer = createElement(`<div id="${buttonContainer.type}-${buttonContainer.id}" class="product-design-contrainer carousel slide rounded my-5" data-bs-touch="false" data-bs-interval="false">`) as HTMLElement;
+        
+        const productsContainer = createElement(`<div class="carousel-inner">`) as HTMLElement;
+        globalProductsContainer.appendChild(productsContainer);
+        
+        return {
+            globalContainer: globalProductsContainer,
+            container: productsContainer
+        };
     }
 
-    public static createProduct(product: Product, type: string, id: number): ChoiceDesignElements
+    public static createProduct(product: Product, type: string, id: number, active?: boolean): ChoiceDesignElements
     {
-        const container = createElement(`<div class="carousel-item active" style="background-color: #6639b7; color: white; border-radius: 5px;">`) as HTMLElement;
+        Debug.info('Create Product design with args', product, type, id);
+
+        const container = createElement(`<div class="carousel-item ${active ? 'active' : ''}" style="background-color: #6639b7; color: white; border-radius: 5px;">`) as HTMLElement;
         
         const skipperContainer = createElement(`<div class="row mx-5 my-5">`) as HTMLElement;
 
         const prev = createElement(`
-        <div class="col" type="button" data-bs-target="${type}-${id}" data-bs-slide="prev">
+        <div class="col-2" type="button" data-bs-target="#${type}-${id}" data-bs-slide="prev">
             <div class="carousel-control-prev-icon mx-auto d-block" aria-hidden="true"></div>
         </div>`) as HTMLElement;
 
         const title = createElement(`<div class="col d-block fs-1 text-center">${product.title}</div>`) as HTMLElement;
 
         const next = createElement(`
-        <div class="col" type="button" data-bs-target="${type}-${id}" data-bs-slide="next">
+        <div class="col-2" type="button" data-bs-target="#${type}-${id}" data-bs-slide="next">
             <div class="carousel-control-next-icon mx-auto d-block" aria-hidden="true"></div>
         </div>`) as HTMLElement;
 
@@ -66,6 +71,7 @@ export class ButtonChoiceDesignCreator extends EventEmitter
         container.appendChild(skipperContainer);
 
         const products = createElement(`<div class="row mx-5 my-5">`) as HTMLElement;
+        const categoriesContainer = createElement(`<div class="col-lg-8 col-sm-12">`) as HTMLElement;
         
         for(const category of product.cat)
         {
@@ -101,17 +107,33 @@ export class ButtonChoiceDesignCreator extends EventEmitter
 
             categoryContainer.appendChild(categoryTitle);
             categoryContainer.innerHTML += catLinesContainer;
+            categoriesContainer.appendChild(categoryContainer);
         }
 
-        const image = createElement(`
-        <div class="col-lg-4 col-sm-12">
-            <img class="img-thumbnail mx-auto d-block" style="width: 15rem; height: 15rem; border-radius: 15rem !important; border-color: #ffffff4f !important; background-color: #ffffff4f;" src="${product.image}" alt="">
-        </div>
-        `) as HTMLElement;
+        if(product.infos)
+        {
+            categoriesContainer.innerHTML += `<a type="button" class="btn btn-light me-2 my-2" href="${product.infos}" target="_blank">${"Fiche produit"}</a>`;
+        }
+        if(product.techsheet)
+        {
+            categoriesContainer.innerHTML += `<a type="button" class="btn btn-light me-2 my-2" href="${product.techsheet}" target="_blank">${"Fiche technique"}</a>`;
+        }
 
-        //TODO : infos & techsheet
+        products.appendChild(categoriesContainer);
+        
+        if(product.image)
+        {
+            const image = createElement(`
+            <div class="col-lg-4 col-sm-12">
+                <img class="img-thumbnail mx-auto d-block" style="width: 15rem; height: 15rem; border-radius: 15rem !important; border-color: #ffffff4f !important; background-color: #ffffff4f;" src="${product.image}" alt="">
+            </div>
+            `) as HTMLElement;
+    
+            //TODO : infos & techsheet
+    
+            products.appendChild(image);
+        }
 
-        products.appendChild(image);
         container.appendChild(products);
 
         return {
