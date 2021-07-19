@@ -2,32 +2,37 @@ h1 {
     color: rgb(102, 57, 183);
 }
 
-p {
-    /*color: rgb(102, 57, 183);*/
-    /*font-weight: bold;*/
+#configurator-container p {
+    color: rgb(102, 57, 183);
+    font-weight: bold;
 }
 
-label {
+#product-design-contrainer p {
+    margin-bottom: .5rem;
+}
+
+
+#response-container label {
     color: rgb(102, 57, 183);
 }
 
-input {
+#response-container input {
     color: rgb(102, 57, 183);
 }
 
-span {
+#response-container span {
     color: rgb(102, 57, 183);
 }
 
-tr {
+#response-container tr {
     color: rgb(102, 57, 183);
 }
 
-td {
+#response-container td {
     color: rgb(102, 57, 183);
 }
 
-.value {
+#response-container .value {
     border: 0.5px solid rgb(102, 57, 183);
     border-radius: 4px;
 

@@ -18,9 +18,20 @@
             background-color: #564D9F;
         }
 
+        footer {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+        }
+
+        a:hover {
+            color: wheat;
+        }
+
         #description-text-container {
             background-color: white;
             border-radius: 1rem !important;
+            cursor: pointer;
         }
 
         #description-text {
@@ -53,18 +64,18 @@
         </div>
     </div>
 </body>
-<footer class="mt-5">
+<footer>
     <div class="text-center">
         <p class="bottom-text fw-bold">Contact</p>
     </div>
     <hr id="separator">
     <div class="text-center">
-        <p class="bottom-text">oai@nadalie.fr</p>
-        <p class="bottom-text">05 57 88 04 42</p>
+        <a href="mailto:oai@nadalie.fr" class="d-block bottom-text">oai@nadalie.fr</a>
+        <a href="tel:0557880442" class="d-block bottom-text">05 57 88 04 42</a>
     </div>
 
     <script>
-        document.body.addEventListener('click', () => {
+        document.querySelector('#description-text-container').addEventListener('click', () => {
             window.location.href = './configurator.html';
         });
     </script>

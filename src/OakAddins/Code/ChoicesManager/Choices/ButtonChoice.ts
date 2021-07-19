@@ -3,6 +3,8 @@ import { createElement } from "../../../../lib/Tools/DOMElementCreator";
 import { ChoiceButton } from "../../../../lib/ChoicesManagement/Choices/ChoiceButton";
 import { Debug } from "../../../../lib/Tools/Debug";
 import { ChoiceConstructionOptions } from "../../../../lib/ChoicesManagement/Choices/Choice";
+import { ButtonContainer } from "./ButtonContainer";
+import { ButtonChoiceDesignCreator, Product } from "../ChoiceTools/ButtonChoiceDesignCreator";
 
 export class ButtonChoice extends ChoiceButton
 {
@@ -28,7 +30,13 @@ export class ButtonChoice extends ChoiceButton
     }
 
     protected onBuilt(data: TreeNode["values"]["index"], choiceData: ChoiceData) : void
-    {}
+    {
+        const product = this.choiceContainer.data.product[data.label] as Product;
+
+        const choiceDesignElements = ButtonChoiceDesignCreator.createProduct(product, this.choiceContainer.type, this.choiceContainer.id);
+
+        (this.choiceContainer as ButtonContainer).$designContainer.appendChild(choiceDesignElements.container);
+    }
 
     protected onClick(ev : MouseEvent, data: TreeNode["values"]["index"], choiceData: ChoiceData) : void
     {
