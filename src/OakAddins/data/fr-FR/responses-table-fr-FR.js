@@ -395,8 +395,8 @@
                 "18 mois",
                 "XL Stave",
                 {
-                    "Hectolitres": (volume, gpl, percentage) => (2/33) * percentage * (volume/26.4),
-                    "Gallons": (volume, gpl, percentage) => (2/33) * percentage * volume,
+                    "Hectolitres": (volume, gpl, percentage) => (2/33) * percentage * volume,
+                    "Gallons": (volume, gpl, percentage) => (2/33) * percentage * (volume/26.4),
                 },
                 {
                     "Hectolitres": (quantity) => quantity / 10,
