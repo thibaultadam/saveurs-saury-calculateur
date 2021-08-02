@@ -18,6 +18,12 @@ export class InputContainer extends ChoiceContainer
         this.registerChoiceClass(InputChoice);
 
         this.node = node;
+        
+        if(!choiceData.title)
+        {
+            choiceData.title = this.node.title;
+        }
+        
         this.choiceData = parseChoiceData(choiceData, this.choicesEnumerator);
         
         this.createNewContainer(() => createElement(`

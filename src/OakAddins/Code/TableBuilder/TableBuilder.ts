@@ -1,9 +1,9 @@
-import { ChoicesEnumerator } from "../../../lib/ChoicesManagement/ChoicesEnumerator";
+import { ChoicesEnumerator, CompletedChoice } from "../../../lib/ChoicesManagement/ChoicesEnumerator";
 import { ChoicesManager } from "../../../lib/ChoicesManagement/ChoicesManager";
 import { Configurator, Data } from "../../../lib/Configurator";
 import { Debug } from "../../../lib/Tools/Debug";
-import { createElement } from "../../../lib/Tools/DOMElementCreator";
 import { EventEmitter } from "../../../lib/Tools/EventEmitter";
+import { TreeNode } from "../Data/DataParser";
 
 export type TableBuilderConstructorOptions = {
     configurator: Configurator,
@@ -24,8 +24,7 @@ export class TableBuilder extends EventEmitter
     protected data: Data;
 
     protected containerCreator!: () => HTMLElement;
-    protected $container!: HTMLElement;
-    $catchUpLine!: HTMLElement;
+    protected $container!: HTMLElement;;
 
     constructor(options: TableBuilderConstructorOptions)
     {
@@ -68,15 +67,28 @@ export class TableBuilder extends EventEmitter
         this.buildContainer();
     }
 
+    protected getActualsProducts(): string[]
+    {
+        const phase = this.choiceEnumerator.get(0) as CompletedChoice;
+        const node = this.configurator.choicesManager.dataProvider.get('Node', [phase]) as TreeNode;
+
+        return Object.keys(node.values).map((product) => product.toLocaleLowerCase());
+    }
+
     protected onBuild(): void
     {   
         this.reset();
 
+        // A la base rajouté pour le bouton "calculer" et ensuite reconverti en phrase d'actoche cette partie du design a finalement été suprimé
+        /*
         this.$catchUpLine = createElement(`
         <div class="text-center my-5"><i>"phrase d’accroche pour annoncer les recommandations"</i></div>
         `) as HTMLElement;
 
         this.$container.appendChild(this.$catchUpLine);
+        */
+
+        this.$container.innerHTML += `<div class="pb-5"></div>`;
 
         const inputs = {
             volumeType : this.choiceEnumerator.getByLabel('unit')?.value || "Hectolitres",
@@ -84,10 +96,16 @@ export class TableBuilder extends EventEmitter
             gpl : Number(this.choiceEnumerator.getData('gramsPerLiter', 'value', 'gramsPerLiter')) || null,
             percentage : Number(this.choiceEnumerator.getData('percentage', 'value', 'percentage')) || null,
         }
+
+        if(inputs.volume <= 0 || (!inputs?.gpl && !inputs?.percentage))
+        {
+            Debug.log('Skiping build volume <= 0 or (!glp and !porcentage)');
+            return;
+        }
         
         Debug.log('Building table with inputs :', inputs);
     
-        let tableContent = '<table class="table table-striped" id="response-container" style="margin-bottom: 10rem">';
+        let tableContent = '<table class="table table-striped text-center mb-0" id="response-container">';
     
         let thead = "<thead>";
         let tbody = "<tbody>";
@@ -113,7 +131,7 @@ export class TableBuilder extends EventEmitter
 
         for(let i = 0; i < lineData.values.length; i++)
         {
-            line += `<td class="text-center fw-bold fs-6" style="font-size: .85rem !important;">${lineData.values[i]}</td>`;
+            line += `<td class="fw-bold fs-6" style="font-size: .85rem !important;">${lineData.values[i]}</td>`;
         }
 
         return line + "</tr>";
@@ -123,14 +141,36 @@ export class TableBuilder extends EventEmitter
     {
         Debug.info('build line', lineData);
 
-        const selectedProduct = this.choiceEnumerator.getByLabel('product')?.value?.toLowerCase() as string;
+        const actualsProducts = this.getActualsProducts();
+        const lineProduct = lineData.product.toLowerCase() as string;
+
+        let founded = false;
+
+        for(const product of actualsProducts)
+        {
+            if(product.search(lineProduct) !== -1)
+            {
+                Debug.log('founded');
+                founded = true;
+                break;
+            }
+        }
+
+        if(!founded)
+        {
+            Debug.info('skiping by product');
+            return "";
+        }
+
+        // cette partie du code permetait de savoir si le produit qui étais en train d'etre construit corespondait a celuis qui avait été selectioné
+        /*const selectedProduct = this.choiceEnumerator.getByLabel('product')?.value?.toLowerCase() as string;
         const lineProduct = lineData.product.toLowerCase() as string;
 
         if(selectedProduct.search(lineProduct) === -1)
         {
             Debug.info('skiping by product');
             return "";
-        }
+        }*/
 
         let line = `<tr style="font-size: .85rem !important;">`;
 
@@ -159,8 +199,10 @@ export class TableBuilder extends EventEmitter
                         
                         if(quantity === 0)
                         {
-                            Debug.info('skiping by quantity');
-                            return "";
+                            //BUG : incompatible avec le nouveau système de produit
+
+                            //Debug.info('skiping by quantity');
+                            //return "";
                         } 
                     }
                     else

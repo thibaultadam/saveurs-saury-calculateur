@@ -110,13 +110,19 @@ export class ButtonChoiceDesignCreator extends EventEmitter
             categoriesContainer.appendChild(categoryContainer);
         }
 
+        /*
+        const heat = `
+        <div class="heat-img-container float-right" style="display: flex">
+            <img class="float-end categorie-img" src="images/Products/macaron_chauffes_FR.jpg" style="border-radius: 7rem !important; width: 7rem; height: 7rem;">
+            <img class="hidden-img" src="images/Products/thermo.png" hidden>
+        <div>
+        `;
+
+        categoriesContainer.innerHTML += heat;*/
+
         if(product.infos)
         {
             categoriesContainer.innerHTML += `<a type="button" class="btn btn-light me-2 my-2" href="${product.infos}" target="_blank">${"Fiche produit"}</a>`;
-        }
-        if(product.techsheet)
-        {
-            categoriesContainer.innerHTML += `<a type="button" class="btn btn-light me-2 my-2" href="${product.techsheet}" target="_blank">${"Fiche technique"}</a>`;
         }
 
         products.appendChild(categoriesContainer);
@@ -129,8 +135,6 @@ export class ButtonChoiceDesignCreator extends EventEmitter
             </div>
             `) as HTMLElement;
     
-            //TODO : infos & techsheet
-    
             products.appendChild(image);
         }
 
@@ -139,7 +143,29 @@ export class ButtonChoiceDesignCreator extends EventEmitter
         return {
             container,
             next,
-            prev,
+            prev
         };
+    }
+
+    public static applyHoverEvents()
+    {
+        const images = document.querySelectorAll('.heat-img-container') as NodeListOf<HTMLElement>;
+
+        images.forEach((imageContainer) => 
+        {
+            const image = imageContainer.querySelector('.categorie-img') as HTMLElement;
+            const hidden = imageContainer.querySelector('.hidden-img') as HTMLElement;
+
+            image.addEventListener('mouseenter', () => { image.setAttribute('hovering', 'true'); hidden.hidden = false});
+            image.addEventListener('mouseleave', () => { image.setAttribute('hovering', 'false'); hidden.hidden = true});
+
+            image.addEventListener('mousemove', (event) => 
+            {
+                if(image.getAttribute('hovering') == 'true')
+                {
+                    hidden.setAttribute('style', `left: ${event.pageX}; top:${event.pageY}`);
+                }
+            });
+        });
     }
 }

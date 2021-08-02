@@ -1,7 +1,7 @@
 {
     "Poudre": {
-        "title": "Poudre",
-        "image" : "https://www.oakaddins.com/wp-content/uploads/2013/10/p_poudre_mixture-280x280.jpg",
+        "title": "Poudre *",
+        "image" : "images/Products/p_poudre_mixture-280x280.jpg",
         "infos": "https://www.oakaddins.com/wp-content/uploads/2013/10/Poudre.pdf",
         "cat" : [
             {
@@ -29,7 +29,7 @@
     },
     "Fine de Chêne": {
         "title": "Fine de Chêne",
-        "image" : "https://www.oakaddins.com/wp-content/uploads/2013/10/p_fine_de_chene-280x280.jpg",
+        "image" : "images/Products/fine de chene.jpg",
         "infos" : "https://www.oakaddins.com/wp-content/uploads/2013/10/Fine-de-Chene.pdf",
         "cat" : [
             {
@@ -57,7 +57,7 @@
     },
     "Copeaux": {
         "title": "Copeaux",
-        "image" : "https://www.oakaddins.com/wp-content/uploads/2013/10/p_oakchips-280x280.jpg",
+        "image" : "images/Products/copeaux.jpg",
         "infos" : "https://www.oakaddins.com/wp-content/uploads/2013/10/Oak-Chips.pdf",
         "cat" : [
             {
@@ -87,7 +87,7 @@
     },
     "Cubes / Dominos / Blocks": {
         "title": "Cubes / Dominos / Blocks",
-        "image" : "https://www.oakaddins.com/wp-content/uploads/2013/10/p_cubes_dominos_blocks-280x280.jpg",
+        "image" : "images/Products/cubes-bomino-blocks.jpg",
         "infos": "https://www.oakaddins.com/wp-content/uploads/2013/10/Cubes-Dominos-Blocks.pdf",
         "cat" : [
             {
@@ -118,9 +118,8 @@
     },
     "Mini Thin Tank Staves / Thin Tank Staves": {
         "title": "Mini Thin Tank Staves / Thin Tank Staves",
-        "image" : null,
-        "infos": "https://www.oakaddins.com/wp-content/uploads/2013/10/Thin-Tank-Staves.pdf",
-        "techsheet": "https://www.oakaddins.com/wp-content/uploads/2019/11/Thin-Tank-Staves1.pdf",
+        "image" : "images/Products/mini thin tank stave.jpg",
+        "infos": "https://www.oakaddins.com/wp-content/uploads/2019/11/Thin-Tank-Staves1.pdf",
         "cat" : [
             {
                 "title" : "Objectif",
@@ -145,7 +144,7 @@
     },
     "Winewood": {
         "title": "Winewood",
-        "image" : "https://www.oakaddins.com/wp-content/uploads/2013/10/p_winewood-280x280.jpg",
+        "image" : "images/Products/p_winewood-280x280.jpg",
         "infos": "https://www.oakaddins.com/wp-content/uploads/2013/10/Winewood.pdf",
         "cat" : [
             {
@@ -168,9 +167,8 @@
     },
     "Mini Tank Staves / Tank Staves": {
         "title": "Mini Tank Staves / Tank Staves",
-        "image" : null,
-        "infos": "https://www.oakaddins.com/wp-content/uploads/2013/10/Tank-Staves.pdf",
-        "techsheet": "https://www.oakaddins.com/wp-content/uploads/2019/11/Tank-Staves1.pdf",
+        "image" : "images/Products/tank stave.jpg",
+        "infos": "https://www.oakaddins.com/wp-content/uploads/2019/11/Tank-Staves1.pdf",
         "cat" : [
             {
                 "title" : "Objectif",
@@ -193,9 +191,8 @@
     },
     "XL Stave": {
         "title": "XL Stave",
-        "image" : null,
-        "infos": "https://www.oakaddins.com/wp-content/uploads/2016/11/XL-Stave.pdf",
-        "techsheet": "https://www.oakaddins.com/wp-content/uploads/2019/11/XL-Stave.pdf",
+        "image" : "images/Products/XL Stave.jpg",
+        "infos": "https://www.oakaddins.com/wp-content/uploads/2019/11/XL-Stave.pdf",
         "cat" : [
             {
                 "title" : "Objectif",
@@ -216,7 +213,7 @@
     },
     "Barrel Insert": {
         "title": "Barrel Insert",
-        "image" : "https://www.oakaddins.com/wp-content/uploads/2013/10/p_barrel_insert-280x280.jpg",
+        "image" : "images/Products/barrel insert.jpg",
         "infos": "https://www.oakaddins.com/wp-content/uploads/2013/10/Barrel-Insert.pdf",
         "cat" : [
             {
@@ -239,7 +236,7 @@
     },
     "Oak Chain": {
         "title": "Oak Chain",
-        "image" : "https://www.oakaddins.com/wp-content/uploads/2014/02/p_oakchain_violet-280x280.jpg",
+        "image" : "images/Products/oak-chain.jpg",
         "infos": "https://www.oakaddins.com/wp-content/uploads/2013/10/Oak-Chain.pdf",
         "cat" : [
             {

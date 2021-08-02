@@ -7,6 +7,7 @@ import { ChoiceType } from "../ChoicesManager/ChoicesManager";
 export type JsonTypes = any; //number | string | boolean | {[index : string] : JsonTypes} | JsonTypes[] | null | undefined;
 
 export type TreeNode = {
+    [index: string]: any,
     type: string,
     values: {
         [index : string] : {
@@ -42,12 +43,10 @@ export type ChoiceData = {
     },
 };
 
-export type ConfiguratorConfig = {
-    choices: {
-        types : {
-            [index : string] : ChoiceData
-        }
-    }    
+export type ChoicesTypes = {
+    types : {
+        [index : string] : ChoiceData
+    }   
 };
 
 export
@@ -58,21 +57,21 @@ class DataParser extends _DataParser {
         super(configurator);
         
         this.addDataParser('tree', this.treeParser, this);
-        this.addDataParser('config', this.configParser, this);
+        this.addDataParser('choicesTypes', this.choicesTypesParser, this);
     }
 
     /**
-     * Parse the config adding typeName fields
+     * Parse the choicesTypes adding typeName fields
      * @param {ConfiguratorConfig} config 
      * @returns {ConfiguratorConfig} parsedData 
      */
-    private configParser(config: ConfiguratorConfig): ConfiguratorConfig
+    private choicesTypesParser(types: ChoicesTypes): ChoicesTypes
     {
-        const parsedConfig = Object.assign({}, config); // cpy
+        const parsedConfig = Object.assign({}, types); // cpy
 
-        for(const choiceTypeName of Object.keys(parsedConfig.choices.types))
+        for(const choiceTypeName of Object.keys(parsedConfig.types))
         {
-            parsedConfig.choices.types[choiceTypeName].typeName = choiceTypeName;
+            parsedConfig.types[choiceTypeName].typeName = choiceTypeName;
         }
 
         return parsedConfig;

@@ -19,9 +19,6 @@ self.addEventListener('install', event =>
             './ConfigurateurOakAddin.js',
             './configurator.html',
             './home.html',
-            './images/Logo-OAI-négatif-sans-fond.png',
-            './images/Logo-OAI.png',
-            './images/logo.png',
             './data/fr-FR/choices-fr-FR.json',
             './data/fr-FR/config-fr-FR.json',
             './data/fr-FR/products-fr-FR.json',
@@ -58,7 +55,13 @@ self.addEventListener('install', event =>
             './app-ressources/apple-splash-750-1334.jpg',
             './app-ressources/apple-splash-828-1792.jpg',
             './app-ressources/manifest-icon-192.png',
-            './app-ressources/manifest-icon-512.png'
+            './app-ressources/manifest-icon-512.png',
+            
+            //TODO : ajouté toutes les images
+            
+            './images/Logo-OAI-négatif-sans-fond.png',
+            './images/Logo-OAI.png',
+            './images/logo.png',
         ])
     ));
 });

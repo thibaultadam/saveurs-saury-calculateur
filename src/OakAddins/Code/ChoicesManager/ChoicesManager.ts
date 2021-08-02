@@ -8,6 +8,7 @@ import { OakAddinsConfigurateur } from "../OakAddinsConfigurateur";
 import { ButtonContainer } from "./Choices/ButtonContainer";
 import { InputContainer } from "./Choices/InputContainer";
 import { RadioContainer } from "./Choices/RadioContainer";
+import { ButtonChoiceDesignCreator } from "./ChoiceTools/ButtonChoiceDesignCreator";
 
 export type ChoiceType = 'button' | 'radio' | 'input';
 export  class ChoicesManager extends _ChoicesManager
@@ -57,5 +58,7 @@ export  class ChoicesManager extends _ChoicesManager
         }
 
         this.createChoiceContainer(choiceData.type, node, choiceData) as ChoiceContainer;
+
+        ButtonChoiceDesignCreator.applyHoverEvents();
     }
 } 

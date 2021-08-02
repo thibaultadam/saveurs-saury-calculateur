@@ -71,7 +71,9 @@ export class ButtonChoice extends ChoiceButton
         }
     }
 
-    protected onBuilt(data: TreeNode["values"]["index"], choiceData: ChoiceData) : void {}
+    protected onBuilt(data: TreeNode["values"]["index"], choiceData: ChoiceData) : void {
+        
+    }
 
     protected onClick(ev : MouseEvent, data: TreeNode["values"]["index"], choiceData: ChoiceData) : void
     {

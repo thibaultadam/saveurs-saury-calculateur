@@ -1,15 +1,34 @@
-html {
-    scroll-behavior: smooth;
+.hidden-img {
+    position: absolute;
+    transform: translateY(-100%);
+    pointer-events: none;
+    
+    max-height: 25rem;
 }
 
-h1 {
+.categorie-img {
+    cursor: pointer;
+}
+
+/* CONFIGURATOR CONTAINER */
+
+
+#configurator-container h1 {
     color: rgb(102, 57, 183);
+}
+
+#configurator-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    min-height: 100vh;
+    padding-top: 5rem;
 }
 
 #configurator-container h6 {
     color: rgb(102, 57, 183);
     font-weight: bold;
 }
+
+/* PRODUCT DESING CONTAINER */
 
 .product-design-contrainer p {
     margin-bottom: .5rem;
@@ -24,6 +43,8 @@ h1 {
 .product-design-contrainer a:hover:not(.btn) {
     color: bisque;
 }
+
+/* RESPONSE CONTAINER */
 
 #response-container label {
     color: rgb(102, 57, 183);
@@ -55,60 +76,4 @@ h1 {
     padding-bottom: 0.1rem;
     padding-right: 0.3rem;
     padding-left: 0.3rem;
-}
-
-.btn-indigo {
-    color: rgb(102, 57, 183);
-    border-color: rgb(102, 57, 183);
-}
-
-.btn-outline-indigo {
-    color: rgb(255, 255, 255);
-    background-color: rgb(102, 57, 183);
-    border-color: rgb(102, 57, 183);
-}
-
-.btn-indigo[type="radio"] {
-    color: rgb(108, 117, 125);
-    background-color: rgba(0, 0, 0, 0);
-    border-color: rgb(108, 117, 125);
-}
-
-.btn-indigo:hover {
-    color: #fff;
-    background-color: rgb(137, 78, 248);
-    border-color: rgb(96, 48, 185)
-}
-
-.btn-check:focus+.btn-indigo,
-.btn-indigo:focus {
-    color: #fff;
-    background-color: rgb(137, 78, 248);
-    border-color: rgb(96, 48, 185);
-    box-shadow: 0 0 0 .25rem rgba(138, 78, 248, 0.486)
-}
-
-.btn-check:active+.btn-indigo,
-.btn-check:checked+.btn-indigo,
-.btn-indigo.active,
-.btn-indigo:active,
-.show>.btn-indigo.dropdown-toggle {
-    color: #fff;
-    background-color: rgb(96, 48, 185);
-    border-color: rgb(103, 57, 189)
-}
-
-.btn-check:active+.btn-indigo:focus,
-.btn-check:checked+.btn-indigo:focus,
-.btn-indigo.active:focus,
-.btn-indigo:active:focus,
-.show>.btn-indigo.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .25rem rgba(138, 78, 248, 0.486);
-}
-
-.btn-indigo.disabled,
-.btn-indigo:disabled {
-    color: #fff;
-    background-color: rgb(102, 57, 183);
-    border-color: rgb(102, 57, 183)
 }

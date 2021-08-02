@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr-FR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
     <style>
 
         body{
-            background-color: #564D9F;
+            background-color: #6639b7;
         }
 
         footer {
@@ -29,13 +29,13 @@
         }
 
         #description-text-container {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.74);
             border-radius: 1rem !important;
             cursor: pointer;
         }
 
         #description-text {
-            color: #564D9F;
+            color: #6639b7;
             margin-bottom: 0rem !important; 
         }
 
@@ -75,9 +75,21 @@
     </div>
 
     <script>
-        document.querySelector('#description-text-container').addEventListener('click', () => {
-            window.location.href = './configurator.html';
-        });
+        document.querySelector('#description-text-container')
+        .addEventListener('click', () => window.location.href = './configurator.html')
+
+        async function init()
+        {
+            const info = (await (await fetch('data/info.json')).json()).home;
+            
+            info[parent.document.querySelector('html').getAttribute("lang") || 'fr-FR'];
+            
+            // auto redirect
+            //setTimeout(() => document.querySelector('#description-text-container').click(), 4000);
+        }
+
+        init();
+
     </script>
 </footer>
 </html>

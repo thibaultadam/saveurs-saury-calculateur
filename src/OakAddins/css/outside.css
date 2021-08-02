@@ -1,0 +1,78 @@
+/*#header {
+    background-image: url(../images/210520-8899-HDF-paR.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 50vh;
+}*/
+
+#logo-OAI {
+    width: 5rem;
+    position: absolute;
+    top: 5rem;
+    left: 0.5rem;
+}
+
+/* sm */
+@media only screen and (min-width:576px) {
+    #logo-OAI {
+       left: 4rem;
+    }
+}
+
+/* md */
+@media only screen and (min-width:768px) {
+    #logo-OAI {
+       left: 5rem;
+
+    }
+}
+
+/* lg */
+@media only screen and (min-width:1200px) {
+    #logo-OAI {
+       left: 7rem;
+    }
+}
+
+#maybe-later-link {
+    color: rgba(101, 57, 183, 0.637);
+}
+
+#display-install-app-button {
+    position: absolute; 
+    top: 1rem; 
+    left: 2rem
+}
+
+.hidden-img {
+    border: solid 5px #ffffff4f;
+    background-color: #ffffff4f;
+}
+
+#display-install-app-button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.bottom-text {
+    margin-bottom: 0rem !important; 
+    color: #6639b7;
+}
+
+#separator {
+    margin-top: .25rem !important; 
+    margin-bottom: .25rem !important; 
+    color: #6639b7;
+    height: 2px;
+}
+
+#contact-container {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#contact-container a:hover {
+    color: #8649f7;
+}
