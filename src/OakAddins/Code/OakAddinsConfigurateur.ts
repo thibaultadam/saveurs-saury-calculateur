@@ -55,7 +55,7 @@ class OakAddinsConfigurateur extends Configurator
         <h1 class="mb-5 text-center">${this.data.config.calc.text}</h1>
 
         <img class="mb-5 mx-auto d-block" src="${this.data.config.calc.logoImg.src}"
-            alt="Calculateur" width="${this.data.config.calc.logoImg.width}" height="${this.data.config.calc.logoImg.height}">
+            alt="Calculateur" widtfth="${this.data.config.calc.logoImg.width}" height="${this.data.config.calc.logoImg.height}">
         `;
 
         this.$container.innerHTML += `
@@ -64,7 +64,7 @@ class OakAddinsConfigurateur extends Configurator
         <img class="categorie-img row offset-8 offset-sm-8 offset-md-9 offset-lg-9" src="${this.data.config.calc.macaronImg}" 
             style="border-radius: 7rem !important; width: 7rem; height: 7rem;">
         `;
-
+        
         const offsetX = -60;
         const offsetY = -20;
 

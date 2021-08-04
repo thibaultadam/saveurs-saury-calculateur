@@ -18,16 +18,33 @@ export function parseChoiceData(_choiceData: ChoiceData, choicesEnumerator: Choi
     return choiceData;
 }
 
+type Parser = {
+    [index: string]: string | Replacer
+}
+
+type Replacer = {
+    index: string,
+    [index:string]: string
+};
+
 function stringReplace(
     value: string, 
-    parser: {[index: string]: string}, 
+    parser: Parser, 
     choicesEnumerator: ChoicesEnumerator)
 {
     let formatedValue = value.toString();
 
     for(const key of Object.keys(parser))
     {
-        formatedValue = formatedValue.replace(parser[key], choicesEnumerator.getByLabel(key)?.value as string);
+        switch(key)
+        {
+            case 'replace':
+                formatedValue = (parser[key] as Replacer)[choicesEnumerator.getByLabel((parser[key] as Replacer).index)?.value as string] || formatedValue;
+                break;
+            default: 
+                formatedValue = formatedValue.replace(parser[key] as string, choicesEnumerator.getByLabel(key)?.value as string);
+                break;
+        }
     }
 
     return formatedValue;

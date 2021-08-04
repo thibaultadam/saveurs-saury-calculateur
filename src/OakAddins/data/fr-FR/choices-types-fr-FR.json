@@ -38,12 +38,19 @@
         "type": "input",
         "inputType": "number",
         "title": "${phase}",
-        "description": "Entrez le nombre de grammes par Litres",
+        "description": "",
         "placeholder": "0",
         "defaultValue": "",
         "parse": {
             "title": {
                 "phase": "${phase}"
+            },
+            "description": {
+                "replace": {
+                    "index": "unit",
+                    "Hectolitres": "Entrez le nombre de grammes par Litres",
+                    "Gallons": "Entrez le nombre de livres pour 1000 gallons"
+                }
             }
         }
     },
