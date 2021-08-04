@@ -10,7 +10,7 @@
 }*/
 
 #logo-OAI {
-    width: 5rem;
+    max-width: 6rem;
     position: absolute;
     top: 5rem;
     left: 0.5rem;
@@ -19,22 +19,30 @@
 /* sm */
 @media only screen and (min-width:576px) {
     #logo-OAI {
-       left: 4rem;
+       left: 6rem;
+    }
+}
+
+/* msm */
+@media only screen and (min-width:660px) {
+    #logo-OAI {
+       left: 7rem;
     }
 }
 
 /* md */
 @media only screen and (min-width:768px) {
     #logo-OAI {
-       left: 5rem;
-
+       left: 8.5rem;
+       max-width: 7.5rem;
     }
 }
 
 /* lg */
 @media only screen and (min-width:1200px) {
     #logo-OAI {
-       left: 7rem;
+       left: 9.5rem;
+        max-width: 8rem;
     }
 }
 

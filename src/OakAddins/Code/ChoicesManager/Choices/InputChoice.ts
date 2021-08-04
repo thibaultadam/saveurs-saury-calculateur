@@ -13,7 +13,7 @@ export class InputChoice extends ChoiceInput
         this.build((data: TreeNode["values"]["index"], choiceData: ChoiceData) => 
         {
             return createElement(`
-            <input class="form-control" type="${choiceData.inputType || "text"}" id="${data.label}-${this.choiceContainer.id}" placeholder="${choiceData.placeholder || ""}" value="${choiceData.defaultValue || "0"}">
+            <input class="form-control" type="${choiceData.inputType || "text"}" id="${data.label}-${this.choiceContainer.id}" placeholder="${choiceData.placeholder || ""}" value="${choiceData.defaultValue || ""}">
             `) as HTMLInputElement;
         });
     }

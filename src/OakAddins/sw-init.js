@@ -1,4 +1,4 @@
-const params = getJsonFromUrl()
+const params = getJsonFromUrl(location.search)
 
 function tryAutoInstall()
 {
@@ -6,7 +6,6 @@ function tryAutoInstall()
     {
         if(deferredPrompt)
         {
-            console.log('getJsonFromUrl');
             displayModalButton.click();
         }
         else if (window.matchMedia('(display-mode: standalone)').matches)
@@ -23,34 +22,16 @@ function tryAutoInstall()
     }
 }
 
-let installAppButton;
 let displayModalButton;
 
 function initInstall()
 {
-    installAppButton = document.getElementById('install-app-button');
+    const installAppButton = document.getElementById('install-app-button');
 
-    console.log('[SW]', 'install button is', installAppButton);
-    
-    // si le DOM n'est pas encore chargé on relance la fonction quand il l'est
-    if(!installAppButton)
-    {
-        //window.addEventListener('DOMContentLoaded', () => initInstall());
-        
-        document.Configurator.on('pwa-modal-builed', () => {
-            
-            console.log('modal builded');
-            
-            initInstall();
-        });
-
-        return;
-    } 
-
-    console.log('[SW]', 'Init Install');
+    console.log('[SW]', 'Init Install', installAppButton);
     
     displayModalButton = document.querySelector('#display-install-app-button');
-    displayModalButton.hidden = (deferredPrompt) ? false : true;
+    displayModalButton.hidden = !(deferredPrompt);
     
     installAppButton.addEventListener('click', async () => 
     {
@@ -83,7 +64,7 @@ let deferredPrompt;
 
 if ('serviceWorker' in navigator) 
 {
-    window.addEventListener('beforeinstallprompt', (prompt) => 
+    window.addEventListener('beforeinstallprompt', async (prompt) => 
     {
         console.log('[SW]', 'try instanciate deferredPrompt');
 
@@ -93,13 +74,7 @@ if ('serviceWorker' in navigator)
             deferredPrompt = prompt;
         }
 
-        //TODO : IMPORTANT
-        //BUG: changer ça
-
-        const id = setTimeout(() => {
-            initInstall();
-            clearTimeout(id)
-        }, 2000);
+        waitUntil(() => document.getElementById('install-app-button'), () => initInstall());
     });
 
     window.addEventListener('load', async () => {
@@ -112,7 +87,6 @@ if ('serviceWorker' in navigator)
         }
     });
 }
-
 
 function getJsonFromUrl(url) 
 {
@@ -128,4 +102,26 @@ function getJsonFromUrl(url)
     }
 
     return result;
+}
+
+function waitUntil(condition, callBack, interval = 100)
+{
+    const intervalID = setInterval(() => {
+
+        let check;
+        
+        try {
+            check = !!(condition());
+        }
+        catch {
+            check = false;
+        }
+
+        if(check) {
+            clearInterval(intervalID);
+            delete intervalID;
+            callBack();
+        }
+
+    }, interval);
 }

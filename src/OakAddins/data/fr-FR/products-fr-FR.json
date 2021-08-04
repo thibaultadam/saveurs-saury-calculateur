@@ -1,7 +1,10 @@
 {
     "Poudre": {
         "title": "Poudre *",
-        "image" : "images/Products/p_poudre_mixture-280x280.jpg",
+        "productsKeys": [
+            "Poudre"
+        ],
+        "image" : "images/Products/CompoPoudreOAK.jpg",
         "infos": "https://www.oakaddins.com/wp-content/uploads/2013/10/Poudre.pdf",
         "cat" : [
             {
@@ -29,6 +32,9 @@
     },
     "Fine de Chêne": {
         "title": "Fine de Chêne",
+        "productsKeys": [
+            "Fine de Chêne"
+        ],
         "image" : "images/Products/fine de chene.jpg",
         "infos" : "https://www.oakaddins.com/wp-content/uploads/2013/10/Fine-de-Chene.pdf",
         "cat" : [
@@ -57,6 +63,9 @@
     },
     "Copeaux": {
         "title": "Copeaux",
+        "productsKeys": [
+            "Copeaux"
+        ],
         "image" : "images/Products/copeaux.jpg",
         "infos" : "https://www.oakaddins.com/wp-content/uploads/2013/10/Oak-Chips.pdf",
         "cat" : [
@@ -87,6 +96,11 @@
     },
     "Cubes / Dominos / Blocks": {
         "title": "Cubes / Dominos / Blocks",
+        "productsKeys": [
+            "Cubes",
+            "Dominos",
+            "Blocks"
+        ],
         "image" : "images/Products/cubes-bomino-blocks.jpg",
         "infos": "https://www.oakaddins.com/wp-content/uploads/2013/10/Cubes-Dominos-Blocks.pdf",
         "cat" : [
@@ -118,6 +132,10 @@
     },
     "Mini Thin Tank Staves / Thin Tank Staves": {
         "title": "Mini Thin Tank Staves / Thin Tank Staves",
+        "productsKeys": [
+            "Mini Thin Tank Staves",
+            "Thin Tank Staves"
+        ],
         "image" : "images/Products/mini thin tank stave.jpg",
         "infos": "https://www.oakaddins.com/wp-content/uploads/2019/11/Thin-Tank-Staves1.pdf",
         "cat" : [
@@ -144,7 +162,10 @@
     },
     "Winewood": {
         "title": "Winewood",
-        "image" : "images/Products/p_winewood-280x280.jpg",
+        "productsKeys": [
+            "Winewood"
+        ],
+        "image" : "images/Products/winewood.jpg",
         "infos": "https://www.oakaddins.com/wp-content/uploads/2013/10/Winewood.pdf",
         "cat" : [
             {
@@ -167,6 +188,10 @@
     },
     "Mini Tank Staves / Tank Staves": {
         "title": "Mini Tank Staves / Tank Staves",
+        "productsKeys": [
+            "Mini Tank Staves",
+            "Tank Staves"
+        ],
         "image" : "images/Products/tank stave.jpg",
         "infos": "https://www.oakaddins.com/wp-content/uploads/2019/11/Tank-Staves1.pdf",
         "cat" : [
@@ -191,6 +216,9 @@
     },
     "XL Stave": {
         "title": "XL Stave",
+        "productsKeys": [
+            "XL Stave"
+        ],
         "image" : "images/Products/XL Stave.jpg",
         "infos": "https://www.oakaddins.com/wp-content/uploads/2019/11/XL-Stave.pdf",
         "cat" : [
@@ -213,6 +241,9 @@
     },
     "Barrel Insert": {
         "title": "Barrel Insert",
+        "productsKeys": [
+            "Barrel Insert"
+        ],
         "image" : "images/Products/barrel insert.jpg",
         "infos": "https://www.oakaddins.com/wp-content/uploads/2013/10/Barrel-Insert.pdf",
         "cat" : [
@@ -236,6 +267,9 @@
     },
     "Oak Chain": {
         "title": "Oak Chain",
+        "productsKeys": [
+            "Oak Chain"
+        ],
         "image" : "images/Products/oak-chain.jpg",
         "infos": "https://www.oakaddins.com/wp-content/uploads/2013/10/Oak-Chain.pdf",
         "cat" : [

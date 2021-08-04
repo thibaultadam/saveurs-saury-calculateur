@@ -16,6 +16,13 @@ export type TableBuilderInput = {
     percentage : number | null
 }
 
+export enum TableColumn {   
+    contactTime,
+    product,
+    quantity,
+    conditioQuantity  
+}
+
 export class TableBuilder extends EventEmitter
 {
     public configurator: Configurator;
@@ -72,7 +79,7 @@ export class TableBuilder extends EventEmitter
         const phase = this.choiceEnumerator.get(0) as CompletedChoice;
         const node = this.configurator.choicesManager.dataProvider.get('Node', [phase]) as TreeNode;
 
-        return Object.keys(node.values).map((product) => product.toLocaleLowerCase());
+        return Object.keys(node.values).map((key) => this.data.products[key].productsKeys);
     }
 
     protected onBuild(): void
@@ -105,7 +112,7 @@ export class TableBuilder extends EventEmitter
         
         Debug.log('Building table with inputs :', inputs);
     
-        let tableContent = '<table class="table table-striped text-center mb-0" id="response-container">';
+        let tableContent = '<table class="table table-striped mb-0" id="response-container">';
     
         let thead = "<thead>";
         let tbody = "<tbody>";
@@ -114,7 +121,7 @@ export class TableBuilder extends EventEmitter
         {
             switch(lineData.type)
             {
-                case "thead" : thead += this.buildHeadLine(lineData, inputs); break;
+                case "thead" : thead += this.buildHeadLine(lineData); break;
                 case "tbody" : tbody += this.buildBodyLine(lineData, inputs); break;
             }
         }
@@ -125,13 +132,15 @@ export class TableBuilder extends EventEmitter
         this.$container.innerHTML += tableContent;
     }
 
-    protected buildHeadLine(lineData: any, inputs: TableBuilderInput)
+    protected buildHeadLine(lineData: any)
     {
         let line = `<tr>`;
 
         for(let i = 0; i < lineData.values.length; i++)
         {
-            line += `<td class="fw-bold fs-6" style="font-size: .85rem !important;">${lineData.values[i]}</td>`;
+            const textDisplay = (i === TableColumn.quantity || i === TableColumn.conditioQuantity) ? 'text-left' : 'text-center';
+
+            line += `<td class="fw-bold fs-6 ${textDisplay}" style="font-size: .85rem !important;">${lineData.values[i]}</td>`;
         }
 
         return line + "</tr>";
@@ -142,15 +151,14 @@ export class TableBuilder extends EventEmitter
         Debug.info('build line', lineData);
 
         const actualsProducts = this.getActualsProducts();
-        const lineProduct = lineData.product.toLowerCase() as string;
+        const lineProduct = lineData.product as string;
 
         let founded = false;
 
         for(const product of actualsProducts)
         {
-            if(product.search(lineProduct) !== -1)
+            if(product.includes(lineProduct))
             {
-                Debug.log('founded');
                 founded = true;
                 break;
             }
@@ -158,66 +166,65 @@ export class TableBuilder extends EventEmitter
 
         if(!founded)
         {
-            Debug.info('skiping by product');
+            Debug.info('skiping by product', lineProduct, actualsProducts);
             return "";
         }
-
-        // cette partie du code permetait de savoir si le produit qui étais en train d'etre construit corespondait a celuis qui avait été selectioné
-        /*const selectedProduct = this.choiceEnumerator.getByLabel('product')?.value?.toLowerCase() as string;
-        const lineProduct = lineData.product.toLowerCase() as string;
-
-        if(selectedProduct.search(lineProduct) === -1)
-        {
-            Debug.info('skiping by product');
-            return "";
-        }*/
 
         let line = `<tr style="font-size: .85rem !important;">`;
 
         let quantity = null;
 
+        let index = 0;
+
         for(const value of lineData.values)
         {
-            switch(typeof value)
-            {
-                case "string" :
+            const textDisplay = (index === TableColumn.quantity || index === TableColumn.conditioQuantity) ? 'text-left' : 'text-center';
 
-                    line += `<td>${value}</td>`;
+            switch(index)
+            {
+                case TableColumn.contactTime :
+                case TableColumn.product :
+
+                    line += `<td class="${textDisplay}">${value}</td>`;
 
                 break;
-                case "object" : 
+                case TableColumn.quantity : 
 
-                    if(quantity === null)
+                    if(quantity)
                     {
-                        quantity = value[inputs.volumeType](inputs.volume, inputs.gpl, inputs.percentage);
-
-                        line += 
-                        `<td>
-                            <span class="value">${quantity?.toFixed(1) || 'null'}</span>
-                            <span>${lineData.dosage[inputs.volumeType]}</span>
-                        </td>`;
-                        
-                        if(quantity === 0)
-                        {
-                            //BUG : incompatible avec le nouveau système de produit
-
-                            //Debug.info('skiping by quantity');
-                            //return "";
-                        } 
+                        Debug.warn('quantity allready defined', value);
                     }
-                    else
+
+                    Debug.info('evaluating', value[inputs.volumeType], inputs.volume, inputs.gpl, inputs.percentage);
+
+                    quantity = eval(value[inputs.volumeType])(inputs.volume, inputs.gpl, inputs.percentage);
+
+                    Debug.info('evaluate quantity', quantity);
+
+                    line += 
+                    `<td class="${textDisplay}">
+                        <span class="value">${quantity?.toFixed(1) || 'null'}</span>
+                        <span>${lineData.dosage[inputs.volumeType]}</span>
+                    </td>`;
+
+                break;
+                case TableColumn.conditioQuantity:
+
+                    if(!quantity)
                     {
-                        line += 
-                        `<td>
-                            <span class="value">${value[inputs.volumeType](quantity)?.toFixed(1) || 'null'}</span>
-                            <span>${lineData.quantity[inputs.volumeType]}</span>
-                        </td>`;
-
-                        quantity;
+                        Debug.warn('no quantity defined for', value);
                     }
+
+                    line += 
+                    `<td class="${textDisplay}">
+                        <span class="value">${eval(value[inputs.volumeType])(quantity)?.toFixed(1) || 'null'}</span>
+                        <span>${lineData.quantity[inputs.volumeType]}</span>
+                    </td>`;
 
                 break;
             }
+
+            index++;
         }
 
         return line + "</tr>";

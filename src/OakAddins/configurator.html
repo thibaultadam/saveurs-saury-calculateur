@@ -5,9 +5,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Configurator - OakAddins</title>
+        <title>Configurator - Oak Add Ins</title>
 
-        <script src="sw-init.js"></script>
+        <!--<script src="sw-init.js"></script>-->
         <link rel="manifest" href="manifest.webmanifest">
 
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -52,37 +52,31 @@
 
         <div id="configurator-container">
             <img id="logo-OAI" src="images/Logo-OAI.png">
-
         </div>
 
         <div id="contact-container" class="container pt-5 offset-">
             <div class="text-center">
-                <p class="bottom-text fw-bold">Contact</p>
+                <p id="contact-text" class="bottom-text fw-bold"></p>
             </div>
             <hr id="separator">
             <div class="text-center mb-2">
-                <a href="mailto:oai@nadalie.fr" class="d-block bottom-text">oai@nadalie.fr</a>
-                <a href="tel:0557880442" class="d-block bottom-text">05 57 88 04 42</a>
+                <a id="mail-link" class="d-block bottom-text"></a>
+                <a id="tel-link" class="d-block bottom-text"></a>
             </div>
         </div>
 
-        <i class="bi bi-hand-index-thumb"></i>
-
         <script>
 
-            const data = {  
-                'fr-FR': {
-                    root: "data/fr-FR",
-                    config: 'data/fr-FR/config-fr-FR.json',
-                    choices: 'data/fr-FR/choices-fr-FR.json',
-                    products: 'data/fr-FR/products-fr-FR.json',
-                    tree: 'data/fr-FR/possibilities-fr-FR.json',
-                    choicesTypes: 'data/fr-FR/choices-types-fr-FR.json',
-                    responseTable: 'data/fr-FR/responses-table-fr-FR.js'
-                }
-            };
+            async function init()
+            {
+                const info = (await (await fetch('./data/info.json')).json()).calc;
+                const data = info[parent.document.querySelector('html').getAttribute("lang") || 'fr-FR'];
 
-            document.Configurator = new ConfigurateurOakAddin.OakAddinsConfigurateur('#configurator-container', data['fr-FR'], 'error');
+                document.Configurator = new ConfigurateurOakAddin.OakAddinsConfigurateur('#configurator-container', data, 'log');
+            } 
+
+            init();
+
         </script>
 
     </body>

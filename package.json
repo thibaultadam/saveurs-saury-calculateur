@@ -11,7 +11,7 @@
     "doc-web": "npm uninstall typedoc-plugin-markdown & typedoc src --out ./docs/web & npm install typedoc-plugin-markdown -save-dev",
     "doc-markdown": "npm install typedoc-plugin-markdown & typedoc src --out ./docs/wiki",
     "docUnsatable": "jsdoc -c docs/jsDocConfig.json -p",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/index.js"
   },
   "repository": {
     "type": "git",

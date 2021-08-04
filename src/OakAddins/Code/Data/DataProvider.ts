@@ -13,12 +13,12 @@ export class DataProvider extends _DataProvider{
 
     public getChoiceData(choiceName: string): ChoiceData
     {
-        if(!this.data?.choicesTypes?.types[choiceName])
+        if(!this.data?.choicesTypes[choiceName])
         {
             Debug.error(`no choiceData defined for "${choiceName}"`);
         }
 
-        return this.data?.choicesTypes?.types[choiceName] as ChoiceData;
+        return this.data?.choicesTypes[choiceName] as ChoiceData;
     }
 
     public getNode(completedChoices: CompletedChoice[]): TreeNode

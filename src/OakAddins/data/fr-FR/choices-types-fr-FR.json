@@ -1,69 +1,62 @@
 {
-    "types": {
-        "phase": {
-            "type": "button",
-            "title": "Phase d'utilisation"
-        },
-        "product": {
-            "type": "button",
-            "title": "Produits",
-            "description": "Produits utilisables dans la phase Fermentation",
-            "params":  {
-                "buildProducts" : true
-            }
-        },
-        "unit": {
-            "type": "radio",
-            "title": "Unité"
-        },
-        "value": {
-            "type": "input",
-            "inputType": "number",
-            "title": "Valeur en ${unit}",
-            "description": "Entrez une valeur en ${unit}",
-            
-            "placeholder": "0",
-            "defaultValue": "0",
-            
-            "parse": {
-                "title" : {
-                    "unit": "${unit}"
-                },
-                "description" : {
-                    "unit": "${unit}"
-                }
+    "phase": {
+        "type": "button",
+        "title": "Phase d'utilisation"
+    },
+    "product": {
+        "type": "button",
+        "title": "Produits",
+        "description": "Produits utilisables dans la phase Fermentation",
+        "params": {
+            "buildProducts": true
+        }
+    },
+    "unit": {
+        "type": "radio",
+        "title": "Unité"
+    },
+    "value": {
+        "type": "input",
+        "inputType": "number",
+        "title": "Valeur en ${unit}",
+        "description": "Entrez une valeur en ${unit}",
+        "placeholder": "0",
+        "defaultValue": "",
+        "parse": {
+            "title": {
+                "unit": "${unit}"
             },
-            "params":  {
-                "buildNext": true
+            "description": {
+                "unit": "${unit}"
             }
         },
-        "gramsPerLiter" : {
-            "type": "input",
-            "inputType": "number",
-            "title": "${phase}",
-            "description": "Entrez le nombre de grammes par Litres",
-            
-            "placeholder": "0",
-            "defaultValue": "0",
-
-            "parse": {
-                "title" : {
-                    "phase": "${phase}"
-                }
+        "params": {
+            "buildNext": true
+        }
+    },
+    "gramsPerLiter": {
+        "type": "input",
+        "inputType": "number",
+        "title": "${phase}",
+        "description": "Entrez le nombre de grammes par Litres",
+        "placeholder": "0",
+        "defaultValue": "",
+        "parse": {
+            "title": {
+                "phase": "${phase}"
             }
-        },
-        "percentage" : {
-            "type": "input",
-            "inputType": "number",
-            "title": "${phase}",
-            "description": "Entrez % de bois neuf",
-            "placeholder": "0",
-            "defaultValue": "0",
-
-            "parse": {
-                "title" : {
-                    "phase": "${phase}"
-                }
+        }
+    },
+    "percentage": {
+        "type": "input",
+        "inputType": "number",
+        "title": "${phase}",
+        "description": "Entrez % de bois neuf",
+        "placeholder": "0",
+        "defaultValue": "",
+        "parse": {
+            "title": {
+                "phase": "${phase}"
             }
         }
     }

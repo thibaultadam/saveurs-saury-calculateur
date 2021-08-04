@@ -13,8 +13,9 @@ export type ProductLine = {
 
 export type Product = {
     title: string,
+    // sometimes a product is multiple products they are listed here
+    productsKeys: string[],
     image?: string,
-    techsheet?: string,
     infos?: string,
     cat: ProductLine[]
 };

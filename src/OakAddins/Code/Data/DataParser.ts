@@ -6,6 +6,35 @@ import { ChoiceType } from "../ChoicesManager/ChoicesManager";
 // BUG: JSON types pour les objet ne fonctionne pas
 export type JsonTypes = any; //number | string | boolean | {[index : string] : JsonTypes} | JsonTypes[] | null | undefined;
 
+export type Config = {
+    title: {
+        text: string,
+        img: {
+            src: string,
+            width: number,
+            height : number
+        }
+    },
+    home: {
+        text: string,
+        img: {
+            src: string,
+            width: number,
+            height: number
+        },
+        mail: {
+            text: string,
+            link: string
+        },
+        tel: {
+            text: string,
+            link: string
+        },
+        redirectDelay: number,
+        contactText: string
+    }
+}
+
 export type TreeNode = {
     [index: string]: any,
     type: string,
@@ -44,9 +73,7 @@ export type ChoiceData = {
 };
 
 export type ChoicesTypes = {
-    types : {
-        [index : string] : ChoiceData
-    }   
+    [index : string] : ChoiceData  
 };
 
 export
@@ -69,9 +96,9 @@ class DataParser extends _DataParser {
     {
         const parsedConfig = Object.assign({}, types); // cpy
 
-        for(const choiceTypeName of Object.keys(parsedConfig.types))
+        for(const choiceTypeName of Object.keys(parsedConfig))
         {
-            parsedConfig.types[choiceTypeName].typeName = choiceTypeName;
+            parsedConfig[choiceTypeName].typeName = choiceTypeName;
         }
 
         return parsedConfig;

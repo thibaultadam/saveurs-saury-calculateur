@@ -1,3 +1,12 @@
+/** /!\ ATTENTION /!\
+ * 
+ * Ce fichier n'est plus utilisé, le suport des fichier .js en input de données est toujours d"acctualité
+ * et fonctionne toujours de la même manière mais il sont trop créateurs de problèmes avec l'outils de modification de données
+ * et donc j'ai choisi de ne plus les utiliser
+ * 
+ * /!\ ATTENTION /!\
+ */
+
 /**
  * Les fichier de données en .js on pour but de pouvoir intègrer ce qui n'est pas possible en json, 
  * dans ce cas précis c'est pour pouvoir utiliser de petits callback dans les données que ce fichier a été créé.
