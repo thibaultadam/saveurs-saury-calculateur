@@ -214,14 +214,15 @@ export class ChoicesEnumerator extends EventEmitter
         }
         else
         {
-            for(const choiceDataByChoiceLabel of this.get(index).data.entries())
+            // DEPRECATED
+            /*for(const choiceDataByChoiceLabel of this.get(index).data.entries())
             {
                 if(choiceDataByChoiceLabel[0] === choiceLabel) continue;
 
                 Debug.info(choiceDataByChoiceLabel, choiceLabel, valueLabel)
 
                 choiceDataByChoiceLabel[1]?.delete(valueLabel);
-            }
+            }*/
 
             this.get(index).data.get(choiceLabel).set(valueLabel, value);
         }

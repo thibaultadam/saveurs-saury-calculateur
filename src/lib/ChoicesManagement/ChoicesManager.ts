@@ -82,7 +82,7 @@ abstract class ChoicesManager extends EventEmitter
 
             if(!ChoiceContainerClass)
             {
-                Debug.error(`can't get ChoiceContainerClass "${type}"`);    
+                Debug.error(`can't get ChoiceContainerClass "${type}"`);
                 return null;
             }
 

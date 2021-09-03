@@ -1,0 +1,26 @@
+{
+    "products-mode" : {
+        "phase": "<fill>",
+        "product": "<fill>",
+        "unit": "<skip>",
+        "value": "<skip>",
+        "gramsPerLiter": "<skip>",
+        "percentage" : "<skip>"
+    },
+    "calc-mode" : {
+        "phase": "<hide>:*",
+        "product": "<hide>:*",
+        "unit": "<fill>",
+        "value": "<fill>",
+        "gramsPerLiter": "<fill>",
+        "percentage" : "<fill>"
+    },
+    "default" : {
+        "phase": "<fill>",
+        "product": "<fill>",
+        "unit": "<fill>",
+        "value": "<fill>",
+        "gramsPerLiter": "<fill>",
+        "percentage" : "<fill>"
+    }
+}

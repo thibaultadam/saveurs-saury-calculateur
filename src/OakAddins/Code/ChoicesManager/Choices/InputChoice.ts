@@ -20,9 +20,22 @@ export class InputChoice extends ChoiceInput
 
     protected onBuild(data: TreeNode["values"]["index"], choiceData: ChoiceData): void
     {
-        this.$container.appendChild(createElement(`
-        <label for="${data.label}-${this.choiceContainer.id}">${choiceData.description}</label>
-        `) as HTMLElement);
+        if(!data.rootDesign)
+        {
+            this.$container.appendChild(createElement(`
+            <label for="${data.label}-${this.choiceContainer.id}">${choiceData.description}</label>
+            `) as HTMLElement);
+        }
+        else
+        {
+            const container = createElement(`<div class="form-floating my-2">`) as HTMLElement;
+            container.appendChild(this.$eventProvider);
+            container.appendChild(createElement(`
+                <label for="${data.label}-${this.choiceContainer.id}">${choiceData.description}</label>
+            `) as HTMLElement);
+
+            this.$container.parentElement?.appendChild(container);
+        }
 
         // en cas de reconstruction on remet la valeur qui a précedement été entré
         if(this.choicesEnumerator.getData(this.choiceContainer.id, 'value', choiceData.typeName))

@@ -49,6 +49,8 @@ function initInstall()
 
                 deferredPrompt = null;
                 displayModalButton.hidden = true;
+
+                document.querySelector('#lang-right-position-container').hidden = false;
             }
             else if(params['install-app'])
             {
@@ -72,9 +74,8 @@ if ('serviceWorker' in navigator)
         {
             console.log('[SW]', 'not in standalone init prompt');
             deferredPrompt = prompt;
+            waitUntil(() => document.getElementById('install-app-button'), () => initInstall());
         }
-
-        waitUntil(() => document.getElementById('install-app-button'), () => initInstall());
     });
 
     window.addEventListener('load', async () => {

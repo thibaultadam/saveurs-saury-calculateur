@@ -37,6 +37,16 @@ export class InputContainer extends ChoiceContainer
         {
             this.createChoice(buttonData, this.choiceData);
         }
+
+        // si on est dans le cas d'un affichages des deux possiblité du double choix
+        if(Object.values(this.node.values)[0]?.show)
+        {
+            this.createChoice({ 
+                label: Object.values(this.node.values)[0].show,
+                rootDesign: true
+            }, 
+            this.choicesManager.dataProvider.get('ChoiceData', Object.values(this.node.values)[0].show) as ChoiceData)
+        }
     }
 
     protected onBuilt(): void

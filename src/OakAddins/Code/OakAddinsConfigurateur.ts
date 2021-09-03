@@ -10,6 +10,9 @@ import '../css/main.css';
 /**
  * @alias OakAddinsConfigurateur
  */
+
+declare function getCookie(index: string): string | undefined;
+declare function waitUntil(condition: () => boolean, callBack: () => any, interval?: number): void;
 export 
 class OakAddinsConfigurateur extends Configurator 
 {
@@ -26,7 +29,9 @@ class OakAddinsConfigurateur extends Configurator
     protected onDataLoaded()
     {
         this.buildPWAModal();
+        this.fillLangs();
         this.fillFooter();
+        
         this.buildHeaders();
 
         this.registerChoiceManagerClass(ChoicesManager);
@@ -50,15 +55,16 @@ class OakAddinsConfigurateur extends Configurator
 
     private buildHeaders()
     {
-        // création du début du Configurateur
+        // logo Oak addins
+        this.$container.innerHTML += `<img id="logo-OAI" src="${this.data.config.calc.logoOAI}">`;
+        
+        // titre du calculateur et image
         this.$container.innerHTML += `
         <h1 class="mb-5 text-center">${this.data.config.calc.text}</h1>
 
         <img class="mb-5 mx-auto d-block" src="${this.data.config.calc.logoImg.src}"
             alt="Calculateur" widtfth="${this.data.config.calc.logoImg.width}" height="${this.data.config.calc.logoImg.height}">
-        `;
 
-        this.$container.innerHTML += `
         <img class="rounded hidden-img" src="${this.data.config.calc.hiddenImg}" hidden>
         
         <img class="categorie-img row offset-8 offset-sm-8 offset-md-9 offset-lg-9" src="${this.data.config.calc.macaronImg}" 
@@ -119,5 +125,53 @@ class OakAddinsConfigurateur extends Configurator
         `;
 
         this.$container.innerHTML += modal;
+    }
+
+    private fillLangs(): void
+    {
+        let langsContainer = `
+        <div id="lang-right-position-container" class="mb-5" ${window.matchMedia('(display-mode: standalone)').matches ? '' : 'hidden'}>
+            <div id="lang-container">
+        `;
+
+        const langs = Object.keys(this.data.info.calc);
+
+        for(const lang of langs)
+        {
+            langsContainer += `<div class="lang-item btn btn-indigo mx-1">${lang}</div>`;
+        }
+
+        langsContainer += `
+            </div></div>
+        `;
+
+        this.$container.innerHTML += langsContainer;
+
+        // pour attendre la fin de la création de des éléments DOM
+        waitUntil(() => document.querySelectorAll('.lang-item').length === langs.length, 
+        () => {
+            const currentLang = getCookie('lang') || parent.document.querySelector('html')?.getAttribute("lang") || 'fr-FR';
+            const langsButtons = document.querySelectorAll('.lang-item') as NodeListOf<HTMLElement> || [];
+
+            for(const langButton of langsButtons) 
+            {    
+                langButton.addEventListener('click', () => {
+    
+                    for(const _langButton of langsButtons)
+                    {
+                        _langButton.classList.remove('btn-outline-indigo');
+                    }
+    
+                    langButton.classList.add('btn-outline-indigo');
+    
+                    document.cookie = `lang=${langButton.innerText}; secure`;
+                });
+    
+                if(langButton.innerText == currentLang)
+                {
+                    langButton.click();
+                }
+            }
+        });
     }
 }

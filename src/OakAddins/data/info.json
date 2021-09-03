@@ -5,13 +5,16 @@
     "calc": {
         "fr-FR": {
             "root": "./data/fr-FR",
+            "info": "./data/info.json",
             "config": "./data/fr-FR/config-fr-FR.json",
             "choices": "./data/fr-FR/choices-fr-FR.json",
             "products": "./data/fr-FR/products-fr-FR.json",
             "tree": "./data/fr-FR/possibilities-fr-FR.json",
             "choicesTypes": "./data/fr-FR/choices-types-fr-FR.json",
             "responseTable": "./data/fr-FR/responses-table-fr-FR.json"
-        }
+        },
+        "en-EN": null,
+        "es-ES": null
     },
     "pwa": [
         "./manifest.webmanifest",

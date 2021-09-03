@@ -6,6 +6,7 @@
             "width": 182,
             "height" : 181
         },
+        "logoOAI" : "images/Logo-OAI.png",
         "hiddenImg" : "images/thermo.png",
         "macaronImg" : "images/Products/macaron_chauffes_FR.jpg"
     },

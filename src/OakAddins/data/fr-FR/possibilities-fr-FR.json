@@ -29,10 +29,36 @@
                         "rootNext" : true
                     },  
                     "Mini Thin Tank Staves / Thin Tank Staves" : {
-                        "next": "possibilities-calculation-percentage-fr-FR.json"
+                        "rootNext": true
                     }
                 },
-                "next": "possibilities-calculation-gramsPerLiter-fr-FR.json"
+                "next": {
+                    "type": "unit",
+                    "values": {
+                        "Hectolitres": {
+                            "rootNext" : true
+                        },
+                        "Gallons": {
+                            "rootNext" : true
+                        }
+                    },
+                    "next" : {
+                        "type": "value",
+                        "values": {
+                            "value": {
+                                "next": {
+                                    "type": "gramsPerLiter",
+                                    "values": {
+                                        "gramsPerLiter-input" : {
+                                            "show" : "percentage",
+                                            "end": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         },
         "Elevage Long": {

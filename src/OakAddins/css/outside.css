@@ -9,8 +9,25 @@
     height: 50vh;
 }*/
 
+#lang-right-position-container {
+    display: flex; 
+    justify-content: flex-end;
+}
+
+#lang-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    
+}
+
+.lang-item {
+    color: rgb(102, 57, 183);
+    font-size: 9pt;
+}
+
 #logo-OAI {
-    max-width: 6rem;
+    max-width: 5rem;
     position: absolute;
     top: 5rem;
     left: 0.5rem;
@@ -20,6 +37,7 @@
 @media only screen and (min-width:576px) {
     #logo-OAI {
        left: 6rem;
+       max-width: 5rem;
     }
 }
 
@@ -44,6 +62,18 @@
        left: 9.5rem;
         max-width: 8rem;
     }
+
+    .hidden-img {
+        max-height: 35rem;
+    }
+}
+
+/* lg+ */
+@media only screen and (min-width:1650px) {
+    #logo-OAI {
+       left: 20rem;
+        max-width: 8rem;
+    }
 }
 
 #maybe-later-link {
@@ -56,9 +86,24 @@
     left: 2rem
 }
 
+
 .hidden-img {
+    position: absolute;
+    transform: translateY(-100%);
+    pointer-events: none;
+
     border: solid 5px #ffffff4f;
     background-color: #ffffff4f;
+    
+    max-height: 25rem;
+}
+
+/* lg */
+@media only screen and (min-width:1200px) {
+
+    .hidden-img {
+        max-height: 33rem;
+    }
 }
 
 #display-install-app-button:hover {

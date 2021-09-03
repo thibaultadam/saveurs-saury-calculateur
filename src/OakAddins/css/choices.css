@@ -1,13 +1,9 @@
-.hidden-img {
-    position: absolute;
-    transform: translateY(-100%);
-    pointer-events: none;
-    
-    max-height: 25rem;
-}
-
 .categorie-img {
     cursor: pointer;
+}
+
+input {
+    font-size: 11pt;
 }
 
 /* CONFIGURATOR CONTAINER */
