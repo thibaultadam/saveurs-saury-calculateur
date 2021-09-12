@@ -1,3 +1,5 @@
+[![GitHub version](https://badge.fury.io/gh/P0ulpy%2FConfigurateur-OakAddins.svg)](https://badge.fury.io/gh/P0ulpy%2FConfigurateur-OakAddins)
+
 # Configutateur - OakAddins.com
 
 Configurateur du site OakAddins
