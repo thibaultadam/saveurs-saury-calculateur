@@ -1,7 +1,7 @@
 {
   "name": "calculateur-oakaddins",
   "version": "1.0.0",
-  "description": "dev",
+  "description": "Calculateur du site web https://oakaddins.com",
   "main": "",
   "scripts": {
     "build": "webpack --progress --mode=production",
