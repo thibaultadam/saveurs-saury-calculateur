@@ -13,12 +13,18 @@ import '../css/main.css';
 
 declare function getCookie(index: string): string | undefined;
 declare function waitUntil(condition: () => boolean, callBack: () => any, interval?: number): void;
+
+export type Shape = {
+    [index: string]: "<fill>" | "<skip>" | string
+};
 export 
 class OakAddinsConfigurateur extends Configurator 
 {
     public tableBuilder!: TableBuilder;        
 
-    constructor(container: string, path : ConfiguratorPathes, debugLevel? : DebugLevel)
+    public shape!: Shape;
+
+    constructor(container: string, path : ConfiguratorPathes, public shapeMode?: string, debugLevel? : DebugLevel)
     {
         super(container, path, debugLevel);
 
@@ -40,12 +46,26 @@ class OakAddinsConfigurateur extends Configurator
             configurator: this
         });
 
+        this.shape = this.loadShape();
+
         this.choicesManager.choicesEnumerator.on('end', () => this.buildTab());
 
         // lance la construction du 1er element
         this.choicesManager.buildChoice();
     }
     
+    private loadShape(): Shape
+    {
+        if(this.shapeMode && this.data.shapes[this.shapeMode])
+        {
+            return this.data.shapes[this.shapeMode];
+        }
+        else
+        {
+            return this.data.shapes["default"];
+        }
+    }
+
     private buildTab(): void
     {
         Debug.log('--------------------------- buildTab');

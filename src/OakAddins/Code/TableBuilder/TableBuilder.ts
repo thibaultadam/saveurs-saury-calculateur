@@ -83,7 +83,7 @@ export class TableBuilder extends EventEmitter
     }
 
     protected onBuild(): void
-    {   
+    {
         this.reset();
 
         // A la base rajouté pour le bouton "calculer" et ensuite reconverti en phrase d'actoche cette partie du design a finalement été suprimé
@@ -153,7 +153,7 @@ export class TableBuilder extends EventEmitter
         const actualsProducts = this.getActualsProducts();
         const lineProduct = lineData.product as string;
 
-        let founded = false;
+        let founded = !!(this.choiceEnumerator.getByLabel('product')?.data?.get('nexted'));
 
         for(const product of actualsProducts)
         {

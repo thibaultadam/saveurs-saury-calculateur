@@ -6,6 +6,7 @@
         "fr-FR": {
             "root": "./data/fr-FR",
             "info": "./data/info.json",
+            "shapes": "./data/fr-FR/configurator-shapes-fr-FR.json",
             "config": "./data/fr-FR/config-fr-FR.json",
             "choices": "./data/fr-FR/choices-fr-FR.json",
             "products": "./data/fr-FR/products-fr-FR.json",

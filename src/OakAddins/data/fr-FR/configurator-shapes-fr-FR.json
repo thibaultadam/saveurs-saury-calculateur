@@ -8,8 +8,8 @@
         "percentage" : "<skip>"
     },
     "calc-mode" : {
-        "phase": "<hide>:*",
-        "product": "<hide>:*",
+        "phase": "<next>:Elevage Court",
+        "product": "<next>:Copeaux",
         "unit": "<fill>",
         "value": "<fill>",
         "gramsPerLiter": "<fill>",

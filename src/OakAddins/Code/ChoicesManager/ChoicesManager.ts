@@ -37,7 +37,7 @@ export  class ChoicesManager extends _ChoicesManager
         }
  
         Debug.log('--------------------------- onBuildChoice', node, choiceData);
-
+        
         // dans le cas ou on reconstruit un choix précedant a l'affache du resultat on supprimer le résultat
         (this.configurator as OakAddinsConfigurateur).tableBuilder.delete();
 
@@ -48,7 +48,6 @@ export  class ChoicesManager extends _ChoicesManager
 
             for(let i = this.choicesEnumerator.current.index; i < this.choicesEnumerator.choices.length; i++)
             {
-                // lorsque
                 if(this.choicesContainersInstances[i])
                 {
                     this.choicesContainersInstances[i].delete();
@@ -57,7 +56,28 @@ export  class ChoicesManager extends _ChoicesManager
             }
         }
 
-        this.createChoiceContainer(choiceData.type, node, choiceData) as ChoiceContainer;
+        // la frome du calculateur est définit par 
+        switch((this.configurator as OakAddinsConfigurateur).shape[node.type])
+        {
+            case '<skip>': break;
+            case '<fill>': 
+            default: 
+
+                if((this.configurator as OakAddinsConfigurateur).shape[node.type].search('<next>') !== -1)
+                {
+                    const value = (this.configurator as OakAddinsConfigurateur).shape[node.type].split(':')[1];
+
+                    this.choicesEnumerator.setData(this.choicesEnumerator.current.index, 'nexted', true)
+
+                    this.choicesEnumerator.set(this.choicesEnumerator.current.index, value);
+                    this.choicesEnumerator.goTo(this.choicesEnumerator.current.index + 1);
+                }
+                else
+                {
+                    this.createChoiceContainer(choiceData.type, node, choiceData) as ChoiceContainer;                    
+                }
+        }
+
 
         ButtonChoiceDesignCreator.applyHoverEvents();
     }
