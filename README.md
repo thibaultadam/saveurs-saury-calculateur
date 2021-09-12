@@ -4,6 +4,9 @@ Configurateur du site OakAddins
 
 This project require [Node.js](https://nodejs.org) >= 14.17
 
+[wiki](https://github.com/P0ulpy/Configurateur-OakAddins/tree/master/docs/wiki)
+
+
 Install dependancies :
 ```bash
 npm i 
@@ -37,6 +40,3 @@ Build markdown documentation :
 ```bash
 doc-markdown
 ```
-
-[wiki](https://github.com/P0ulpy/Configurateur-OakAddins/tree/master/docs/wiki)
-[web-wiki](https://github.com/P0ulpy/Configurateur-OakAddins/tree/master/docs/typeDoc)
