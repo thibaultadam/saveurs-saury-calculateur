@@ -4,13 +4,14 @@
   "description": "Calculateur du site web https://oakaddins.com",
   "main": "",
   "scripts": {
-    "build": "webpack --progress --mode=production",
+    "build": "webpack --progress --mode=production && npm run fill-pwa-info",
     "dev-nohost": "webpack --watch --progress --mode=development",
     "dev": "concurrently -k -n \"Webpack,Host\" -p \"[{name}]\" -c \"blue,green\" \"webpack --watch --progress --mode=development\" \"http-server ./build -p 6600 -o\"",
     "doc": "npm run doc-web & npm run doc-markdown",
     "doc-web": "npm uninstall typedoc-plugin-markdown & typedoc src --out ./docs/web & npm install typedoc-plugin-markdown -save-dev",
     "doc-markdown": "npm install typedoc-plugin-markdown & typedoc src --out ./docs/wiki",
     "docUnsatable": "jsdoc -c docs/jsDocConfig.json -p",
+    "fill-pwa-info": "node tools/fill-pwa-info.js",
     "test": "node tests/index.js"
   },
   "repository": {
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/P0ulpy/Configurateur-OakAddins#readme",
   "dependencies": {
+    "bootstrap": "^5.1.1",
     "bootstrap-icons": "^1.5.0",
     "copy-webpack-plugin": "^6.4.0",
     "css-loader": "^5.0.1",
@@ -39,6 +41,6 @@
     "concurrently": "^6.1.0",
     "http-server": "^0.12.3",
     "typedoc": "^0.21.0",
-    "typedoc-plugin-markdown": "^3.10.3"
+    "typedoc-plugin-markdown": "^3.10.4"
   }
 }

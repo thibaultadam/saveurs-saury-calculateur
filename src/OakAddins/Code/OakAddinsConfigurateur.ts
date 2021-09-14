@@ -6,6 +6,9 @@ import { TableBuilder } from "./TableBuilder/TableBuilder";
 
 // webpack css import
 import '../css/main.css';
+//import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+//import '../../../node_modules/bootstrap/dist/js/bootstrap.min.js';
 
 /**
  * @alias OakAddinsConfigurateur
@@ -38,7 +41,10 @@ class OakAddinsConfigurateur extends Configurator
         this.fillLangs();
         this.fillFooter();
         
-        this.buildHeaders();
+        if(this.shapeMode !== 'products-mode')
+        {
+            this.buildHeaders();
+        }
 
         this.registerChoiceManagerClass(ChoicesManager);
 

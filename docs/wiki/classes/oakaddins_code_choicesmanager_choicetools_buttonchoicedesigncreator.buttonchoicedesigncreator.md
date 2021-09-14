@@ -26,6 +26,7 @@
 - [on](oakaddins_code_choicesmanager_choicetools_buttonchoicedesigncreator.buttonchoicedesigncreator.md#on)
 - [once](oakaddins_code_choicesmanager_choicetools_buttonchoicedesigncreator.buttonchoicedesigncreator.md#once)
 - [removeListener](oakaddins_code_choicesmanager_choicetools_buttonchoicedesigncreator.buttonchoicedesigncreator.md#removelistener)
+- [applyHoverEvents](oakaddins_code_choicesmanager_choicetools_buttonchoicedesigncreator.buttonchoicedesigncreator.md#applyhoverevents)
 - [createContainer](oakaddins_code_choicesmanager_choicetools_buttonchoicedesigncreator.buttonchoicedesigncreator.md#createcontainer)
 - [createProduct](oakaddins_code_choicesmanager_choicetools_buttonchoicedesigncreator.buttonchoicedesigncreator.md#createproduct)
 
@@ -41,7 +42,7 @@
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/EventEmitter.ts#L6)
+[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/Tools/EventEmitter.ts#L6)
 
 ## Properties
 
@@ -55,7 +56,7 @@
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/EventEmitter.ts#L6)
+[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/Tools/EventEmitter.ts#L6)
 
 ## Methods
 
@@ -80,7 +81,7 @@
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/EventEmitter.ts#L33)
+[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/Tools/EventEmitter.ts#L33)
 
 ___
 
@@ -105,7 +106,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/EventEmitter.ts#L13)
+[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/Tools/EventEmitter.ts#L13)
 
 ___
 
@@ -130,7 +131,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/EventEmitter.ts#L46)
+[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/Tools/EventEmitter.ts#L46)
 
 ___
 
@@ -155,7 +156,21 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/EventEmitter.ts#L21)
+[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/Tools/EventEmitter.ts#L21)
+
+___
+
+### applyHoverEvents
+
+▸ `Static` **applyHoverEvents**(): `void`
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts:151](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts#L151)
 
 ___
 
@@ -180,7 +195,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts:34](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts#L34)
+[OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts:35](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts#L35)
 
 ___
 
@@ -203,4 +218,4 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts:47](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts#L47)
+[OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts:48](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts#L48)

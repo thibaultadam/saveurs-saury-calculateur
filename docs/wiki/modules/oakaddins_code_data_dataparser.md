@@ -11,7 +11,8 @@
 ### Type aliases
 
 - [ChoiceData](oakaddins_code_data_dataparser.md#choicedata)
-- [ConfiguratorConfig](oakaddins_code_data_dataparser.md#configuratorconfig)
+- [ChoicesTypes](oakaddins_code_data_dataparser.md#choicestypes)
+- [Config](oakaddins_code_data_dataparser.md#config)
 - [JsonTypes](oakaddins_code_data_dataparser.md#jsontypes)
 - [TreeNode](oakaddins_code_data_dataparser.md#treenode)
 
@@ -40,24 +41,56 @@
 
 #### Defined in
 
-[OakAddins/Code/Data/DataParser.ts:22](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/Data/DataParser.ts#L22)
+[OakAddins/Code/Data/DataParser.ts:52](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/Data/DataParser.ts#L52)
 
 ___
 
-### ConfiguratorConfig
+### ChoicesTypes
 
-Ƭ **ConfiguratorConfig**: `Object`
+Ƭ **ChoicesTypes**: `Object`
+
+#### Index signature
+
+▪ [index: `string`]: [`ChoiceData`](oakaddins_code_data_dataparser.md#choicedata)
+
+#### Defined in
+
+[OakAddins/Code/Data/DataParser.ts:75](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/Data/DataParser.ts#L75)
+
+___
+
+### Config
+
+Ƭ **Config**: `Object`
 
 #### Type declaration
 
 | Name | Type |
 | :------ | :------ |
-| `choices` | `Object` |
-| `choices.types` | `Object` |
+| `home` | `Object` |
+| `home.contactText` | `string` |
+| `home.img` | `Object` |
+| `home.img.height` | `number` |
+| `home.img.src` | `string` |
+| `home.img.width` | `number` |
+| `home.mail` | `Object` |
+| `home.mail.link` | `string` |
+| `home.mail.text` | `string` |
+| `home.redirectDelay` | `number` |
+| `home.tel` | `Object` |
+| `home.tel.link` | `string` |
+| `home.tel.text` | `string` |
+| `home.text` | `string` |
+| `title` | `Object` |
+| `title.img` | `Object` |
+| `title.img.height` | `number` |
+| `title.img.src` | `string` |
+| `title.img.width` | `number` |
+| `title.text` | `string` |
 
 #### Defined in
 
-[OakAddins/Code/Data/DataParser.ts:45](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/Data/DataParser.ts#L45)
+[OakAddins/Code/Data/DataParser.ts:9](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/Data/DataParser.ts#L9)
 
 ___
 
@@ -67,13 +100,17 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/Data/DataParser.ts:7](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/Data/DataParser.ts#L7)
+[OakAddins/Code/Data/DataParser.ts:7](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/Data/DataParser.ts#L7)
 
 ___
 
 ### TreeNode
 
 Ƭ **TreeNode**: `Object`
+
+#### Index signature
+
+▪ [index: `string`]: `any`
 
 #### Type declaration
 
@@ -85,4 +122,4 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/Data/DataParser.ts:9](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/Data/DataParser.ts#L9)
+[OakAddins/Code/Data/DataParser.ts:38](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/Data/DataParser.ts#L38)

@@ -18,7 +18,6 @@
 
 ### Properties
 
-- [$catchUpLine](oakaddins_code_tablebuilder_tablebuilder.tablebuilder.md#$catchupline)
 - [$container](oakaddins_code_tablebuilder_tablebuilder.tablebuilder.md#$container)
 - [choiceEnumerator](oakaddins_code_tablebuilder_tablebuilder.tablebuilder.md#choiceenumerator)
 - [choicesManager](oakaddins_code_tablebuilder_tablebuilder.tablebuilder.md#choicesmanager)
@@ -35,6 +34,7 @@
 - [buildHeadLine](oakaddins_code_tablebuilder_tablebuilder.tablebuilder.md#buildheadline)
 - [delete](oakaddins_code_tablebuilder_tablebuilder.tablebuilder.md#delete)
 - [emit](oakaddins_code_tablebuilder_tablebuilder.tablebuilder.md#emit)
+- [getActualsProducts](oakaddins_code_tablebuilder_tablebuilder.tablebuilder.md#getactualsproducts)
 - [on](oakaddins_code_tablebuilder_tablebuilder.tablebuilder.md#on)
 - [onBuild](oakaddins_code_tablebuilder_tablebuilder.tablebuilder.md#onbuild)
 - [once](oakaddins_code_tablebuilder_tablebuilder.tablebuilder.md#once)
@@ -59,19 +59,9 @@
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L28)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:34](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L34)
 
 ## Properties
-
-### $catchUpLine
-
-• **$catchUpLine**: `HTMLElement`
-
-#### Defined in
-
-[OakAddins/Code/TableBuilder/TableBuilder.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L28)
-
-___
 
 ### $container
 
@@ -79,7 +69,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:27](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L27)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:34](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L34)
 
 ___
 
@@ -89,7 +79,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:23](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L23)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:30](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L30)
 
 ___
 
@@ -99,7 +89,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:22](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L22)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:29](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L29)
 
 ___
 
@@ -109,7 +99,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L21)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L28)
 
 ___
 
@@ -127,7 +117,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:26](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L26)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L33)
 
 ___
 
@@ -137,7 +127,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:24](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L24)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:31](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L31)
 
 ___
 
@@ -151,7 +141,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/EventEmitter.ts#L6)
+[lib/Tools/EventEmitter.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/Tools/EventEmitter.ts#L6)
 
 ## Methods
 
@@ -165,7 +155,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:42](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L42)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:48](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L48)
 
 ___
 
@@ -186,7 +176,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:122](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L122)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:149](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L149)
 
 ___
 
@@ -200,20 +190,19 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:48](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L48)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:54](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L54)
 
 ___
 
 ### buildHeadLine
 
-▸ `Protected` **buildHeadLine**(`lineData`, `inputs`): `string`
+▸ `Protected` **buildHeadLine**(`lineData`): `string`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `lineData` | `any` |
-| `inputs` | [`TableBuilderInput`](../modules/oakaddins_code_tablebuilder_tablebuilder.md#tablebuilderinput) |
 
 #### Returns
 
@@ -221,7 +210,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:110](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L110)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:135](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L135)
 
 ___
 
@@ -235,7 +224,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:60](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L60)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:66](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L66)
 
 ___
 
@@ -260,7 +249,21 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/EventEmitter.ts#L33)
+[lib/Tools/EventEmitter.ts:33](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/Tools/EventEmitter.ts#L33)
+
+___
+
+### getActualsProducts
+
+▸ `Protected` **getActualsProducts**(): `string`[]
+
+#### Returns
+
+`string`[]
+
+#### Defined in
+
+[OakAddins/Code/TableBuilder/TableBuilder.ts:77](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L77)
 
 ___
 
@@ -285,7 +288,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/EventEmitter.ts#L13)
+[lib/Tools/EventEmitter.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/Tools/EventEmitter.ts#L13)
 
 ___
 
@@ -299,7 +302,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:71](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L71)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:85](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L85)
 
 ___
 
@@ -324,7 +327,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/EventEmitter.ts#L46)
+[lib/Tools/EventEmitter.ts:46](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/Tools/EventEmitter.ts#L46)
 
 ___
 
@@ -349,7 +352,7 @@ ___
 
 #### Defined in
 
-[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/EventEmitter.ts#L21)
+[lib/Tools/EventEmitter.ts:21](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/Tools/EventEmitter.ts#L21)
 
 ___
 
@@ -363,4 +366,4 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:65](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L65)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:71](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L71)

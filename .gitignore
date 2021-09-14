@@ -1,6 +1,7 @@
 # Configurator
 build/
 doc/web
+.vscode/
 
 # Logs
 logs

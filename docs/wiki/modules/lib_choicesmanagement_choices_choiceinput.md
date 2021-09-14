@@ -32,4 +32,4 @@
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceInput.ts:5](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L5)
+[lib/ChoicesManagement/Choices/ChoiceInput.ts:5](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/ChoicesManagement/Choices/ChoiceInput.ts#L5)

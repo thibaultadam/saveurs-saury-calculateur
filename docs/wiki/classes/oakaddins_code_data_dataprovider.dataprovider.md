@@ -27,6 +27,7 @@
 - [get](oakaddins_code_data_dataprovider.dataprovider.md#get)
 - [getChoiceData](oakaddins_code_data_dataprovider.dataprovider.md#getchoicedata)
 - [getCurrentNode](oakaddins_code_data_dataprovider.dataprovider.md#getcurrentnode)
+- [getNode](oakaddins_code_data_dataprovider.dataprovider.md#getnode)
 
 ## Constructors
 
@@ -48,7 +49,7 @@ Le DataProvider est instancier au moment de sont ajout ajout dans le ChoiceManag
 
 #### Defined in
 
-[OakAddins/Code/Data/DataProvider.ts:6](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/Data/DataProvider.ts#L6)
+[OakAddins/Code/Data/DataProvider.ts:7](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/Data/DataProvider.ts#L7)
 
 ## Properties
 
@@ -105,7 +106,7 @@ ___
 
 #### Defined in
 
-[lib/DataProvider.ts:55](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/DataProvider.ts#L55)
+[lib/DataProvider.ts:55](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/DataProvider.ts#L55)
 
 ___
 
@@ -125,7 +126,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/Data/DataProvider.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/Data/DataProvider.ts#L13)
+[OakAddins/Code/Data/DataProvider.ts:14](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/Data/DataProvider.ts#L14)
 
 ___
 
@@ -139,4 +140,24 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/Data/DataProvider.ts:23](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/Data/DataProvider.ts#L23)
+[OakAddins/Code/Data/DataProvider.ts:47](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/Data/DataProvider.ts#L47)
+
+___
+
+### getNode
+
+▸ **getNode**(`completedChoices`): [`TreeNode`](../modules/oakaddins_code_data_dataparser.md#treenode)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `completedChoices` | [`CompletedChoice`](../modules/lib_choicesmanagement_choicesenumerator.md#completedchoice)[] |
+
+#### Returns
+
+[`TreeNode`](../modules/oakaddins_code_data_dataparser.md#treenode)
+
+#### Defined in
+
+[OakAddins/Code/Data/DataProvider.ts:24](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/Data/DataProvider.ts#L24)

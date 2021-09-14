@@ -1,7 +1,10 @@
 {
     "phase": {
         "type": "button",
-        "title": "Phase d'utilisation"
+        "title": "Phase d'utilisation",
+        "params": {
+            "autoBuild": 0
+        }
     },
     "product": {
         "type": "button",

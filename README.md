@@ -28,6 +28,11 @@ Build :
 npm run build
 ```
 
+In case of PWA bug :
+```bash
+npm run fill-pwa-info
+```
+
 Build markdown and web documentation :
 ```bash
 npm run doc
@@ -35,10 +40,10 @@ npm run doc
 
 Build web documentation :
 ```bash
-doc-web 
+npm run doc-web 
 ```
 
 Build markdown documentation :
 ```bash
-doc-markdown
+npm run doc-markdown
 ```

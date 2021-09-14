@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceContainer.ts:20](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/ChoicesManagement/Choices/ChoiceContainer.ts#L20)
+[lib/ChoicesManagement/Choices/ChoiceContainer.ts:20](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/ChoicesManagement/Choices/ChoiceContainer.ts#L20)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceContainer.ts:15](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/ChoicesManagement/Choices/ChoiceContainer.ts#L15)
+[lib/ChoicesManagement/Choices/ChoiceContainer.ts:15](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/ChoicesManagement/Choices/ChoiceContainer.ts#L15)
 
 ___
 
@@ -79,4 +79,4 @@ HTMLElement
 
 #### Defined in
 
-[lib/ChoicesManagement/Choices/ChoiceContainer.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/ChoicesManagement/Choices/ChoiceContainer.ts#L13)
+[lib/ChoicesManagement/Choices/ChoiceContainer.ts:13](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/ChoicesManagement/Choices/ChoiceContainer.ts#L13)

@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts:28](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts#L28)
+[OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts:29](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts#L29)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts:22](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts#L22)
+[OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts:23](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts#L23)
 
 ___
 
@@ -63,12 +63,12 @@ ___
 | `cat` | [`ProductLine`](oakaddins_code_choicesmanager_choicetools_buttonchoicedesigncreator.md#productline)[] |
 | `image?` | `string` |
 | `infos?` | `string` |
-| `techsheet?` | `string` |
+| `productsKeys` | `string`[] |
 | `title` | `string` |
 
 #### Defined in
 
-[OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts:14](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts#L14)
+[OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts:14](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts#L14)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts:9](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts#L9)
+[OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts:9](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts#L9)
 
 ___
 
@@ -95,4 +95,4 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts:7](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts#L7)
+[OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts:7](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/ChoicesManager/ChoiceTools/ButtonChoiceDesignCreator.ts#L7)

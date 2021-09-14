@@ -94,20 +94,20 @@
     </div>
 
     <script>
-
         function getCookie(index) {
             let name = index + "=";
             let decodedCookie = decodeURIComponent(document.cookie);
             let ca = decodedCookie.split(';');
+
             for (let i = 0; i < ca.length; i++) {
                 let c = ca[i];
                 while (c.charAt(0) == ' ') {
                     c = c.substring(1);
                 }
-                if (c.indexOf(name) == 0) {
-                    return c.substring(name.length, c.length);
-                }
+
+                if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
             }
+
             return "";
         }
 
@@ -116,11 +116,13 @@
             const info = (await (await fetch('./data/info.json')).json()).calc;
 
             const lang = getCookie('lang') || parent.document.querySelector('html')?.getAttribute("lang");
-
             const data = info[lang || 'fr-FR'];
 
+            const mode = (window.matchMedia('(display-mode: standalone)').matches) ? 'default' : getJsonFromUrl()[
+                'mode'] || 'default';
+
             document.Configurator = new ConfigurateurOakAddin.OakAddinsConfigurateur('#configurator-container',
-                data, 'calc-mode', 'log');
+                data, mode, 'warn');
         }
 
         init();

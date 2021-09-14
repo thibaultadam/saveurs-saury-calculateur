@@ -20,4 +20,4 @@
 
 #### Defined in
 
-[lib/Tools/Debug.ts:1](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/lib/Tools/Debug.ts#L1)
+[lib/Tools/Debug.ts:1](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/lib/Tools/Debug.ts#L1)

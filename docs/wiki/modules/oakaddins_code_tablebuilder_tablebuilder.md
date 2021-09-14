@@ -4,6 +4,10 @@
 
 ## Table of contents
 
+### Enumerations
+
+- [TableColumn](../enums/oakaddins_code_tablebuilder_tablebuilder.tablecolumn.md)
+
 ### Classes
 
 - [TableBuilder](../classes/oakaddins_code_tablebuilder_tablebuilder.tablebuilder.md)
@@ -27,7 +31,7 @@
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:8](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L8)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:8](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L8)
 
 ___
 
@@ -46,4 +50,4 @@ ___
 
 #### Defined in
 
-[OakAddins/Code/TableBuilder/TableBuilder.ts:12](https://github.com/P0ulpy/Configurateur-OakAddins/blob/a535c84/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L12)
+[OakAddins/Code/TableBuilder/TableBuilder.ts:12](https://github.com/P0ulpy/Configurateur-OakAddins/blob/6c35e95/src/OakAddins/Code/TableBuilder/TableBuilder.ts#L12)

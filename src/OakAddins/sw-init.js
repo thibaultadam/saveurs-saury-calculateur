@@ -64,6 +64,21 @@ function initInstall()
 
 let deferredPrompt;
 
+// dans le cas ou on install l'app depuis l'exterieur de l'iframe
+waitUntil(() => document.getElementById('display-install-app-button'), () => {
+    const displayModalButton = document.getElementById('display-install-app-button');
+
+    console.warn('unit')
+
+    if(parent.document != document)
+    {   
+        displayModalButton.addEventListener('click', () => {
+            parent.document.location.href = './configurator.html?install-app=true&mode=default';
+        });   
+    }
+});
+
+
 if ('serviceWorker' in navigator) 
 {
     window.addEventListener('beforeinstallprompt', async (prompt) => 
