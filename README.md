@@ -14,7 +14,7 @@ Install dependancies :
 npm i 
 ```
 
-Start in host dev host mode :
+Start in host dev mode :
 ```bash
 npm run dev
 ```
