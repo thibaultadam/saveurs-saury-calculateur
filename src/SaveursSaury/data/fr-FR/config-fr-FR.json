@@ -2,11 +2,11 @@
     "calc": {
         "text": "CALCULATEUR",
         "logoImg": {
-            "src": "images/logo.png",
+            "src": "images/saveurs.png",
             "width": 182,
             "height" : 181
         },
-        "logoOAI" : "images/Logo-OAI.png",
+        "logoOAI" : "images/saveurs.png",
         "hiddenImg" : "images/thermo.png",
         "macaronImg" : "images/Products/macaron_chauffes_FR.jpg"
     },

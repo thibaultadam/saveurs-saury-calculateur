@@ -39,7 +39,7 @@ class OakAddinsConfigurateur extends Configurator
     {
         this.buildPWAModal();
         this.fillLangs();
-        this.fillFooter();
+        //this.fillFooter();
         
         if(this.shapeMode !== 'products-mode')
         {

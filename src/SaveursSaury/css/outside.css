@@ -22,7 +22,7 @@
 }
 
 .lang-item {
-    color: rgb(102, 57, 183);
+    color: rgb(207, 138, 12);
     font-size: 9pt;
 }
 #logo-OAI-footer {
@@ -82,7 +82,7 @@
 }
 
 #maybe-later-link {
-    color: rgba(101, 57, 183, 0.637);
+    color: rgba(207, 138, 12, 0.637);
 }
 
 #display-install-app-button {
@@ -117,13 +117,13 @@
 
 .bottom-text {
     margin-bottom: 0rem !important; 
-    color: #6639b7;
+    color: #cf8a0c;
 }
 
 #separator {
     margin-top: .25rem !important; 
     margin-bottom: .25rem !important; 
-    color: #6639b7;
+    color: #cf8a0c;
     height: 2px;
 }
 
@@ -132,5 +132,5 @@
 }
 
 #contact-container a:hover {
-    color: #8649f7;
+    color: #cf8a0c;
 }

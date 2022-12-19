@@ -10,7 +10,7 @@ input {
 
 
 #configurator-container h1 {
-    color: rgb(102, 57, 183);
+    color: rgb(207, 138, 12);
 }
 
 #configurator-container {
@@ -20,7 +20,7 @@ input {
 }
 
 #configurator-container h6 {
-    color: rgb(102, 57, 183);
+    color: rgb(207, 138, 12);
     font-weight: bold;
 }
 
@@ -43,27 +43,27 @@ input {
 /* RESPONSE CONTAINER */
 
 #response-container label {
-    color: rgb(102, 57, 183);
+    color: rgb(207, 138, 12);
 }
 
 #response-container input {
-    color: rgb(102, 57, 183);
+    color: rgb(207, 138, 12);
 }
 
 #response-container span {
-    color: rgb(102, 57, 183);
+    color: rgb(207, 138, 12);
 }
 
 #response-container tr {
-    color: rgb(102, 57, 183);
+    color: rgb(207, 138, 12);
 }
 
 #response-container td {
-    color: rgb(102, 57, 183);
+    color: rgb(207, 138, 12);
 }
 
 #response-container .value {
-    border: 0.5px solid rgb(102, 57, 183);
+    border: 0.5px solid rgb(207, 138, 12);
     border-radius: 4px;
 
     background: white;
