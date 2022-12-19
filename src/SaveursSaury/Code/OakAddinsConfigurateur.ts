@@ -37,7 +37,7 @@ class OakAddinsConfigurateur extends Configurator
     
     protected onDataLoaded()
     {
-        this.buildPWAModal();
+        //this.buildPWAModal();
         this.fillLangs();
         //this.fillFooter();
         
