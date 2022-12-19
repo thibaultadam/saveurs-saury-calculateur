@@ -136,9 +136,9 @@ class OakAddinsConfigurateur extends Configurator
     private fillLangs(): void
     {
         let langsContainer = `
-        <div id="lang-right-position-container" class="mb-5" ${window.matchMedia('(display-mode: standalone)').matches ? '' : 'hidden'}>
+        <div id="lang-right-position-container" class="mb-5">
             <div id="lang-container">
-        `;
+        `; //${window.matchMedia('(display-mode: standalone)').matches ? '' : 'hidden'}
 
         const langs = Object.keys(this.data.info.calc);
 

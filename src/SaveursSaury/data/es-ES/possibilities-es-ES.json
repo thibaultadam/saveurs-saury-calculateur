@@ -1,0 +1,96 @@
+{
+    "type": "phase",
+    "values": {
+        "Fermentation": {
+            "next": {  
+                "type": "product",
+                "values": {
+                    "Poudre": {
+                        "rootNext" : true
+                    },
+                    "Fine de Chêne": {
+                        "rootNext" : true
+                    },
+                    "Copeaux" : {
+                        "rootNext" : true
+                    }
+                },
+                "next": "possibilities-calculation-gramsPerLiter-fr-FR.json"
+            }
+        },
+        "Elevage Court": {
+            "next": {  
+                "type": "product",
+                "values" : {
+                    "Copeaux": {
+                        "rootNext" : true
+                    },
+                    "Cubes / Dominos / Blocks": {
+                        "rootNext" : true
+                    },  
+                    "Mini Thin Tank Staves / Thin Tank Staves" : {
+                        "rootNext": true
+                    }
+                },
+                "next": {
+                    "type": "unit",
+                    "values": {
+                        "Hectolitres": {
+                            "rootNext" : true
+                        },
+                        "Gallons": {
+                            "rootNext" : true
+                        }
+                    },
+                    "next" : {
+                        "type": "value",
+                        "values": {
+                            "value": {
+                                "next": {
+                                    "type": "gramsPerLiter",
+                                    "values": {
+                                        "gramsPerLiter-input" : {
+                                            "show" : "percentage",
+                                            "end": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Elevage Long": {
+            "next": {
+                "type": "product",
+                "values" : {
+                    "Mini Tank Staves / Tank Staves": {
+                        "rootNext" : true
+                    },
+                    "Winewood": {
+                        "rootNext" : true
+                    },
+                    "XL Stave" : {
+                        "rootNext" : true
+                    }
+                },
+                "next": "possibilities-calculation-percentage-fr-FR.json"
+            }
+        },
+        "Kits Barriques": {
+            "next": {  
+                "type": "product",
+                "values" : {
+                    "Barrel Insert": {
+                        "rootNext" : true
+                    },
+                    "Oak Chain": {
+                        "rootNext" : true
+                    }
+                },
+                "next": "possibilities-calculation-percentage-fr-FR.json"
+            }
+        }
+    }
+}
