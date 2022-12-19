@@ -2,17 +2,17 @@
     {
         "type" : "thead", 
         "values" : [
-            "Temps de contact recommandé",
-            "Produits",
-            "Quantité",
-            "Quantité conditionnée"
+            "Tiempo de contacto recomendado",
+            "Productos",
+            "Cantidad",
+            "Cantidad envasada"
         ]
     },
     {
         "type" : "tbody",
         "values" : [
-            "Durée de la fermentation",
-            "Poudre <b>*</b>",
+            "Duración de la fermentación",
+            "Polvo <b>*</b>",
             {
                 "Hectolitres": "(volume, gpl) => (volume * 100) * gpl / 1000",
                 "Gallons": "(volume, gpl) => volume * gpl / 1000"
@@ -28,14 +28,14 @@
             "Gallons" : "Lb"
         },
         "quantity" : {
-            "Hectolitres": "Sacs (18kg)",
-            "Gallons": "Sacs (40 Lbs)"
+            "Hectolitres": "Bolsas (18kg)",
+            "Gallons": "Bolsas (40 Lbs)"
         }
     },
     {
         "type" : "tbody",
         "values" : [
-            "Durée de la fermentation",
+            "Duración de la fermentación",
             "Fine de Chêne",
             {
                 "Hectolitres": "(volume, gpl) => (volume * 100) * gpl / 1000",
@@ -52,15 +52,15 @@
             "Gallons" : "Lb"
         },
         "quantity" : {
-            "Hectolitres": "Sacs (18kg)",
-            "Gallons": "Sacs (40 Lbs)"
+            "Hectolitres": "Bolsas (18kg)",
+            "Gallons": "Bolsas (40 Lbs)"
         }
     },
     {
         "type" : "tbody",
         "values" : [
-            "Fermentation ou élevage court",
-            "Copeaux",
+            "Fermentación o cría corta",
+            "Virutas",
             {
                 "Hectolitres": "(volume, gpl) => (volume * 100) * gpl / 1000",
                 "Gallons": "(volume, gpl) => volume * gpl / 1000"
@@ -76,15 +76,15 @@
             "Gallons" : "Lb"
         },
         "quantity" : {
-            "Hectolitres": "Sacs (18kg)",
-            "Gallons": "Sacs (40 Lbs)"
+            "Hectolitres": "Bolsas (18kg)",
+            "Gallons": "Bolsas (40 Lbs)"
         }
     },
     {
         "type" : "tbody",
         "values" : [
-            "3-4 mois",
-            "Cubes",
+            "3-4 meses",
+            "Cubos",
             {
                 "Hectolitres": "(volume, gpl) => (volume * 100) * gpl / 1000",
                 "Gallons": "(volume, gpl) => volume * gpl / 1000"
@@ -100,15 +100,15 @@
             "Gallons" : "Lb"
         },
         "quantity" : {
-            "Hectolitres": "Sacs (9kg)",
-            "Gallons": "Sacs (20 Lbs)"
+            "Hectolitres": "Bolsas (9kg)",
+            "Gallons": "Bolsas (20 Lbs)"
         }
     },
     {
         "type" : "tbody",
         "values" : [
-            "4-5 mois",
-            "Dominos",
+            "4-5 meses",
+            "Dominó",
             {
                 "Hectolitres": "(volume, gpl, percentage) => (gpl) ? gpl * (volume*100)/1000 : (2 / 100) * percentage * volume",
                 "Gallons": "(volume, gpl, percentage) => (gpl) ? gpl * volume / 1000 : ((4.4062452 / 100) * percentage * (volume / 26.4))"
@@ -125,15 +125,15 @@
             "Gallons" : "Lb"
         },
         "quantity" : {
-            "Hectolitres": "Sacs (9kg)",
-            "Gallons": "Sacs (20 Lbs)"
+            "Hectolitres": "Bolsas (9kg)",
+            "Gallons": "Bolsas (20 Lbs)"
         }
     },
     {
         "type" : "tbody",
         "values" : [
-            "5 mois",
-            "Blocks",
+            "5 meses",
+            "Bloques",
             {
                 "Hectolitres": "(volume, gpl, percentage) => (gpl) ? gpl * (volume * 100) / 1000 : (2.5 / 100) * percentage * volume",
                 "Gallons": "(volume, gpl, percentage) => (gpl) ? gpl * volume / 1000 : ((5.5115566 / 100) * percentage * (volume / 26.4))"
@@ -149,14 +149,14 @@
             "Gallons" : "Lb"
         },
         "quantity" : {
-            "Hectolitres": "Sacs (9kg)",
-            "Gallons": "Sacs (20 Lbs)"
+            "Hectolitres": "Bolsas (9kg)",
+            "Gallons": "Bolsas (20 Lbs)"
         }
     },
     {
         "type" : "tbody",
         "values" : [
-            "6-8 mois",
+            "6-8 meses",
             "Mini Thin Tank Staves",
             {
                 "Hectolitres": "(volume, gpl, percentage) => (6/33) * percentage * volume",
@@ -173,14 +173,14 @@
             "Gallons": "Staves"
         },
         "quantity" : {
-            "Hectolitres" : "Sacs infusion de 40 unités",
-            "Gallons" : "Sacs infusion de 40 unités"
+            "Hectolitres" : "Bolsas de infusión de 40 unidades",
+            "Gallons" : "Bolsas de infusión de 40 unidades"
         } 
     },
     {
         "type" : "tbody",
         "values" : [
-            "6-8 mois",
+            "6-8 meses",
             "Thin Tank Staves",
             {
                 "Hectolitres": "(volume, gpl, percentage) => (3/33) * percentage * volume",
@@ -197,14 +197,14 @@
             "Gallons": "Staves"
         },
         "quantity" : {
-            "Hectolitres" : "Paquets de 20 unités",
-            "Gallons" : "Paquets de 20 unités"
+            "Hectolitres" : "Paquetes de 20 unidades",
+            "Gallons" : "Paquetes de 20 unidades"
         } 
     },
     {
         "type" : "tbody",
         "values" : [
-            "8-10 mois",
+            "8-10 meses",
             "Mini Tank Staves",
             {
                 "Hectolitres": "(volume, gpl, percentage) => (4/33) * percentage * volume",
@@ -221,14 +221,14 @@
             "Gallons": "Staves"
         },
         "quantity" : {
-            "Hectolitres" : "Sacs infusion de 40 unités",
-            "Gallons" : "Sacs infusion de 40 unités"
+            "Hectolitres" : "Bolsas de infusión de 40 unidades",
+            "Gallons" : "Bolsas de infusión de 40 unidades"
         } 
     },
     {
         "type" : "tbody",
         "values" : [
-            "8-10 mois",
+            "8-10 meses",
             "Tank Staves",
             {
                 "Hectolitres": "(volume, gpl, percentage) => (2/33) * percentage * volume",
@@ -245,14 +245,14 @@
             "Gallons": "Staves"
         },
         "quantity" : {
-            "Hectolitres" : "Paquets de 20 unités",
-            "Gallons" : "Paquets de 20 unités"
+            "Hectolitres" : "Paquetes de 20 unidades",
+            "Gallons" : "Paquetes de 20 unidades"
         }
     },
     {
         "type" : "tbody",
         "values" : [
-            "10-12 mois",
+            "10-12 meses",
             "Winewood",
             {
                 "Hectolitres": "(volume, gpl, percentage) => (1.5/33) * percentage * volume",
@@ -269,14 +269,14 @@
             "Gallons": "Staves"
         },
         "quantity" : {
-            "Hectolitres" : "Paquets de 10 unités",
-            "Gallons" : "Paquets de 10 unités"
+            "Hectolitres" : "Paquetes de 10 unidades",
+            "Gallons" : "Paquetes de 10 unidades"
         } 
     },
     {
         "type" : "tbody",
         "values" : [
-            "10-12 mois",
+            "10-12 meses",
             "Barrel Insert",
             {
                 "Hectolitres": "(volume, gpl, percentage) => ((14/2.25) / 70) * percentage * volume",
@@ -293,14 +293,14 @@
             "Gallons": "Staves"
         },
         "quantity" : {
-            "Hectolitres" : "Paquets de 14 unités",
-            "Gallons" : "Paquets de 14 unités"
+            "Hectolitres" : "Paquetes de 14 unidades",
+            "Gallons" : "Paquetes de 14 unidades"
         } 
     },
     {
         "type" : "tbody",
         "values" : [
-            "6-12 mois",
+            "6-12 meses",
             "Oak Chain 18 pièces",
             {
                 "Hectolitres": "(volume, gpl, percentage) => ((18/2.25) / 18) * percentage * volume",
@@ -317,14 +317,14 @@
             "Gallons": "Pièces"
         },
         "quantity" : {
-            "Hectolitres": "Set de 18 pièces",
-            "Gallons": "Set de 18 pièces"
+            "Hectolitres": "Set de 18 piezas",
+            "Gallons": "Set de 18 piezas"
         }
     },
     {
         "type" : "tbody",
         "values" : [
-            "6-12 mois",
+            "6-12 meses",
             "Oak Chain 34 pièces",
             {
                 "Hectolitres": "(volume, gpl, percentage) => ((34/2.25) / 33) * percentage * volume",
@@ -341,14 +341,14 @@
             "Gallons": "Pièces"
         },
         "quantity" : {
-            "Hectolitres" : "Set de 34 pièces",
-            "Gallons" : "Set de 34 pièces"
+            "Hectolitres" : "Set de 34 piezas",
+            "Gallons" : "Set de 34 piezas"
         }
     },
     {
         "type" : "tbody",
         "values" : [
-            "18 mois",
+            "18 meses",
             "XL Stave",
             {
                 "Hectolitres": "(volume, gpl, percentage) => (2/33) * percentage * volume",
@@ -365,8 +365,8 @@
             "Gallons": "Staves"
         },
         "quantity" : {
-            "Hectolitres" : "Paquets de 10 unités",
-            "Gallons" : "Paquets de 10 unités"
+            "Hectolitres" : "Paquetes de 10 unidades",
+            "Gallons" : "Paquetes de 10 unidades"
         }
     }
 ]

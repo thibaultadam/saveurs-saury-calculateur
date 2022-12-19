@@ -15,7 +15,7 @@
                         "rootNext" : true
                     }
                 },
-                "next": "possibilities-calculation-gramsPerLiter-fr-FR.json"
+                "next": "possibilities-calculation-gramsPerLiter-es-ES.json"
             }
         },
         "Elevage Court": {
@@ -75,7 +75,7 @@
                         "rootNext" : true
                     }
                 },
-                "next": "possibilities-calculation-percentage-fr-FR.json"
+                "next": "possibilities-calculation-percentage-es-ES.json"
             }
         },
         "Kits Barriques": {
@@ -89,7 +89,7 @@
                         "rootNext" : true
                     }
                 },
-                "next": "possibilities-calculation-percentage-fr-FR.json"
+                "next": "possibilities-calculation-percentage-es-ES.json"
             }
         }
     }

@@ -1,6 +1,6 @@
 {
     "calc": {
-        "text": "CALCULATEUR",
+        "text": "CALCULATOR",
         "logoImg": {
             "src": "images/saveurs.png",
             "width": 182,
@@ -31,9 +31,9 @@
         }
     },
     "pwaModal": {
-        "button": "Installer l'application",
-        "title": "Installer l'Application Oak Add Ins",
-        "install": "Installer",
+        "button": "Install application",
+        "title": "Install the application",
+        "install": "Install",
         "deny": "Peut être plus tard"
     }
 }

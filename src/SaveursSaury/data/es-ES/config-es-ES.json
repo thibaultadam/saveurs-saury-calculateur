@@ -1,6 +1,6 @@
 {
     "calc": {
-        "text": "CALCULATEUR",
+        "text": "CALCULADORA",
         "logoImg": {
             "src": "images/saveurs.png",
             "width": 182,
@@ -20,7 +20,7 @@
         "redirectDelay": 4000
     },
     "footer": {
-        "contactText": "Contact",
+        "contactText": "Contacto",
         "mail": {
             "text": "oai@nadalie.fr",
             "link": "oai@nadalie.fr"

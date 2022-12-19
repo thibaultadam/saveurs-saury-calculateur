@@ -1,6 +1,6 @@
 {
     "Poudre": {
-        "title": "Poudre *",
+        "title": "Powder *",
         "productsKeys": [
             "Poudre"
         ],
@@ -31,7 +31,7 @@
         ]
     },
     "Fine de Chêne": {
-        "title": "Fine de Chêne",
+        "title": "Oak Chain",
         "productsKeys": [
             "Fine de Chêne"
         ],
@@ -62,7 +62,7 @@
         ]
     },
     "Copeaux": {
-        "title": "Copeaux",
+        "title": "Chips",
         "productsKeys": [
             "Copeaux"
         ],
@@ -95,7 +95,7 @@
         ]
     },
     "Cubes / Dominos / Blocks": {
-        "title": "Cubes / Dominos / Blocks",
+        "title": "Blocks",
         "productsKeys": [
             "Cubes",
             "Dominos",

@@ -1,28 +1,28 @@
 {
     "phase": {
         "type": "button",
-        "title": "Phase d'utilisation",
+        "title": "Use phase",
         "params": {
             "autoBuild": 0
         }
     },
     "product": {
         "type": "button",
-        "title": "Produits",
-        "description": "Produits utilisables dans la phase Fermentation",
+        "title": "Products",
+        "description": "Products usable in the Fermentation phase",
         "params": {
             "buildProducts": true
         }
     },
     "unit": {
         "type": "radio",
-        "title": "Unité"
+        "title": "Unit"
     },
     "value": {
         "type": "input",
         "inputType": "number",
-        "title": "Valeur en ${unit}",
-        "description": "Entrez une valeur en ${unit}",
+        "title": "Value in ${unit}",
+        "description": "Enter en value in ${unit}",
         "placeholder": "0",
         "defaultValue": "",
         "parse": {
@@ -51,8 +51,8 @@
             "description": {
                 "replace": {
                     "index": "unit",
-                    "Hectolitres": "Entrez le nombre de grammes par Litres",
-                    "Gallons": "Entrez le nombre de livres pour 1000 gallons"
+                    "Hectolitres": "Enter the number of grams per liter",
+                    "Gallons": "Enter the number of pounds per 1000 gallons"
                 }
             }
         }
@@ -61,7 +61,7 @@
         "type": "input",
         "inputType": "number",
         "title": "${phase}",
-        "description": "Entrez % de bois neuf",
+        "description": "Enter % of new wood",
         "placeholder": "0",
         "defaultValue": "",
         "parse": {

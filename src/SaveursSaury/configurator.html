@@ -74,7 +74,9 @@
     </script>
     <link href="css/fusion-style.min.css" rel="stylesheet">
     <script src="ConfigurateurOakAddin.js"></script>
-
+    <script>
+        const config = await (await fetch(configPath)).json();
+    </script>
 </head>
 
 <body>
@@ -89,7 +91,7 @@
                 <div class="fusion-copyright-content">
                     <div class="fusion-copyright-notice" style="padding-bottom: 0px;">
                         <div style="margin-left: 780px; ">
-                            <a href="https://www.saveurs-saury.com/mentions-legales/" target="_blank">Mentions légales</a> - <a href="https://www.saveurs-saury.com/donnees-personnelles/" target="_blank">Données personnelles</a>	
+                            <a href="https://www.saveurs-saury.com/mentions-legales/" id="mentions" target="_blank">Mentions légales</a> - <a href="https://www.saveurs-saury.com/donnees-personnelles/" id="donnee" target="_blank">Données personnelles</a>	
                         </div>
                     </div>
                 </div> <!-- fusion-fusion-copyright-content -->

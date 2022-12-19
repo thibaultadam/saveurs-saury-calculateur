@@ -39,7 +39,7 @@ class OakAddinsConfigurateur extends Configurator
     {
         //this.buildPWAModal();
         this.fillLangs();
-        //this.fillFooter();
+        this.fillFooter();
         
         if(this.shapeMode !== 'products-mode')
         {
@@ -94,13 +94,15 @@ class OakAddinsConfigurateur extends Configurator
 
     private fillFooter(): void
     {
-        (document.querySelector('#mail-link') as HTMLElement).innerHTML = this.data.config.footer.mail.text;
+        (document.querySelector('#mentions') as HTMLElement).innerHTML = this.data.config.calc.mentions;
+        (document.querySelector('#donnee') as HTMLElement).innerHTML = this.data.config.calc.donnee;
+        /*(document.querySelector('#mail-link') as HTMLElement).innerHTML = this.data.config.footer.mail.text;
         (document.querySelector('#mail-link') as HTMLElement).setAttribute('href', `mailto:${this.data.config.footer.mail.link}`);
 
         (document.querySelector('#tel-link') as HTMLElement).innerHTML = this.data.config.footer.tel.text;
         (document.querySelector('#tel-link') as HTMLElement).setAttribute('href', `tel:${this.data.config.footer.tel.link}`);
 
-        (document.querySelector('#contact-text') as HTMLElement).innerHTML = this.data.config.footer.contactText;   
+        (document.querySelector('#contact-text') as HTMLElement).innerHTML = this.data.config.footer.contactText;  */ 
     }
 
     private buildPWAModal(): void

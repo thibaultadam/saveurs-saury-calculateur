@@ -1,7 +1,7 @@
 {
     "phase": {
         "type": "button",
-        "title": "Phase d'utilisation",
+        "title": "Fase de utilización",
         "params": {
             "autoBuild": 0
         }
@@ -16,13 +16,13 @@
     },
     "unit": {
         "type": "radio",
-        "title": "Unité"
+        "title": "Unidad"
     },
     "value": {
         "type": "input",
         "inputType": "number",
-        "title": "Valeur en ${unit}",
-        "description": "Entrez une valeur en ${unit}",
+        "title": "Valor en ${unit}",
+        "description": "Ingrese un valor en ${unit}",
         "placeholder": "0",
         "defaultValue": "",
         "parse": {
@@ -51,8 +51,8 @@
             "description": {
                 "replace": {
                     "index": "unit",
-                    "Hectolitres": "Entrez le nombre de grammes par Litres",
-                    "Gallons": "Entrez le nombre de livres pour 1000 gallons"
+                    "Hectolitres": "Introduzca el número de gramos por Litros",
+                    "Gallons": "Introduzca el número de libras por 1000 galones"
                 }
             }
         }
@@ -61,7 +61,7 @@
         "type": "input",
         "inputType": "number",
         "title": "${phase}",
-        "description": "Entrez % de bois neuf",
+        "description": "Introduzca % de madera nueva",
         "placeholder": "0",
         "defaultValue": "",
         "parse": {
