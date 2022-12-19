@@ -1,16 +1,16 @@
 {
     "name" : "ConfigurateurOakAddin",
-    "main": "OakAddins/Code/OakAddinsConfigurateur.ts",
+    "main": "SaveursSaury/Code/OakAddinsConfigurateur.ts",
     "tsconfig": "tsconfig.json",
     "assets" : [
-        { "from": "OakAddins/data", "to": "data" },
-        { "from": "OakAddins/images", "to": "images" },
-        { "from": "OakAddins/configurator.html", "to": "configurator.html" },
-        { "from": "OakAddins/home.html", "to": "home.html" },
-        { "from": "OakAddins/favicon.ico", "to": "favicon.ico" },
-        { "from": "OakAddins/manifest.webmanifest", "to": "manifest.webmanifest" },
-        { "from": "OakAddins/sw-init.js", "to": "sw-init.js" },
-        { "from": "OakAddins/sw.js", "to": "sw.js"},
-        { "from": "OakAddins/app-ressources", "to": "app-ressources"}
+        { "from": "SaveursSaury/data", "to": "data" },
+        { "from": "SaveursSaury/images", "to": "images" },
+        { "from": "SaveursSaury/configurator.html", "to": "configurator.html" },
+        { "from": "SaveursSaury/home.html", "to": "home.html" },
+        { "from": "SaveursSaury/favicon.ico", "to": "favicon.ico" },
+        { "from": "SaveursSaury/manifest.webmanifest", "to": "manifest.webmanifest" },
+        { "from": "SaveursSaury/sw-init.js", "to": "sw-init.js" },
+        { "from": "SaveursSaury/sw.js", "to": "sw.js"},
+        { "from": "SaveursSaury/app-ressources", "to": "app-ressources"}
     ]
 }

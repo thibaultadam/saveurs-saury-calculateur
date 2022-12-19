@@ -25,7 +25,12 @@
     color: rgb(102, 57, 183);
     font-size: 9pt;
 }
-
+#logo-OAI-footer {
+    max-width: 2rem;
+}
+#footer-table{
+    margin: auto;
+}
 #logo-OAI {
     max-width: 5rem;
     position: absolute;

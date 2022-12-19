@@ -1,7 +1,5 @@
 const fs = require('fs');
-
 let files = [];
-
 const a = require('bootstrap')
 
 function readDirectory(directoryPath = './build')
@@ -24,7 +22,6 @@ function readDirectory(directoryPath = './build')
 
         file = directory.readSync();
     }
-
     for(const dir of directories)
     {
         readDirectory(`${directoryPath}/${dir.name}`);

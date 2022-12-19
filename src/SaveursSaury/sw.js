@@ -26,6 +26,20 @@ self.addEventListener('install', event =>
             './data/fr-FR/possibilities-calculation-percentage-fr-FR.json',
             './data/fr-FR/possibilities-fr-FR.json',
             './data/fr-FR/responses-table-fr-FR.js',
+            './data/en-EN/choices-en-EN.json',
+            './data/en-EN/config-en-EN.json',
+            './data/en-EN/products-en-EN.json',
+            './data/en-EN/possibilities-calculation-gramsPerLiter-en-EN.json',
+            './data/en-EN/possibilities-calculation-percentage-en-EN.json',
+            './data/en-EN/possibilities-en-EN.json',
+            './data/en-EN/responses-table-en-EN.js',
+            './data/es-ES/choices-es-ES.json',
+            './data/es-ES/config-es-ES.json',
+            './data/es-ES/products-es-ES.json',
+            './data/es-ES/possibilities-calculation-gramsPerLiter-es-ES.json',
+            './data/es-ES/possibilities-calculation-percentage-es-ES.json',
+            './data/es-ES/possibilities-es-ES.json',
+            './data/es-ES/responses-table-es-ES.js',
             './app-ressources/logo.png',
             './app-ressources/apple-icon-180.png',
             './app-ressources/apple-splash-1125-2436.jpg',
@@ -62,6 +76,7 @@ self.addEventListener('install', event =>
             './images/Logo-OAI-négatif-sans-fond.png',
             './images/Logo-OAI.png',
             './images/logo.png',
+            './images/110426PAR-1948.jpg'
         ])
     ));
 });

@@ -81,8 +81,6 @@ class OakAddinsConfigurateur extends Configurator
 
     private buildHeaders()
     {
-        // logo Oak addins
-        this.$container.innerHTML += `<img id="logo-OAI" src="${this.data.config.calc.logoOAI}">`;
         
         // titre du calculateur et image
         this.$container.innerHTML += `
@@ -90,26 +88,8 @@ class OakAddinsConfigurateur extends Configurator
 
         <img class="mb-5 mx-auto d-block" src="${this.data.config.calc.logoImg.src}"
             alt="Calculateur" widtfth="${this.data.config.calc.logoImg.width}" height="${this.data.config.calc.logoImg.height}">
-
-        <img class="rounded hidden-img" src="${this.data.config.calc.hiddenImg}" hidden>
-        
-        <img class="categorie-img row offset-8 offset-sm-8 offset-md-9 offset-lg-9" src="${this.data.config.calc.macaronImg}" 
-            style="border-radius: 7rem !important; width: 7rem; height: 7rem;">
         `;
         
-        const offsetX = -60;
-        const offsetY = -20;
-
-        const image = document.querySelector('.categorie-img') as HTMLElement;
-        const hidden = document.querySelector('.hidden-img') as HTMLElement;
-
-        image.addEventListener('mouseenter', () => hidden.hidden = false);
-        image.addEventListener('mouseleave', () => hidden.hidden = true);
-
-        image.addEventListener('mousemove', (event) => 
-        {
-            hidden.setAttribute('style', `left: ${event.pageX + offsetX}px; top:${event.pageY + offsetY}px;`);
-        });
     }
 
     private fillFooter(): void
