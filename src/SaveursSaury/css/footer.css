@@ -49,6 +49,7 @@
     --copyright_text_color: #ffffff;
     --copyright_link_color: #ffffff;
     --copyright_font_size: 17px;
+    --copyright_link_color_hover: #2f1e04;
 }
 .fusion-copyright-notice {
     display: table-cell;
@@ -60,8 +61,11 @@
 }
 .fusion-copyright-notice a {
     font-family: 'Poppins', sans-serif;
-}
-.fusion-copyright-notice a {
     color: var(--copyright_link_color);
+    text-decoration: none;
 }
+.fusion-copyright-notice a:hover {
+    color: #2f1e04;
+}
+
 
