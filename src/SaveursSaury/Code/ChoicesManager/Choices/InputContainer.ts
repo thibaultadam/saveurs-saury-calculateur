@@ -26,10 +26,11 @@ export class InputContainer extends ChoiceContainer
         
         this.choiceData = parseChoiceData(choiceData, this.choicesEnumerator);
         
-        this.createNewContainer(() => createElement(`
+        //Pas utile pour le mode calculateur
+        /*this.createNewContainer(() => createElement(`
         <div class="my-4">
             <h6 class="my-2 fs-6 text-uppercase">${this.choiceData.title}</h6>
-        </div>`) as HTMLElement);
+        </div>`) as HTMLElement);*/
 
         this.createNewContainer(() => createElement(`<div class="form-floating my-2">`) as HTMLElement);
 

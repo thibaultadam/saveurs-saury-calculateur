@@ -8,7 +8,9 @@
         },
         "logoOAI" : "images/saveurs.png",
         "hiddenImg" : "images/thermo.png",
-        "macaronImg" : "images/Products/macaron_chauffes_FR.jpg"
+        "macaronImg" : "images/Products/macaron_chauffes_FR.jpg",
+        "mentions": "Menciones legales",
+        "donnee": "Información personal"
     },
     "home": {
         "text": "Un outil simple et pratique qui vous guidera dans le choix de vos produits de boisage œnologique.",

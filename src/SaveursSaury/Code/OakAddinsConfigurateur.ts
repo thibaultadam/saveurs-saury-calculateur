@@ -160,6 +160,8 @@ class OakAddinsConfigurateur extends Configurator
         () => {
             const currentLang = getCookie('lang') || parent.document.querySelector('html')?.getAttribute("lang") || 'fr-FR';
             const langsButtons = document.querySelectorAll('.lang-item') as NodeListOf<HTMLElement> || [];
+            //Pour initialisé
+            var notinit = false;
 
             for(const langButton of langsButtons) 
             {    
@@ -169,7 +171,9 @@ class OakAddinsConfigurateur extends Configurator
                     {
                         _langButton.classList.remove('btn-outline-indigo');
                     }
-    
+                    //Permet d'actualiser la page mais eviter d'actualisé a l'initialisation et donc de refresh en boucle
+                    if(notinit == true){ window.location.reload(); }
+                    else{ notinit = true; }
                     langButton.classList.add('btn-outline-indigo');
     
                     document.cookie = `lang=${langButton.innerText}; secure`;
@@ -178,6 +182,7 @@ class OakAddinsConfigurateur extends Configurator
                 if(langButton.innerText == currentLang)
                 {
                     langButton.click();
+                    
                 }
             }
         });
