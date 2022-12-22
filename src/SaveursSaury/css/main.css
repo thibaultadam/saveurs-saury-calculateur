@@ -12,8 +12,12 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Poppins';
 }
 
 body {
     background-color: rgba(255, 255, 255, 0);
+    font-family: 'Poppins';
 }
+
+

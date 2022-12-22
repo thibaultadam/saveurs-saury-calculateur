@@ -51,7 +51,8 @@ input {
 }
 
 #response-container span {
-    color: rgb(207, 138, 12);
+    /*color: rgb(207, 138, 12);*/
+    color: black;
 }
 
 #response-container tr {
@@ -60,6 +61,14 @@ input {
 
 #response-container td {
     color: rgb(207, 138, 12);
+    
+}
+#response-container tbody > tr {
+    color: black;
+}
+
+#response-container tbody > tr > td {
+    color: black;
 }
 
 #response-container .value {

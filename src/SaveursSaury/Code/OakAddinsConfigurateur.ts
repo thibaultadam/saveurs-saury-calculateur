@@ -41,13 +41,15 @@ class OakAddinsConfigurateur extends Configurator
         this.fillLangs();
         this.fillFooter();
         
-        if(this.shapeMode !== 'products-mode')
+        if(this.shapeMode !== 'calc-mode')
         {
-            this.buildHeaders();
+            this.shapeMode = 'calc-mode'
         }
 
+        
+        this.buildHeaders();
         this.registerChoiceManagerClass(ChoicesManager);
-
+ 
         this.tableBuilder = new TableBuilder({
             configurator: this
         });
