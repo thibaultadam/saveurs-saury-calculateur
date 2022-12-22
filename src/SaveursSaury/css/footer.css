@@ -57,7 +57,7 @@
     margin: 0;
     padding: 0;
     color: var(--copyright_text_color);
-    font-size: var(--copyright_font_size);
+    /*font-size: var(--copyright_font_size);*/
 }
 .fusion-copyright-notice a {
     font-family: 'Poppins', sans-serif;
@@ -68,7 +68,7 @@
     color: #2f1e04;
 }
 .letextefooter{
-    margin-left: 41%;
+    margin-left: 42.5%;
 }
 
 

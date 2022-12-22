@@ -72,8 +72,10 @@ export class InputChoice extends ChoiceInput
             {
                 this.choicesEnumerator.set(this.choiceContainer.id, 'value');
                 this.choicesEnumerator.goTo(this.choiceContainer.id + 1);
+                
             }
         }
+        document.cookie = `${data.label}-${this.choiceContainer.id}=${this.value}`
     }
 
     protected onClick(ev : MouseEvent, data: TreeNode["values"]["index"], choiceData: ChoiceData): void

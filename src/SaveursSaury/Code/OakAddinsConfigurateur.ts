@@ -60,6 +60,8 @@ class OakAddinsConfigurateur extends Configurator
 
         // lance la construction du 1er element
         this.choicesManager.buildChoice();
+
+        this.recupanciennevaleur();
     }
     
     private loadShape(): Shape
@@ -188,5 +190,40 @@ class OakAddinsConfigurateur extends Configurator
                 }
             }
         });
+    }
+    private getCookie(index: String) {
+        let name = index + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+
+            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+
+        return "";
+    }
+
+    private recupanciennevaleur() : void
+    {
+        let valeurchamp1 : String;
+        let valeurchamp2 : String;
+        let valeurchamp3 : String;
+
+        valeurchamp1 = String(getCookie("value-3"));
+        valeurchamp2 = String(getCookie("percentage-4"));
+        valeurchamp3 = String(getCookie("gramsPerLiter-input-4"));
+
+        let champ1 = document.getElementById("value-3");
+        let champ2 = document.getElementById("percentage-4");
+        let champ3 = document.getElementById("gramsPerLiter-input-4");
+
+        champ1?.setAttribute("value",""+valeurchamp1);
+        champ2?.setAttribute("value",""+valeurchamp2);
+        champ3?.setAttribute("value",""+valeurchamp3);
     }
 }
