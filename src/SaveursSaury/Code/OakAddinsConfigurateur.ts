@@ -6,6 +6,8 @@ import { TableBuilder } from "./TableBuilder/TableBuilder";
 
 // webpack css import
 import '../css/main.css';
+import { ChoicesEnumerator } from "../../lib/ChoicesManagement/ChoicesEnumerator";
+import { EventEmitter } from "../../lib/Tools/EventEmitter";
 //import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 //import '../../../node_modules/bootstrap/dist/js/bootstrap.min.js';
@@ -26,6 +28,7 @@ class OakAddinsConfigurateur extends Configurator
     public tableBuilder!: TableBuilder;        
 
     public shape!: Shape;
+
 
     constructor(container: string, path : ConfiguratorPathes, public shapeMode?: string, debugLevel? : DebugLevel)
     {
@@ -78,7 +81,7 @@ class OakAddinsConfigurateur extends Configurator
 
     private buildTab(): void
     {
-        Debug.log('--------------------------- buildTab');
+        console.log('--------------------------- buildTab');
 
         this.tableBuilder.build();
     }
@@ -225,5 +228,13 @@ class OakAddinsConfigurateur extends Configurator
         champ1?.setAttribute("value",""+valeurchamp1);
         champ2?.setAttribute("value",""+valeurchamp2);
         champ3?.setAttribute("value",""+valeurchamp3);
+
+        if(valeurchamp1 != "" && (valeurchamp2 != "" || valeurchamp3 != "")){
+            console.log("Recontruction de la table");
+            this.buildTab();
+            this.choicesManager.choicesEnumerator.emit('build');
+        }
+        
+        
     }
 }
